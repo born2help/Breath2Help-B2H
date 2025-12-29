@@ -27,20 +27,34 @@ function isInViewport(element) {
 
 let countersStarted = false;
 
-// Start counters on scroll
+// Animate counters on scroll
 window.addEventListener('scroll', () => {
   const charitySection = document.getElementById('charity');
   if (!countersStarted && isInViewport(charitySection)) {
     animateCounters();
     countersStarted = true;
   }
+
+  // Fade-in sections
+  document.querySelectorAll('.fade-in').forEach(el => {
+    if (isInViewport(el)) {
+      el.style.animationPlayState = 'running';
+    }
+  });
 });
 
-// Start counters if in viewport on page load
+// Animate counters and hero elements on load if in viewport
 window.addEventListener('load', () => {
   const charitySection = document.getElementById('charity');
   if (isInViewport(charitySection)) {
     animateCounters();
     countersStarted = true;
   }
+
+  // Hero fade-ins
+  document.querySelectorAll('.fade-in').forEach(el => {
+    if (isInViewport(el)) {
+      el.style.animationPlayState = 'running';
+    }
+  });
 });
