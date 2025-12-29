@@ -1,4 +1,4 @@
-// Charity Counters
+// ===== Charity Counters Animation =====
 function animateCounters() {
     const counters = document.querySelectorAll('.counter');
     counters.forEach(counter => {
@@ -6,7 +6,7 @@ function animateCounters() {
         const updateCounter = () => {
             const target = +counter.getAttribute('data-target');
             const current = +counter.innerText;
-            const increment = target / 200;
+            const increment = target / 200; // smoother animation
             if (current < target) {
                 counter.innerText = Math.ceil(current + increment);
                 requestAnimationFrame(updateCounter);
@@ -25,16 +25,6 @@ function isInViewport(element) {
            rect.bottom >= 0;
 }
 
-// Animate fade-in elements
-function handleFadeIns() {
-    const elements = document.querySelectorAll('.fade-in');
-    elements.forEach(el => {
-        if (isInViewport(el)) {
-            el.style.animationPlayState = 'running';
-        }
-    });
-}
-
 let countersStarted = false;
 
 window.addEventListener('scroll', () => {
@@ -43,7 +33,6 @@ window.addEventListener('scroll', () => {
         animateCounters();
         countersStarted = true;
     }
-    handleFadeIns();
 });
 
 window.addEventListener('load', () => {
@@ -52,5 +41,28 @@ window.addEventListener('load', () => {
         animateCounters();
         countersStarted = true;
     }
-    handleFadeIns();
+});
+
+// ===== Fade-in Sections on Scroll =====
+const faders = document.querySelectorAll('.fade-in');
+
+const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+};
+
+const appearOnScroll = new IntersectionObserver(function(
+    entries,
+    appearOnScroll
+) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = 'translateY(0)';
+        appearOnScroll.unobserve(entry.target);
+    });
+}, appearOptions);
+
+faders.forEach(fader => {
+    appearOnScroll.observe(fader);
 });
