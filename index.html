@@ -5,31 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>B2H – Born for Humanity</title>
 <style>
-  body { font-family: Arial, sans-serif; background:#0b0f19; color:#fff; margin:0; padding:0; }
+  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#0b0f19; color:#fff; }
   a { text-decoration:none; }
   section { padding:60px 20px; max-width:1000px; margin:auto; }
-  h1,h2 { text-align:center; }
-  h2 { margin-bottom:40px; }
+  h1,h2 { text-align:center; margin-bottom:20px; }
+  h2 { color: #1e90ff; margin-bottom:40px; } /* Restored blue headers */
   p, li { font-size:1.2rem; line-height:1.8; }
   ul { padding:0; list-style:none; }
   li { margin-bottom:15px; }
   .btn { padding:15px 30px; border-radius:10px; font-weight:bold; display:inline-block; }
+  
+  /* Section backgrounds and styling restored */
+  #hero { background: linear-gradient(135deg, #0b0f19, #1e3c72); color:#ffd700; padding:80px 20px; }
+  #founder { background: linear-gradient(135deg, #0d1321, #1a1f3d); border-radius:15px; padding:60px 20px; }
+  #join { background:#ffd700; color:#0b0f19; border-radius:15px; padding:60px 20px; }
+  #charity { background:#0d1321; border-radius:15px; padding:60px 20px; }
+  #tokenomics, #roadmap, #transparency { padding:60px 20px; }
+  
+  .btn-primary { background:#1e90ff; color:#fff; }
+  .btn-secondary { background:#0b0f19; color:#ffd700; }
 </style>
 </head>
 <body>
 
 <!-- HERO SECTION -->
 <section id="hero">
-  <h1 style="color:#ffd700;">B2H – Born for Humanity</h1>
-  <p style="text-align:center; font-size:1.5rem;">A token with purpose. A movement for humanity. Together, we rise.</p>
-  <p style="font-size:1.2rem; text-align:center; margin-top:20px; color:#ffd700;">
+  <h1>B2H – Born for Humanity</h1>
+  <p style="font-size:1.5rem;">A token with purpose. A movement for humanity. Together, we rise.</p>
+  <p style="font-size:1.2rem; margin-top:20px; color:#ffd700;">
     🚀 Phase 1 is live! B2H is now available on Solana. Your investment helps humanity automatically. Join the mission today!
   </p>
 </section>
 
 <!-- FOUNDER MESSAGE -->
-<section id="founder" style="background:#0d1321; border-radius:15px;">
-  <h2 style="color:#ff7f50;">👤 Founder Message</h2>
+<section id="founder">
+  <h2>👤 Founder Message</h2>
   <p>
     Assalamu Alaikum, I am <strong>Mubashir Munnawar Ud Din</strong>, Founder & CEO of B2H – Born for Humanity.  
     I come from humble beginnings, and my mission is simple yet powerful:
@@ -40,12 +50,12 @@
     Together, we rise, we impact, and we make history.
   </p>
   <div style="text-align:center; margin-top:30px;">
-    <a href="#join" class="btn" style="background:#ffd700; color:#0b0f19;">Join the Mission</a>
+    <a href="#join" class="btn btn-secondary">Join the Mission</a>
   </div>
 </section>
 
 <!-- JOIN THE MISSION -->
-<section id="join" style="background:#ffd700; color:#0b0f19; border-radius:15px;">
+<section id="join">
   <h2>🤝 Join the B2H Mission</h2>
   <p>Every token you purchase helps humanity automatically, while allowing your investment to grow.</p>
   <ul>
@@ -55,13 +65,13 @@
     <li>4️⃣ Become part of a global humanitarian movement</li>
   </ul>
   <div style="text-align:center; margin-top:30px;">
-    <a href="#tokenomics" class="btn" style="background:#0b0f19; color:#ffd700;">Get Started</a>
+    <a href="#tokenomics" class="btn btn-secondary">Get Started</a>
   </div>
 </section>
 
 <!-- CHARITY WALLET & FIRST DONATIONS -->
-<section id="charity" style="background:#0d1321; border-radius:15px;">
-  <h2 style="color:#ff7f50;">💖 Charity Contributions</h2>
+<section id="charity">
+  <h2>💖 Charity Contributions</h2>
   <p>B2H is already helping real people. Here’s how your contribution makes a difference:</p>
   <ul>
     <li>🏥 5 patients received medicines in week 1</li>
@@ -74,7 +84,7 @@
 
 <!-- TOKENOMICS -->
 <section id="tokenomics">
-  <h2 style="color:#ffd700;">💰 Tokenomics</h2>
+  <h2>💰 Tokenomics</h2>
   <ul>
     <li>Total Supply: 500 Billion B2H</li>
     <li>Transaction Tax: 10% (4% burn, 4% charity, 2% operations)</li>
@@ -85,7 +95,7 @@
 
 <!-- ROADMAP -->
 <section id="roadmap">
-  <h2 style="color:#ffd700;">🗺️ Roadmap</h2>
+  <h2>🗺️ Roadmap</h2>
   <ul>
     <li>Phase 1: Token launch, charity wallet setup, first donations</li>
     <li>Phase 2: Community expansion, partnerships with NGOs and philanthropists</li>
@@ -96,7 +106,7 @@
 
 <!-- TRANSPARENCY & PROTECTION -->
 <section id="transparency">
-  <h2 style="color:#ffd700;">🛡️ Transparency & Protection</h2>
+  <h2>🛡️ Transparency & Protection</h2>
   <p>B2H is built to be fully transparent and secure. Every transaction is traceable, and all charitable contributions are visible to the public.</p>
   <ul>
     <li>🔒 Smart contracts prevent unauthorized control</li>
