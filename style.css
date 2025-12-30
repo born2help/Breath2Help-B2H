@@ -55,30 +55,32 @@ nav a:hover {
     padding: 0 70px;
 }
 
+#hero {
+    min-height: 90vh;
+    background: url("images/hero-bg.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
+    position: relative;
+}
+
 .hero-content {
-    max-width: 650px;
+    max-width: 700px;
     background: rgba(0, 0, 0, 0.35);
-    padding: 45px;
-    border-radius: 14px;
+    padding: 55px;
+    border-radius: 18px;
     color: #fff;
     position: relative;
 }
 
+/* BIG & CLEAR BURN LOGO */
 .burn-logo {
     position: absolute;
-    top: -35px;
-    right: -35px;
-    width: 100px;
-}
-
-.hero-content h1 {
-    font-size: 52px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 20px;
-    margin-bottom: 30px;
+    top: -60px;
+    right: -60px;
+    width: 160px;        /* 🔥 MUCH BIGGER */
+    height: auto;
+    z-index: 10;
 }
 
 .cta-buttons a {
