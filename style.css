@@ -126,6 +126,51 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+.tokenomics-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.token-card {
+  background-color: #ffd700;
+  color: #004aad;
+  padding: 25px;
+  border-radius: 10px;
+  flex: 1 1 220px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.token-card:hover {
+  transform: translateY(-5px);
+}
+
+.roadmap-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.roadmap-card {
+  background-color: #004aad;
+  color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  flex: 1 1 200px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-5px);
+}
+
 /* ================= SPLIT ================= */
 .split {
   display: flex;
