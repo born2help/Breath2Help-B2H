@@ -29,7 +29,7 @@ body {
   right: 1.5in;
   top: 50%;
   transform: translateY(-50%);
-  width: 220px; /* 🔥 increase here */
+  width: 300px; /* 🔥 increase here */
 }
 
 .brand {
