@@ -1,217 +1,160 @@
-/* ===============================
-   GLOBAL RESET
-================================ */
+/* ================= RESET ================= */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    line-height: 1.7;
-    color: #222;
-    background: #f5f7fb;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
 }
 
-/* ===============================
-   HEADER
-================================ */
-header {
-    background: linear-gradient(90deg, #0a2a66, #123d9c);
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
 }
 
-header .logo img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: #fff;
-    padding: 6px;
-}
-
-nav a {
-    color: #fff;
-    margin-left: 22px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* ===============================
-   HERO SECTION
-================================ */
-#hero {
-    min-height: 90vh;
-    background: url("images/hero-bg.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 0 70px;
-}
-
-#hero {
-    min-height: 90vh;
-    background: url("images/hero-bg.jpg") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    padding: 0 70px;
-    position: relative;
-}
-
-.hero-content {
-    max-width: 700px;
-    background: rgba(0, 0, 0, 0.35);
-    padding: 55px;
-    border-radius: 18px;
-    color: #fff;
-    position: relative;
-}
-
-/* BIG & CLEAR BURN LOGO */
+/* Burn Logo */
 .burn-logo {
-    position: absolute;
-    top: -60px;
-    right: -60px;
-    width: 200px;        /* 🔥 MUCH BIGGER */
-    height: auto;
-    z-index: 10;
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 140px;
+  opacity: 0.9;
 }
 
-.cta-buttons a {
-    padding: 14px 28px;
-    margin-right: 15px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
+/* Hero Content */
+.hero-content {
+  max-width: 800px;
+  color: #ffffff;
+  z-index: 2;
 }
 
-.btn-primary {
-    background: #ff9800;
-    color: #fff;
+/* Logo + Text */
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
-.btn-secondary {
-    background: #fff;
-    color: #0a2a66;
+.hero-logo {
+  width: 220px;   /* INCREASED SIZE */
+  height: auto;
 }
 
-/* ===============================
-   SECTIONS
-================================ */
-section {
-    padding: 80px 70px;
-    background: #fff;
+.logo-text span {
+  font-size: 18px;
+  letter-spacing: 2px;
 }
 
-section:nth-child(even) {
-    background: #f0f3fa;
+.logo-text strong {
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
 }
 
-section h2 {
-    font-size: 38px;
-    margin-bottom: 20px;
-    color: #0a2a66;
+/* Hero Title */
+.hero-title {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
-section p {
-    font-size: 18px;
-    max-width: 800px;
+.hero-title span {
+  color: #ffcc00;
 }
 
-/* ===============================
-   HELP SECTION
-================================ */
-.split {
-    display: flex;
-    gap: 50px;
-    align-items: center;
-    margin-top: 40px;
+/* Hero Text */
+.hero-text {
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 650px;
+  margin-bottom: 30px;
 }
 
-.split img {
-    width: 45%;
-    border-radius: 18px;
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
 }
 
-.split ul li {
-    font-size: 18px;
-    margin-bottom: 12px;
+.btn {
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 30px;
+  transition: 0.3s ease;
 }
 
-/* ===============================
-   CHARITY CARDS
-================================ */
-.cards {
-    display: flex;
-    gap: 30px;
-    margin-top: 40px;
+.btn.primary {
+  background: #ffcc00;
+  color: #000;
 }
 
-.card {
-    flex: 1;
-    background: #0a2a66;
-    color: #fff;
-    padding: 35px;
-    border-radius: 18px;
-    text-align: center;
+.btn.secondary {
+  border: 2px solid #fff;
+  color: #fff;
 }
 
-.counter {
-    font-size: 34px;
-    font-weight: bold;
-    margin-top: 10px;
+.btn:hover {
+  transform: translateY(-2px);
 }
 
-/* ===============================
-   FOUNDER SECTION
-================================ */
-#connect {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+/* ================= SECTIONS ================= */
+.section {
+  padding: 80px 8%;
+  text-align: center;
 }
 
-#connect::before {
-    content: "";
-    width: 220px;
-    height: 220px;
-    background: url("images/founder.jpg") center/cover no-repeat;
-    border-radius: 50%;
-    flex-shrink: 0;
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
 }
 
-/* ===============================
-   DONATE
-================================ */
-#donate {
-    text-align: center;
+.section p {
+  font-size: 18px;
+  max-width: 700px;
+  margin: auto;
 }
 
-#donate .btn-primary {
-    display: inline-block;
-    margin-top: 20px;
+.section.light {
+  background: #f5f5f5;
 }
 
-/* ===============================
-   FOOTER
-================================ */
+.section.dark {
+  background: #111;
+  color: #fff;
+}
+
+/* ================= FOOTER ================= */
 footer {
-    background: #0a2a66;
-    color: #fff;
-    text-align: center;
-    padding: 30px;
+  padding: 25px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
 }
 
-footer img {
-    width: 55px;
-    border-radius: 50%;
-    background: #fff;
-    padding: 6px;
-    margin-bottom: 10px;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 38px;
+  }
+
+  .hero-logo {
+    width: 170px;
+  }
+
+  .burn-logo {
+    display: none;
+  }
 }
