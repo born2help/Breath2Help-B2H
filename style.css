@@ -1,284 +1,262 @@
-/* ================= RESET ================= */
+/* ================= GENERAL RESET ================= */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
 body {
-  background-color: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
 /* ================= HEADER ================= */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #004aad;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #004aad;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-header img {
-  height: 50px;
+header img.header-logo {
+    height: 60px;
 }
 
 header nav a {
-  color: #fff;
-  margin-left: 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 header nav a:hover {
-  color: #ffd700;
+    color: #ffd700;
 }
 
 /* ================= HERO SECTION ================= */
 #hero {
-  position: relative;
-  background: url('images/hero-bg.jpg') center/cover no-repeat;
-  padding: 120px 20px;
-  color: #fff;
-  text-align: center;
-  overflow: hidden;
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
 }
 
-#hero::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 74, 173, 0.5); /* semi-transparent overlay */
-  z-index: 1;
+.hero-background {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('images/hero-bg.jpg') center/cover no-repeat;
+    z-index: 1;
+    filter: brightness(0.8);
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 1000px;
-  margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+    padding: 0 20px;
 }
 
-.hero-logo {
-  height: 120px;
+.hero-logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-.logo-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
+.hero-logo-wrap img.hero-logo {
+    height: 100px;
+}
+
+.logo-text {
+    font-size: 1.8rem;
 }
 
 .logo-text span {
-  font-size: 1.5rem;
+    display: block;
+    font-weight: normal;
 }
 
 .logo-text strong {
-  font-size: 2rem;
-  color: #ffd700;
+    display: block;
+    font-weight: bold;
 }
 
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
+.burn-logo {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80px;
+    z-index: 3;
 }
 
-.hero-title span {
-  color: #ffd700;
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
 }
 
-.hero-text {
-  font-size: 1.3rem;
-  margin-bottom: 30px;
-  line-height: 1.5;
+#hero p {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
 }
 
-.hero-buttons .btn {
-  padding: 15px 30px;
-  margin: 5px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s;
+.cta-buttons .btn {
+    padding: 15px 30px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
 }
 
 .btn-primary {
-  background-color: #ffd700;
-  color: #004aad;
+    background-color: #ffd700;
+    color: #004aad;
 }
 
 .btn-primary:hover {
-  background-color: #ffc107;
+    background-color: #ffc107;
 }
 
 .btn-secondary {
-  background-color: #fff;
-  color: #004aad;
+    background-color: #fff;
+    color: #004aad;
 }
 
 .btn-secondary:hover {
-  background-color: #e0e0e0;
-}
-
-/* Burn logo top-right */
-.burn-logo {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  height: 120px;
-  z-index: 3;
+    background-color: #e0e0e0;
 }
 
 /* ================= SECTIONS ================= */
-.section {
-  padding: 80px 50px;
-  max-width: 1200px;
-  margin: 0 auto;
+section {
+    padding: 80px 50px;
 }
 
-.section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-  color: #004aad;
+section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #004aad;
 }
 
-.section p, .section li {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
+section p, section li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
-/* FOUNDER SECTION */
-.founder-content {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.founder-pic {
-  width: 200px;
-  border-radius: 50%;
-}
-
-/* ================= SPLIT ================= */
+/* ================= SPLIT LAYOUT ================= */
 .split {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 .split img {
-  width: 500px;
-  max-width: 100%;
-  border-radius: 10px;
+    width: 500px;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
 .split .text {
-  flex: 1;
+    flex: 1;
 }
 
 /* ================= LISTS ================= */
 ul {
-  list-style-type: disc;
-  padding-left: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
 }
 
 /* ================= CARDS ================= */
 .cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .card {
-  background-color: #004aad;
-  color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  flex: 1 1 200px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.2rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background-color: #004aad;
+    color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 1 1 200px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* COUNTER NUMBERS */
+/* Counter numbers */
 .counter {
-  font-size: 2.5rem;
-  margin-top: 15px;
-  color: #ffd700;
+    font-size: 2.5rem;
+    margin-top: 15px;
+    color: #ffd700;
 }
 
 /* ================= FOOTER ================= */
 footer {
-  background-color: #004aad;
-  color: #fff;
-  padding: 40px 50px;
-  text-align: center;
+    background-color: #004aad;
+    color: #fff;
+    padding: 40px 50px;
+    text-align: center;
 }
 
-footer img {
-  height: 50px;
-  margin-bottom: 20px;
-}
-
-/* ================= LIGHT & DARK SECTIONS ================= */
-.section.light {
-  background-color: #f9f9f9;
-}
-
-.section.dark {
-  background-color: #004aad;
-  color: #fff;
+footer img.footer-logo {
+    height: 60px;
+    margin-bottom: 20px;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-  header nav {
-    margin-top: 10px;
-  }
+    header nav {
+        margin-top: 10px;
+    }
 
-  .split, .founder-content {
-    flex-direction: column;
-  }
+    .split {
+        flex-direction: column;
+    }
 
-  .cards {
-    flex-direction: column;
-  }
+    .cards {
+        flex-direction: column;
+    }
 
-  .hero-title {
-    font-size: 2.2rem;
-  }
+    .hero-logo-wrap {
+        flex-direction: column;
+        gap: 10px;
+    }
 
-  .hero-text {
-    font-size: 1.1rem;
-  }
+    #hero h1 {
+        font-size: 2.2rem;
+    }
 
-  .hero-logo {
-    height: 100px;
-  }
+    #hero p {
+        font-size: 1.1rem;
+    }
 
-  .burn-logo {
-    height: 80px;
-  }
+    .burn-logo {
+        right: 5%;
+        height: 60px;
+    }
 }
