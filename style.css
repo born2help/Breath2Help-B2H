@@ -385,3 +385,33 @@ footer {
     0 2px 8px rgba(0,0,0,0.35),
     0 0 20px rgba(212,175,55,0.25);
 }
+
+/* ================= HERO HEADING GOLD GRADIENT ================= */
+
+.hero-title {
+  font-size: 72px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+
+  background: linear-gradient(
+    90deg,
+    #f9e29c 0%,
+    #d4af37 35%,
+    #b8962e 70%,
+    #f9e29c 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.35),
+    0 0 18px rgba(212, 175, 55, 0.25);
+}
+
+.hero {
+  background-color: #0b1a2b;
+}
