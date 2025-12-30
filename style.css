@@ -43,26 +43,25 @@ body {
   margin-bottom: 20px;
 }
 
+/* ========== HERO UPDATED ========== */
 .main-logo {
-  width: 80px;
-  height: auto;
+  width: 180px; /* increased */
 }
 
 .brand-text span {
-  font-size: 14px;
+  font-size: 20px; /* increased */
   color: #555;
 }
 
 .brand-text strong {
-  font-size: 22px;
+  font-size: 32px; /* increased */
   color: #e67e22;
 }
 
 .hero-title {
-  font-size: 56px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #004aad;
+  font-size: 72px; /* increased */
+  font-weight: 800;
+  margin-bottom: 25px;
 }
 
 .hero-title span {
@@ -70,16 +69,23 @@ body {
 }
 
 .hero-desc {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 600px;
-  color: #333;
+  font-size: 22px; /* increased */
+  line-height: 1.8;
+  max-width: 700px;
+  margin-bottom: 35px;
 }
 
-.hero-actions {
-  display: flex;
-  gap: 15px;
+.hero-actions .btn {
+  padding: 16px 32px; /* increased */
+  font-size: 18px;
+}
+
+.burn-logo {
+  width: 320px; /* already bigger */
+  right: 1.5in;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
 }
 
 .btn {
