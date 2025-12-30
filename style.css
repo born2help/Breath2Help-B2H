@@ -33,12 +33,12 @@ body {
 /* Burn Logo */
 .burn-logo {
   position: absolute;
-  right: 110px;
+  right: 1.5in;
   top: 50%;
   transform: translateY(-50%);
   width: 280px;
   max-width: 18vw;
-  z-index: 1;
+  z-index: 3;
   opacity: 0.95;
 }
 
