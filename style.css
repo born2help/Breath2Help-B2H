@@ -78,7 +78,7 @@ nav a:hover {
     position: absolute;
     top: -60px;
     right: -60px;
-    width: 160px;        /* 🔥 MUCH BIGGER */
+    width: 200px;        /* 🔥 MUCH BIGGER */
     height: auto;
     z-index: 10;
 }
