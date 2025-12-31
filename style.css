@@ -957,3 +957,66 @@ section p {
     height: 50px;
   }
 }
+
+/* ================= GOVERNANCE & CONSTITUTION CARDS ================= */
+.governance-card, .constitution-card {
+  background-color: #ffffff; /* light card for contrast */
+  color: #111;               /* dark text */
+  padding: 25px;
+  border-radius: 14px;
+  text-align: center;
+  max-width: 800px;
+  margin: 20px auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.governance-card:hover, .constitution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.card-icon {
+  font-size: 70px;
+  color: #e67e22; /* orange color matching hero */
+  margin-bottom: 15px;
+}
+
+/* Section text */
+#governance p, #constitution p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333; /* dark for readability */
+}
+
+/* Dark section adjustments */
+#constitution {
+  background-color: #111b3d;
+}
+
+#constitution p {
+  color: #f1f1f1; /* light text for dark background */
+}
+
+/* Headings */
+#governance h2, #constitution h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .card-icon {
+    font-size: 55px;
+  }
+
+  #governance h2, #constitution h2 {
+    font-size: 34px;
+  }
+
+  #governance p, #constitution p {
+    font-size: 16px;
+  }
+}
