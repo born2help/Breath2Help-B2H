@@ -562,3 +562,96 @@ footer {
     font-size: 17px;
   }
 }
+
+/* ================= STEP 4.1 – HERO EMOTIONAL DEPTH ================= */
+
+/* HERO INNER – breathing space */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+}
+
+/* BRAND BLOCK – calm introduction */
+.brand {
+  margin-bottom: 28px;
+}
+
+.main-logo {
+  width: 96px; /* more presence */
+}
+
+/* HERO TITLE – authority without aggression */
+.hero-title {
+  margin-top: 10px;
+  margin-bottom: 26px;
+  line-height: 1.15;
+  max-width: 680px;
+}
+
+/* HERO DESCRIPTION – emotional readability */
+.hero-desc {
+  margin-bottom: 42px;
+  max-width: 640px;
+  line-height: 1.75;
+}
+
+/* BUTTONS – grounded & confident */
+.hero-actions {
+  gap: 18px;
+}
+
+.btn {
+  padding: 15px 34px;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+}
+
+/* PRIMARY BUTTON – humanitarian calm */
+.btn.primary {
+  background: #e67e22;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.btn.primary:hover {
+  background: #cf6d17;
+}
+
+/* SECONDARY BUTTON – respectful presence */
+.btn.secondary {
+  background: transparent;
+  border-color: rgba(230,126,34,0.7);
+}
+
+.btn.secondary:hover {
+  background: rgba(230,126,34,0.08);
+}
+
+/* MOBILE EMOTIONAL BALANCE */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 30px;
+  }
+
+  .hero-inner {
+    text-align: center;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  .hero-title {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+}
