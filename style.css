@@ -436,11 +436,81 @@ p {
   }
 }
 
-/* ================= GOVERNANCE / CONSTITUTION ================= */
+/* ================= GOVERNANCE & CONSTITUTION ================= */
+
+/* Section headings */
+#governance h2,
+#constitution h2 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #e67e22; /* hero orange for consistency */
+  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
+}
+
+/* Cards for readability */
+.governance-card,
+.constitution-card {
+  background: #f5f5f5;   /* light card background */
+  color: #111;            /* dark text for readability */
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  line-height: 1.8;
+  font-size: 18px;
+}
+
+/* Constitution dark card for contrast */
+#constitution .constitution-card {
+  background: #111b3d;  /* dark card background */
+  color: #f1f1f1;       /* bright text */
+  text-align: center;
+}
+
+/* Paragraphs inside both sections */
 #governance p,
-#constitution p,
-#why p {
-  font-size: 1.15rem;
+#constitution p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  #governance h2,
+  #constitution h2 {
+    font-size: 36px;
+  }
+
+  .governance-card,
+  .constitution-card {
+    padding: 20px;
+  }
+
+  #governance p,
+  #constitution p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  #governance h2,
+  #constitution h2 {
+    font-size: 28px;
+  }
+
+  .governance-card,
+  .constitution-card {
+    padding: 15px;
+  }
+
+  #governance p,
+  #constitution p {
+    font-size: 15px;
+  }
 }
 
 /* ================= FOUNDER MESSAGE ================= */
