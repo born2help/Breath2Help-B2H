@@ -217,6 +217,12 @@ body {
 }
 .dark { background: #222; color: #fff; }
 
+.section p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cfd6e4;
+}
+
 /* ================= TOKENOMICS ================= */
 #tokenomics h2 {
   color: #1e3a5f;
