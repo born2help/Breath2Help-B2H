@@ -371,7 +371,6 @@ p {
   font-size: 46px;
   margin-bottom: 60px;
   text-shadow: 0 3px 10px rgba(0,0,0,0.4);
-  z-index: 2;
 }
 
 .roadmap-cards {
@@ -379,12 +378,10 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
   justify-items: center;
-  z-index: 2;
 }
 
 .roadmap-card {
-  background-color: #1c1f4d; /* solid dark blue card */
-  color: #ffffff !important; /* bright text */
+  background-color: #1a1d4a; /* solid dark blue */
   padding: 35px 25px;
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
@@ -393,41 +390,34 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative; /* ensure no overlapping layers */
-  z-index: 3;
+  z-index: 2;
 }
 
-/* Hover effect */
-.roadmap-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.45);
-}
-
-/* Phase label */
-.roadmap-card .phase-label {
-  display: inline-block;
-  background: #ff8c00; /* solid bright orange */
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 10px;
-  font-size: 24px;
+/* Headings inside cards */
+.roadmap-card h3, .roadmap-card .phase-label {
+  color: #ff8c00;  /* bright orange */
   font-weight: 800;
-  margin-bottom: 20px;
-  text-align: center;
-  width: 100%;
-  text-shadow: none; /* remove faint shadows causing dull text */
+  text-shadow: none;
+  margin-bottom: 16px;
+  font-size: 24px;
 }
 
-/* Description */
+/* Paragraph text inside cards */
 .roadmap-card p {
-  font-size: 17px;
-  line-height: 1.9;
-  color: #ffffff; /* solid white for readability */
+  color: #ffffff !important; /* force pure white */
+  font-size: 16px;
+  line-height: 1.8;
   text-align: center;
   margin: 0;
 }
 
-/* ================= RESPONSIVE ================= */
+/* Hover effect */
+.roadmap-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
+/* Responsive */
 @media (max-width: 992px) {
   .roadmap-card {
     max-width: 90%;
@@ -438,12 +428,9 @@ p {
   #roadmap h2 {
     font-size: 36px;
   }
-
-  .roadmap-card .phase-label {
+  .roadmap-card h3 {
     font-size: 20px;
-    padding: 6px 12px;
   }
-
   .roadmap-card p {
     font-size: 15px;
   }
