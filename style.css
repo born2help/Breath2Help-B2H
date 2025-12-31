@@ -10,7 +10,7 @@ body {
   background: #fff;
 }
 
-/* ================= HERO SECTION UPGRADE ================= */
+/* ================= HERO ================= */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -21,8 +21,7 @@ body {
 }
 
 .hero-inner {
-  max-width: 750px;
-  z-index: 2;
+  max-width: 800px;
 }
 
 .burn-logo {
@@ -30,49 +29,47 @@ body {
   right: 1.5in;
   top: 50%;
   transform: translateY(-50%);
-  width: 320px; /* 🔥 Bigger than main logo */
+  width: 320px; /* 3-4x bigger than main logo */
 }
 
 .brand {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
   margin-bottom: 25px;
 }
 
 .main-logo {
-  width: 120px; /* Increased size */
+  width: 120px; /* increased size */
 }
 
 .brand-text span {
-  font-size: 16px;
-  color: #555;
+  font-size: 18px;
+  color: #fff;
 }
 
 .brand-text strong {
-  font-size: 26px;
-  color: #ffd700; /* Gradient-safe golden for contrast */
+  font-size: 30px;
+  color: #ffd700; /* prominent gold */
 }
 
 .hero-title {
-  font-size: 62px;
+  font-size: 64px;
   font-weight: 800;
   margin-bottom: 25px;
-  color: #fff; /* White on background */
-  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  color: #ffd700; /* gold headline */
 }
 
 .hero-title span {
-  color: #ffd700; /* Highlight Humanity in gold */
+  color: #fff;
 }
 
 .hero-desc {
   font-size: 20px;
-  line-height: 1.7;
+  line-height: 1.8;
   margin-bottom: 35px;
   max-width: 650px;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  color: #f0f0f0;
 }
 
 .hero-actions {
