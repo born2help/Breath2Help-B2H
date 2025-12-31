@@ -367,25 +367,28 @@ p {
   color: #e67e22; /* hero orange */
   font-weight: 800;
   font-size: 42px;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   text-shadow: 0 3px 8px rgba(0,0,0,0.35);
 }
 
 .roadmap-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 25px;
   justify-items: center;
 }
 
 .roadmap-card {
-  background: #1a1f4b; /* slightly lighter than before for contrast */
+  background: #1a1f4b; /* lighter than before */
   color: #fff;
-  padding: 25px;
+  padding: 30px 20px;
   border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   transition: transform 0.3s, box-shadow 0.3s;
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .roadmap-card:hover {
@@ -393,22 +396,28 @@ p {
   box-shadow: 0 12px 28px rgba(0,0,0,0.35);
 }
 
-.roadmap-card h3 {
+/* Phase labels */
+.roadmap-card .phase-label {
   display: inline-block;
-  background: rgba(255, 140, 0, 0.3); /* stronger highlight for contrast */
-  padding: 6px 12px;
-  border-radius: 6px;
-  font-size: 24px;
-  color: #ffb84d; /* brighter orange */
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* stronger shadow for readability */
+  background: rgba(255, 140, 0, 0.4); /* stronger highlight */
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 22px;
   font-weight: 700;
-  margin-bottom: 12px;
+  color: #ffb84d; /* bright orange */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+  margin-bottom: 16px;
+  text-align: center;
+  width: 100%;
 }
 
+/* Description */
 .roadmap-card p {
   font-size: 16px;
   line-height: 1.8;
-  color: #f8f8f8; /* slightly brighter for better readability */
+  color: #f8f8f8; /* bright enough for visibility */
+  text-align: center;
+  margin: 0;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -423,9 +432,9 @@ p {
     font-size: 34px;
   }
 
-  .roadmap-card h3 {
-    font-size: 20px;
-    padding: 4px 8px;
+  .roadmap-card .phase-label {
+    font-size: 18px;
+    padding: 4px 10px;
   }
 
   .roadmap-card p {
