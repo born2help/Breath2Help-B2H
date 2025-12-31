@@ -943,3 +943,82 @@ footer {
     flex: 1 1 90%;
   }
 }
+
+/* ================= STEP 6 – ROADMAP CONFIDENCE REDESIGN ================= */
+
+/* Section title */
+#roadmap h2 {
+  font-size: 38px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #ffd700; /* golden highlight */
+  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/* Cards container */
+.roadmap-cards {
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Base roadmap card */
+.roadmap-card {
+  background: linear-gradient(145deg, #004aad, #0070ff);
+  color: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+}
+
+/* Number badge */
+.roadmap-card::before {
+  content: counter(phase);
+  counter-increment: phase;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffd700;
+  color: #004aad;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 12px 20px;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Card title */
+.roadmap-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Card text */
+.roadmap-card p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Hover effect */
+.roadmap-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+/* Reset counter */
+.roadmap-cards {
+  counter-reset: phase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .roadmap-card {
+    flex: 1 1 90%;
+  }
+}
