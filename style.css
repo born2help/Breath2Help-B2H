@@ -888,3 +888,72 @@ section p {
     text-align: center;
   }
 }
+
+/* ================= CONSTITUTION CARD ================= */
+.constitution-card {
+  position: relative;
+  background-color: #111b3d; /* dark blue */
+  color: #fefefe !important; /* bright white text */
+  padding: 30px 25px;
+  border-radius: 16px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  line-height: 1.8;
+  font-size: 18px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Override any inherited text shadow or opacity */
+.constitution-card p {
+  color: #fefefe !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* Icon */
+.constitution-card .card-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+/* Strong text highlight */
+.constitution-card p strong {
+  color: #e67e22; /* orange highlight */
+}
+
+/* Hover effect */
+.constitution-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+  .constitution-card {
+    padding: 25px;
+  }
+  .constitution-card p {
+    font-size: 16px;
+  }
+  .constitution-card .card-icon img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .constitution-card {
+    padding: 20px;
+  }
+  .constitution-card p {
+    font-size: 15px;
+  }
+  .constitution-card .card-icon img {
+    width: 50px;
+    height: 50px;
+  }
+}
