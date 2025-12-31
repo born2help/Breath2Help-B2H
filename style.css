@@ -199,7 +199,22 @@ body {
 }
 
 /* Light / Dark sections */
-.light { background: #f7f7f7; color: #222; }
+.light-section {
+  background: #0b1220;
+  padding: 80px 20px;
+}
+
+.section-text {
+  max-width: 860px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #d0d6e0;
+}
+
+.center {
+  text-align: center;
+}
 .dark { background: #222; color: #fff; }
 
 /* ================= TOKENOMICS ================= */
