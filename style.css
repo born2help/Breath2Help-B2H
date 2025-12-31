@@ -1,4 +1,4 @@
-/* ================= GLOBAL RESET ================= */
+/* ================= GLOBAL ================= */
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +9,9 @@
 body {
   color: #222;
   background: #fff;
-  line-height: 1.6;
 }
 
-/* ================= HERO SECTION ================= */
+/* ================= HERO ================= */
 .hero {
   position: relative;
   min-height: 100vh;
@@ -43,17 +42,18 @@ body {
   pointer-events: none;
 }
 
+/* BRAND / Born to Help / Burn for Humanity */
 .brand {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 22px;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   flex-wrap: wrap;
 }
 
 .main-logo {
-  width: 96px;
+  width: 140px;
   height: auto;
   filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
 }
@@ -65,48 +65,55 @@ body {
 }
 
 .brand-text span {
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  color: #666;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffd580;
+  letter-spacing: 1px;
+  display: block;
 }
 
 .brand-text strong {
-  font-size: 26px;
-  font-weight: 700;
-  color: #e67e22;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.55);
+  font-size: 36px;
+  font-weight: 800;
+  color: #ff9c2f;
+  letter-spacing: 1.2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 0 12px rgba(255,165,0,0.3);
 }
 
+/* HERO TITLE */
 .hero-title {
   font-size: 60px;
   font-weight: 800;
   letter-spacing: -0.5px;
-  margin-top: 10px;
+  color: #ff9c2f;
+  margin-top: 15px;
   margin-bottom: 26px;
   line-height: 1.15;
-  color: #1c1c1c;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.65);
 }
 
 .hero-title span,
 .hero-title strong {
-  color: #e67e22;
+  color: #ffd580;
 }
 
+/* HERO DESCRIPTION */
 .hero-desc {
   font-size: 19px;
   font-weight: 400;
-  color: #333;
+  color: #f1f1f1;
   max-width: 640px;
   margin: 0 auto 42px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
+/* HERO BUTTONS */
 .hero-actions {
   display: flex;
   gap: 18px;
   justify-content: center;
 }
 
-/* ================= BUTTONS ================= */
 .btn {
   padding: 15px 34px;
   font-size: 15px;
@@ -115,13 +122,11 @@ body {
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s;
-  display: inline-block;
 }
 
 .btn.primary {
   background-color: #004aad;
   color: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
 .btn.primary:hover {
@@ -129,14 +134,13 @@ body {
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.btn.donate {
-  background-color: #e67e22;
-  color: #fff;
+.btn.secondary {
+  background: transparent;
+  border: 2px solid rgba(230,126,34,0.7);
 }
 
-.btn.donate:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+.btn.secondary:hover {
+  background: rgba(230,126,34,0.08);
 }
 
 /* ================= SECTIONS ================= */
@@ -145,31 +149,26 @@ body {
 }
 
 .section h2 {
-  font-size: 38px;
-  font-weight: 800;
-  margin-bottom: 40px;
+  font-size: 36px;
+  margin-bottom: 20px;
   text-align: center;
-  color: #ffd700;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
 }
 
-/* Light / Dark Background */
-.light {
-  background: #f7f7f7;
-  color: #222;
-}
-
-.dark {
-  background: #222;
-  color: #fff;
-}
+/* Light / Dark sections */
+.light { background: #f7f7f7; color: #222; }
+.dark { background: #222; color: #fff; }
 
 /* ================= TOKENOMICS ================= */
+#tokenomics h2 {
+  color: #1e3a5f;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
 .tokenomics-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
+  justify-content: center;
   margin-top: 50px;
 }
 
@@ -182,18 +181,10 @@ body {
   font-weight: 700;
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
   transition: transform 0.4s, box-shadow 0.4s;
-  flex: 1 1 220px;
 }
 
-.token-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.token-card p {
-  font-size: 16px;
-  line-height: 1.6;
-}
+.token-card h3 { font-size: 22px; margin-bottom: 15px; }
+.token-card p { font-size: 16px; line-height: 1.6; }
 
 .token-card:hover {
   transform: translateY(-10px);
@@ -201,12 +192,16 @@ body {
 }
 
 /* ================= ROADMAP ================= */
+#roadmap h2 {
+  color: #1e3a5f;
+  text-shadow: 0 3px 6px rgba(0,0,0,0.25);
+}
+
 .roadmap-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-top: 40px;
   counter-reset: phase;
 }
 
@@ -218,9 +213,8 @@ body {
   text-align: center;
   font-weight: 600;
   box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  transition: transform 0.4s, box-shadow 0.4s;
-  flex: 1 1 200px;
   position: relative;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .roadmap-card::before {
@@ -239,85 +233,25 @@ body {
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.roadmap-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.roadmap-card p {
-  font-size: 16px;
-  line-height: 1.6;
-}
+.roadmap-card h3 { font-size: 22px; margin-bottom: 15px; }
+.roadmap-card p { font-size: 16px; line-height: 1.6; }
 
 .roadmap-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 30px 60px rgba(0,0,0,0.3);
 }
 
-/* ================= CHARITY & BURN ================= */
-.charity-burn-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-.charity-burn-card {
-  background: #004aad;
-  color: #fff;
-  padding: 35px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  flex: 1 1 250px;
-  transition: transform 0.4s, box-shadow 0.4s;
-  position: relative;
-}
-
-.charity-burn-card img {
-  width: 140px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
-}
-
-.charity-burn-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.charity-burn-card p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.charity-burn-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
-}
-
-.charity-burn-card:first-child {
-  background: linear-gradient(135deg, #004aad, #1e88e5);
-}
-.charity-burn-card:first-child h3 { color: #ffd700; }
-.charity-burn-card:first-child p { color: #f0f4ff; }
-
-.charity-burn-card:last-child {
-  background: linear-gradient(135deg, #111, #2b2b2b);
-}
-.charity-burn-card:last-child h3 { color: #ff6b00; }
-.charity-burn-card:last-child p { color: #e0e0e0; }
-
 /* ================= FOUNDER ================= */
+#founder-message, .founder {
+  text-align: center;
+}
+
 .founder-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   gap: 30px;
-  margin-top: 30px;
 }
 
 .founder-img {
@@ -334,29 +268,12 @@ body {
   padding: 30px;
   border-radius: 14px;
   box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-}
-
-.founder-text p {
-  font-size: 17px;
+  font-size: 1.15rem;
+  line-height: 1.6;
   color: #333;
-  line-height: 1.7;
+  text-align: left;
 }
 
-/* ================= CONNECT & DONATE ================= */
-.connect-button, .donate-button {
-  margin-top: 30px;
-  text-align: center;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  padding: 30px;
-  text-align: center;
-  background: #111;
-  color: #aaa;
-}
-
-/* ================= SPLIT SECTIONS ================= */
 .split {
   display: flex;
   gap: 40px;
@@ -372,38 +289,77 @@ footer {
 
 .reverse { flex-direction: row-reverse; }
 
-/* ================= MEDIA LOGOS ================= */
-.media-logos {
+/* ================= CHARITY & BURN ================= */
+#charity-burn h2 { font-size: 38px; margin-bottom: 40px; }
+.charity-burn-cards {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  justify-content: center;
+  gap: 40px;
+}
+
+.charity-burn-card {
+  padding: 35px;
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.charity-burn-card:first-child {
+  background: linear-gradient(135deg, #004aad, #1e88e5);
+}
+
+.charity-burn-card:first-child h3 { color: #ffd700; }
+.charity-burn-card:first-child p { color: #f0f4ff; }
+
+.charity-burn-card:last-child {
+  background: linear-gradient(135deg, #111, #2b2b2b);
+}
+
+.charity-burn-card:last-child h3 { color: #ff6b00; }
+.charity-burn-card:last-child p { color: #e0e0e0; }
+
+.charity-burn-card img {
+  width: 140px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+}
+
+.charity-burn-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
+/* ================= CONNECT & DONATE BUTTONS ================= */
+.connect-button, .donate-button {
   margin-top: 30px;
+  text-align: center;
 }
 
-.media-logos img {
-  width: 130px;
-  filter: grayscale(100%);
-  transition: all 0.3s;
-}
+.btn.donate { background-color: #e67e22; color: #fff; padding: 16px 32px; }
+.btn.donate:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
 
-.media-logos img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.05);
+.btn.primary { background-color: #004aad; color: #fff; padding: 16px 32px; }
+.btn.primary:hover { transform: translateY(-3px); box-shadow: 0 6px 15px rgba(0,0,0,0.2); }
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 30px;
+  text-align: center;
+  background: #111;
+  color: #aaa;
 }
 
 /* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .burn-logo { position: relative; top: auto; right: auto; transform: none; margin: 40px auto 0; display: block; width: 220px; }
-}
-
 @media (max-width: 768px) {
-  .hero { padding: 60px 30px; }
-  .hero-inner { text-align: center; }
-  .brand { justify-content: center; }
-  .hero-title { font-size: 42px; margin: auto; }
-  .hero-desc { font-size: 17px; margin: auto; }
-  .hero-actions { justify-content: center; }
-  .founder-container, .split, .tokenomics-cards, .roadmap-cards, .charity-burn-cards, .airdrop-steps { flex-direction: column; align-items: center; }
-  .split img { width: 100%; }
+  .founder-container, .split, .tokenomics-cards, .roadmap-cards, .charity-burn-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-title { font-size: 42px; }
+  .hero-desc { font-size: 17px; }
+  .main-logo { width: 110px; }
+  .brand-text strong { font-size: 22px; }
 }
