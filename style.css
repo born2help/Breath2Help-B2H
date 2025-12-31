@@ -1,430 +1,291 @@
-/* ================= GLOBAL ================= */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-  color: #222;
-  background: #fff;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0b132b;
+  color: #ffffff;
+  line-height: 1.7;
+}
+
+/* ================= COMMON ================= */
+.section {
+  padding: 80px 10%;
+}
+
+.section.light {
+  background: #f8f9fb;
+  color: #111;
+}
+
+.section.dark {
+  background: #0b132b;
+}
+
+h2 {
+  font-size: 2.6rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #ff8c00;
+}
+
+p {
+  font-size: 1.05rem;
+  max-width: 900px;
+  margin: auto;
+  opacity: 0.9;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  padding: 14px 34px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.btn.primary {
+  background: #ff8c00;
+  color: #fff;
+}
+
+.btn.donate {
+  background: #ff4500;
+  color: #fff;
 }
 
 /* ================= HERO ================= */
 .hero {
   position: relative;
   min-height: 100vh;
+  background: url("images/hero.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
-  background-color: #0b1a2b;
-  overflow: hidden;
+  text-align: center;
 }
 
 .hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-  text-align: center;
+  max-width: 900px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 16px;
 }
 
-.hero-title {
-  text-align: center;
-  line-height: 1.2;
-}
-
-.hero-title .main-line {
-  display: block;
-  font-size: 60px;
-  font-weight: 800;
-  color: #e67e22; /* main orange color */
-}
-
-.hero-title .sub-line {
-  display: block;
-  font-size: 32px;
-  font-weight: 600;
-  color: #f1f1f1; /* softer sub-line color */
-  margin-top: 8px;
-}
-  
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-title .main-line {
-    font-size: 42px;
-  }
-
-  .hero-title .sub-line {
-    font-size: 22px;
-  }
-}
-
+/* Burn logo */
 .burn-logo {
   position: absolute;
-  top: 50%;
   right: 6%;
+  top: 50%;
   transform: translateY(-50%);
-  width: 280px;
-  max-width: 45vw;
+  width: 220px;
   opacity: 0.95;
-  z-index: 1;
-  filter: drop-shadow(0 10px 28px rgba(0,0,0,0.6));
-  pointer-events: none;
 }
 
-/* Brand & main logo */
+/* Brand */
 .brand {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 28px;
+  gap: 18px;
+  margin-bottom: 25px;
 }
 
 .main-logo {
-  width: 140px;
-  height: auto;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
+  width: 90px;
 }
 
 .brand-text span {
-  font-size: 18px;
-  color: #f3efe6;
-  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  display: block;
+  color: #ffcc80;
 }
 
 .brand-text strong {
-  font-size: 32px;
-  color: #e67e22;
-  font-weight: 700;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  font-size: 1.3rem;
+  color: #ff8c00;
 }
 
-/* Hero Title */
+/* Hero text */
 .hero-title {
-  font-size: 60px;
-  font-weight: 800;
-  color: #e67e22;
-  line-height: 1.15;
+  font-size: 3.2rem;
+  color: #ff8c00;
   margin-bottom: 20px;
 }
 
 .hero-desc {
-  font-size: 19px;
-  line-height: 1.75;
+  font-size: 1.15rem;
+  margin-bottom: 30px;
   color: #f1f1f1;
-  max-width: 680px;
-  margin: 0 auto 35px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
-/* Hero Buttons */
 .hero-actions {
   display: flex;
   justify-content: center;
-  gap: 18px;
+  gap: 20px;
   flex-wrap: wrap;
-}
-
-.btn {
-  padding: 15px 34px;
-  font-size: 15px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.btn.primary {
-  background-color: #004aad;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-}
-
-.btn.secondary {
-  background: transparent;
-  border: 2px solid rgba(230,126,34,0.7);
-  color: #fff;
-}
-
-.btn.secondary:hover {
-  background: rgba(230,126,34,0.1);
-}
-
-/* ================= SECTIONS ================= */
-.section {
-  padding: 80px 20px;
-}
-
-.section h2 {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 40px;
-  font-weight: 800;
-  color: #e67e22;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-.light {
-  background: #f7f7f7;
-  color: #222;
-}
-
-.dark {
-  background: #222;
-  color: #fff;
 }
 
 /* ================= TOKENOMICS ================= */
 .tokenomics-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
 }
 
 .token-card {
-  background: linear-gradient(145deg, #ffd700, #ffcf40);
-  color: #004aad;
-  padding: 30px 25px;
-  border-radius: 16px;
+  background: #ffffff;
+  color: #111;
+  padding: 25px;
+  border-radius: 14px;
   text-align: center;
-  font-weight: 700;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  transition: transform 0.4s, box-shadow 0.4s;
-  max-width: 300px;
-}
-
-.token-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-}
-
-.token-card p {
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 500;
-}
-
-.token-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
 }
 
 /* ================= ROADMAP ================= */
+#roadmap h2 {
+  color: #ff8c00;
+}
+
 .roadmap-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  counter-reset: phase;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
 }
 
 .roadmap-card {
-  background: linear-gradient(145deg, #004aad, #0070ff);
-  color: #fff;
-  padding: 30px 25px;
-  border-radius: 16px;
-  text-align: center;
-  font-weight: 600;
-  position: relative;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-  transition: transform 0.4s, box-shadow 0.4s;
-  max-width: 280px;
-}
-
-.roadmap-card::before {
-  content: counter(phase);
-  counter-increment: phase;
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #e67e22;
-  color: #004aad;
-  font-weight: 700;
-  font-size: 18px;
-  padding: 12px 20px;
-  border-radius: 50%;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.roadmap-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.roadmap-card p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.roadmap-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.3);
-}
-
-/* ================= CHARITY / BURN ================= */
-.charity-burn-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.charity-burn-card {
-  background-color: #004aad;
-  color: #fff;
+  background: #111b3d;
   padding: 25px;
-  border-radius: 12px;
-  flex: 1 1 250px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
-  max-width: 280px;
+  border-radius: 14px;
 }
 
-.charity-burn-card img {
-  width: 140px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+/* ================= GOVERNANCE / CONSTITUTION ================= */
+#governance p,
+#constitution p,
+#why p {
+  font-size: 1.15rem;
 }
 
-.charity-burn-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.charity-burn-card p {
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.charity-burn-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
-}
-
-/* ================= FOUNDER ================= */
+/* ================= FOUNDER MESSAGE ================= */
 .founder-container {
   display: flex;
   align-items: center;
   gap: 30px;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .founder-img {
-  width: 220px;
-  height: 220px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
-  border: 4px solid #004aad;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  object-fit: cover;
 }
 
 .founder-text {
-  max-width: 700px;
-  background: #fff;
-  padding: 30px;
-  border-radius: 14px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  max-width: 550px;
+  font-size: 1.1rem;
 }
 
-.founder-text p {
-  font-size: 17px;
-  line-height: 1.7;
-  color: #333;
-}
-
-/* ================= MEDIA / SOCIAL ================= */
-.media-logos {
+/* ================= FOUNDER HIGHLIGHT ================= */
+.split {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
   flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 30px;
 }
 
-.media-logos img {
-  width: 130px;
-  height: auto;
-  filter: grayscale(100%);
-  transition: all 0.3s;
+.split.reverse {
+  flex-direction: row-reverse;
 }
 
-.media-logos img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.05);
+.founder-square {
+  width: 320px;
+  border-radius: 16px;
 }
 
-/* ================= CONNECT & DONATE ================= */
-.connect-button, .donate-button {
-  margin-top: 20px;
+/* ================= CHARITY ================= */
+.charity-burn-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.charity-burn-card {
+  background: #111b3d;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.charity-burn-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.charity-burn-card h3 {
+  padding: 15px;
+  color: #ff8c00;
+}
+
+.charity-burn-card p {
+  padding: 0 15px 20px;
+}
+
+/* ================= V3 ================= */
+.v3-logo-container {
   text-align: center;
 }
 
-.btn.donate {
-  background-color: #e67e22;
-  color: #fff;
-  padding: 16px 32px;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: all 0.3s;
+.v3-logo-container img {
+  width: 180px;
 }
 
-.btn.donate:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+/* ================= SOCIAL ================= */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-icons img {
+  width: 36px;
+}
+
+/* ================= CONNECT / DONATE ================= */
+.connect-button,
+.donate-button {
+  text-align: center;
+  margin-top: 30px;
 }
 
 /* ================= FOOTER ================= */
 footer {
   padding: 30px;
   text-align: center;
-  background: #111;
-  color: #aaa;
+  background: #050816;
+  font-size: 0.9rem;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .hero {
-    padding: 60px 20px;
-  }
-
   .hero-title {
-    font-size: 42px;
-  }
-
-  .hero-desc {
-    font-size: 17px;
-  }
-
-  .brand-text strong {
-    font-size: 26px;
-  }
-
-  .token-card, .roadmap-card, .charity-burn-card {
-    flex: 1 1 90%;
-  }
-
-  .founder-container {
-    flex-direction: column;
+    font-size: 2.4rem;
   }
 
   .burn-logo {
-    position: relative;
-    top: auto;
-    right: auto;
+    position: static;
     transform: none;
-    margin: 20px auto;
+    margin: 30px auto;
     display: block;
-    width: 220px;
+  }
+
+  .brand {
+    flex-direction: column;
   }
 }
