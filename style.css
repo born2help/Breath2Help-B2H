@@ -2293,3 +2293,22 @@ section p {
     font-size: 15px;
   }
 }
+
+.connect-card,
+.donate-card,
+.social-card {
+  background: linear-gradient(145deg, #0f1230, #1a1c3f) !important;
+  color: #f1f1f1 !important;
+}
+
+.connect-card p,
+.donate-card p,
+.social-card p {
+  color: #f1f1f1 !important;
+}
+
+.connect-card h3,
+.donate-card h3,
+.social-card h3 {
+  color: #ffffff !important;
+}
