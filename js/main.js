@@ -1,39 +1,25 @@
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const elements = document.querySelectorAll('.founder-image-wrapper, .founder-message');
+document.addEventListener("DOMContentLoaded", function() {
+  const elements = document.querySelectorAll('.founder-image-wrapper, .founder-message, #founder');
 
-  function checkVisibility() {
+  // Initially set visible for in-view content
+  elements.forEach(el => {
+    el.style.opacity = 0;
+    el.style.transform = "translateY(50px)";
+    el.style.transition = "opacity 0.8s ease-out, transform 0.8s ease-out";
+  });
+
+  function revealOnScroll() {
     const triggerBottom = window.innerHeight * 0.85;
 
     elements.forEach(el => {
       const boxTop = el.getBoundingClientRect().top;
       if (boxTop < triggerBottom) {
-        el.classList.add('founder-visible');
+        el.style.opacity = 1;
+        el.style.transform = "translateY(0)";
       }
     });
   }
 
-  window.addEventListener('scroll', checkVisibility);
-  checkVisibility(); // run once on page load
-});
-</script>
-
-// Fade-in on scroll for founder section
-document.addEventListener("DOMContentLoaded", function() {
-  const founderSection = document.querySelector("#founder");
-  const options = { threshold: 0.1 };
-  
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = "translateY(0)";
-        observer.unobserve(entry.target);
-      }
-    });
-  }, options);
-
-  founderSection.style.opacity = 0;
-  founderSection.style.transform = "translateY(50px)";
-  observer.observe(founderSection);
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Run on page load
 });
