@@ -1489,6 +1489,13 @@ section p {
   }
 }
 
+#founder {
+  display: flex; /* or block */
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
 /* ================= V3 & CHARITY SECTION ================= */
 
 #v3-charity h2 {
