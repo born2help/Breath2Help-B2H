@@ -1766,6 +1766,85 @@ Css
   color: #f1f1f1;
 }
 
+/* ================= FIXED AIRDROP / LAUNCH ================= */
+#airdrop {
+  padding: 80px 20px;
+  background-color: #0f1230; /* dark blue/black background consistent */
+  text-align: center;
+  color: #f1f1f1; /* default text for all p, span inside this section */
+}
+
+#airdrop h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #ff8c00; /* hero orange */
+  margin-bottom: 20px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
+}
+
+#airdrop p {
+  font-size: 18px;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+  color: #f1f1f1; /* ensure readable text */
+}
+
+/* Steps / Boxes */
+.airdrop-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.airdrop-steps .step {
+  background-color: #1b2450; /* darker card background */
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+  color: #f1f1f1; /* make sure text inside box is visible */
+}
+
+.airdrop-steps .step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
+}
+
+.airdrop-steps .step h3 {
+  font-size: 24px;
+  color: #ff8c00;
+  margin-bottom: 12px;
+}
+
+.airdrop-steps .step p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f1f1f1; /* ensure text is readable */
+}
+
+/* If there is another subsection like Eligibility, Rewards, Timeline */
+.airdrop-subsection p,
+.airdrop-subsection span {
+  color: #f1f1f1; /* make text readable on dark bg */
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  #airdrop h2 {
+    font-size: 36px;
+  }
+
+  .airdrop-steps .step h3 {
+    font-size: 20px;
+  }
+
+  .airdrop-steps .step p {
+    font-size: 15px;
+  }
+}
 /* RESPONSIVE */
 @media (max-width: 768px) {
   #airdrop h2 {
