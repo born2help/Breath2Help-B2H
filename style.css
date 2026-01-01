@@ -2245,3 +2245,92 @@ section p {
 #connect-donate .connect-donate-cards i {
   color: #e67e22 !important;
 }
+
+/* ===== CONNECT & DONATE / SOCIAL MEDIA SECTION FIX ===== */
+#connect-donate.section.dark {
+  background: linear-gradient(135deg, #0f1230, #111b3d) !important; /* dark gradient */
+  color: #ffffff !important; /* headings and text */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* Heading */
+#connect-donate h2 {
+  color: #e67e22 !important; /* hero orange */
+  font-weight: 800;
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+
+/* Paragraph */
+#connect-donate p {
+  color: #f1f1f1 !important;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 40px;
+}
+
+/* Cards */
+#connect-donate .connect-donate-cards > div {
+  background: #ffffff; /* keep cards white */
+  border-radius: 14px;
+  padding: 30px 20px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#connect-donate .connect-donate-cards > div:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.18);
+}
+
+/* Card Headings */
+#connect-donate .connect-donate-cards h3 {
+  color: #0f1230 !important; /* dark text inside cards */
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+/* Card Paragraphs */
+#connect-donate .connect-donate-cards p {
+  color: #444 !important; /* readable text */
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* Card Icons */
+#connect-donate .connect-donate-cards i {
+  color: #e67e22 !important; /* hero orange */
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+/* Social Media Icons */
+#connect-donate .social-icons a i {
+  color: #0f1230; /* dark for visibility */
+  margin: 0 8px;
+  font-size: 22px;
+  transition: transform 0.3s;
+}
+
+#connect-donate .social-icons a:hover i {
+  transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #connect-donate h2 {
+    font-size: 36px;
+  }
+
+  #connect-donate .connect-donate-cards h3 {
+    font-size: 20px;
+  }
+
+  #connect-donate .connect-donate-cards p {
+    font-size: 15px;
+  }
+}
