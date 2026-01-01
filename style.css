@@ -2215,153 +2215,81 @@ section p {
   }
 }
 
-/* ===== FIX: CONNECT / DONATE VISIBILITY OVERRIDE ===== */
-
-#connect-donate.section.dark {
-  background: linear-gradient(135deg, #0f1230, #111b3d) !important;
+/* ================= CONNECT & DONATE / SOCIAL MEDIA CARDS ================= */
+.connect-donate-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-items: center;
 }
 
-#connect-donate.section.dark p,
-#connect-donate.section.dark h2,
-#connect-donate.section.dark h3 {
-  color: #ffffff !important;
-}
-
-/* Card background fix */
-#connect-donate .connect-donate-cards > div {
-  background: #ffffff !important;
-}
-
-/* Card text fix */
-#connect-donate .connect-donate-cards h3 {
-  color: #0f1230 !important;
-}
-
-#connect-donate .connect-donate-cards p {
-  color: #444 !important;
-}
-
-/* Icons fix */
-#connect-donate .connect-donate-cards i {
-  color: #e67e22 !important;
-}
-
-/* ===== CONNECT & DONATE / SOCIAL MEDIA SECTION FIX ===== */
-#connect-donate.section.dark {
-  background: linear-gradient(135deg, #0f1230, #111b3d) !important; /* dark gradient */
-  color: #ffffff !important; /* headings and text */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-/* Heading */
-#connect-donate h2 {
-  color: #e67e22 !important; /* hero orange */
-  font-weight: 800;
-  font-size: 42px;
-  margin-bottom: 30px;
-}
-
-/* Paragraph */
-#connect-donate p {
-  color: #f1f1f1 !important;
-  font-size: 18px;
-  line-height: 1.8;
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-
-/* Cards */
-#connect-donate .connect-donate-cards > div {
-  background: #ffffff; /* keep cards white */
-  border-radius: 14px;
+.connect-card,
+.donate-card,
+.social-card {
+  background: linear-gradient(145deg, #0f1230, #1a1c3f); /* dark blue gradient */
   padding: 30px 20px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-#connect-donate .connect-donate-cards > div:hover {
+.connect-card:hover,
+.donate-card:hover,
+.social-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.18);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.35);
 }
 
-/* Card Headings */
-#connect-donate .connect-donate-cards h3 {
-  color: #0f1230 !important; /* dark text inside cards */
-  font-size: 22px;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-/* Card Paragraphs */
-#connect-donate .connect-donate-cards p {
-  color: #444 !important; /* readable text */
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* Card Icons */
-#connect-donate .connect-donate-cards i {
-  color: #e67e22 !important; /* hero orange */
+.connect-card i,
+.donate-card i,
+.social-card i {
   font-size: 36px;
+  color: #ff8c00; /* hero orange for icons */
   margin-bottom: 15px;
 }
 
-/* Social Media Icons */
-#connect-donate .social-icons a i {
-  color: #0f1230; /* dark for visibility */
-  margin: 0 8px;
+.connect-card h3,
+.donate-card h3,
+.social-card h3 {
   font-size: 22px;
-  transition: transform 0.3s;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ffffff; /* white for readability */
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
 }
 
-#connect-donate .social-icons a:hover i {
-  transform: scale(1.2);
+.connect-card p,
+.donate-card p,
+.social-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f1f1f1; /* light color for contrast */
+}
+
+/* Social media icons */
+.social-icons a {
+  margin: 0 8px;
+  color: #ff8c00; /* hero orange */
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  #connect-donate h2 {
-    font-size: 36px;
-  }
-
-  #connect-donate .connect-donate-cards h3 {
+  .connect-card h3,
+  .donate-card h3,
+  .social-card h3 {
     font-size: 20px;
   }
 
-  #connect-donate .connect-donate-cards p {
+  .connect-card p,
+  .donate-card p,
+  .social-card p {
     font-size: 15px;
   }
-}
-
-/* ===== CONNECT & DONATE / SOCIAL MEDIA CARDS FIX ===== */
-#connect-donate.section.dark .connect-donate-cards > div {
-  background: #fdfdfd; /* slightly off-white for better contrast */
-  color: #111 !important; /* text inside cards dark for readability */
-  padding: 30px 25px;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.15);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-#connect-donate .connect-donate-cards h3 {
-  color: #0f1230 !important; /* dark heading inside card */
-}
-
-#connect-donate .connect-donate-cards p {
-  color: #111 !important; /* dark text inside card */
-  font-size: 16px;
-  line-height: 1.8;
-}
-
-#connect-donate .connect-donate-cards i {
-  color: #e67e22 !important; /* hero orange for icons */
-}
-
-/* Hover effect */
-#connect-donate .connect-donate-cards > div:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.25);
 }
