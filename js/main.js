@@ -1,19 +1,19 @@
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const elements = document.querySelectorAll('.founder-image-wrapper, .founder-message');
-
-  function checkVisibility() {
-    const triggerBottom = window.innerHeight * 0.85;
-
-    elements.forEach(el => {
-      const boxTop = el.getBoundingClientRect().top;
-      if (boxTop < triggerBottom) {
-        el.classList.add('founder-visible');
+// Fade-in on scroll for founder section
+document.addEventListener("DOMContentLoaded", function() {
+  const founderSection = document.querySelector("#founder");
+  const options = { threshold: 0.1 };
+  
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) {
+        entry.target.style.opacity = 1;
+        entry.target.style.transform = "translateY(0)";
+        observer.unobserve(entry.target);
       }
     });
-  }
+  }, options);
 
-  window.addEventListener('scroll', checkVisibility);
-  checkVisibility(); // run once on page load
+  founderSection.style.opacity = 0;
+  founderSection.style.transform = "translateY(50px)";
+  observer.observe(founderSection);
 });
-</script>
