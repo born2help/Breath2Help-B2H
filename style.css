@@ -2033,3 +2033,88 @@ section p {
     font-size: 22px;
   }
 }
+
+/* ================= CONNECT & DONATE ================= */
+
+#connect-donate {
+  padding: 90px 20px;
+  background: linear-gradient(135deg, #0f1230, #111b3d);
+  text-align: center;
+}
+
+#connect-donate h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #e67e22;
+  margin-bottom: 25px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
+}
+
+.connect-desc {
+  max-width: 780px;
+  margin: 0 auto 50px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #f1f1f1;
+}
+
+/* BUTTONS */
+.connect-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.connect-actions .btn {
+  padding: 16px 34px;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.35s ease;
+}
+
+/* Primary */
+.connect-actions .btn.primary {
+  background: #e67e22;
+  color: #fff;
+}
+
+.connect-actions .btn.primary:hover {
+  background: #ff9f43;
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(230,126,34,0.45);
+}
+
+/* Secondary */
+.connect-actions .btn.secondary {
+  background: transparent;
+  border: 2px solid #e67e22;
+  color: #e67e22;
+}
+
+.connect-actions .btn.secondary:hover {
+  background: #e67e22;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 14px 32px rgba(230,126,34,0.45);
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  #connect-donate h2 {
+    font-size: 34px;
+  }
+
+  .connect-desc {
+    font-size: 16px;
+  }
+
+  .connect-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
