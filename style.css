@@ -1290,3 +1290,55 @@ section p {
   line-height: 1.8;
   color: #333; /* dark text to be visible */
 }
+
+/* ================= FOUNDER SECTION ================= */
+#founder {
+  background-color: #f0f0f0; /* light gray to make content visible */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#founder h2 {
+  color: #e67e22; /* hero orange */
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+.founder-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.founder-image-wrapper {
+  flex: 1 1 300px;
+  max-width: 450px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.founder-image-wrapper:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
+}
+
+.founder-image {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  display: block;
+}
+
+.founder-message {
+  flex: 2 1 400px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.founder-message p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333; /* dark text to be visible */
+}
