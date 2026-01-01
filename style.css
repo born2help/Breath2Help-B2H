@@ -1837,3 +1837,131 @@ section p {
     </div>
   </div>
 </section>
+
+/* ================= CONNECT / DONATE / SOCIAL MEDIA ================= */
+#connect-donate {
+  padding: 80px 20px;
+  background-color: #0f1230; /* dark background for contrast */
+  text-align: center;
+}
+
+#connect-donate h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #e67e22; /* hero orange */
+  margin-bottom: 25px;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
+}
+
+#connect-donate p {
+  font-size: 18px;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  color: #f1f1f1;
+  line-height: 1.8;
+}
+
+/* Action Cards */
+.connect-donate-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.connect-card, .donate-card, .social-card {
+  background-color: #1b2450; /* dark card */
+  padding: 30px 20px;
+  border-radius: 14px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #f1f1f1;
+}
+
+.connect-card:hover, .donate-card:hover, .social-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.35);
+}
+
+/* Icons */
+.connect-card i, .donate-card i, .social-card i {
+  font-size: 40px;
+  color: #ff8c00;
+  margin-bottom: 15px;
+}
+
+/* Card Titles */
+.connect-card h3, .donate-card h3, .social-card h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #ff8c00;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Card Paragraphs */
+.connect-card p, .donate-card p, .social-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f1f1f1;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.connect-card .btn, .donate-card .btn {
+  text-decoration: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.connect-card .btn.secondary {
+  background-color: #333;
+  color: #ff8c00;
+}
+
+.connect-card .btn.secondary:hover {
+  background-color: #ff8c00;
+  color: #111;
+}
+
+.donate-card .btn.primary {
+  background-color: #ff8c00;
+  color: #111;
+}
+
+.donate-card .btn.primary:hover {
+  background-color: #e67e22;
+}
+
+/* Social Media Icons */
+.social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 24px;
+  color: #ff8c00;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #e67e22;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  #connect-donate h2 {
+    font-size: 36px;
+  }
+  
+  .connect-card h3, .donate-card h3, .social-card h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #connect-donate p, .connect-card p, .donate-card p, .social-card p {
+    font-size: 15px;
+  }
+}
