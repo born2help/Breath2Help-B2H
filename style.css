@@ -2312,3 +2312,90 @@ section p {
 .social-card h3 {
   color: #ffffff !important;
 }
+
+/* ================= FOOTER ================= */
+#footer {
+  background: linear-gradient(135deg, #0f1230, #1a1f4b);
+  color: #fff;
+  padding: 60px 20px 30px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-brand p {
+  max-width: 300px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ddd;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #ff8c00; /* hero orange */
+}
+
+.footer-social .social-icons a {
+  display: inline-block;
+  margin: 0 8px;
+  color: #fff;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-social .social-icons a:hover {
+  color: #ff8c00;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links ul li,
+  .footer-social .social-icons a {
+    margin: 6px 0;
+  }
+}
