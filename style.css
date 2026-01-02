@@ -72,7 +72,7 @@ p {
 }
 
 /* Burn logo – dominant and right aligned */
-.burn-logo {
+.burn.logo {
   position: absolute;
   top: 50%;
   right: 6%;
@@ -576,27 +576,6 @@ p {
   }
 }
 
-/* ================= FOUNDER MESSAGE ================= */
-.founder-container {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.founder-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.founder-text {
-  max-width: 550px;
-  font-size: 1.1rem;
-}
-
 /* ================= CHARITY ================= */
 .charity-burn-cards {
   display: grid;
@@ -666,7 +645,7 @@ footer {
     font-size: 2.4rem;
   }
 
-  .burn-logo {
+  .burn.logo {
     position: static;
     transform: none;
     margin: 30px auto;
@@ -701,14 +680,6 @@ footer {
 }
 
 /* ================= STEP 6 — FOUNDER & CHARITY IMAGE RESIZING ================= */
-
-.founder-img {
-  width: 180px; /* reduced from full width */
-  height: 180px;
-  border-radius: 50%;
-  border: 4px solid #ffd700;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-}
 
 .charity-burn-card img {
   width: 120px; /* smaller & uniform */
@@ -1237,182 +1208,6 @@ section p {
 .founder-image-wrapper:hover {
   transform: scale(1.05) translateY(-5px);
   box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-/* ================= FOUNDER SECTION ================= */
-#founder {
-  background-color: #f0f0f0; /* light gray to make content visible */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#founder h2 {
-  color: #e67e22; /* hero orange */
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 50px;
-}
-
-.founder-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-
-.founder-image-wrapper {
-  flex: 1 1 300px;
-  max-width: 450px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-.founder-image {
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
-
-.founder-message {
-  flex: 2 1 400px;
-  max-width: 600px;
-  text-align: left;
-}
-
-.founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333; /* dark text to be visible */
-}
-
-/* ================= FOUNDER SECTION ================= */
-#founder {
-  background-color: #f0f0f0; /* light gray to make content visible */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#founder h2 {
-  color: #e67e22; /* hero orange */
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 50px;
-}
-
-.founder-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-
-.founder-image-wrapper {
-  flex: 1 1 300px;
-  max-width: 450px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-.founder-image {
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
-
-.founder-message {
-  flex: 2 1 400px;
-  max-width: 600px;
-  text-align: left;
-}
-
-.founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333; /* dark text to be visible */
-}
-
-/* ================= FOUNDER SECTION ================= */
-#founder {
-  background-color: #f0f0f0;
-  padding: 100px 20px;
-  text-align: center;
-}
-
-#founder h2 {
-  color: #e67e22;
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 60px;
-}
-
-/* Container for image + message */
-.founder-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-}
-
-/* Founder Image */
-.founder-image-wrapper {
-  flex: 1 1 400px;
-  max-width: 550px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-}
-
-.founder-image {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  display: block;
-  object-fit: cover;
-}
-
-/* Founder Message */
-.founder-message {
-  flex: 1 1 450px;
-  max-width: 600px;
-  text-align: left;
-  position: relative;
-}
-
-/* Small round logo above message */
-.founder-logo {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 20px;
-}
-
-.founder-logo img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 3px solid #e67e22;
-}
-
-/* Message text */
-.founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333;
 }
 
 /* ================= FOUNDER FADE-IN ================= */
