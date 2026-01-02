@@ -1,4 +1,9 @@
-/* ================= RESET ================= */
+/* ===============================
+   B2H GLOBAL FOUNDATION STYLE
+   Modernized, responsive, cleaned
+   =============================== */
+
+/* ------------------- Reset & Base ------------------- */
 * {
   margin: 0;
   padding: 0;
@@ -6,1708 +11,298 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #0b132b;
-  color: #ffffff;
-  line-height: 1.7;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #1b1b1b;
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
-/* ================= COMMON ================= */
-.section {
-  padding: 80px 10%;
-}
-
-.section.light {
-  background: #f8f9fb;
-  color: #111;
-}
-
-.section.dark {
-  background: #0b132b;
-}
-
-h2 {
-  font-size: 2.6rem;
-  margin-bottom: 25px;
-  text-align: center;
-  color: #ff8c00;
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 p {
-  font-size: 1.05rem;
-  max-width: 900px;
-  margin: auto;
-  opacity: 0.9;
-}
-
-/* ================= BUTTONS ================= */
-.btn {
-  padding: 14px 34px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-}
-
-.btn.primary {
-  background: #ff8c00;
-  color: #fff;
-}
-
-.btn.donate {
-  background: #ff4500;
-  color: #fff;
-}
-
-/* ================= HERO SECTION STYLING ================= */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background-color: #0b1a2b; /* dark hero background */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 30px;
-  overflow: hidden;
-}
-
-/* Burn logo – dominant and right aligned */
-.burn.logo {
-  position: absolute;
-  top: 50%;
-  right: 6%;
-  transform: translateY(-50%);
-  width: 280px;
-  max-width: 45vw;
-  opacity: 0.95;
-  z-index: 1;
-  filter: drop-shadow(0 10px 28px rgba(0,0,0,0.6));
-  pointer-events: none;
-}
-
-/* Hero inner content – above burn logo */
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-  text-align: center;
-}
-
-/* Brand section */
-.brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-.main-logo {
-  width: 120px;
-  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
-}
-
-.brand-text span {
-  font-size: 18px;
-  color: #f3efe6; /* soft ivory */
-  font-weight: 500;
-}
-
-.brand-text strong {
-  font-size: 28px;
-  color: #e67e22; /* bright orange */
-  font-weight: 800;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-}
-
-/* Hero heading */
-.hero-title {
-  margin-bottom: 25px;
-  line-height: 1.2;
-}
-
-/* Main line – bigger & bold */
-.hero-title .main-line {
-  display: block;
-  font-size: 60px;
-  font-weight: 900;
-  color: #e67e22; /* orange/gold main */
-  text-shadow: 0 4px 14px rgba(0,0,0,0.65);
-}
-
-/* Sub-line – smaller & secondary */
-.hero-title .sub-line {
-  display: block;
-  font-size: 32px;
-  font-weight: 600;
-  color: #f3efe6; /* soft ivory */
-  margin-top: 6px;
-}
-
-/* Hero description */
-.hero-desc {
-  font-size: 19px;
-  line-height: 1.75;
-  color: #e8e8e8;
-  max-width: 640px;
-  margin: 20px auto 35px;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
-}
-
-/* Hero buttons */
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.btn {
-  padding: 16px 34px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.btn.primary {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  background-color: #cf6d17;
-}
-
-.btn.secondary {
-  background-color: transparent;
-  border: 2px solid rgba(230,126,34,0.8);
-  color: #fff;
-}
-
-.btn.secondary:hover {
-  background-color: rgba(230,126,34,0.08);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .burn-logo {
-    position: relative;
-    width: 220px;
-    margin: 40px auto 0;
-  }
-  
-  .hero-title .main-line {
-    font-size: 46px;
-  }
-  
-  .hero-title .sub-line {
-    font-size: 24px;
-  }
-  
-  .hero-desc {
-    font-size: 17px;
-  }
-  
-  .btn {
-    padding: 14px 28px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-title .main-line {
-    font-size: 36px;
-  }
-  
-  .hero-title .sub-line {
-    font-size: 20px;
-  }
-  
-  .hero-desc {
-    font-size: 16px;
-  }
-}
-
-/* ================= TOKENOMICS ================= */
-#tokenomics {
-  padding: 80px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-#tokenomics h2 {
-  font-size: 42px;
-  color: #e67e22; /* orange heading */
-  margin-bottom: 20px;
-  font-weight: 800;
-}
-
-#tokenomics p {
-  font-size: 18px;
-  line-height: 1.8;
-  max-width: 780px;
-  margin: 20px auto 50px;
+  margin-bottom: 1rem;
   color: #333;
 }
 
-/* Token visual bars */
-.tokenomics-visual {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 50px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.token-bar {
-  width: 200px;
-  text-align: left;
-}
-
-.token-bar span {
+img {
+  max-width: 100%;
   display: block;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: #111;
 }
 
-.token-bar .bar {
-  width: 100%;
-  height: 18px;
-  background: #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  margin-bottom: 6px;
-}
-
-.token-bar .fill {
-  height: 100%;
-  border-radius: 12px;
-}
-
-/* Token percentage text */
-.token-bar strong {
-  display: block;
-  text-align: right;
-  font-size: 16px;
-  color: #111;
-}
-
-/* Token Cards */
-.tokenomics-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-}
-
-.token-card {
-  background: #ffffff;
-  color: #111;
-  padding: 25px;
-  border-radius: 14px;
-  text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.token-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
-}
-
-.token-card h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
-  color: #e67e22;
-}
-
-.token-card p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #555;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .tokenomics-visual {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .token-bar {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 600px) {
-  #tokenomics h2 {
-    font-size: 34px;
-  }
-
-  .token-card h3 {
-    font-size: 18px;
-  }
-
-  .token-card p {
-    font-size: 15px;
-  }
-}
-
-/* ================= ROADMAP ================= */
-#roadmap {
-  padding: 100px 20px;
-  background-color: #0f1230; /* solid dark background */
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-#roadmap h2 {
-  color: #ff8c00; /* bright orange */
-  font-weight: 800;
-  font-size: 46px;
-  margin-bottom: 60px;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
-}
-
-.roadmap-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-  justify-items: center;
-}
-
-.roadmap-card {
-  background-color: #1a1d4a; /* solid dark blue */
-  padding: 35px 25px;
-  border-radius: 18px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
-  transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 320px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 2;
-}
-
-/* Headings inside cards */
-.roadmap-card h3, .roadmap-card .phase-label {
-  color: #ff8c00;  /* bright orange */
-  font-weight: 800;
-  text-shadow: none;
-  margin-bottom: 16px;
-  font-size: 24px;
-}
-
-/* Paragraph text inside cards */
-.roadmap-card p {
-  color: #ffffff !important; /* force pure white */
-  font-size: 16px;
-  line-height: 1.8;
-  text-align: center;
-  margin: 0;
-}
-
-/* Hover effect */
-.roadmap-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .roadmap-card {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 600px) {
-  #roadmap h2 {
-    font-size: 36px;
-  }
-  .roadmap-card h3 {
-    font-size: 20px;
-  }
-  .roadmap-card p {
-    font-size: 15px;
-  }
-}
-
-/* ================= GOVERNANCE & CONSTITUTION ================= */
-
-/* Section headings */
-#governance h2,
-#constitution h2 {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 40px;
-  text-align: center;
-  color: #e67e22; /* hero orange */
-  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
-}
-
-/* Card common styles */
-.governance-card,
-.constitution-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 25px;
-  border-radius: 16px;
-  max-width: 900px;
-  margin: 0 auto 40px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  line-height: 1.8;
-  font-size: 18px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-/* Light and dark background fixes */
-.governance-card {
-  background-color: #f5f5f5;
-  color: #111; /* ensure dark text */
-}
-
-.constitution-card {
-  background-color: #111b3d;
-  color: #f1f1f1; /* ensure bright text */
-}
-
-/* Card icons */
-.card-icon {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 20px;
-}
-
-.card-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Paragraph styling */
-#governance p,
-#constitution p {
-  margin: 0;
-  max-width: 850px;
-  font-size: 18px;
-  line-height: 1.8;
-  color: inherit; /* ensures it uses correct card color */
-}
-
-/* Highlight strong text */
-#governance strong,
-#constitution strong {
-  color: #e67e22; /* orange highlight */
-}
-
-/* ================= HOVER ANIMATION ================= */
-.governance-card:hover,
-.constitution-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.25);
-  background: linear-gradient(135deg, #e67e22, #ffb347); /* subtle gradient on hover */
-}
-
-.governance-card:hover p,
-.constitution-card:hover p {
-  color: #fff; /* ensure text remains readable */
-}
-
-/* Small icon accents inside text (optional) */
-#governance p::before,
-#constitution p::before {
-  content: "⚡"; /* tiny icon */
+/* ------------------- Buttons ------------------- */
+.btn {
   display: inline-block;
-  margin-right: 8px;
-  color: #e67e22;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  #governance h2,
-  #constitution h2 {
-    font-size: 36px;
-  }
-
-  .governance-card,
-  .constitution-card {
-    padding: 25px;
-  }
-
-  #governance p,
-  #constitution p {
-    font-size: 16px;
-  }
-
-  .card-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 600px) {
-  #governance h2,
-  #constitution h2 {
-    font-size: 28px;
-  }
-
-  .governance-card,
-  .constitution-card {
-    padding: 20px;
-  }
-
-  #governance p,
-  #constitution p {
-    font-size: 15px;
-  }
-
-  .card-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 12px;
-  }
-}
-
-/* ================= CHARITY ================= */
-.charity-burn-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-}
-
-.charity-burn-card {
-  background: #111b3d;
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.charity-burn-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.charity-burn-card h3 {
-  padding: 15px;
-  color: #ff8c00;
-}
-
-.charity-burn-card p {
-  padding: 0 15px 20px;
-}
-
-/* ================= V3 ================= */
-.v3-logo-container {
-  text-align: center;
-}
-
-.v3-logo-container img {
-  width: 180px;
-}
-
-/* ================= SOCIAL ================= */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.social-icons img {
-  width: 36px;
-}
-
-/* ================= CONNECT / DONATE ================= */
-.connect-button,
-.donate-button {
-  text-align: center;
-  margin-top: 30px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  padding: 30px;
-  text-align: center;
-  background: #050816;
-  font-size: 0.9rem;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.4rem;
-  }
-
-  .burn.logo {
-    position: static;
-    transform: none;
-    margin: 30px auto;
-    display: block;
-  }
-
-  .brand {
-    flex-direction: column;
-  }
-}
-
-/* ================= STEP 5 — TEXT SIZE & READABILITY ================= */
-
-#why p,
-#tokenomics p,
-#roadmap p,
-#governance p,
-#constitution p,
-#founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  max-width: 780px;
-  margin: 20px auto;
-  color: #333; /* dark enough for readability */
-  text-align: center;
-}
-
-/* Airdrop steps text */
-.airdrop-steps .step p {
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* ================= STEP 6 — FOUNDER & CHARITY IMAGE RESIZING ================= */
-
-.charity-burn-card img {
-  width: 120px; /* smaller & uniform */
-  height: auto;
-  border-radius: 12px;
-}
-
-/* Social Media section */
-#social-media {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-#social-media h2 {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  color: #004aad;
-}
-
-#social-media p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.media-logos a img {
-  width: 80px;
-  height: auto;
-  margin: 0 15px;
-  transition: transform 0.3s, filter 0.3s;
-  filter: grayscale(100%);
-}
-
-.media-logos a img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.1);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .founder-img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .charity-burn-card img {
-    width: 100px;
-  }
-
-  .media-logos a img {
-    width: 60px;
-    margin: 10px;
-  }
-}
-
-/* ================= STEP 7 — FINAL POLISH ================= */
-
-/* Hero heading gradient & shadow */
-.hero-title {
-  font-size: 64px;
-  font-weight: 900;
-  text-align: center;
-  line-height: 1.1;
-  background: linear-gradient(90deg, #f9e29c 0%, #d4af37 50%, #ff8c00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
-}
-
-/* Hero subtext — B2H description */
-.brand-text span {
-  font-size: 22px;
-  color: #f3efe6;
-}
-
-.brand-text strong {
-  font-size: 36px;
-  color: #e67e22; /* prominent orange */
-  display: block;
-  line-height: 1.2;
-}
-
-/* Hero description readability */
-.hero-desc {
-  font-size: 20px;
-  line-height: 1.75;
-  max-width: 720px;
-  margin: 20px auto 30px;
-  color: #f1f1f1;
-  text-align: center;
-}
-
-/* Connect & Donate buttons positioning */
-#connect-donate {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 50px 0 80px;
-}
-
-#connect-donate .btn {
-  padding: 16px 36px;
-  font-size: 16px;
+  padding: 0.7rem 1.6rem;
   border-radius: 30px;
   font-weight: 600;
-  transition: all 0.3s;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .btn.primary {
-  background-color: #004aad;
+  background: #004aad;
   color: #fff;
 }
 
 .btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  background: #00337a;
 }
 
 .btn.donate {
-  background-color: #e67e22;
+  background: #e67e22;
   color: #fff;
 }
 
 .btn.donate:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  background: #c76c19;
 }
 
-/* Description sections readability */
-section p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
-  max-width: 800px;
-  margin: 0 auto 30px;
+/* ------------------- Hero Section ------------------- */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background: linear-gradient(to bottom, #f9f9f9, #fff);
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 46px;
-  }
-
-  .hero-desc {
-    font-size: 17px;
-  }
-
-  .brand-text strong {
-    font-size: 28px;
-  }
-
-  #connect-donate {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  #connect-donate .btn {
-    width: 70%;
-    text-align: center;
-  }
-}
-
-/* ================= CONSTITUTION CARD ================= */
-.constitution-card {
-  position: relative;
-  background-color: #111b3d; /* dark blue */
-  color: #fefefe !important; /* bright white text */
-  padding: 30px 25px;
-  border-radius: 16px;
+.hero .hero-inner {
   max-width: 900px;
-  margin: 0 auto 40px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  line-height: 1.8;
-  font-size: 18px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Override any inherited text shadow or opacity */
-.constitution-card p {
-  color: #fefefe !important;
-  text-shadow: none !important;
-  opacity: 1 !important;
-}
-
-/* Icon */
-.constitution-card .card-icon img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  margin-bottom: 20px;
-}
-
-/* Strong text highlight */
-.constitution-card p strong {
-  color: #e67e22; /* orange highlight */
-}
-
-/* Hover effect */
-.constitution-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.35);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .constitution-card {
-    padding: 25px;
-  }
-  .constitution-card p {
-    font-size: 16px;
-  }
-  .constitution-card .card-icon img {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-@media (max-width: 600px) {
-  .constitution-card {
-    padding: 20px;
-  }
-  .constitution-card p {
-    font-size: 15px;
-  }
-  .constitution-card .card-icon img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-/* ================= GOVERNANCE & CONSTITUTION CARDS ================= */
-.governance-card, .constitution-card {
-  background-color: #ffffff; /* light card for contrast */
-  color: #111;               /* dark text */
-  padding: 25px;
-  border-radius: 14px;
-  text-align: center;
-  max-width: 800px;
-  margin: 20px auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.governance-card:hover, .constitution-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-}
-
-.card-icon {
-  font-size: 70px;
-  color: #e67e22; /* orange color matching hero */
-  margin-bottom: 15px;
-}
-
-/* Section text */
-#governance p, #constitution p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333; /* dark for readability */
-}
-
-/* Dark section adjustments */
-#constitution {
-  background-color: #111b3d;
-}
-
-#constitution p {
-  color: #f1f1f1; /* light text for dark background */
-}
-
-/* Headings */
-#governance h2, #constitution h2 {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 30px;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .card-icon {
-    font-size: 55px;
-  }
-
-  #governance h2, #constitution h2 {
-    font-size: 34px;
-  }
-
-  #governance p, #constitution p {
-    font-size: 16px;
-  }
-}
-
-/* ================= GOVERNANCE & CONSTITUTION FIX ================= */
-
-#governance-constitution {
-  padding: 90px 20px;
-  background: #f7f9fc;
-}
-
-.gc-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.gc-card {
-  background: #ffffff;
-  border-radius: 18px;
-  padding: 45px 35px;
-  text-align: center;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  transition: all 0.35s ease;
-  position: relative;
-}
-
-/* ICON */
-.gc-icon {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #ff8c00, #ff6a00);
-  color: #fff;
-  border-radius: 50%;
+.hero .brand {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 22px;
-  font-size: 28px;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
-/* HEADINGS */
-.gc-card h2 {
-  font-size: 28px;
-  font-weight: 800;
-  margin-bottom: 18px;
-  color: #0f1230;
+.hero .brand img.main-logo {
+  width: 80px;
+  height: auto;
 }
 
-/* TEXT — THIS IS THE MAIN FIX */
-.gc-card p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #2b2b2b;       /* solid readable color */
-  opacity: 1;           /* force visibility */
+.hero-title {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
 }
 
-/* HOVER — SAFE, DOES NOT KILL TEXT */
-.gc-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-  background: #fff5ec;  /* LIGHT orange, not dark */
+.hero-title .sub-line {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
 }
 
-.gc-card:hover p {
-  color: #1e1e1e;       /* stays readable */
+.hero-desc {
+  font-size: 1rem;
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  color: #555;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .gc-card {
-    padding: 35px 25px;
-  }
-
-  .gc-card h2 {
-    font-size: 24px;
-  }
-
-  .gc-card p {
-    font-size: 16px;
-  }
+#connect-donate {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* ================= WHY B2H (READABILITY FIX + MODERN STYLE) ================= */
-
-.why-b2h {
-  background: #f9fafc; /* clean light background */
+/* ------------------- Sections ------------------- */
+.section {
+  padding: 4rem 2rem;
+  position: relative;
 }
 
-.why-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+.section h2 {
   text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
 }
 
-.why-b2h h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #1b2559; /* deep blue, matches professional tone */
-  margin-bottom: 30px;
-}
-
-.why-text {
-  font-size: 18px;
-  line-height: 1.9;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.why-highlight {
-  margin-top: 30px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #e67e22; /* hero orange */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .why-b2h h2 {
-    font-size: 32px;
-  }
-
-  .why-text {
-    font-size: 16px;
-  }
-
-  .why-highlight {
-    font-size: 18px;
-  }
-}
-
-/* ================= WHY B2H – ICON CARDS ================= */
-
-.why-b2h {
-  background: #f9fafc;
-}
-
-.why-inner {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.why-b2h h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #1b2559;
-  margin-bottom: 30px;
-}
-
-.why-text {
-  font-size: 18px;
-  line-height: 1.9;
-  color: #333;
-  max-width: 800px;
-  margin: 0 auto 40px;
-}
-
-.why-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  margin-bottom: 40px;
+/* ------------------- Why B2H ------------------- */
+.why-b2h .why-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .why-card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #f7f7f7;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1 1 250px;
+  transition: transform 0.3s ease;
 }
 
 .why-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+  transform: translateY(-8px);
 }
 
 .why-card i {
-  font-size: 38px;
-  color: #e67e22;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #004aad;
 }
 
-.why-card h3 {
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #1b2559;
+/* ------------------- Founder Section ------------------- */
+.founder-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
 }
 
-.why-card p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #444;
-}
-
-.why-highlight {
-  font-size: 20px;
-  font-weight: 600;
-  color: #e67e22;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .why-b2h h2 {
-    font-size: 32px;
-  }
-
-  .why-text {
-    font-size: 16px;
-  }
-}
-
-/* ================= FOUNDER SCROLL ANIMATION ================= */
-.founder-image-wrapper,
-.founder-message {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.founder-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= FOUNDER IMAGE HOVER EFFECT ================= */
 .founder-image-wrapper {
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-/* ================= FOUNDER FADE-IN ================= */
-.founder-image-wrapper,
-.founder-message {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.founder-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .founder-container {
-    flex-direction: column;
-  }
-
-  #founder h2 {
-    font-size: 38px;
-  }
-
-  .founder-message {
-    text-align: center;
-  }
-
-  .founder-logo {
-    margin: 0 auto 20px;
-  }
-}
-
-@media (max-width: 600px) {
-  #founder h2 {
-    font-size: 32px;
-  }
-
-  .founder-message p {
-    font-size: 16px;
-  }
-
-  .founder-image-wrapper {
-    max-width: 90%;
-  }
-}
-
-/* ================= FOUNDER SMALL ROUND AVATAR ================= */
-
-.founder-avatar {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 18px;
-}
-
-.founder-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 200px;
   border-radius: 50%;
-  border: 3px solid #e67e22; /* hero orange */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  overflow: hidden;
 }
 
-/* Align avatar nicely on desktop */
-@media (min-width: 768px) {
-  .founder-message {
-    position: relative;
-  }
-
-  .founder-avatar {
-    margin-bottom: 20px;
-  }
-}
-
-/* ================= V3 & CHARITY SECTION ================= */
-
-#v3-charity h2 {
-  color: #e67e22;
-  font-size: 40px;
-  font-weight: 800;
-  margin-bottom: 50px;
+.founder-message {
+  max-width: 600px;
   text-align: center;
 }
 
+.founder-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: all 0.8s ease-out;
+}
+
+/* ------------------- Tokenomics ------------------- */
+.tokenomics-visual {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.token-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.token-bar .bar {
+  flex: 1;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.token-bar .fill {
+  height: 100%;
+  border-radius: 10px;
+}
+
+/* ------------------- Roadmap ------------------- */
+.roadmap-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.roadmap-card {
+  background: #f7f7f7;
+  padding: 2rem;
+  border-radius: 15px;
+  flex: 1 1 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ------------------- Governance & Constitution ------------------- */
+.gc-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.gc-card {
+  background: #f7f7f7;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1 1 300px;
+}
+
+.gc-icon i {
+  font-size: 2rem;
+  color: #004aad;
+  margin-bottom: 1rem;
+}
+
+/* ------------------- Charity / V3 ------------------- */
 .v3-charity-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
 .v3-box {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
+  background: #f7f7f7;
+  padding: 1.5rem;
+  border-radius: 15px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.3s ease;
 }
 
 .v3-box:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 }
 
-.v3-box img {
-  max-width: 90px;
-  margin-bottom: 20px;
-}
-
-.v3-box h3 {
-  color: #111;
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.v3-box p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #444;
-}
-
-/* ================= V3 LOGO SECTION ================= */
-
-.v3-section {
-  padding: 80px 20px;
+/* ------------------- Footer ------------------- */
+footer {
   text-align: center;
-  background: #f8f9fc;
+  padding: 2rem;
+  background: #004aad;
+  color: #fff;
+  font-size: 0.9rem;
 }
 
-.v3-section img {
-  width: 350px;        /* MAIN CONTROL */
-  max-width: 90%;
-  height: auto;
-  margin: 0 auto 25px;
-  display: block;
-}
-
-.v3-section h3 {
-  font-size: 28px;
-  font-weight: 800;
-  color: #0f1230;
-}
-
-/* ================= CHARITY IMAGES ================= */
-
-.charity-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.charity-grid img {
-  width: 100%;
-  height: 300px;          /* CONTROL HEIGHT */
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
-}
-
-/* ================= AIRDROP SECTION ================= */
-#airdrop {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f9f9f9; /* keep light */
-}
-
-#airdrop h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #e67e22; /* hero orange */
-  margin-bottom: 30px;
-}
-
-#airdrop p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto 50px;
-  line-height: 1.8;
-  color: #333; /* dark enough for readability */
-}
-
-/* ================= AIRDROP CARDS ================= */
-.airdrop-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  justify-items: center;
-}
-
-.airdrop-card {
-  background-color: #1b2450; /* dark card for contrast */
-  padding: 30px 20px;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.25); /* stronger shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  color: #f1f1f1; /* all text readable inside card */
-}
-
-.airdrop-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.35);
-}
-
-.airdrop-card i {
-  font-size: 36px;
-  color: #ff8c00; /* orange icon */
-  margin-bottom: 15px;
-}
-
-.airdrop-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-  color: #ff8c00; /* bright heading */
-  font-weight: 700;
-}
-
-.airdrop-card p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #f1f1f1; /* readable paragraph */
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  #airdrop h2 {
-    font-size: 36px;
-  }
-
-  .airdrop-card h3 {
-    font-size: 20px;
-  }
-
-  .airdrop-card p {
-    font-size: 15px;
-  }
-}
-
-/* ================= SOCIAL MEDIA SECTION ================= */
-#social-media {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f0f0f0;
-}
-
-#social-media h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #e67e22; /* hero orange */
-  margin-bottom: 20px;
-}
-
-#social-media p {
-  font-size: 18px;
-  max-width: 750px;
-  margin: 0 auto 40px;
-  color: #333;
-  line-height: 1.8;
-}
-
-/* SOCIAL ICONS */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-}
-
-.social-icons a {
-  font-size: 28px;
-  color: #111b3d;
-  transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #e67e22; /* hero orange on hover */
-  transform: scale(1.2);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  #social-media h2 {
-    font-size: 36px;
-  }
-
-  .social-icons a {
-    font-size: 24px;
-    margin: 10px;
-  }
-}
-
-/* ================= FIXED AIRDROP / LAUNCH ================= */
-#airdrop {
-  padding: 80px 20px;
-  background-color: #0f1230; /* dark blue/black background consistent */
-  text-align: center;
-  color: #f1f1f1; /* default text for all p, span inside this section */
-}
-
-#airdrop h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #ff8c00; /* hero orange */
-  margin-bottom: 20px;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
-}
-
-#airdrop p {
-  font-size: 18px;
-  max-width: 750px;
-  margin: 0 auto 40px;
-  line-height: 1.8;
-  color: #f1f1f1; /* ensure readable text */
-}
-
-/* Steps / Boxes */
-.airdrop-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  justify-items: center;
-}
-
-.airdrop-steps .step {
-  background-color: #1b2450; /* darker card background */
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-  color: #f1f1f1; /* make sure text inside box is visible */
-}
-
-.airdrop-steps .step:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
-}
-
-.airdrop-steps .step h3 {
-  font-size: 24px;
-  color: #ff8c00;
-  margin-bottom: 12px;
-}
-
-.airdrop-steps .step p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #f1f1f1; /* ensure text is readable */
-}
-
-/* If there is another subsection like Eligibility, Rewards, Timeline */
-.airdrop-subsection p,
-.airdrop-subsection span {
-  color: #f1f1f1; /* make text readable on dark bg */
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  #airdrop h2 {
-    font-size: 36px;
-  }
-
-  .airdrop-steps .step h3 {
-    font-size: 20px;
-  }
-
-  .airdrop-steps .step p {
-    font-size: 15px;
-  }
-}
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  #airdrop h2 {
-    font-size: 36px;
-  }
-
-  .airdrop-steps .step h3 {
-    font-size: 20px;
-  }
-
-  .airdrop-steps .step p {
-    font-size: 15px;
-  }
-}
-
-/* ================= HERO ================= */
-.hero {
-  position: relative;
-  min-height: 100vh;
-  background-color: #0b1a2b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 30px;
-  overflow: hidden;
-}
-
-.hero-title {
-  font-size: 64px;
-  font-weight: 900;
-  text-align: center;
-  line-height: 1.1;
-  background: linear-gradient(90deg, #f9e29c 0%, #d4af37 50%, #ff8c00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
-}
-
-.hero-desc {
-  font-size: 20px;
-  line-height: 1.75;
-  max-width: 720px;
-  margin: 20px auto 30px;
-  color: #f1f1f1;
-  text-align: center;
-}
-
-/* ================= FOUNDER ================= */
-
-.founder-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-}
-
-.founder-image-wrapper {
-  flex: 1 1 400px;
-  max-width: 550px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.4);
-}
-
-.founder-image {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  object-fit: cover;
-}
-
+/* ------------------- Scroll Reveal Initial ------------------- */
+.section[data-reveal],
+.founder-image-wrapper,
 .founder-message {
-  flex: 1 1 450px;
-  max-width: 600px;
-  text-align: left;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
 }
 
-/* ================= V3 SECTION ================= */
-.v3-section {
-  padding: 80px 20px;
-  text-align: center;
-  background: #f8f9fc;
-}
-
-.v3-section img {
-  width: 350px;
-  max-width: 90%;
-  height: auto;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .founder-container {
-    flex-direction: column;
-  }
-
-  #founder h2 {
-    font-size: 38px;
-  }
-
-  .founder-message {
-    text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  #founder h2 {
-    font-size: 32px;
-  }
-
-  .founder-message p {
-    font-size: 16px;
-  }
-
-  .founder-image-wrapper {
-    max-width: 90%;
-  }
-
+/* ------------------- Responsive ------------------- */
+@media (max-width: 768px) {
   .hero-title {
-    font-size: 46px;
+    font-size: 2rem;
   }
 
-  .hero-desc {
-    font-size: 17px;
+  .why-b2h .why-cards,
+  .roadmap-cards,
+  .gc-wrapper {
+    flex-direction: column;
+    align-items: center;
   }
 }
