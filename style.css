@@ -2472,3 +2472,8 @@ header, .hero-inner {
   gap: 40px;
   flex-wrap: wrap;
 }
+
+.founder-content {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+}
