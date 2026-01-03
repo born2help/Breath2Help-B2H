@@ -13,30 +13,137 @@
 </head>
 <body>
 
-  <!-- ================= HERO ================= -->
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-inner">
-      <div class="brand">
-        <img src="images/logo.png" alt="B2H Logo" class="main-logo">
-        <div class="brand-text">
-          <span>Born for Humanity</span>
-          <strong>B2H Foundation</strong>
-        </div>
-      </div>
-      <h1 class="hero-title">
-        <span class="main-line">Helping Hands</span>
-        <span class="sub-line">Change the World</span>
-      </h1>
-      <p class="hero-desc">
-        We strive to create a meaningful impact through education, charity, and social empowerment. Join us in making the world a better place.
-      </p>
-      <div id="connect-donate" class="hero-actions">
-        <a href="#why" class="btn primary">Connect</a>
-        <a href="#donate" class="btn donate">Donate</a>
-      </div>
-    </div>
-  </section>
+ /* ================= HERO ================= */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  color: #fff;
+
+  /* Strong background image with gradient overlay */
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.5)
+    ), 
+    url('images/hero-bg.jpg') no-repeat center center/cover;
+  overflow: hidden;
+}
+
+/* Burn logo top-left */
+.burn-logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 80px;
+  height: auto;
+  z-index: 2;
+}
+
+/* Hero content container */
+.hero-inner {
+  max-width: 900px;
+  z-index: 2;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Brand section */
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.brand .main-logo {
+  width: 60px;
+  height: auto;
+}
+
+.brand-text span {
+  display: block;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.brand-text strong {
+  font-size: 1.5rem;
+}
+
+/* Hero title animations */
+.hero-title .main-line,
+.hero-title .sub-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.hero-title .main-line {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation-delay: 0.5s;
+}
+
+.hero-title .sub-line {
+  font-size: 1.5rem;
+  color: #ddd;
+  animation-delay: 1s;
+}
+
+/* Hero description */
+.hero-desc {
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  color: #eee;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* Hero buttons */
+.hero-actions a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-actions .primary {
+  background: #004aad;
+  color: #fff;
+}
+
+.hero-actions .primary:hover {
+  background: #002f70;
+}
+
+.hero-actions .donate {
+  background: #e67e22;
+  color: #fff;
+}
+
+.hero-actions .donate:hover {
+  background: #c76a1a;
+}
+
+/* ================= ANIMATION KEYFRAMES ================= */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
   <!-- ================= WHY B2H ================= -->
   <section class="why-b2h section light" id="why">
