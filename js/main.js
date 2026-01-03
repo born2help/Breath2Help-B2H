@@ -32,9 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   }, {threshold:0.1});
-  document.querySelectorAll(".section, .founder-image-wrapper, .founder-message, .roadmap-card").forEach(el=>{
-    observer.observe(el);
-  });
+  document.querySelectorAll(".section").forEach(section => {
+  if (!section.classList.contains("no-reveal")) {
+    section.style.opacity = 0;
+    section.style.transform = "translateY(50px)";
+    observer.observe(section);
+  }
 });
 </script>
 
