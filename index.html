@@ -15,11 +15,9 @@
 
   <!-- ================= HERO ================= -->
   <section class="hero">
-    <!-- Check: images/burn.png image -->
-    <img src="images/burn.png" alt="Burn Logo" class="burn-logo">
+    <div class="hero-overlay"></div>
     <div class="hero-inner">
       <div class="brand">
-        <!-- Check: images/logo.png image -->
         <img src="images/logo.png" alt="B2H Logo" class="main-logo">
         <div class="brand-text">
           <span>Born for Humanity</span>
@@ -31,9 +29,9 @@
         <span class="sub-line">Change the World</span>
       </h1>
       <p class="hero-desc">
-        We strive to create a meaningful impact through education, charity, and social empowerment.
+        We strive to create a meaningful impact through education, charity, and social empowerment. Join us in making the world a better place.
       </p>
-      <div class="hero-actions">
+      <div id="connect-donate" class="hero-actions">
         <a href="#why" class="btn primary">Connect</a>
         <a href="#donate" class="btn donate">Donate</a>
       </div>
@@ -44,37 +42,91 @@
   <section class="why-b2h section light" id="why">
     <div class="why-inner">
       <h2>Why Choose B2H?</h2>
+      <p class="why-text">
+        At B2H, we focus on transparent charity, sustainable projects, and community-driven initiatives. Every effort counts, and every donation creates real change.
+      </p>
       <div class="why-cards">
         <div class="why-card">
           <i class="fas fa-hands-helping"></i>
           <h3>Community Support</h3>
+          <p>Empowering local communities through education, food, and health initiatives.</p>
         </div>
         <div class="why-card">
           <i class="fas fa-leaf"></i>
           <h3>Environment</h3>
+          <p>Promoting sustainability and green initiatives to protect our planet.</p>
         </div>
         <div class="why-card">
           <i class="fas fa-globe"></i>
           <h3>Global Outreach</h3>
+          <p>Extending our support internationally, making a difference worldwide.</p>
         </div>
+      </div>
+      <p class="why-highlight">Together, we can achieve more.</p>
+    </div>
+  </section>
+
+  <!-- ================= TOKENOMICS ================= -->
+  <section id="tokenomics" class="section light">
+    <h2>Tokenomics</h2>
+    <p>Our token allocation ensures transparency, sustainability, and community growth.</p>
+    <div class="tokenomics-visual">
+      <div class="token-bar">
+        <span>Marketing</span>
+        <div class="bar"><div class="fill" data-percentage="70%"></div></div>
+        <strong>70%</strong>
+      </div>
+      <div class="token-bar">
+        <span>Charity</span>
+        <div class="bar"><div class="fill" data-percentage="25%"></div></div>
+        <strong>25%</strong>
+      </div>
+      <div class="token-bar">
+        <span>Team</span>
+        <div class="bar"><div class="fill" data-percentage="20%"></div></div>
+        <strong>20%</strong>
+      </div>
+      <div class="token-bar">
+        <span>Development</span>
+        <div class="bar"><div class="fill" data-percentage="15%"></div></div>
+        <strong>15%</strong>
       </div>
     </div>
   </section>
 
-  <!-- ================= FOUNDER SECTION ================= -->
+  <!-- ================= ROADMAP ================= -->
+  <section id="roadmap" class="section dark">
+    <h2>Roadmap</h2>
+    <div class="roadmap-cards">
+      <div class="roadmap-card">
+        <h3>Phase 1</h3>
+        <p>Foundation setup, team building, and initial charity campaigns.</p>
+      </div>
+      <div class="roadmap-card">
+        <h3>Phase 2</h3>
+        <p>Community outreach, partnerships, and global awareness programs.</p>
+      </div>
+      <div class="roadmap-card">
+        <h3>Phase 3</h3>
+        <p>Launch of token initiatives, sustainability projects, and education programs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOUNDER ================= -->
   <section id="founder" class="section light">
     <h2>Meet Our Founder</h2>
     <div class="founder-container">
       <div class="founder-image-wrapper">
-        <!-- Check: founder.jpg -->
         <img src="images/founder.jpg" alt="Founder" class="founder-image">
       </div>
       <div class="founder-message">
         <div class="founder-logo">
-          <!-- Check: small-founder.jpg -->
-          <img src="images/founder.jpg" alt="B2H Logo">
+          <img src="images/small-founder.jpg" alt="B2H Logo">
         </div>
-        <p>Our founder is dedicated to creating real impact through education and charity.</p>
+        <p>
+          Our founder is dedicated to creating real impact through education, charity, and social empowerment. Every initiative is crafted with transparency, compassion, and innovation.
+        </p>
       </div>
     </div>
   </section>
@@ -86,15 +138,30 @@
       <div class="v3-box">
         <img src="images/charity.jpg" alt="Charity">
         <h3>Food Drives</h3>
+        <p>Providing meals to underprivileged communities.</p>
       </div>
       <div class="v3-box">
         <img src="images/charity-1.jpg" alt="Charity">
         <h3>Education</h3>
+        <p>Supporting schools and scholarships worldwide.</p>
       </div>
       <div class="v3-box">
         <img src="images/charity-2.jpg" alt="Charity">
         <h3>Environment</h3>
+        <p>Tree plantations and green initiatives for a better planet.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- ================= SOCIAL MEDIA ================= -->
+  <section id="social-media" class="section light">
+    <h2>Follow Us</h2>
+    <p>Stay connected with our updates on social media.</p>
+    <div class="media-logos social-icons">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
     </div>
   </section>
 
@@ -103,5 +170,7 @@
     &copy; 2026 B2H Global Foundation. All Rights Reserved.
   </footer>
 
+  <!-- JS -->
+  <script src="main.js"></script>
 </body>
 </html>
