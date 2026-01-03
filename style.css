@@ -42,28 +42,49 @@ p {
 
 /* ================= BUTTONS ================= */
 .btn {
-  padding: 14px 34px;
+  padding: 16px 34px;
   border-radius: 30px;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
   display: inline-block;
 }
 
 .btn.primary {
-  background: #ff8c00;
+  background-color: #004aad;
   color: #fff;
+}
+
+.btn.primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
 
 .btn.donate {
-  background: #ff4500;
+  background-color: #e67e22;
   color: #fff;
 }
 
-/* ================= HERO SECTION STYLING ================= */
+.btn.donate:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid rgba(230,126,34,0.8);
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(230,126,34,0.08);
+}
+
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
   min-height: 100vh;
-  background-color: #0b1a2b; /* dark hero background */
+  background-color: #0b1a2b;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,7 +92,6 @@ p {
   overflow: hidden;
 }
 
-/* Burn logo – dominant and right aligned */
 .burn-logo {
   position: absolute;
   top: 50%;
@@ -85,7 +105,6 @@ p {
   pointer-events: none;
 }
 
-/* Hero inner content – above burn logo */
 .hero-inner {
   position: relative;
   z-index: 2;
@@ -93,7 +112,6 @@ p {
   text-align: center;
 }
 
-/* Brand section */
 .brand {
   display: flex;
   flex-direction: column;
@@ -108,126 +126,52 @@ p {
 }
 
 .brand-text span {
-  font-size: 18px;
-  color: #f3efe6; /* soft ivory */
-  font-weight: 500;
+  font-size: 22px;
+  color: #f3efe6;
 }
 
 .brand-text strong {
-  font-size: 28px;
-  color: #e67e22; /* bright orange */
+  font-size: 36px;
+  color: #e67e22;
   font-weight: 800;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.5);
-}
-
-/* Hero heading */
-.hero-title {
-  margin-bottom: 25px;
+  display: block;
   line-height: 1.2;
 }
 
-/* Main line – bigger & bold */
-.hero-title .main-line {
-  display: block;
-  font-size: 60px;
+.hero-title {
+  font-size: 64px;
   font-weight: 900;
-  color: #e67e22; /* orange/gold main */
-  text-shadow: 0 4px 14px rgba(0,0,0,0.65);
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  background: linear-gradient(90deg, #f9e29c 0%, #d4af37 50%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
 }
 
-/* Sub-line – smaller & secondary */
 .hero-title .sub-line {
   display: block;
   font-size: 32px;
   font-weight: 600;
-  color: #f3efe6; /* soft ivory */
+  color: #f3efe6;
   margin-top: 6px;
 }
 
-/* Hero description */
 .hero-desc {
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.75;
-  color: #e8e8e8;
-  max-width: 640px;
-  margin: 20px auto 35px;
+  max-width: 720px;
+  margin: 20px auto 30px;
+  color: #f1f1f1;
+  text-align: center;
   text-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
 
-/* Hero buttons */
 .hero-actions {
   display: flex;
   justify-content: center;
   gap: 20px;
-}
-
-.btn {
-  padding: 16px 34px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s;
-}
-
-.btn.primary {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  background-color: #cf6d17;
-}
-
-.btn.secondary {
-  background-color: transparent;
-  border: 2px solid rgba(230,126,34,0.8);
-  color: #fff;
-}
-
-.btn.secondary:hover {
-  background-color: rgba(230,126,34,0.08);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .burn-logo {
-    position: relative;
-    width: 220px;
-    margin: 40px auto 0;
-  }
-  
-  .hero-title .main-line {
-    font-size: 46px;
-  }
-  
-  .hero-title .sub-line {
-    font-size: 24px;
-  }
-  
-  .hero-desc {
-    font-size: 17px;
-  }
-  
-  .btn {
-    padding: 14px 28px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-title .main-line {
-    font-size: 36px;
-  }
-  
-  .hero-title .sub-line {
-    font-size: 20px;
-  }
-  
-  .hero-desc {
-    font-size: 16px;
-  }
 }
 
 /* ================= TOKENOMICS ================= */
@@ -239,7 +183,7 @@ p {
 
 #tokenomics h2 {
   font-size: 42px;
-  color: #e67e22; /* orange heading */
+  color: #e67e22;
   margin-bottom: 20px;
   font-weight: 800;
 }
@@ -252,7 +196,6 @@ p {
   color: #333;
 }
 
-/* Token visual bars */
 .tokenomics-visual {
   display: flex;
   flex-wrap: wrap;
@@ -287,7 +230,6 @@ p {
   border-radius: 12px;
 }
 
-/* Token percentage text */
 .token-bar strong {
   display: block;
   text-align: right;
@@ -295,7 +237,6 @@ p {
   color: #111;
 }
 
-/* Token Cards */
 .tokenomics-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -329,44 +270,15 @@ p {
   color: #555;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .tokenomics-visual {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .token-bar {
-    width: 100%;
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 600px) {
-  #tokenomics h2 {
-    font-size: 34px;
-  }
-
-  .token-card h3 {
-    font-size: 18px;
-  }
-
-  .token-card p {
-    font-size: 15px;
-  }
-}
-
 /* ================= ROADMAP ================= */
 #roadmap {
   padding: 100px 20px;
-  background-color: #0f1230; /* solid dark background */
+  background-color: #0f1230;
   text-align: center;
-  position: relative;
-  z-index: 1;
 }
 
 #roadmap h2 {
-  color: #ff8c00; /* bright orange */
+  color: #ff8c00;
   font-weight: 800;
   font-size: 46px;
   margin-bottom: 60px;
@@ -381,7 +293,7 @@ p {
 }
 
 .roadmap-card {
-  background-color: #1a1d4a; /* solid dark blue */
+  background-color: #1a1d4a;
   padding: 35px 25px;
   border-radius: 18px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.35);
@@ -393,618 +305,27 @@ p {
   z-index: 2;
 }
 
-/* Headings inside cards */
 .roadmap-card h3, .roadmap-card .phase-label {
-  color: #ff8c00;  /* bright orange */
+  color: #ff8c00;
   font-weight: 800;
-  text-shadow: none;
   margin-bottom: 16px;
   font-size: 24px;
 }
 
-/* Paragraph text inside cards */
 .roadmap-card p {
-  color: #ffffff !important; /* force pure white */
+  color: #ffffff;
   font-size: 16px;
   line-height: 1.8;
   text-align: center;
   margin: 0;
 }
 
-/* Hover effect */
 .roadmap-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.45);
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-  .roadmap-card {
-    max-width: 90%;
-  }
-}
-
-@media (max-width: 600px) {
-  #roadmap h2 {
-    font-size: 36px;
-  }
-  .roadmap-card h3 {
-    font-size: 20px;
-  }
-  .roadmap-card p {
-    font-size: 15px;
-  }
-}
-
 /* ================= GOVERNANCE & CONSTITUTION ================= */
-
-/* Section headings */
-#governance h2,
-#constitution h2 {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 40px;
-  text-align: center;
-  color: #e67e22; /* hero orange */
-  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
-}
-
-/* Card common styles */
-.governance-card,
-.constitution-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 25px;
-  border-radius: 16px;
-  max-width: 900px;
-  margin: 0 auto 40px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  line-height: 1.8;
-  font-size: 18px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-}
-
-/* Light and dark background fixes */
-.governance-card {
-  background-color: #f5f5f5;
-  color: #111; /* ensure dark text */
-}
-
-.constitution-card {
-  background-color: #111b3d;
-  color: #f1f1f1; /* ensure bright text */
-}
-
-/* Card icons */
-.card-icon {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 20px;
-}
-
-.card-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Paragraph styling */
-#governance p,
-#constitution p {
-  margin: 0;
-  max-width: 850px;
-  font-size: 18px;
-  line-height: 1.8;
-  color: inherit; /* ensures it uses correct card color */
-}
-
-/* Highlight strong text */
-#governance strong,
-#constitution strong {
-  color: #e67e22; /* orange highlight */
-}
-
-/* ================= HOVER ANIMATION ================= */
-.governance-card:hover,
-.constitution-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.25);
-  background: linear-gradient(135deg, #e67e22, #ffb347); /* subtle gradient on hover */
-}
-
-.governance-card:hover p,
-.constitution-card:hover p {
-  color: #fff; /* ensure text remains readable */
-}
-
-/* Small icon accents inside text (optional) */
-#governance p::before,
-#constitution p::before {
-  content: "⚡"; /* tiny icon */
-  display: inline-block;
-  margin-right: 8px;
-  color: #e67e22;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  #governance h2,
-  #constitution h2 {
-    font-size: 36px;
-  }
-
-  .governance-card,
-  .constitution-card {
-    padding: 25px;
-  }
-
-  #governance p,
-  #constitution p {
-    font-size: 16px;
-  }
-
-  .card-icon {
-    width: 60px;
-    height: 60px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (max-width: 600px) {
-  #governance h2,
-  #constitution h2 {
-    font-size: 28px;
-  }
-
-  .governance-card,
-  .constitution-card {
-    padding: 20px;
-  }
-
-  #governance p,
-  #constitution p {
-    font-size: 15px;
-  }
-
-  .card-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 12px;
-  }
-}
-
-/* ================= FOUNDER MESSAGE ================= */
-.founder-container {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.founder-img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.founder-text {
-  max-width: 550px;
-  font-size: 1.1rem;
-}
-
-/* ================= CHARITY ================= */
-.charity-burn-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-}
-
-.charity-burn-card {
-  background: #111b3d;
-  border-radius: 14px;
-  overflow: hidden;
-}
-
-.charity-burn-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.charity-burn-card h3 {
-  padding: 15px;
-  color: #ff8c00;
-}
-
-.charity-burn-card p {
-  padding: 0 15px 20px;
-}
-
-/* ================= V3 ================= */
-.v3-logo-container {
-  text-align: center;
-}
-
-.v3-logo-container img {
-  width: 180px;
-}
-
-/* ================= SOCIAL ================= */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-}
-
-.social-icons img {
-  width: 36px;
-}
-
-/* ================= CONNECT / DONATE ================= */
-.connect-button,
-.donate-button {
-  text-align: center;
-  margin-top: 30px;
-}
-
-/* ================= FOOTER ================= */
-footer {
-  padding: 30px;
-  text-align: center;
-  background: #050816;
-  font-size: 0.9rem;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.4rem;
-  }
-
-  .burn-logo {
-    position: static;
-    transform: none;
-    margin: 30px auto;
-    display: block;
-  }
-
-  .brand {
-    flex-direction: column;
-  }
-}
-
-/* ================= STEP 5 — TEXT SIZE & READABILITY ================= */
-
-#why p,
-#tokenomics p,
-#roadmap p,
-#governance p,
-#constitution p,
-#founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  max-width: 780px;
-  margin: 20px auto;
-  color: #333; /* dark enough for readability */
-  text-align: center;
-}
-
-/* Airdrop steps text */
-.airdrop-steps .step p {
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-/* ================= STEP 6 — FOUNDER & CHARITY IMAGE RESIZING ================= */
-
-.founder-img {
-  width: 180px; /* reduced from full width */
-  height: 180px;
-  border-radius: 50%;
-  border: 4px solid #ffd700;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-}
-
-.charity-burn-card img {
-  width: 120px; /* smaller & uniform */
-  height: auto;
-  border-radius: 12px;
-}
-
-/* Social Media section */
-#social-media {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-#social-media h2 {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 20px;
-  color: #004aad;
-}
-
-#social-media p {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-
-.media-logos a img {
-  width: 80px;
-  height: auto;
-  margin: 0 15px;
-  transition: transform 0.3s, filter 0.3s;
-  filter: grayscale(100%);
-}
-
-.media-logos a img:hover {
-  filter: grayscale(0%);
-  transform: scale(1.1);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .founder-img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .charity-burn-card img {
-    width: 100px;
-  }
-
-  .media-logos a img {
-    width: 60px;
-    margin: 10px;
-  }
-}
-
-/* ================= STEP 7 — FINAL POLISH ================= */
-
-/* Hero heading gradient & shadow */
-.hero-title {
-  font-size: 64px;
-  font-weight: 900;
-  text-align: center;
-  line-height: 1.1;
-  background: linear-gradient(90deg, #f9e29c 0%, #d4af37 50%, #ff8c00 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
-}
-
-/* Hero subtext — B2H description */
-.brand-text span {
-  font-size: 22px;
-  color: #f3efe6;
-}
-
-.brand-text strong {
-  font-size: 36px;
-  color: #e67e22; /* prominent orange */
-  display: block;
-  line-height: 1.2;
-}
-
-/* Hero description readability */
-.hero-desc {
-  font-size: 20px;
-  line-height: 1.75;
-  max-width: 720px;
-  margin: 20px auto 30px;
-  color: #f1f1f1;
-  text-align: center;
-}
-
-/* Connect & Donate buttons positioning */
-#connect-donate {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin: 50px 0 80px;
-}
-
-#connect-donate .btn {
-  padding: 16px 36px;
-  font-size: 16px;
-  border-radius: 30px;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-
-.btn.primary {
-  background-color: #004aad;
-  color: #fff;
-}
-
-.btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-.btn.donate {
-  background-color: #e67e22;
-  color: #fff;
-}
-
-.btn.donate:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-/* Description sections readability */
-section p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
-  max-width: 800px;
-  margin: 0 auto 30px;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 46px;
-  }
-
-  .hero-desc {
-    font-size: 17px;
-  }
-
-  .brand-text strong {
-    font-size: 28px;
-  }
-
-  #connect-donate {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  #connect-donate .btn {
-    width: 70%;
-    text-align: center;
-  }
-}
-
-/* ================= CONSTITUTION CARD ================= */
-.constitution-card {
-  position: relative;
-  background-color: #111b3d; /* dark blue */
-  color: #fefefe !important; /* bright white text */
-  padding: 30px 25px;
-  border-radius: 16px;
-  max-width: 900px;
-  margin: 0 auto 40px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-  line-height: 1.8;
-  font-size: 18px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Override any inherited text shadow or opacity */
-.constitution-card p {
-  color: #fefefe !important;
-  text-shadow: none !important;
-  opacity: 1 !important;
-}
-
-/* Icon */
-.constitution-card .card-icon img {
-  width: 70px;
-  height: 70px;
-  object-fit: contain;
-  margin-bottom: 20px;
-}
-
-/* Strong text highlight */
-.constitution-card p strong {
-  color: #e67e22; /* orange highlight */
-}
-
-/* Hover effect */
-.constitution-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 35px rgba(0,0,0,0.35);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-  .constitution-card {
-    padding: 25px;
-  }
-  .constitution-card p {
-    font-size: 16px;
-  }
-  .constitution-card .card-icon img {
-    width: 60px;
-    height: 60px;
-  }
-}
-
-@media (max-width: 600px) {
-  .constitution-card {
-    padding: 20px;
-  }
-  .constitution-card p {
-    font-size: 15px;
-  }
-  .constitution-card .card-icon img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-/* ================= GOVERNANCE & CONSTITUTION CARDS ================= */
-.governance-card, .constitution-card {
-  background-color: #ffffff; /* light card for contrast */
-  color: #111;               /* dark text */
-  padding: 25px;
-  border-radius: 14px;
-  text-align: center;
-  max-width: 800px;
-  margin: 20px auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.governance-card:hover, .constitution-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-}
-
-.card-icon {
-  font-size: 70px;
-  color: #e67e22; /* orange color matching hero */
-  margin-bottom: 15px;
-}
-
-/* Section text */
-#governance p, #constitution p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333; /* dark for readability */
-}
-
-/* Dark section adjustments */
-#constitution {
-  background-color: #111b3d;
-}
-
-#constitution p {
-  color: #f1f1f1; /* light text for dark background */
-}
-
-/* Headings */
-#governance h2, #constitution h2 {
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 30px;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.3);
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .card-icon {
-    font-size: 55px;
-  }
-
-  #governance h2, #constitution h2 {
-    font-size: 34px;
-  }
-
-  #governance p, #constitution p {
-    font-size: 16px;
-  }
-}
-
-/* ================= GOVERNANCE & CONSTITUTION FIX ================= */
-
 #governance-constitution {
   padding: 90px 20px;
   background: #f7f9fc;
@@ -1028,7 +349,6 @@ section p {
   position: relative;
 }
 
-/* ICON */
 .gc-icon {
   width: 70px;
   height: 70px;
@@ -1042,7 +362,6 @@ section p {
   font-size: 28px;
 }
 
-/* HEADINGS */
 .gc-card h2 {
   font-size: 28px;
   font-weight: 800;
@@ -1050,91 +369,24 @@ section p {
   color: #0f1230;
 }
 
-/* TEXT — THIS IS THE MAIN FIX */
 .gc-card p {
   font-size: 18px;
   line-height: 1.8;
-  color: #2b2b2b;       /* solid readable color */
-  opacity: 1;           /* force visibility */
+  color: #2b2b2b;
+  opacity: 1;
 }
 
-/* HOVER — SAFE, DOES NOT KILL TEXT */
 .gc-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 25px 60px rgba(0,0,0,0.15);
-  background: #fff5ec;  /* LIGHT orange, not dark */
+  background: #fff5ec;
 }
 
 .gc-card:hover p {
-  color: #1e1e1e;       /* stays readable */
+  color: #1e1e1e;
 }
 
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .gc-card {
-    padding: 35px 25px;
-  }
-
-  .gc-card h2 {
-    font-size: 24px;
-  }
-
-  .gc-card p {
-    font-size: 16px;
-  }
-}
-
-/* ================= WHY B2H (READABILITY FIX + MODERN STYLE) ================= */
-
-.why-b2h {
-  background: #f9fafc; /* clean light background */
-}
-
-.why-inner {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.why-b2h h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #1b2559; /* deep blue, matches professional tone */
-  margin-bottom: 30px;
-}
-
-.why-text {
-  font-size: 18px;
-  line-height: 1.9;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.why-highlight {
-  margin-top: 30px;
-  font-size: 20px;
-  font-weight: 600;
-  color: #e67e22; /* hero orange */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .why-b2h h2 {
-    font-size: 32px;
-  }
-
-  .why-text {
-    font-size: 16px;
-  }
-
-  .why-highlight {
-    font-size: 18px;
-  }
-}
-
-/* ================= WHY B2H – ICON CARDS ================= */
-
+/* ================= WHY B2H ================= */
 .why-b2h {
   background: #f9fafc;
 }
@@ -1142,6 +394,7 @@ section p {
 .why-inner {
   max-width: 1000px;
   margin: 0 auto;
+  padding: 20px;
   text-align: center;
 }
 
@@ -1205,144 +458,6 @@ section p {
   color: #e67e22;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .why-b2h h2 {
-    font-size: 32px;
-  }
-
-  .why-text {
-    font-size: 16px;
-  }
-}
-
-/* ================= FOUNDER SCROLL ANIMATION ================= */
-.founder-image-wrapper,
-.founder-message {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.founder-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ================= FOUNDER IMAGE HOVER EFFECT ================= */
-.founder-image-wrapper {
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-/* ================= FOUNDER SECTION ================= */
-#founder {
-  background-color: #f0f0f0; /* light gray to make content visible */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#founder h2 {
-  color: #e67e22; /* hero orange */
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 50px;
-}
-
-.founder-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-
-.founder-image-wrapper {
-  flex: 1 1 300px;
-  max-width: 450px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-.founder-image {
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
-
-.founder-message {
-  flex: 2 1 400px;
-  max-width: 600px;
-  text-align: left;
-}
-
-.founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333; /* dark text to be visible */
-}
-
-/* ================= FOUNDER SECTION ================= */
-#founder {
-  background-color: #f0f0f0; /* light gray to make content visible */
-  padding: 80px 20px;
-  text-align: center;
-}
-
-#founder h2 {
-  color: #e67e22; /* hero orange */
-  font-size: 42px;
-  font-weight: 800;
-  margin-bottom: 50px;
-}
-
-.founder-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-}
-
-.founder-image-wrapper {
-  flex: 1 1 300px;
-  max-width: 450px;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.founder-image-wrapper:hover {
-  transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 12px 36px rgba(0,0,0,0.4);
-}
-
-.founder-image {
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  display: block;
-}
-
-.founder-message {
-  flex: 2 1 400px;
-  max-width: 600px;
-  text-align: left;
-}
-
-.founder-message p {
-  font-size: 18px;
-  line-height: 1.8;
-  color: #333; /* dark text to be visible */
-}
-
 /* ================= FOUNDER SECTION ================= */
 #founder {
   background-color: #f0f0f0;
@@ -1357,7 +472,6 @@ section p {
   margin-bottom: 60px;
 }
 
-/* Container for image + message */
 .founder-container {
   display: flex;
   flex-wrap: wrap;
@@ -1366,7 +480,6 @@ section p {
   gap: 60px;
 }
 
-/* Founder Image */
 .founder-image-wrapper {
   flex: 1 1 400px;
   max-width: 550px;
@@ -1382,11 +495,9 @@ section p {
   width: 100%;
   height: auto;
   border-radius: 16px;
-  display: block;
   object-fit: cover;
 }
 
-/* Founder Message */
 .founder-message {
   flex: 1 1 450px;
   max-width: 600px;
@@ -1394,7 +505,6 @@ section p {
   position: relative;
 }
 
-/* Small round logo above message */
 .founder-logo {
   width: 60px;
   height: 60px;
@@ -1408,14 +518,12 @@ section p {
   border: 3px solid #e67e22;
 }
 
-/* Message text */
 .founder-message p {
   font-size: 18px;
   line-height: 1.8;
   color: #333;
 }
 
-/* ================= FOUNDER FADE-IN ================= */
 .founder-image-wrapper,
 .founder-message {
   opacity: 0;
@@ -1430,12 +538,26 @@ section p {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 992px) {
-  .founder-container {
-    flex-direction: column;
+  .burn-logo {
+    position: relative;
+    width: 220px;
+    margin: 40px auto 0;
   }
 
-  #founder h2 {
-    font-size: 38px;
+  .hero-title {
+    font-size: 46px;
+  }
+
+  .hero-title .sub-line {
+    font-size: 24px;
+  }
+
+  .hero-desc {
+    font-size: 17px;
+  }
+
+  .founder-container {
+    flex-direction: column;
   }
 
   .founder-message {
@@ -1448,8 +570,20 @@ section p {
 }
 
 @media (max-width: 600px) {
-  #founder h2 {
-    font-size: 32px;
+  .burn-logo {
+    width: 180px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-title .sub-line {
+    font-size: 20px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
   }
 
   .founder-message p {
@@ -1459,607 +593,4 @@ section p {
   .founder-image-wrapper {
     max-width: 90%;
   }
-}
-
-/* ================= FOUNDER SMALL ROUND AVATAR ================= */
-
-.founder-avatar {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 18px;
-}
-
-.founder-avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #e67e22; /* hero orange */
-  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
-}
-
-/* Align avatar nicely on desktop */
-@media (min-width: 768px) {
-  .founder-message {
-    position: relative;
-  }
-
-  .founder-avatar {
-    margin-bottom: 20px;
-  }
-}
-
-/* ================= V3 & CHARITY SECTION ================= */
-
-#v3-charity h2 {
-  color: #e67e22;
-  font-size: 40px;
-  font-weight: 800;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.v3-charity-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
-
-.v3-box {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.v3-box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
-}
-
-.v3-box img {
-  max-width: 90px;
-  margin-bottom: 20px;
-}
-
-.v3-box h3 {
-  color: #111;
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.v3-box p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #444;
-}
-
-/* ================= V3 LOGO SECTION ================= */
-
-.v3-section {
-  padding: 80px 20px;
-  text-align: center;
-  background: #f8f9fc;
-}
-
-.v3-section img {
-  width: 350px;        /* MAIN CONTROL */
-  max-width: 90%;
-  height: auto;
-  margin: 0 auto 25px;
-  display: block;
-}
-
-.v3-section h3 {
-  font-size: 28px;
-  font-weight: 800;
-  color: #0f1230;
-}
-
-/* ================= CHARITY IMAGES ================= */
-
-.charity-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.charity-grid img {
-  width: 100%;
-  height: 300px;          /* CONTROL HEIGHT */
-  object-fit: cover;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.18);
-}
-
-/* ================= AIRDROP SECTION ================= */
-#airdrop {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f9f9f9; /* keep light */
-}
-
-#airdrop h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #e67e22; /* hero orange */
-  margin-bottom: 30px;
-}
-
-#airdrop p {
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto 50px;
-  line-height: 1.8;
-  color: #333; /* dark enough for readability */
-}
-
-/* ================= AIRDROP CARDS ================= */
-.airdrop-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  justify-items: center;
-}
-
-.airdrop-card {
-  background-color: #1b2450; /* dark card for contrast */
-  padding: 30px 20px;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.25); /* stronger shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-  color: #f1f1f1; /* all text readable inside card */
-}
-
-.airdrop-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.35);
-}
-
-.airdrop-card i {
-  font-size: 36px;
-  color: #ff8c00; /* orange icon */
-  margin-bottom: 15px;
-}
-
-.airdrop-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-  color: #ff8c00; /* bright heading */
-  font-weight: 700;
-}
-
-.airdrop-card p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #f1f1f1; /* readable paragraph */
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  #airdrop h2 {
-    font-size: 36px;
-  }
-
-  .airdrop-card h3 {
-    font-size: 20px;
-  }
-
-  .airdrop-card p {
-    font-size: 15px;
-  }
-}
-
-/* ================= SOCIAL MEDIA SECTION ================= */
-#social-media {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #f0f0f0;
-}
-
-#social-media h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #e67e22; /* hero orange */
-  margin-bottom: 20px;
-}
-
-#social-media p {
-  font-size: 18px;
-  max-width: 750px;
-  margin: 0 auto 40px;
-  color: #333;
-  line-height: 1.8;
-}
-
-/* SOCIAL ICONS */
-.social-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 25px;
-}
-
-.social-icons a {
-  font-size: 28px;
-  color: #111b3d;
-  transition: all 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #e67e22; /* hero orange on hover */
-  transform: scale(1.2);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  #social-media h2 {
-    font-size: 36px;
-  }
-
-  .social-icons a {
-    font-size: 24px;
-    margin: 10px;
-  }
-}
-
-/* ================= FIXED AIRDROP / LAUNCH ================= */
-#airdrop {
-  padding: 80px 20px;
-  background-color: #0f1230; /* dark blue/black background consistent */
-  text-align: center;
-  color: #f1f1f1; /* default text for all p, span inside this section */
-}
-
-#airdrop h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #ff8c00; /* hero orange */
-  margin-bottom: 20px;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
-}
-
-#airdrop p {
-  font-size: 18px;
-  max-width: 750px;
-  margin: 0 auto 40px;
-  line-height: 1.8;
-  color: #f1f1f1; /* ensure readable text */
-}
-
-/* Steps / Boxes */
-.airdrop-steps {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  justify-items: center;
-}
-
-.airdrop-steps .step {
-  background-color: #1b2450; /* darker card background */
-  padding: 25px;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-align: center;
-  color: #f1f1f1; /* make sure text inside box is visible */
-}
-
-.airdrop-steps .step:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.35);
-}
-
-.airdrop-steps .step h3 {
-  font-size: 24px;
-  color: #ff8c00;
-  margin-bottom: 12px;
-}
-
-.airdrop-steps .step p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #f1f1f1; /* ensure text is readable */
-}
-
-/* If there is another subsection like Eligibility, Rewards, Timeline */
-.airdrop-subsection p,
-.airdrop-subsection span {
-  color: #f1f1f1; /* make text readable on dark bg */
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  #airdrop h2 {
-    font-size: 36px;
-  }
-
-  .airdrop-steps .step h3 {
-    font-size: 20px;
-  }
-
-  .airdrop-steps .step p {
-    font-size: 15px;
-  }
-}
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  #airdrop h2 {
-    font-size: 36px;
-  }
-
-  .airdrop-steps .step h3 {
-    font-size: 20px;
-  }
-
-  .airdrop-steps .step p {
-    font-size: 15px;
-  }
-}
-
-<!-- ================= AIRDROP / LAUNCH SECTION ================= -->
-<section id="airdrop" class="section light">
-  <h2>Airdrop / Launch</h2>
-  <p>
-    Participate in the B2H airdrop to be part of a humanitarian-driven blockchain ecosystem. 
-    Eligible users will receive tokens, support charity initiatives, and engage in our growing community.
-  </p>
-
-  <!-- Airdrop Cards -->
-  <div class="airdrop-cards">
-    <div class="airdrop-card">
-      <i class="fas fa-user-check"></i>
-      <h3>Eligibility</h3>
-      <p>
-        Open to all crypto enthusiasts, community members, and early supporters. 
-        Verification is simple and transparent.
-      </p>
-    </div>
-
-    <div class="airdrop-card">
-      <i class="fas fa-gift"></i>
-      <h3>Rewards</h3>
-      <p>
-        Tokens distributed fairly to participants. Each transaction continues to contribute to charity and token burn for sustainable value.
-      </p>
-    </div>
-
-    <div class="airdrop-card">
-      <i class="fas fa-calendar-alt"></i>
-      <h3>Timeline</h3>
-      <p>
-        Airdrop starts immediately after launch and continues in scheduled phases. Stay updated through our social channels.
-      </p>
-    </div>
-  </div>
-</section>
-
-/* ================= CONNECT / DONATE / SOCIAL MEDIA ================= */
-#connect-donate {
-  padding: 80px 20px;
-  background-color: #0f1230; /* dark background for contrast */
-  text-align: center;
-}
-
-#connect-donate h2 {
-  font-size: 42px;
-  font-weight: 800;
-  color: #e67e22; /* hero orange */
-  margin-bottom: 25px;
-  text-shadow: 0 3px 8px rgba(0,0,0,0.35);
-}
-
-#connect-donate p {
-  font-size: 18px;
-  max-width: 900px;
-  margin: 0 auto 50px;
-  color: #f1f1f1;
-  line-height: 1.8;
-}
-
-/* Action Cards */
-.connect-donate-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  justify-items: center;
-}
-
-.connect-card, .donate-card, .social-card {
-  background-color: #1b2450; /* dark card */
-  padding: 30px 20px;
-  border-radius: 14px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.25);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  color: #f1f1f1;
-}
-
-.connect-card:hover, .donate-card:hover, .social-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 36px rgba(0,0,0,0.35);
-}
-
-/* Icons */
-.connect-card i, .donate-card i, .social-card i {
-  font-size: 40px;
-  color: #ff8c00;
-  margin-bottom: 15px;
-}
-
-/* Card Titles */
-.connect-card h3, .donate-card h3, .social-card h3 {
-  font-size: 24px;
-  margin-bottom: 12px;
-  color: #ff8c00;
-  font-weight: 700;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
-
-/* Card Paragraphs */
-.connect-card p, .donate-card p, .social-card p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #f1f1f1;
-  margin-bottom: 20px;
-}
-
-/* Buttons */
-.connect-card .btn, .donate-card .btn {
-  text-decoration: none;
-  padding: 10px 25px;
-  border-radius: 6px;
-  font-weight: 700;
-  transition: 0.3s;
-}
-
-.connect-card .btn.secondary {
-  background-color: #333;
-  color: #ff8c00;
-}
-
-.connect-card .btn.secondary:hover {
-  background-color: #ff8c00;
-  color: #111;
-}
-
-.donate-card .btn.primary {
-  background-color: #ff8c00;
-  color: #111;
-}
-
-.donate-card .btn.primary:hover {
-  background-color: #e67e22;
-}
-
-/* Social Media Icons */
-.social-icons a {
-  display: inline-block;
-  margin: 0 8px;
-  font-size: 24px;
-  color: #ff8c00;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: #e67e22;
-}
-
-/* RESPONSIVE */
-@media (max-width: 992px) {
-  #connect-donate h2 {
-    font-size: 36px;
-  }
-  
-  .connect-card h3, .donate-card h3, .social-card h3 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  #connect-donate p, .connect-card p, .donate-card p, .social-card p {
-    font-size: 15px;
-  }
-}
-
-/* 🔧 DEBUG FORCE VISIBILITY */
-#founder,
-#founder * {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: none !important;
-}
-
-/* ================= FOOTER – FINAL FIX ================= */
-.site-footer {
-  background: linear-gradient(135deg, #050816, #0b132b);
-  padding: 50px 20px;
-  text-align: center;
-  position: relative;
-  z-index: 5;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.site-footer p {
-  color: #eaeaea !important;
-  font-size: 14px;
-  letter-spacing: 0.5px;
-  margin-bottom: 20px;
-  opacity: 1 !important;
-}
-
-.site-footer strong {
-  color: #ff8c00;
-}
-
-/* Social icons */
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.footer-social a {
-  color: #ff8c00;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
-
-.footer-social a:hover {
-  color: #ffffff;
-  transform: translateY(-3px);
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .site-footer {
-    padding: 40px 15px;
-  }
-
-  .footer-social a {
-    font-size: 16px;
-  }
-}
-
-/* ================= FOOTER HEIGHT FIX ================= */
-.site-footer {
-  background: linear-gradient(135deg, #050816, #0b132b);
-  padding: 20px 15px !important;   /* FORCE small height */
-  margin: 0 !important;
-}
-
-.site-footer * {
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  line-height: 1.4;
-}
-
-.footer-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.site-footer p {
-  color: #eaeaea !important;
-  font-size: 13px;
-  margin-bottom: 10px !important;
-}
-
-.footer-social {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-}
-
-.footer-social a {
-  color: #ff8c00;
-  font-size: 16px;
 }
