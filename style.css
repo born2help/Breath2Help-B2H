@@ -598,3 +598,128 @@ footer {
     left: 30px;
   }
 }
+
+/* ===== ROADMAP TIMELINE ===== */
+#roadmap {
+  background: #f4f7fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#roadmap h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 50px;
+}
+
+/* Timeline wrapper */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+/* Vertical line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: #004aad;
+  border-radius: 2px;
+}
+
+/* Timeline items */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+/* Left and right positioning */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+/* Timeline content */
+.timeline-content {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content h3 {
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.timeline-content p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Timeline circle replaced with icon */
+.timeline-icon {
+  position: absolute;
+  top: 25px;
+  width: 40px;
+  height: 40px;
+  background: #004aad;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+/* Icon position based on odd/even */
+.timeline-item:nth-child(odd) .timeline-icon {
+  right: -20px;
+}
+
+.timeline-item:nth-child(even) .timeline-icon {
+  left: -20px;
+}
+
+/* Hover effect */
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 70px;
+    padding-right: 20px;
+    margin-bottom: 40px;
+  }
+
+  .timeline-item .timeline-icon {
+    left: 20px !important;
+    right: auto !important;
+  }
+
+  .timeline::after {
+    left: 30px;
+  }
+}
