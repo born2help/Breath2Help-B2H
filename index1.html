@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2H Global Foundation</title>
+
+<!-- ================= MODERNIZED CSS ================= -->
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:"Segoe UI", Arial, sans-serif; background:#0b132b; color:#fff; line-height:1.7; }
+.section { padding:80px 10%; position:relative; opacity:0; transform:translateY(50px); transition: all 1s ease-out; }
+.section.light { background:#f8f9fb; color:#111; }
+.section.dark { background:#0b132b; color:#fff; }
+h2 { font-size:2.6rem; margin-bottom:25px; text-align:center; color:#ff8c00; }
+p { font-size:1.05rem; max-width:900px; margin:auto; opacity:0.9; }
+.btn { padding:14px 34px; border-radius:30px; text-decoration:none; font-weight:600; display:inline-block; transition:all 0.3s; }
+.btn.primary { background:#004aad; color:#fff; }
+.btn.primary:hover { transform:translateY(-3px); box-shadow:0 6px 18px rgba(0,0,0,0.25); }
+.btn.donate { background:#e67e22; color:#fff; }
+.btn.donate:hover { transform:translateY(-3px); box-shadow:0 6px 18px rgba(0,0,0,0.25); }
+
+/* HERO */
+.hero { position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:80px 30px; overflow:hidden; background:#0b1a2b; }
+.burn-logo { position:absolute; top:50%; right:6%; transform:translateY(-50%); width:280px; max-width:45vw; opacity:0.95; z-index:1; filter:drop-shadow(0 10px 28px rgba(0,0,0,0.6)); pointer-events:none; }
+.hero-inner { position:relative; z-index:2; max-width:760px; text-align:center; }
+.brand { display:flex; flex-direction:column; align-items:center; gap:10px; margin-bottom:30px; }
+.main-logo { width:120px; filter:drop-shadow(0 6px 18px rgba(0,0,0,0.45)); }
+.brand-text span { font-size:22px; color:#f3efe6; }
+.brand-text strong { font-size:36px; color:#e67e22; font-weight:800; display:block; line-height:1.2; }
+.hero-title { font-size:64px; font-weight:900; line-height:1.1; text-align:center; background:linear-gradient(90deg,#f9e29c 0%,#d4af37 50%,#ff8c00 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; text-shadow:0 3px 12px rgba(0,0,0,0.35); }
+.hero-title .sub-line { display:block; font-size:32px; font-weight:600; color:#f3efe6; margin-top:6px; }
+.hero-desc { font-size:20px; line-height:1.75; max-width:720px; margin:20px auto 30px; color:#f1f1f1; text-align:center; }
+.hero-actions { display:flex; justify-content:center; gap:20px; }
+
+/* TOKENOMICS */
+#tokenomics { padding:80px 20px; background:#f9f9f9; text-align:center; }
+.tokenomics-visual { display:flex; flex-wrap:wrap; justify-content:center; gap:30px; margin-bottom:50px; }
+.token-bar { width:200px; text-align:left; }
+.token-bar span { display:block; margin-bottom:6px; font-weight:600; color:#111; }
+.token-bar .bar { width:100%; height:18px; background:#ddd; border-radius:12px; overflow:hidden; }
+.token-bar .fill { height:100%; border-radius:12px; background:#e67e22; width:0%; transition: width 1.8s ease-out; }
+.token-bar strong { display:block; text-align:right; font-size:16px; color:#111; }
+.tokenomics-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; }
+.token-card { background:#fff; color:#111; padding:25px; border-radius:14px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.08); transition:transform 0.3s,box-shadow 0.3s; }
+.token-card:hover { transform:translateY(-6px); box-shadow:0 10px 24px rgba(0,0,0,0.15); }
+.token-card h3 { font-size:20px; margin-bottom:12px; color:#e67e22; }
+.token-card p { font-size:16px; line-height:1.7; color:#555; }
+
+/* ROADMAP */
+#roadmap { padding:100px 20px; background:#0f1230; text-align:center; }
+.roadmap-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px; justify-items:center; }
+.roadmap-card { background:#1a1d4a; padding:35px 25px; border-radius:18px; box-shadow:0 8px 24px rgba(0,0,0,0.35); max-width:320px; display:flex; flex-direction:column; align-items:center; opacity:0; transform:translateY(50px); transition: all 0.8s ease-out; }
+.roadmap-card h3 { color:#ff8c00; font-weight:800; margin-bottom:16px; font-size:24px; }
+.roadmap-card p { color:#fff; font-size:16px; line-height:1.8; text-align:center; }
+
+/* FOUNDER */
+#founder { background:#f0f0f0; padding:100px 20px; text-align:center; }
+.founder-container { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:60px; }
+.founder-image-wrapper { flex:1 1 400px; max-width:550px; transition:all 0.8s ease-out; }
+.founder-message { flex:1 1 450px; max-width:600px; text-align:left; position:relative; transition:all 0.8s ease-out; }
+.founder-message p { font-size:18px; line-height:1.8; color:#333; }
+
+/* CHARITY */
+.charity-burn-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:25px; }
+.charity-burn-card { background:#111b3d; border-radius:14px; overflow:hidden; }
+.charity-burn-card img { width:100%; height:180px; object-fit:cover; }
+.charity-burn-card h3 { padding:15px; color:#ff8c00; }
+.charity-burn-card p { padding:0 15px 20px; }
+
+/* SOCIAL */
+.social-icons { display:flex; justify-content:center; gap:25px; }
+.social-icons img { width:36px; }
+
+/* FOOTER */
+footer { padding:30px; text-align:center; background:#050816; font-size:0.9rem; }
+
+/* RESPONSIVE */
+@media (max-width:992px) { .hero-title { font-size:46px; } .founder-container { flex-direction:column; } }
+@media (max-width:600px) { .hero-title { font-size:36px; } .founder-message { text-align:center; } }
+
+</style>
+</head>
+<body>
