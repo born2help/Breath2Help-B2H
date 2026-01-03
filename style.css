@@ -7,12 +7,27 @@
   align-items: center;
   justify-content: center;
   background: url('images/hero-bg.jpg') no-repeat center center/cover;
-  color: #fff;
   text-align: center;
   padding: 50px 20px;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
+/* DARK OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* ← THIS fixes white issue */
+  z-index: 1;
+}
+
+/* Keep hero content above overlay */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
 .hero .burn-logo {
   position: absolute;
   top: 20px;
@@ -42,9 +57,14 @@
   text-align: left;
 }
 
+.hero-title {
+  color: #ffffff;
+}
+
 .hero-title .main-line {
   font-size: 3rem;
   font-weight: 800;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
 .hero-title .sub-line {
@@ -52,14 +72,14 @@
   display: block;
   margin-top: 10px;
   font-weight: 400;
+  color: #f1f1f1;
 }
 
 .hero-desc {
-  margin: 20px 0;
+  color: #eaeaea;
   font-size: 1.1rem;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 20px auto;
 }
 
 .hero-actions .btn {
