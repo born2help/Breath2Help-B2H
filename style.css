@@ -1,3 +1,21 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #ffffff;
+  color: #222;
+  overflow-x: hidden;
+}
+
 /* ================= HERO ================= */
 .hero {
   position: relative;
