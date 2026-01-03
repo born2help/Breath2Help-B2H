@@ -434,3 +434,48 @@ footer {
   color: #555;
 }
 
+/* ===== ROADMAP SECTION ===== */
+#roadmap {
+  background: #f4f7fa; /* light background */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#roadmap h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 40px;
+}
+
+.roadmap-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.roadmap-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  padding: 30px 25px;
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.roadmap-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.roadmap-card h3 {
+  font-size: 1.4rem;
+  color: #004aad;
+  margin-bottom: 12px;
+}
+
+.roadmap-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
