@@ -602,3 +602,57 @@ footer {
   background: #00c896;
   color: #ffffff;
 }
+
+/* ===== BOARD MEMBERS ===== */
+.board-members {
+  max-width: 1200px;
+  margin: 50px auto 0;
+  text-align: center;
+}
+
+.board-members h3 {
+  font-size: 1.8rem;
+  color: #004aad;
+  margin-bottom: 30px;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.board-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.board-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.board-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #00c896;
+}
+
+.board-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.board-card p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
