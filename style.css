@@ -54,16 +54,17 @@ body {
   padding: 50px 20px;
   overflow: hidden;
 
-  /* Background Gradient + Overlay for strong look */
+  /* Background Gradient */
   background: linear-gradient(135deg, #0d1b2a, #1b263b);
   color: #fff;
 }
 
+/* Dark overlay for readability */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5); /* Dark overlay for readability */
+  background: rgba(0,0,0,0.6);
   z-index: 1;
 }
 
@@ -71,16 +72,21 @@ body {
   position: relative;
   z-index: 2;
   max-width: 1200px;
+  animation: fadeInUp 1.2s ease forwards;
 }
 
+/* BURN logo huge & prominent */
 .hero .burn-logo {
   position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 80px;
-  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px; /* 5 times bigger */
+  opacity: 0.1;  /* soft behind effect */
+  z-index: 0;
 }
 
+/* Brand Section */
 .hero .brand {
   display: flex;
   flex-direction: column;
@@ -100,10 +106,12 @@ body {
   font-weight: 600;
 }
 
+/* Hero Titles */
 .hero-title .main-line {
   font-size: 3.5rem;
   font-weight: 800;
-  text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+  text-shadow: 0 4px 25px rgba(0,0,0,0.8);
+  animation: fadeInUp 1s ease forwards;
 }
 
 .hero-title .sub-line {
@@ -111,19 +119,24 @@ body {
   margin-top: 10px;
   font-weight: 400;
   color: #f1f1f1;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  text-shadow: 0 2px 15px rgba(0,0,0,0.6);
+  animation: fadeInUp 1.2s ease forwards;
 }
 
+/* Hero Description */
 .hero-desc {
   max-width: 700px;
   margin: 20px auto;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #eaeaea;
+  animation: fadeInUp 1.4s ease forwards;
 }
 
+/* Buttons */
 .hero-actions {
   margin-top: 30px;
+  animation: fadeInUp 1.6s ease forwards;
 }
 
 .hero-actions .btn {
@@ -133,25 +146,43 @@ body {
   display: inline-block;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, transform 0.3s ease;
 }
 
 .hero-actions .btn.primary {
   background: #ff8c00;
   color: #fff;
+  box-shadow: 0 0 15px #ff8c00, 0 0 30px #ffae42;
 }
 
 .hero-actions .btn.primary:hover {
   background: #e67e22;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ffae42, 0 0 40px #ff8c00;
 }
 
 .hero-actions .btn.donate {
   background: #00c896;
   color: #fff;
+  box-shadow: 0 0 15px #00c896, 0 0 30px #00fff0;
 }
 
 .hero-actions .btn.donate:hover {
   background: #00a37a;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00fff0, 0 0 40px #00c896;
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */
@@ -167,6 +198,9 @@ body {
   }
   .hero .main-logo {
     width: 100px;
+  }
+  .hero .burn-logo {
+    width: 250px;
   }
 }
 
