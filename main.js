@@ -13,6 +13,21 @@ document.addEventListener("DOMContentLoaded", () => {
         item.classList.add("visible");
         count++;
       }
+
+      /* ================= PARTNERS SCROLL ANIMATION ================= */
+const partnerCards = document.querySelectorAll(".partner-card[data-animate]");
+
+function animatePartners() {
+  const trigger = window.innerHeight * 0.85;
+  partnerCards.forEach(card => {
+    if (card.getBoundingClientRect().top < trigger) {
+      card.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", animatePartners);
+animatePartners(); // trigger once on load
     });
 
     if (line) {
