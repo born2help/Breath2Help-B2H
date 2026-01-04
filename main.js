@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* ================= TIMELINE ================= */
   const timelineItems = document.querySelectorAll(".timeline-item");
   const timelineLine = document.querySelector(".timeline-line");
 
@@ -21,9 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", onScroll);
   onScroll();
 
- // ===== Hero particles =====
-document.addEventListener("DOMContentLoaded", () => {
 
+  /* ================= HERO PARTICLES ================= */
   const particlesContainer = document.querySelector(".particles");
   if (!particlesContainer) return;
 
@@ -46,4 +47,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-                          
