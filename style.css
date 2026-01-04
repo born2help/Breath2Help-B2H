@@ -58,33 +58,33 @@ body {
   color: #fff;
 }
 
-/* Dark overlay to maintain contrast */
+/* Dark overlay reduced opacity to not cover logo or background */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.1); /* reduced from 0.35 */
   z-index: 1;
 }
 
 /* Hero content */
 .hero-inner {
   position: relative;
-  z-index: 2;
+  z-index: 3; /* above overlay and logo if needed */
   max-width: 1200px;
   animation: fadeInUp 1.2s ease forwards;
-  text-align: left; /* Keep left alignment for readability */
+  text-align: left;
 }
 
-/* Burn logo positioned right */
+/* Burn logo positioned right and above overlay */
 .hero .burn-logo {
   position: absolute;
-  top: 144px; /* 1.5 inches from top */
-  right: 144px; /* 1.5 inches from right */
+  top: 144px;
+  right: 144px;
   width: 400px;
   max-width: 30vw;
-  opacity: 0.15;
-  z-index: 0;
+  opacity: 1; /* fully visible */
+  z-index: 2; /* above overlay but below hero text if needed */
 }
 
 /* Brand section */
@@ -94,7 +94,7 @@ body {
   align-items: flex-start;
   gap: 10px;
   margin-bottom: 20px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .hero .main-logo {
@@ -192,9 +192,9 @@ body {
 .particles span {
   position: absolute;
   display: block;
-  width: 8px;
-  height: 8px;
-  background: rgba(255,255,255,0.3);
+  width: 12px; /* larger for visibility */
+  height: 12px;
+  background: rgba(0,255,255,0.5); /* brighter color */
   border-radius: 50%;
   animation: float 10s linear infinite;
 }
@@ -211,8 +211,8 @@ body {
 .particles span:nth-child(10){ left: 100%; animation-delay: 9s; }
 
 @keyframes float {
-  0% { transform: translateY(100vh) scale(0.5); opacity: 0.3; }
-  50% { opacity: 0.6; }
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0.5; }
+  50% { opacity: 0.8; }
   100% { transform: translateY(-20vh) scale(1); opacity: 0; }
 }
 
@@ -222,7 +222,7 @@ body {
   .hero-title .sub-line { font-size: 1.2rem; }
   .hero-desc { font-size: 1rem; }
   .hero .main-logo { width: 100px; }
-  .hero .burn-logo { width: 250px; top: 80px; right: 20px; }
+  .hero .burn-logo { width: 250px; top: 80px; right: 20px; opacity: 0.8; }
   .hero-inner { text-align: center; }
   .hero-actions { justify-content: center; }
 }
