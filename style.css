@@ -54,40 +54,40 @@ body {
   padding: 50px 20px;
   overflow: hidden;
 
-  background: linear-gradient(135deg, #0d1b2a, #1b263b); /* Dark blue gradient */
+  background: linear-gradient(135deg, #0d1b2a, #1b263b);
   color: #fff;
 }
 
-/* Dark overlay reduced opacity to not cover logo or background */
+/* Dark overlay reduced opacity */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.1); /* reduced from 0.35 */
+  background: rgba(0,0,0,0.1);
   z-index: 1;
 }
 
 /* Hero content */
 .hero-inner {
   position: relative;
-  z-index: 3; /* above overlay and logo if needed */
+  z-index: 3;
   max-width: 1200px;
-  animation: fadeInUp 1.2s ease forwards;
   text-align: left;
 }
 
-/* Burn logo positioned right and above overlay */
+/* Burn logo: glowing + rotating */
 .hero .burn-logo {
   position: absolute;
   top: 144px;
   right: 144px;
   width: 400px;
   max-width: 30vw;
-  opacity: 1; /* fully visible */
-  z-index: 2; /* above overlay but below hero text if needed */
+  opacity: 1;
+  z-index: 2;
+  animation: burnGlowRotate 10s linear infinite;
 }
 
-/* Brand section */
+/* Brand */
 .hero .brand {
   display: flex;
   flex-direction: column;
@@ -97,23 +97,15 @@ body {
   z-index: 3;
 }
 
-.hero .main-logo {
-  width: 120px;
-  height: auto;
-}
+.hero .main-logo { width: 120px; height: auto; }
 
-.hero .brand-text {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #ffffff;
-}
+.hero .brand-text { font-size: 1.1rem; font-weight: 600; color: #fff; }
 
 /* Hero Titles */
 .hero-title .main-line {
   font-size: 3.5rem;
   font-weight: 800;
   text-shadow: 0 4px 25px rgba(0,0,0,0.7);
-  animation: fadeInUp 1s ease forwards;
 }
 
 .hero-title .sub-line {
@@ -122,7 +114,6 @@ body {
   font-weight: 400;
   color: #f1f1f1;
   text-shadow: 0 2px 15px rgba(0,0,0,0.6);
-  animation: fadeInUp 1.2s ease forwards;
 }
 
 /* Hero description */
@@ -132,15 +123,9 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   color: #eaeaea;
-  animation: fadeInUp 1.4s ease forwards;
 }
 
-/* Buttons */
-.hero-actions {
-  margin-top: 30px;
-  animation: fadeInUp 1.6s ease forwards;
-}
-
+/* Buttons with glowing inner effect */
 .hero-actions .btn {
   padding: 14px 36px;
   border-radius: 50px;
@@ -148,40 +133,69 @@ body {
   display: inline-block;
   text-decoration: none;
   font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   transition: all 0.3s ease, transform 0.3s ease;
 }
 
+/* Primary button */
 .hero-actions .btn.primary {
   background: #ff8c00;
   color: #fff;
   box-shadow: 0 0 15px #ff8c00, 0 0 30px #ffae42;
 }
 
+.hero-actions .btn.primary::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,200,100,0.2);
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.hero-actions .btn.primary:hover::after {
+  opacity: 1;
+}
+
 .hero-actions .btn.primary:hover {
   background: #e67e22;
   transform: scale(1.05);
-  box-shadow: 0 0 20px #ffae42, 0 0 40px #ff8c00;
 }
 
+/* Donate button */
 .hero-actions .btn.donate {
   background: #00c896;
   color: #fff;
   box-shadow: 0 0 15px #00c896, 0 0 30px #00fff0;
 }
 
+.hero-actions .btn.donate::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,255,255,0.2);
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.hero-actions .btn.donate:hover::after {
+  opacity: 1;
+}
+
 .hero-actions .btn.donate:hover {
   background: #00a37a;
   transform: scale(1.05);
-  box-shadow: 0 0 20px #00fff0, 0 0 40px #00c896;
 }
 
-/* Fade-in animation */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(40px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* ===== PARTICLE BACKGROUND ===== */
+/* Particles */
 .particles {
   position: absolute;
   inset: 0;
@@ -192,28 +206,25 @@ body {
 .particles span {
   position: absolute;
   display: block;
-  width: 12px; /* larger for visibility */
+  width: 12px;
   height: 12px;
-  background: rgba(0,255,255,0.5); /* brighter color */
+  background: rgba(0,255,255,0.5);
   border-radius: 50%;
   animation: float 10s linear infinite;
 }
 
-.particles span:nth-child(1) { left: 10%; animation-delay: 0s; }
-.particles span:nth-child(2) { left: 20%; animation-delay: 2s; }
-.particles span:nth-child(3) { left: 30%; animation-delay: 4s; }
-.particles span:nth-child(4) { left: 40%; animation-delay: 6s; }
-.particles span:nth-child(5) { left: 50%; animation-delay: 8s; }
-.particles span:nth-child(6) { left: 60%; animation-delay: 1s; }
-.particles span:nth-child(7) { left: 70%; animation-delay: 3s; }
-.particles span:nth-child(8) { left: 80%; animation-delay: 5s; }
-.particles span:nth-child(9) { left: 90%; animation-delay: 7s; }
-.particles span:nth-child(10){ left: 100%; animation-delay: 9s; }
-
+/* Particle animation */
 @keyframes float {
   0% { transform: translateY(100vh) scale(0.5); opacity: 0.5; }
   50% { opacity: 0.8; }
   100% { transform: translateY(-20vh) scale(1); opacity: 0; }
+}
+
+/* Burn logo animation */
+@keyframes burnGlowRotate {
+  0% { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
+  50% { transform: rotate(10deg); filter: drop-shadow(0 0 25px #ffae42); }
+  100% { transform: rotate(0deg); filter: drop-shadow(0 0 15px #ff8c00); }
 }
 
 /* Responsive */
@@ -222,7 +233,7 @@ body {
   .hero-title .sub-line { font-size: 1.2rem; }
   .hero-desc { font-size: 1rem; }
   .hero .main-logo { width: 100px; }
-  .hero .burn-logo { width: 250px; top: 80px; right: 20px; opacity: 0.8; }
+  .hero .burn-logo { width: 250px; top: 80px; right: 20px; }
   .hero-inner { text-align: center; }
   .hero-actions { justify-content: center; }
 }
