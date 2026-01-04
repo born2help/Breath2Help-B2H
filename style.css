@@ -54,16 +54,16 @@ body {
   padding: 50px 20px;
   overflow: hidden;
 
-  background: linear-gradient(135deg, #0d1b2a, #1b263b);
+  background: linear-gradient(135deg, #0d1b2a, #1b263b); /* Dark blue gradient */
   color: #fff;
 }
 
-/* Dark overlay */
+/* Dark overlay to maintain contrast */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.35);
   z-index: 1;
 }
 
@@ -73,16 +73,16 @@ body {
   z-index: 2;
   max-width: 1200px;
   animation: fadeInUp 1.2s ease forwards;
+  text-align: left; /* Keep left alignment for readability */
 }
 
-/* BURN logo behind content, 5x bigger and visible */
+/* Burn logo positioned right */
 .hero .burn-logo {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 400px; /* huge size */
-  max-width: 90vw; /* responsive */
+  top: 144px; /* 1.5 inches from top */
+  right: 144px; /* 1.5 inches from right */
+  width: 400px;
+  max-width: 30vw;
   opacity: 0.15;
   z-index: 0;
 }
@@ -91,7 +91,7 @@ body {
 .hero .brand {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 20px;
   z-index: 2;
@@ -103,16 +103,16 @@ body {
 }
 
 .hero .brand-text {
-  text-align: center;
   font-size: 1.1rem;
   font-weight: 600;
+  color: #ffffff;
 }
 
 /* Hero Titles */
 .hero-title .main-line {
   font-size: 3.5rem;
   font-weight: 800;
-  text-shadow: 0 4px 25px rgba(0,0,0,0.8);
+  text-shadow: 0 4px 25px rgba(0,0,0,0.7);
   animation: fadeInUp 1s ease forwards;
 }
 
@@ -128,7 +128,7 @@ body {
 /* Hero description */
 .hero-desc {
   max-width: 700px;
-  margin: 20px auto;
+  margin: 20px 0;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #eaeaea;
@@ -177,14 +177,8 @@ body {
 
 /* Fade-in animation */
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== PARTICLE BACKGROUND ===== */
@@ -228,7 +222,9 @@ body {
   .hero-title .sub-line { font-size: 1.2rem; }
   .hero-desc { font-size: 1rem; }
   .hero .main-logo { width: 100px; }
-  .hero .burn-logo { width: 250px; }
+  .hero .burn-logo { width: 250px; top: 80px; right: 20px; }
+  .hero-inner { text-align: center; }
+  .hero-actions { justify-content: center; }
 }
 
 /* ===== FOUNDER SECTION ===== */
