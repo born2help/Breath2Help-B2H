@@ -18,20 +18,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  window.addEventListener("scroll", onScroll);
-  onScroll();
-});
+  // ===== Create particles dynamically =====
+const particlesContainer = document.querySelector(".particles");
+const numParticles = 50;
+
+for(let i=0;i<numParticles;i++){
+  const span = document.createElement("span");
+  span.style.left = Math.random() * 100 + "%";
+  span.style.top = Math.random() * 100 + "%";
+  span.style.width = 5 + Math.random() * 12 + "px";
+  span.style.height = span.style.width;
+  span.style.animationDuration = 4 + Math.random()*6 + "s";
+  particlesContainer.appendChild(span);
+}
 
 // ===== Cursor-reactive particles =====
 document.addEventListener("mousemove", (e) => {
   const particles = document.querySelectorAll(".particles span");
-  const centerX = window.innerWidth;
-  const centerY = window.innerHeight;
+  const centerX = window.innerWidth/2;
+  const centerY = window.innerHeight/2;
 
   particles.forEach((p, i) => {
-    const offsetX = (e.clientX - centerX/2) * 0.02 * (i+1);
-    const offsetY = (e.clientY - centerY/2) * 0.02 * (i+1);
-    p.style.setProperty("--x", offsetX + "px");
-    p.style.setProperty("--y", offsetY + "px");
+    const offsetX = (e.clientX - centerX) * 0.02 * (i+1);
+    const offsetY = (e.clientY - centerY) * 0.02 * (i+1);
+    p.style.transform = translate(${offsetX}px, ${offsetY}px);
   });
 });
