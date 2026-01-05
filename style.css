@@ -1009,3 +1009,26 @@ footer {
 .governance-btn:hover {
   box-shadow: 0 0 25px rgba(255, 122, 0, 0.6);
 }
+
+/* ================= GOVERNANCE CARDS HORIZONTAL ADJUSTMENT ================= */
+
+/* Top row: Board Members already horizontal in .board-grid */
+.board-members {
+  margin-bottom: 50px;
+}
+
+/* Bottom governance cards in a single row */
+.governance-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Each card adjusts to same height and width for horizontal row */
+.governance-card {
+  flex: 1 1 250px; /* flexible, min width 250px */
+  max-width: 280px;
+  text-align: center;
+  margin-bottom: 0; /* remove extra spacing */
+}
