@@ -1180,3 +1180,65 @@ footer {
   margin-bottom: 12px;
   animation: glow 2.5s ease-in-out infinite;
 }
+
+/* ===== Social Media & Airdrop Section ===== */
+.social-airdrop-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.social-airdrop-intro {
+  font-size: 1rem;
+  color: #555; /* Slightly darker than Governance intro */
+  margin-bottom: 40px;
+}
+
+.social-airdrop-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.social-card, .airdrop-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: 25px 20px;
+  flex: 1 1 200px;
+  max-width: 250px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social-card:hover, .airdrop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.social-card i, .airdrop-card i {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #0077b6;
+  transition: color 0.3s, text-shadow 0.5s;
+}
+
+.social-card:hover i, .airdrop-card:hover i {
+  color: #00b4d8;
+  text-shadow: 0 0 10px #00b4d8, 0 0 20px #0077b6;
+}
+
+.social-card h4, .airdrop-card h4 {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.social-card p, .airdrop-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.social-card .btn, .airdrop-card .btn {
+  font-size: 0.85rem;
+  padding: 8px 15px;
+}
