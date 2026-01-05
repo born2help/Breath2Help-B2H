@@ -1285,3 +1285,48 @@ footer {
   font-weight: 600;
   letter-spacing: 0.5px;
 }
+
+/* ===== TOKENOMICS ===== */
+.tokenomics-intro {
+  max-width: 900px;
+  margin: 0 auto 30px;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.token-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  margin: 30px 0 40px;
+}
+
+.token-info {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.token-info:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+}
+
+.token-info strong {
+  display: block;
+  color: #f7931a;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.token-info span {
+  color: #111;
+  font-weight: 600;
+  font-size: 1rem;
+}
