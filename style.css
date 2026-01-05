@@ -462,58 +462,6 @@ footer {
   color: #e5e7eb;
 }
 
-<!-- ================= GOVERNANCE & CONSTITUTION ================= -->
-<section id="governance" class="section light governance-section">
-  <h2>Governance & Constitution</h2>
-
-  <p class="governance-intro">
-    B2H Global Foundation is governed by a transparent, ethical, and
-    accountable framework that ensures every action aligns with our
-    humanitarian mission.
-  </p>
-
-  <div class="governance-grid">
-
-    <div class="governance-card">
-      <div class="gov-icon">⚖️</div>
-      <h3>Legal Structure</h3>
-      <p>
-        Operates as a legally compliant, non-profit organization following
-        international best practices, regulatory obligations, and reporting
-        standards.
-      </p>
-    </div>
-
-    <div class="governance-card">
-      <div class="gov-icon">👥</div>
-      <h3>Board & Leadership</h3>
-      <p>
-        Guided by an independent board responsible for strategic direction,
-        ethical oversight, and safeguarding the foundation’s long-term vision.
-      </p>
-    </div>
-
-    <div class="governance-card">
-      <div class="gov-icon">📜</div>
-      <h3>Constitution & Policies</h3>
-      <p>
-        All activities are governed by a written constitution defining values,
-        decision-making processes, conflict-of-interest rules, and transparency.
-      </p>
-    </div>
-
-    <div class="governance-card">
-      <div class="gov-icon">🌍</div>
-      <h3>Community Accountability</h3>
-      <p>
-        Community-focused governance ensures donors, partners, and beneficiaries
-        remain at the heart of every initiative and decision.
-      </p>
-    </div>
-
-  </div>
-</section>
-
 /* ================= GOVERNANCE SAFE ENHANCEMENTS ================= */
 
 #governance.governance-section {
