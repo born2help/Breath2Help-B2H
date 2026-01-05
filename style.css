@@ -870,3 +870,142 @@ footer {
   color: #555;
   line-height: 1.5;
 }
+
+/* ================= GOVERNANCE MODERN UPGRADE ================= */
+
+.governance-section {
+  background: linear-gradient(135deg, #eaf6ff, #e9fff3);
+}
+
+.governance-intro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #333;
+}
+
+/* Governance Cards */
+.governance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.governance-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.governance-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 170, 255, 0.35);
+}
+
+.gov-icon {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+/* ================= BOARD OF TRUSTEES ================= */
+
+.board-members {
+  margin: 80px 0 40px;
+  text-align: center;
+}
+
+.board-members h3 {
+  font-size: 1.8rem;
+  margin-bottom: 35px;
+  color: #ff7a00;
+}
+
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 35px;
+}
+
+.board-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px 20px 30px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow border */
+.board-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 2px;
+  background: linear-gradient(120deg, #00c6ff, #00ff99);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.board-card:hover::before {
+  opacity: 1;
+}
+
+.board-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 40px rgba(0, 200, 255, 0.45);
+}
+
+.board-card img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #00c6ff;
+}
+
+.board-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #111;
+}
+
+.board-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ================= GOVERNANCE BUTTONS ================= */
+
+.governance-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.governance-btn {
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.governance-btn:hover {
+  box-shadow: 0 0 25px rgba(255, 122, 0, 0.6);
+}
