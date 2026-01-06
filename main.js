@@ -1,76 +1,47 @@
+/* ===============================
+   B2H GLOBAL FOUNDATION - HERO & FOUNDER ANIMATIONS
+=============================== */
+
+// Wait until DOM is fully loaded
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ===== TIMELINE SCROLL ANIMATION ===== */
-  const items = document.querySelectorAll(".timeline-item");
-  const line = document.querySelector(".timeline-line");
+  /* ====== HERO PARTICLES ====== */
+  const particlesContainer = document.querySelector('.particles');
+  const numParticles = 30;
 
-  function animateTimeline() {
-    let count = 0;
-    const trigger = window.innerHeight * 0.85;
+  // Generate particles dynamically
+  for (let i = 0; i < numParticles; i++) {
+    const particle = document.createElement('span');
+    const size = Math.random() * 8 + 4; // size between 4-12px
+    const x = Math.random() * window.innerWidth;
+    const y = Math.random() * window.innerHeight;
+    const delay = Math.random() * 10; // animation delay
 
-    items.forEach(item => {
-      if (item.getBoundingClientRect().top < trigger) {
-        item.classList.add("visible");
-        count++;
+    particle.style.width = `${size}px`;
+    particle.style.height = `${size}px`;
+    particle.style.left = `${x}px`;
+    particle.style.top = `${y}px`;
+    particle.style.animationDelay = `${delay}s`;
+
+    particlesContainer.appendChild(particle);
+  }
+
+  /* ====== FADE-IN ON SCROLL ====== */
+  const fadeElems = document.querySelectorAll('.hero-inner, .founder-section h2, .founder-intro, .founder-text');
+
+  const fadeInOnScroll = () => {
+    const triggerBottom = window.innerHeight * 0.85;
+
+    fadeElems.forEach(elem => {
+      const top = elem.getBoundingClientRect().top;
+
+      if (top < triggerBottom) {
+        elem.classList.add('fade-in');
       }
     });
+  };
 
-    if (line) {
-      line.style.height = count * 120 + "px";
-    }
-  }
-
-  window.addEventListener("scroll", animateTimeline);
-  animateTimeline();
-
-  /* ===== PARTNERS SCROLL ANIMATION ===== */
-  const partnerCards = document.querySelectorAll(".partner-card[data-animate]");
-
-  function animatePartners() {
-    const trigger = window.innerHeight * 0.85;
-    partnerCards.forEach(card => {
-      if (card.getBoundingClientRect().top < trigger) {
-        card.classList.add("visible");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", animatePartners);
-  animatePartners(); // trigger once on load
-
-  /* ===== HERO PARTICLES ===== */
-  const container = document.querySelector(".particles");
-  if (container) {
-    for (let i = 0; i < 60; i++) {
-      const p = document.createElement("span");
-      const size = Math.random() * 10 + 4;
-      p.style.width = size + "px";
-      p.style.height = size + "px";
-      p.style.left = Math.random() * 100 + "%";
-      p.style.top = Math.random() * 100 + "%";
-      p.style.animationDuration = 6 + Math.random() * 8 + "s";
-      container.appendChild(p);
-    }
-  }
-
-  /* ===== COUNT-UP NUMBERS ===== */
-  const counters = document.querySelectorAll('#impact .impact-card span');
-  counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.innerText.replace(/\D/g,'');
-      let count = 0;
-      const increment = Math.ceil(target / 200); // adjust speed
-      const timer = setInterval(() => {
-        count += increment;
-        if(count >= target) {
-          counter.innerText = target + '+';
-          clearInterval(timer);
-        } else {
-          counter.innerText = count + '+';
-        }
-      }, 10);
-    };
-    updateCount();
-  });
+  window.addEventListener('scroll', fadeInOnScroll);
+  fadeInOnScroll(); // run on load
 
 });
