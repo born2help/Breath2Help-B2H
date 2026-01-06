@@ -81,3 +81,16 @@ document.addEventListener("DOMContentLoaded", () => {
   type();
 
 });
+
+/* ===== FOUNDER SLIDE-IN ===== */
+const founderTexts = document.querySelectorAll('.founder-text');
+
+const founderObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.3 });
+
+founderTexts.forEach(text => founderObserver.observe(text));
