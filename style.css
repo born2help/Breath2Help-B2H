@@ -256,3 +256,26 @@ footer {
   pointer-events: none;
   transition: transform 0.2s ease;
 }
+
+/* ===== FOUNDER SLIDE ANIMATION ===== */
+.founder-text {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.9s ease;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.2rem;
+}
+
+.founder-text.left {
+  transform: translateX(-60px);
+}
+
+.founder-text.right {
+  transform: translateX(60px);
+}
+
+.founder-text.show {
+  opacity: 1;
+  transform: translateX(0);
+}
