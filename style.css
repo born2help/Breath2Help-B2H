@@ -228,3 +228,31 @@ footer {
   .hero-title .main-line { font-size: 2rem; }
   .hero-title .sub-line { font-size: 1rem; }
 }
+
+/* ===== TYPING EFFECT ===== */
+#typed-text {
+  font-weight: 800;
+  color: #ff6a00;
+}
+
+.cursor {
+  display: inline-block;
+  background-color: #ff6a00;
+  width: 3px;
+  animation: blink 0.7s steps(1) infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* ===== PARTICLES FOLLOW MOUSE ===== */
+.particles span {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  pointer-events: none;
+  transition: transform 0.2s ease;
+}
