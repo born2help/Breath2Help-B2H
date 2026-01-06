@@ -279,3 +279,21 @@ footer {
   opacity: 1;
   transform: translateX(0);
 }
+
+/* ===== BURN LOGO FIXED ===== */
+.burn-logo {
+  position: fixed;
+  top: 1.5in;
+  right: 1.5in;
+  width: 90px;
+  opacity: 0.9;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .burn-logo {
+    width: 60px;
+    top: 1in;
+    right: 1in;
+  }
+}
