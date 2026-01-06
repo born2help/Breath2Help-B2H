@@ -2,20 +2,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ===== HERO PARTICLES ===== */
   const particlesContainer = document.querySelector('.particles');
-  const numParticles = 30;
+  const numParticles = 40;
+  const particles = [];
+
   for (let i = 0; i < numParticles; i++) {
     const particle = document.createElement('span');
     const size = Math.random() * 8 + 4;
     const x = Math.random() * window.innerWidth;
     const y = Math.random() * window.innerHeight;
-    const delay = Math.random() * 10;
     particle.style.width = `${size}px`;
     particle.style.height = `${size}px`;
     particle.style.left = `${x}px`;
     particle.style.top = `${y}px`;
-    particle.style.animationDelay = `${delay}s`;
     particlesContainer.appendChild(particle);
+    particles.push({el: particle, x, y});
   }
+
+  /* ===== PARTICLES FOLLOW MOUSE ===== */
+  document.addEventListener('mousemove', e => {
+    const mouseX = e.clientX;
+    const mouseY = e.clientY;
+
+    particles.forEach(p => {
+      const dx = (mouseX - p.x) * 0.02;
+      const dy = (mouseY - p.y) * 0.02;
+      p.el.style.transform = `translate(${dx}px, ${dy}px)`;
+    });
+  });
 
   /* ===== FADE-IN ON SCROLL ===== */
   const fadeElems = document.querySelectorAll('.hero-inner, .founder-section h2, .founder-intro, .founder-text');
@@ -37,4 +50,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const y = (e.clientY / window.innerHeight - 0.5) * 15;
     hero.style.transform = `translate(${x}px, ${y}px)`;
   });
+
+  /* ===== TYPED HERO TEXT ===== */
+  const typedText = document.getElementById('typed-text');
+  const phrases = ["Empowering Humanity", "Spreading Hope", "Building Futures", "One Helping Hand"];
+  let i = 0, j = 0, currentText = "", isDeleting = false;
+
+  function type() {
+    const fullText = phrases[i];
+    if (!isDeleting) {
+      currentText = fullText.substring(0, j+1);
+      typedText.textContent = currentText;
+      j++;
+      if (currentText === fullText) {
+        isDeleting = true;
+        setTimeout(type, 1500);
+        return;
+      }
+    } else {
+      currentText = fullText.substring(0, j-1);
+      typedText.textContent = currentText;
+      j--;
+      if (currentText === "") {
+        isDeleting = false;
+        i = (i + 1) % phrases.length;
+      }
+    }
+    setTimeout(type, isDeleting ? 60 : 120);
+  }
+  type();
+
 });
