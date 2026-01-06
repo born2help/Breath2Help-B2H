@@ -45,3 +45,11 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeInOnScroll(); // run on load
 
 });
+
+/* ===== HERO PARALLAX ON MOUSE MOVE ===== */
+const hero = document.querySelector('.hero-inner');
+document.addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 15; // horizontal movement
+  const y = (e.clientY / window.innerHeight - 0.5) * 15; // vertical movement
+  hero.style.transform = `translate(${x}px, ${y}px)`;
+});
