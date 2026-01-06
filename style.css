@@ -714,3 +714,36 @@ footer {
     font-size: 0.85rem;
   }
 }
+
+/* ================= SOCIAL IMPACT ================= */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.impact-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+}
+
+.impact-card i {
+  font-size: 2.2rem;
+  color: #22c55e;
+  margin-bottom: 12px;
+}
+
+.impact-card span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #111827;
+}
