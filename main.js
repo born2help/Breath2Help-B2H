@@ -1,95 +1,73 @@
-// ================= FLOATING PARTICLES =================
-const particles = document.querySelectorAll(".particles span");
-particles.forEach(p => {
-  p.style.left = Math.random() * 100 + "vw";
-  p.style.top = Math.random() * 100 + "vh";   // ✅ THIS WAS MISSING
-  const size = 3 + Math.random() * 5;
-  p.style.width = size + "px";
-  p.style.height = size + "px";
-  p.style.animationDuration = 10 + Math.random() * 10 + "s";
-  p.style.opacity = 0.6;
-});
-
-// ================= HERO TEXT LINE ANIMATION =================
-document.querySelectorAll('.hero-content .line').forEach((line, index) => {
-  line.style.animation = `lineFadeUp 0.8s forwards`;
-  line.style.animationDelay = (index * 0.3) + 's';
-});
-
-// ================= 3D PARALLAX HERO =================
-const heroSection = document.querySelector('.hero');
-const layers = document.querySelectorAll('.parallax-layer');
-
-heroSection.addEventListener('mousemove', (e) => {
-  const rect = heroSection.getBoundingClientRect();
-  const x = e.clientX - rect.left - rect.width / 2;
-  const y = e.clientY - rect.top - rect.height / 2;
-
-  layers.forEach(layer => {
-    const depth = layer.classList.contains('depth-logo') ? 40 :
-                  layer.classList.contains('depth-front') ? 25 :
-                  layer.classList.contains('depth-mid') ? 15 : 8;
-
-    const moveX = (x / rect.width) * depth;
-    const moveY = (y / rect.height) * depth;
-
-    layer.style.transform =
-      `translate3d(${moveX}px, ${-moveY}px, ${layer.style.z || 0})`;
-  });
-});
-
-heroSection.addEventListener('mouseleave', () => {
-  layers.forEach(layer => {
-    layer.style.transform = '';
-  });
-});
-
-// ===== SCROLL PARALLAX EFFECT =====
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-
-  document.documentElement.style.setProperty(
-    '--scroll-bg',
-    scrollY * 0.15 + 'px'
-  );
-
-  document.documentElement.style.setProperty(
-    '--scroll-text',
-    scrollY * 0.3 + 'px'
-  );
-});
-
-// ===== CURSOR HALO =====
-const halo = document.createElement('div');
-halo.classList.add('cursor-halo');
-document.body.appendChild(halo);
-
-document.addEventListener('mousemove', e => {
-  halo.style.left = e.clientX + 'px';
-  halo.style.top = e.clientY + 'px';
-});
-
-// ===== INITIALIZE FLOATING PARTICLES =====
-document.querySelectorAll('.particles span').forEach(p => {
-  p.style.left = Math.random() * window.innerWidth + 'px';
-  p.style.bottom = (-Math.random() * 200) + 'px';
-});
-
-// ===== MOUSE PARALLAX EFFECT =====
+// ================== HERO PARALLAX & PARTICLES ==================
 const hero = document.querySelector('.hero');
-const layers = document.querySelectorAll('.parallax-layer');
+const parallaxLayers = document.querySelectorAll('.parallax-layer');
+
+// Floating background particles
+const bgParticles = document.querySelectorAll('.particles span');
+bgParticles.forEach(p => {
+  p.style.left = Math.random() * window.innerWidth + 'px';
+  p.style.bottom = Math.random() * 50 + 'px';
+  p.style.width = 4 + Math.random() * 6 + 'px';
+  p.style.height = p.style.width;
+  p.style.animationDuration = 8 + Math.random() * 6 + 's';
+});
+
+// Hero lines animation
+document.querySelectorAll('.hero-content .line').forEach((line, index) => {
+  line.style.animationDelay = (index * 0.3) + 's';
+  line.classList.add('slide-in');
+});
+
+// ================== MOUSE FOLLOWING PARTICLES ==================
+const mouseParticles = [];
+for (let i = 0; i < 15; i++) {
+  const p = document.createElement('div');
+  p.classList.add('mouse-particle');
+  p.style.width = p.style.height = (3 + Math.random() * 4) + 'px';
+  p.style.position = 'absolute';
+  p.style.background = 'rgba(255,255,255,0.35)';
+  p.style.borderRadius = '50%';
+  p.style.pointerEvents = 'none';
+  p.style.transition = 'transform 0.1s linear';
+  hero.appendChild(p);
+  mouseParticles.push(p);
+}
 
 hero.addEventListener('mousemove', e => {
-  const x = (window.innerWidth / 2 - e.clientX) / 30;
-  const y = (window.innerHeight / 2 - e.clientY) / 30;
-
-  layers.forEach(layer => {
-    const depth = layer.classList.contains('depth-front') ? 1 : 0.5;
-    layer.style.transform = `translate(${x * depth}px, ${y * depth}px)`;
+  mouseParticles.forEach((p, idx) => {
+    const offset = idx * 6;
+    p.style.transform = `translate(${e.clientX + offset}px, ${e.clientY + offset}px)`;
   });
 });
 
-// ===== HERO TEXT DELAY =====
-document.querySelectorAll('.hero-content .line').forEach((line, i) => {
-  line.style.animationDelay = `${i * 0.3}s`;
+// ================== PARALLAX MOVEMENT ON MOUSE ==================
+hero.addEventListener('mousemove', e => {
+  const centerX = window.innerWidth / 2;
+  const centerY = window.innerHeight / 2;
+  const moveX = (e.clientX - centerX) / centerX;
+  const moveY = (e.clientY - centerY) / centerY;
+
+  parallaxLayers.forEach(layer => {
+    const depth = parseFloat(layer.className.match(/depth-(\w+)/)[1] || 1);
+    let multiplier = 0;
+    switch(depth){
+      case 'bg': multiplier = 5; break;
+      case 'mid': multiplier = 15; break;
+      case 'logo': multiplier = 8; break;
+      case 'front': multiplier = 10; break;
+      default: multiplier = 10;
+    }
+    layer.style.transform = `translate(${moveX * multiplier}px, ${moveY * multiplier}px)`;
+  });
 });
+
+// ================== FOUNDER TEXT SLIDE IN ON VIEW ==================
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll(".founder-text").forEach(el => observer.observe(el));
