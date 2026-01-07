@@ -45,7 +45,8 @@ p, li {
   align-items: center;
   text-align: center;
   color: #fff;
-  background: radial-gradient(circle at top left, #0a0a15, #1c1c34);
+  /* Beautiful eye-catching gradient */
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
 /* Hero Particles */
@@ -67,23 +68,21 @@ p, li {
 /* Burn Logo */
 .hero img.burn-logo {
   position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 120px;
-  width: 10%;
+  top: 1.5in;  /* distance from top */
+  right: 0.5in; /* distance from right */
+  transform: translate(0, 0);
+  width: 400px; /* approx 4x bigger */
+  max-width: 20%; /* responsive */
   z-index: 2;
-  opacity: 0.8;
 }
 
-/* Main Logo */
+/* Main Logo on Left Corner */
 .hero img.main-logo-hero {
   position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 200px;
-  width: 15%;
+  top: 20px;
+  left: 20px;
+  width: 150px; 
+  max-width: 12%;
   z-index: 3;
 }
 
@@ -94,6 +93,7 @@ p, li {
   max-width: 800px;
   padding: 0 20px;
   animation: depth-float 4s ease-in-out infinite alternate;
+  margin-top: 80px; /* push below top logos */
 }
 
 /* Depth float animation */
@@ -108,18 +108,20 @@ p, li {
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 20px;
-  color: #fff;
+  color: #00ffcc; /* bright turquoise for gradient contrast */
+  text-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
   margin-bottom: 15px;
-  color: #ccc;
+  color: #d0f0ff; /* soft light cyan */
+  text-shadow: 0 0 10px rgba(208, 240, 255, 0.5);
 }
 
 .hero-subtext {
   font-size: 1rem;
-  color: #aaa;
+  color: #b0e0e6; /* lighter cyan */
   margin-bottom: 30px;
 }
 
@@ -156,18 +158,19 @@ p, li {
 }
 
 .btn.primary {
-  background: #00ff88;
-  color: #0a0a15;
+  background: #00ffcc;
+  color: #0f2027;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
 }
 
 .btn.outline {
-  border: 2px solid #00ff88;
-  color: #00ff88;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
   background: transparent;
 }
 
 .btn.glow:hover {
-  box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88 inset;
+  box-shadow: 0 0 25px #00ffcc, 0 0 50px #00ffcc inset;
   transform: translateY(-2px);
 }
 
@@ -181,8 +184,8 @@ p, li {
   .hero-title { font-size: 2.2rem; }
   .hero-subtitle { font-size: 1rem; }
   .hero-subtext { font-size: 0.9rem; }
-  .hero img.burn-logo { max-width: 80px; top: 8%; }
-  .hero img.main-logo-hero { max-width: 150px; top: 22%; }
+  .hero img.main-logo-hero { width: 100px; top: 10px; left: 10px; }
+  .hero img.burn-logo { width: 200px; top: 1in; right: 0.3in; }
 }
 
 /* ------------------- FOUNDER SECTION ------------------- */
@@ -390,157 +393,3 @@ ul.readable-text li {
   .tokenomics-grid, .board-members, .governance-flow { flex-direction: column; }
 }
 
-/* ================= HERO SECTION ================= */
-.hero {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  /* Beautiful eye-catching gradient */
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-}
-
-/* Hero Particles */
-.hero .particles span {
-  position: absolute;
-  display: block;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.15);
-  width: 6px;
-  height: 6px;
-  animation: float 12s infinite ease-in-out;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); opacity: 0.3; }
-  50% { transform: translateY(-20px); opacity: 0.7; }
-}
-
-/* Burn Logo */
-.hero img.burn-logo {
-  position: absolute;
-  top: 1.5in;  /* distance from top */
-  right: 0.5in; /* distance from right */
-  transform: translate(0, 0);
-  width: 400px; /* approx 4x bigger */
-  max-width: 20%; /* responsive */
-  z-index: 2;
-}
-
-/* Main Logo on Left Corner */
-.hero img.main-logo-hero {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 150px; 
-  max-width: 12%;
-  z-index: 3;
-}
-
-/* Hero Content */
-.hero-content {
-  position: relative;
-  z-index: 4;
-  max-width: 800px;
-  padding: 0 20px;
-  animation: depth-float 4s ease-in-out infinite alternate;
-  margin-top: 80px; /* push below top logos */
-}
-
-/* Depth float animation */
-@keyframes depth-float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-8px); }
-}
-
-/* Hero Text */
-.hero-title {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  color: #00ffcc; /* bright turquoise for gradient contrast */
-  text-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: #d0f0ff; /* soft light cyan */
-  text-shadow: 0 0 10px rgba(208, 240, 255, 0.5);
-}
-
-.hero-subtext {
-  font-size: 1rem;
-  color: #b0e0e6; /* lighter cyan */
-  margin-bottom: 30px;
-}
-
-/* Line animation */
-.hero-content .line {
-  display: block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slide-in 1s forwards;
-}
-
-.hero-content .line:nth-child(1) { animation-delay: 0.2s; }
-.hero-content .line:nth-child(2) { animation-delay: 0.5s; }
-.hero-content .line:nth-child(3) { animation-delay: 0.8s; }
-
-@keyframes slide-in {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hero Buttons */
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.btn {
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn.primary {
-  background: #00ffcc;
-  color: #0f2027;
-  box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
-}
-
-.btn.outline {
-  border: 2px solid #00ffcc;
-  color: #00ffcc;
-  background: transparent;
-}
-
-.btn.glow:hover {
-  box-shadow: 0 0 25px #00ffcc, 0 0 50px #00ffcc inset;
-  transform: translateY(-2px);
-}
-
-/* Mouse parallax layers */
-.parallax-layer {
-  will-change: transform;
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .hero-title { font-size: 2.2rem; }
-  .hero-subtitle { font-size: 1rem; }
-  .hero-subtext { font-size: 0.9rem; }
-  .hero img.main-logo-hero { width: 100px; top: 10px; left: 10px; }
-  .hero img.burn-logo { width: 200px; top: 1in; right: 0.3in; }
-}
