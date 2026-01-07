@@ -56,33 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const phrases = ["Empowering Humanity", "Spreading Hope", "Building Futures", "One Helping Hand"];
   let i = 0, j = 0, currentText = "", isDeleting = false;
 
-  function type() {
-    const fullText = phrases[i];
-    if (!isDeleting) {
-      currentText = fullText.substring(0, j+1);
-      typedText.textContent = currentText;
-      j++;
-      if (currentText === fullText) {
-        isDeleting = true;
-        setTimeout(type, 1500);
-        return;
-      }
-    } else {
-      currentText = fullText.substring(0, j-1);
-      typedText.textContent = currentText;
-      j--;
-      if (currentText === "") {
-        isDeleting = false;
-        i = (i + 1) % phrases.length;
-      }
-    }
-    setTimeout(type, isDeleting ? 60 : 120);
-  }
-  type();
-
-});
-
-/* ===== FOUNDER SLIDE-IN ===== */
+  /* ===== FOUNDER SLIDE-IN ===== */
 const founderTexts = document.querySelectorAll('.founder-text');
 
 const founderObserver = new IntersectionObserver(entries => {
