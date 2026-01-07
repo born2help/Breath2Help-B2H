@@ -102,3 +102,13 @@ window.addEventListener('scroll', () => {
     scrollY * 0.3 + 'px'
   );
 });
+
+// ===== CURSOR HALO =====
+const halo = document.createElement('div');
+halo.classList.add('cursor-halo');
+document.body.appendChild(halo);
+
+document.addEventListener('mousemove', e => {
+  halo.style.left = e.clientX + 'px';
+  halo.style.top = e.clientY + 'px';
+});
