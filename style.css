@@ -979,44 +979,6 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   box-shadow: 0 0 25px rgba(255,255,255,0.8);
 }
 
-/* ================= HERO OVAL BLOCKS ================= */
-.hero-blocks {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  z-index: 5;
-}
-
-.hero-block {
-  width: 120px;
-  height: 50px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.hero-block.donate { background: #1e90ff; }      /* Blue */
-.hero-block.tokenomics { background: #ff4500; } /* Red */
-.hero-block.mission { background: #32cd32; }    /* Green */
-.hero-block.governance { background: #ffd700; } /* Yellow */
-.hero-block.contact { background: #000; }       /* Black */
-
-.hero-block:hover {
-  transform: scale(1.2);
-  box-shadow: 0 0 25px rgba(255,255,255,0.8);
-}
-
 /* ================= HERO BACKGROUND ================= */
 .hero {
   position: relative;
