@@ -5,6 +5,8 @@ body { font-family: 'Montserrat', sans-serif; background: #f9f9f9; color: #222; 
 
 /* ================= HERO SECTION ================= */
 .hero {
+  perspective: 1200px;
+  transform-style: preserve-3d;
   position: relative;
   min-height: 100vh;
   display: flex;
