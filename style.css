@@ -298,3 +298,24 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 .hero-content.depth-float {
   animation: depthFloat 6s ease-in-out infinite;
 }
+
+/* ===== HERO HEADING BOLD & GLOW ===== */
+.hero-title {
+  font-weight: 900; /* extra bold */
+  color: #ffb347; /* brighter orange for visibility */
+  text-shadow: 
+    0 0 10px rgba(255, 180, 71, 0.8),
+    0 0 20px rgba(255, 180, 71, 0.6),
+    0 0 30px rgba(255, 180, 71, 0.4),
+    0 0 40px rgba(255, 180, 71, 0.2);
+}
+
+/* Optional: subtitle glow */
+.hero-subtitle {
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+}
+
+/* Optional: subtext glow */
+.hero-subtext {
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
