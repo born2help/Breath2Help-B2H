@@ -871,3 +871,26 @@ footer.footer a:hover {
     height: 220px;
   }
 }
+
+/* ================= CARD FLOATING GLOW ================= */
+.card-glow {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(34,197,94,0.25); /* greenish glow */
+  pointer-events: none;
+  filter: blur(12px);
+  animation: floatCardGlow linear infinite;
+  z-index: 0;
+}
+
+@keyframes floatCardGlow {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+  50% { transform: translate(20px, -30px) scale(1.2); opacity: 0.7; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.4; }
+}
+
+/* Ensure cards are above glow */
+.board-card, .trustee-card, .governance-card, .constitution-card {
+  position: relative;
+  z-index: 1;
+}
