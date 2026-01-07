@@ -1006,66 +1006,52 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   margin-top: 15px;
 }
 
-/* ================= HERO BLOCKS – FINAL FIX ================= */
-
-.hero {
-  position: relative;
-}
-
-/* Container placement */
-.hero-blocks {
-  position: absolute;
-  left: 35px;          /* moved away from wall */
-  bottom: 35px;        /* bottom spacing */
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  z-index: 2;
-}
-
-/* All blocks SAME */
-.hero-block {
-  width: 96px;         /* slightly bigger */
-  height: 28px;
-  border-radius: 50px; /* perfect oval */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.65rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.35);
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Colors – balanced & serious */
-.hero-block.donate { background: #1e88e5; }
-.hero-block.tokenomics { background: #e53935; }
-.hero-block.mission { background: #2e7d32; }
-.hero-block.governance { background: #f9a825; color: #111; }
-.hero-block.contact { background: #111111; }
-
-/* Subtle interaction */
-.hero-block:hover {
-  transform: translateX(3px);
-  box-shadow: 0 0 12px rgba(255,255,255,0.45);
-}
-
+/* ================= HERO BLOCKS FIXED ================= */
 .hero > .hero-blocks {
   position: absolute !important;
-  left: 24px !important;
-  bottom: 24px !important;
+  left: 24px !important;        /* small space from left */
+  bottom: 24px !important;      /* small space from bottom */
   display: flex !important;
   flex-direction: column !important;
-  gap: 10px !important;
+  gap: 12px !important;
   z-index: 20 !important;
 }
 
 .hero > .hero-blocks > .hero-block {
-  width: 96px !important;
-  height: 28px !important;
+  width: 120px !important;      /* uniform width */
+  height: 32px !important;      /* uniform height */
   border-radius: 999px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 600;
+  font-size: 14px;
+  color: #fff !important;       /* text always readable */
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ================= COLORS FOR EACH BLOCK ================= */
+.hero-block.donate {
+  background: #1e90ff;  /* blue */
+}
+.hero-block.tokenomics {
+  background: #32cd32;  /* green */
+}
+.hero-block.mission {
+  background: #ffd700;  /* yellow */
+  color: #000;
+}
+.hero-block.governance {
+  background: #ff4500;  /* red */
+}
+.hero-block.contact {
+  background: #000;     /* black */
+}
+
+/* ================= HOVER EFFECT ================= */
+.hero-block:hover {
+  transform: translateX(6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
