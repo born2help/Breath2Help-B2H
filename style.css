@@ -22,9 +22,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    linear-gradient(180deg, rgba(8,25,55,0.92), rgba(4,10,25,0.96)),
-    radial-gradient(circle at top, #1f4fa3 0%, #071225 70%);
+ background: radial-gradient(
+      circle at top,
+      rgba(0, 190, 150, 0.35),
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      #062a2f 0%,
+      #0a4b55 40%,
+      #0f6f7d 70%,
+      #1aa6a6 100%
+    );
   overflow: hidden;
 }
 
