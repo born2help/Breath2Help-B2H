@@ -112,3 +112,9 @@ document.addEventListener('mousemove', e => {
   halo.style.left = e.clientX + 'px';
   halo.style.top = e.clientY + 'px';
 });
+
+// ===== INITIALIZE FLOATING PARTICLES =====
+document.querySelectorAll('.particles span').forEach(p => {
+  p.style.left = Math.random() * window.innerWidth + 'px';
+  p.style.bottom = (-Math.random() * 200) + 'px';
+});
