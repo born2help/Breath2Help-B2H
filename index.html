@@ -103,5 +103,11 @@
 
   <!-- Main JS -->
   <script src="main.js"></script>
+
+  // HERO LINE ANIMATION DELAY
+document.querySelectorAll('.hero-content .line').forEach((line, index) => {
+  line.style.animationDelay = (index * 0.3) + 's';
+});
+    
 </body>
 </html>
