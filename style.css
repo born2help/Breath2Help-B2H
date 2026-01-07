@@ -1074,3 +1074,77 @@ footer.footer a:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
 }
+
+/* ===== TOKENOMICS SECTION ===== */
+.tokenomics-section {
+  background: linear-gradient(135deg, #0a4b55, #062a2f);
+  color: #e0f7f4; /* default text color */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.tokenomics-section h2 {
+  font-size: 3rem;
+  color: #22c55e; /* vibrant green */
+  margin-bottom: 40px;
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tokenomics-section p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #ccefe3; /* readable light color */
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+/* ===== TOKENOMICS CARDS ===== */
+.tokenomics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.tokenomics-card {
+  background: linear-gradient(145deg, #0f6f7d, #1aa6a6);
+  color: #e0f7f4;
+  padding: 30px 25px;
+  border-radius: 20px;
+  width: 280px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.tokenomics-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #22c55e;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Glow effect for numbers/percentages inside card */
+.tokenomics-card span.number {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0 0 8px #22c55e, 0 0 15px #22c55e, 0 0 25px #00ffcc;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.tokenomics-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0f7f4;
+}
+
+/* Card hover effect */
+.tokenomics-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
