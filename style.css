@@ -1014,3 +1014,63 @@ footer.footer a:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 12px 30px rgba(34,197,94,0.35);
 }
+
+/* ===== TOKENOMICS SECTION ===== */
+.tokenomics-section {
+  background: linear-gradient(135deg, #0a4b55, #062a2f);
+  color: #e0f7f4;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.tokenomics-section h2 {
+  font-size: 2.8rem;
+  color: #22c55e; /* vibrant green */
+  margin-bottom: 30px;
+  font-weight: 800;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tokenomics-section p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #ccefe3; /* lighter but readable */
+  max-width: 900px;
+  margin: 0 auto 20px;
+}
+
+.tokenomics-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.tokenomics-card {
+  background: linear-gradient(145deg, #0f6f7d, #1aa6a6);
+  color: #e0f7f4;
+  padding: 30px 25px;
+  border-radius: 20px;
+  width: 280px;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+.tokenomics-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+  color: #22c55e; /* keep headings vibrant */
+}
+
+.tokenomics-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0f7f4; /* readable description */
+}
+
+.tokenomics-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
