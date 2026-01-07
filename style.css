@@ -1044,81 +1044,50 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   margin-top: 15px;
 }
 
-/* ================= HERO BLOCKS FIXED ================= */
-.hero-blocks {
-  position: absolute;
-  bottom: 40px;
-  left: 10px; /* move slightly left so logo is safe */
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 5;
+/* ================= HERO OVAL BLOCKS – FINAL ================= */
+
+.hero {
+  position: relative;
 }
 
+/* Container */
+.hero-blocks {
+  position: absolute;
+  left: 0.3in;
+  bottom: 0.3in;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 3;
+}
+
+/* SAME SIZE FOR ALL */
 .hero-block {
-  width: 120px;  /* smaller width */
-  height: 40px;  /* smaller height */
-  border-radius: 50px; /* fully oval */
+  width: 78px;
+  height: 24px;
+  border-radius: 40px;       /* true oval */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
   font-weight: 600;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-  font-size: 0.9rem;
-}
-
-.hero-block.donate { background: #1e90ff; }      /* Blue */
-.hero-block.tokenomics { background: #ff4500; } /* Red */
-.hero-block.mission { background: #32cd32; }    /* Green */
-.hero-block.governance { background: #ffd700; } /* Yellow */
-.hero-block.contact { background: #000; }       /* Black */
-
-.hero-block:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(255,255,255,0.8);
-}
-
-/* ================= ULTRA SMALL HERO BLOCKS ================= */
-.hero-blocks {
-  position: absolute;
-  bottom: 35px;
-  left: 6px;              /* more left – safe from logo */
-  display: flex;
-  flex-direction: column;
-  gap: 8px;               /* tighter spacing */
-  z-index: 4;
-}
-
-.hero-block {
-  width: 70px;            /* VERY small */
-  height: 22px;           /* slim oval */
-  border-radius: 30px;    /* perfect oval */
-  display: flex;
-  align-items: center;
-  justify-content: center;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 0.6rem;      /* small but readable */
   letter-spacing: 0.4px;
   color: #ffffff;
   cursor: pointer;
-  box-shadow: 0 0 8px rgba(0,0,0,0.35);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Colors */
-.hero-block.donate { background: #1e90ff; }      
-.hero-block.tokenomics { background: #ff3b30; } 
-.hero-block.mission { background: #2ecc71; }    
-.hero-block.governance { background: #f1c40f; color:#111; } 
+/* COLORS */
+.hero-block.donate { background: #1e90ff; }
+.hero-block.tokenomics { background: #ff3b30; }
+.hero-block.mission { background: #2ecc71; }
+.hero-block.governance { background: #f1c40f; color: #111; }
 .hero-block.contact { background: #000000; }
 
-/* Hover */
+/* SUBTLE HOVER */
 .hero-block:hover {
-  transform: scale(1.15);
-  box-shadow: 0 0 12px rgba(255,255,255,0.6);
+  transform: translateX(4px) scale(1.05);
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
