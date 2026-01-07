@@ -98,34 +98,27 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".founder-text").forEach(el => observer.observe(el));
 
-/* ===== FOUNDER PARTICLE AURA ===== */
-.founder-image {
-  position: relative; /* required for aura positioning */
-}
+// ===== FOUNDER PARTICLE AURA =====
+const founderImage = document.querySelector('.founder-image');
 
-.founder-aura {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;   /* slightly bigger than image */
-  height: 300px;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 0;
-}
+if (founderImage) {
+  const auraContainer = document.createElement('div');
+  auraContainer.classList.add('founder-aura');
 
-.founder-aura span {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: rgba(34, 197, 94, 0.6);
-  border-radius: 50%;
-  animation: auraFloat 4s linear infinite;
-}
+  for (let i = 0; i < 15; i++) { // 15 small floating particles
+    const particle = document.createElement('span');
 
-@keyframes auraFloat {
-  0% { transform: translate(0, 0) scale(0.5); opacity: 0.4; }
-  50% { transform: translate(var(--x), var(--y)) scale(1); opacity: 0.8; }
-  100% { transform: translate(0, 0) scale(0.5); opacity: 0.4; }
+    // Random position around the image
+    const angle = Math.random() * 2 * Math.PI;
+    const radius = 60 + Math.random() * 40; // distance from center
+    particle.style.setProperty('--x', `${radius * Math.cos(angle)}px`);
+    particle.style.setProperty('--y', `${radius * Math.sin(angle)}px`);
+
+    // Random animation delay
+    particle.style.animationDelay = `${Math.random() * 2}s`;
+
+    auraContainer.appendChild(particle);
+  }
+
+  founderImage.appendChild(auraContainer);
 }
