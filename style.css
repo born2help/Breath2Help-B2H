@@ -894,3 +894,123 @@ footer.footer a:hover {
   position: relative;
   z-index: 1;
 }
+
+/* ================= SECTION HEADINGS ================= */
+.section h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #22c55e; /* fresh green */
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #22c55e, #0fffc3);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ================= SECTION PARAGRAPHS ================= */
+.section p, .section ul li {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #cbd5e1; /* soft gray-white for readability */
+  max-width: 850px;
+  margin: 15px auto;
+  text-align: center;
+}
+
+/* ================= TRUSTEE CARDS ================= */
+.trustee-section .trustee-card,
+.board-members .board-card {
+  background: #111827; /* dark card background */
+  border-radius: 16px;
+  padding: 25px 20px;
+  margin: 15px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 255, 150, 0.15);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.board-card img, .trustee-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #22c55e;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.board-card:hover img, .trustee-card:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(34,197,94,0.7);
+}
+
+.board-card:hover, .trustee-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(34,197,94,0.4);
+}
+
+/* ================= GOVERNANCE & CONSTITUTION CARDS ================= */
+.governance-card, .constitution-card {
+  background: #0f172a;
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+  margin: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(34,197,94,0.15);
+  position: relative;
+}
+
+.governance-card:hover, .constitution-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(34,197,94,0.35);
+}
+
+.governance-card h3, .constitution-card h3 {
+  font-size: 1.5rem;
+  color: #22c55e;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.governance-card p, .constitution-card p {
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+/* ================= TOKENOMICS CARDS ================= */
+.tokenomics-card {
+  background: linear-gradient(135deg, #0f172a, #111827);
+  border-radius: 16px;
+  padding: 20px 18px;
+  text-align: center;
+  margin: 15px;
+  box-shadow: 0 8px 25px rgba(34,197,94,0.2);
+  transition: all 0.4s ease;
+}
+
+.tokenomics-card h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #22c55e;
+  margin-bottom: 12px;
+}
+
+.tokenomics-card p {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+}
+
+.tokenomics-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(34,197,94,0.35);
+}
