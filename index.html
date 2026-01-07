@@ -349,5 +349,103 @@
 
   <!-- Main JS -->
   <script src="main.js"></script>
+
+  <script>
+/* ================= FLOATING ANIMATION FOR TOKENOMICS BOXES ================= */
+const tokenBoxes = document.querySelectorAll('.token-box');
+
+tokenBoxes.forEach(box => {
+  let position = 0;
+  let direction = 1;
+  setInterval(() => {
+    if(position > 5) direction = -1;
+    if(position < -5) direction = 1;
+    position += direction * 0.3;
+    box.style.transform = `translateY(${position}px)`;
+  }, 50);
+});
+
+/* ================= SCROLL REVEAL ================= */
+const revealElements = document.querySelectorAll('.fade-on-scroll');
+
+const revealOnScroll = () => {
+  const triggerBottom = window.innerHeight / 5 * 4;
+
+  revealElements.forEach(el => {
+    const elTop = el.getBoundingClientRect().top;
+
+    if(elTop < triggerBottom) {
+      el.classList.add('active');
+    } else {
+      el.classList.remove('active');
+    }
+  });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+/* ================= SOCIAL BUTTON FLOAT EFFECT ================= */
+const socialLinks = document.querySelectorAll('.social-links a');
+
+socialLinks.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    link.style.transform = 'scale(1.15)';
+    link.style.boxShadow = '0 15px 30px rgba(0, 150, 136, 0.5)';
+  });
+  link.addEventListener('mouseleave', () => {
+    link.style.transform = 'scale(1)';
+    link.style.boxShadow = '0 0 15px rgba(0, 150, 136, 0.3)';
+  });
+});
+
+/* ================= HERO PARALLAX FLOATING SHAPES ================= */
+const floatingShapes = document.querySelectorAll('.floating-shape');
+
+document.addEventListener('mousemove', e => {
+  const x = (e.clientX / window.innerWidth) - 0.5;
+  const y = (e.clientY / window.innerHeight) - 0.5;
+
+  floatingShapes.forEach((shape, index) => {
+    const speed = (index + 1) * 5;
+    shape.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+  });
+});
+
+/* ================= TOKENOMICS LIVE COUNTER ================= */
+const tokenCounters = document.querySelectorAll('.token-counter');
+
+tokenCounters.forEach(counter => {
+  const target = +counter.getAttribute('data-target');
+  let count = 0;
+  const increment = target / 200; // smooth increment
+
+  const updateCount = () => {
+    count += increment;
+    if(count < target) {
+      counter.innerText = Math.floor(count).toLocaleString();
+      requestAnimationFrame(updateCount);
+    } else {
+      counter.innerText = target.toLocaleString();
+    }
+  };
+  updateCount();
+});
+
+/* ================= OPTIONAL: GLOW EFFECT FOR FOUNDER IMAGE ================= */
+const founderImg = document.querySelector('.founder-image');
+
+if(founderImg) {
+  founderImg.addEventListener('mouseenter', () => {
+    founderImg.style.transform = 'scale(1.05)';
+    founderImg.style.boxShadow = '0 0 30px rgba(0, 150, 136, 0.6)';
+  });
+  founderImg.addEventListener('mouseleave', () => {
+    founderImg.style.transform = 'scale(1)';
+    founderImg.style.boxShadow = '0 0 15px rgba(0, 150, 136, 0.3)';
+  });
+}
+</script>
+  
 </body>
 </html>
