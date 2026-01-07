@@ -913,3 +913,106 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   font-size: 1rem;
   color: #cbd5e1;
 }
+
+/* ================= HERO SECTION ================= */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298, #00d084, #00bfff);
+  overflow: hidden;
+}
+
+/* Headings */
+.hero-title .line {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 3rem;
+  color: #ffe600; /* bright yellow for attention */
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+  display: block;
+  margin-bottom: 15px;
+}
+
+/* Subtitle and text */
+.hero-subtitle .line,
+.hero-subtext .line {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #ffffffcc; /* semi-white for readability */
+  margin-bottom: 10px;
+}
+
+/* Hero Buttons */
+.hero-buttons .btn {
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-buttons .btn.primary {
+  background: #00d084;
+  color: #fff;
+  box-shadow: 0 0 20px #00d08488;
+}
+
+.hero-buttons .btn.outline {
+  background: transparent;
+  border: 2px solid #ffe600;
+  color: #ffe600;
+  box-shadow: 0 0 15px #ffe60066;
+}
+
+.hero-buttons .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px rgba(255,255,255,0.8);
+}
+
+/* ================= HERO OVAL BLOCKS ================= */
+.hero-blocks {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  z-index: 5;
+}
+
+.hero-block {
+  width: 120px;
+  height: 50px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-block.donate { background: #1e90ff; }      /* Blue */
+.hero-block.tokenomics { background: #ff4500; } /* Red */
+.hero-block.mission { background: #32cd32; }    /* Green */
+.hero-block.governance { background: #ffd700; } /* Yellow */
+.hero-block.contact { background: #000; }       /* Black */
+
+.hero-block:hover {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(255,255,255,0.8);
+}
