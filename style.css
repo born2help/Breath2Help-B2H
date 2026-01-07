@@ -33,17 +33,19 @@ p, li {
   font-weight: 400;
 }
 
-/* ------------------- HERO ------------------- */
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: #fff;
-  background: linear-gradient(135deg, #0b0b17 0%, #1a1a2f 100%);
+  background: radial-gradient(circle at top left, #0a0a15, #1c1c34);
 }
 
 /* Hero Particles */
@@ -51,33 +53,38 @@ p, li {
   position: absolute;
   display: block;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   width: 6px;
   height: 6px;
-  animation: float 10s infinite ease-in-out;
+  animation: float 12s infinite ease-in-out;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); opacity: 0.3; }
-  50% { transform: translateY(-20px); opacity: 0.6; }
+  0%, 100% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(-20px); opacity: 0.7; }
 }
 
-/* Hero Logos */
-.hero img.burn-logo,
-.hero img.main-logo-hero {
+/* Burn Logo */
+.hero img.burn-logo {
   position: absolute;
-  max-width: 180px;
-  width: 15%;
-  z-index: 2;
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 120px;
+  width: 10%;
+  z-index: 2;
+  opacity: 0.8;
 }
 
+/* Main Logo */
 .hero img.main-logo-hero {
-  max-width: 250px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 200px;
+  width: 15%;
   z-index: 3;
-  top: 35%;
 }
 
 /* Hero Content */
@@ -85,15 +92,38 @@ p, li {
   position: relative;
   z-index: 4;
   max-width: 800px;
+  padding: 0 20px;
   animation: depth-float 4s ease-in-out infinite alternate;
 }
 
+/* Depth float animation */
 @keyframes depth-float {
-  0% { transform: translateY(0px); }
-  100% { transform: translateY(-10px); }
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-8px); }
 }
 
-/* Hero Text Lines */
+/* Hero Text */
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.hero-subtext {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+/* Line animation */
 .hero-content .line {
   display: block;
   opacity: 0;
@@ -111,26 +141,48 @@ p, li {
 
 /* Hero Buttons */
 .hero-buttons {
-  margin-top: 20px;
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .btn {
   padding: 12px 25px;
   border-radius: 25px;
-  text-decoration: none;
   font-weight: 600;
-  transition: 0.3s;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.btn.primary { background: #00ff88; color: #0f0f1a; }
-.btn.outline { border: 2px solid #00ff88; color: #00ff88; background: transparent; }
+.btn.primary {
+  background: #00ff88;
+  color: #0a0a15;
+}
+
+.btn.outline {
+  border: 2px solid #00ff88;
+  color: #00ff88;
+  background: transparent;
+}
 
 .btn.glow:hover {
   box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88 inset;
   transform: translateY(-2px);
+}
+
+/* Mouse parallax layers */
+.parallax-layer {
+  will-change: transform;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-title { font-size: 2.2rem; }
+  .hero-subtitle { font-size: 1rem; }
+  .hero-subtext { font-size: 0.9rem; }
+  .hero img.burn-logo { max-width: 80px; top: 8%; }
+  .hero img.main-logo-hero { max-width: 150px; top: 22%; }
 }
 
 /* ------------------- FOUNDER SECTION ------------------- */
