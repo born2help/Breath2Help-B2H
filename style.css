@@ -442,3 +442,34 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
               0 0 90px rgba(34, 197, 94, 0.4);
 }
 
+/* ===== FOUNDER PARTICLE AURA ===== */
+.founder-image {
+  position: relative; /* required for aura positioning */
+}
+
+.founder-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;   /* slightly bigger than image */
+  height: 300px;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.founder-aura span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(34, 197, 94, 0.6);
+  border-radius: 50%;
+  animation: auraFloat 4s linear infinite;
+}
+
+@keyframes auraFloat {
+  0% { transform: translate(0, 0) scale(0.5); opacity: 0.4; }
+  50% { transform: translate(var(--x), var(--y)) scale(1); opacity: 0.8; }
+  100% { transform: translate(0, 0) scale(0.5); opacity: 0.4; }
+}
