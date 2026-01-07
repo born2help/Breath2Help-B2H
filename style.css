@@ -1055,3 +1055,109 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   transform: translateX(6px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
+
+<!-- ================= CHARITIES ================= -->
+<section id="charity" class="section dark charity-section">
+  <h2>Our Charities</h2>
+
+  <p class="charity-intro">
+    B2H Global Foundation is committed to uplifting communities by addressing
+    fundamental human needs through sustainable and transparent initiatives.
+  </p>
+
+  <div class="charity-grid">
+
+    <div class="charity-card">
+      <img src="images/charity-health.jpg" alt="Health & Education">
+      <div class="charity-content">
+        <h3>Health & Education</h3>
+        <p>
+          Providing access to essential healthcare and quality education,
+          empowering individuals to build stronger and healthier futures.
+        </p>
+      </div>
+    </div>
+
+    <div class="charity-card">
+      <img src="images/charity-food.jpg" alt="Food & Shelter">
+      <div class="charity-content">
+        <h3>Food & Shelter</h3>
+        <p>
+          Supporting vulnerable families with nutritious food, safe shelter,
+          and emergency relief during times of crisis.
+        </p>
+      </div>
+    </div>
+
+    <div class="charity-card">
+      <img src="images/charity-environment.jpg" alt="Environment">
+      <div class="charity-content">
+        <h3>Environment & Sustainability</h3>
+        <p>
+          Promoting environmental responsibility through sustainability
+          programs, conservation efforts, and climate awareness.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+/* ================= CHARITY SECTION (ENHANCED) ================= */
+
+.charity-section {
+  background: linear-gradient(135deg, #0f172a, #020617);
+}
+
+.charity-intro {
+  max-width: 750px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 1.05rem;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.charity-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.charity-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.charity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 200, 150, 0.35);
+}
+
+.charity-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.charity-content {
+  padding: 25px;
+  text-align: center;
+}
+
+.charity-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #00c896;
+}
+
+.charity-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+}
