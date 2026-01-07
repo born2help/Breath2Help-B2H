@@ -1,4 +1,4 @@
-// ===== FLOATING PARTICLES RANDOM =====
+// ================= FLOATING PARTICLES =================
 const particles = document.querySelectorAll(".particles span");
 particles.forEach(p => {
   p.style.left = Math.random() * window.innerWidth + "px";
@@ -7,7 +7,13 @@ particles.forEach(p => {
   p.style.height = p.style.width;
 });
 
-// ===== FOUNDER TEXT SLIDE ANIMATION =====
+// ================= HERO TEXT LINE ANIMATION =================
+document.querySelectorAll('.hero-content .line').forEach((line, index) => {
+  line.style.animation = `lineFadeUp 0.8s forwards`;
+  line.style.animationDelay = (index * 0.3) + 's';
+});
+
+// ================= FOUNDER TEXT SLIDE =================
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
@@ -18,9 +24,10 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".founder-text").forEach(el => observer.observe(el));
 
-// ===== MOUSE FOLLOW PARTICLES =====
+// ================= MOUSE FOLLOWING PARTICLES =================
 const hero = document.querySelector('.hero');
 const mouseParticles = [];
+
 for(let i=0; i<20; i++){
   const p = document.createElement('div');
   p.classList.add('mouse-particle');
@@ -33,15 +40,10 @@ for(let i=0; i<20; i++){
   hero.appendChild(p);
   mouseParticles.push(p);
 }
+
 hero.addEventListener('mousemove', e => {
   mouseParticles.forEach((p, idx) => {
     const offset = idx * 5;
     p.style.transform = `translate(${e.clientX + offset}px, ${e.clientY + offset}px)`;
   });
-});
-
-// ===== HERO TEXT LINE ANIMATION =====
-document.querySelectorAll('.hero-content .line').forEach((line, index) => {
-  line.style.animation = `lineFadeUp 0.8s forwards`;
-  line.style.animationDelay = (index * 0.3) + 's';
 });
