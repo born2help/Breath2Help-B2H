@@ -44,3 +44,8 @@ hero.addEventListener('mousemove', e => {
     p.style.transform = `translate(${e.clientX + offset}px, ${e.clientY + offset}px)`;
   });
 });
+
+// HERO LINE ANIMATION DELAY
+document.querySelectorAll('.hero-content .line').forEach((line, index) => {
+  line.style.animationDelay = (index * 0.3) + 's';
+});
