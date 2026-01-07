@@ -188,139 +188,34 @@ p, li {
   .hero img.burn-logo { width: 200px; top: 1in; right: 0.3in; }
 }
 
-/* ------------------- FOUNDER SECTION ------------------- */
-.founder-section {
-  padding: 80px 0;
-  background: #101026;
-  color: #fff;
-}
+/* ================= FOUNDER SECTION ================= */
+.founder-section { background: linear-gradient(180deg, #111827, #1f2937); color: #fff; padding: 90px 20px; }
+.container { max-width: 1100px; margin: auto; text-align: center; }
+.founder-section h2 { font-size: 2.8rem; color: #22c55e; margin-bottom: 20px; }
+.founder-intro { max-width: 800px; margin: 0 auto 50px; font-size: 1.2rem; color: #cbd5e1; line-height: 1.7; }
 
-.founder-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  align-items: center;
-}
-
-.founder-image {
-  flex: 1 1 250px;
-  position: relative;
-  max-width: 250px;
-}
-
-.founder-image img {
-  width: 100%;
-  border-radius: 15px;
-  display: block;
-}
-
-/* Founder aura */
-.founder-aura span {
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #00ff88;
-  animation: aura-float 4s infinite alternate;
-}
-
-@keyframes aura-float {
-  0% { transform: translate(0,0); opacity: 0.3; }
-  50% { transform: translate(10px,-10px); opacity: 0.8; }
-  100% { transform: translate(-5px,5px); opacity: 0.3; }
-}
-
-/* Founder Text */
+.founder-content { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 50px; }
+.founder-image img { width: 260px; height: 260px; border-radius: 50%; border: 4px solid #22c55e; object-fit: cover; }
 .founder-text {
-  flex: 2 1 500px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 0.8s;
-}
-
-.founder-text.show {
+  max-width: 600px;
+  text-align: left;
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
+.founder-text.show { opacity: 1; transform: translateX(0); }
+.founder-text p { margin-bottom: 18px; line-height: 1.7; color: #d1d5db; }
+.signature { margin-top: 20px; color: #22c55e; font-weight: 700; }
 
-.signature {
-  margin-top: 15px;
-  font-weight: 800;
-  color: #00ff88;
-}
+/* ================= FOOTER ================= */
+footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; text-align: center; padding: 30px; }
 
-/* ------------------- SECTION HEADINGS ------------------- */
-.section {
-  padding: 80px 0;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #fff;
-  position: relative;
-}
-
-.green-glow {
-  color: #00ff88;
-  text-shadow: 0 0 10px #00ff88, 0 0 20px #00ff88;
-}
-
-.section-intro {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  color: #ccc;
-}
-
-/* ------------------- CARDS & GLOW ------------------- */
-.tokenomics-grid,
-.board-members,
-.governance-flow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-}
-
-.token-box,
-.board-card,
-.governance-node {
-  background: #111127;
-  border-radius: 15px;
-  padding: 25px;
-  flex: 1 1 250px;
-  position: relative;
-  overflow: hidden;
-  transition: 0.3s;
-}
-
-.token-box:hover,
-.board-card:hover,
-.governance-node:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px #00ff88, 0 0 30px #00ff88 inset;
-}
-
-.glow-card::before {
-  content: '';
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  top: -50%;
-  left: -50%;
-  background: radial-gradient(circle, #00ff88 0%, transparent 70%);
-  filter: blur(30px);
-  opacity: 0.4;
-  pointer-events: none;
-}
-
-/* Governance Arrows */
-.governance-arrow {
-  font-size: 2rem;
-  color: #00ff88;
-  align-self: center;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.4rem; }
+  .hero h1 span { font-size: 1.2rem; }
+  .burn-logo { width: 180px; top: 1in; right: 1in; }
+  .founder-content { flex-direction: column; }
+  .founder-text { text-align: center; }
 }
 
 /* ------------------- TOKENOMICS PARTICLES ------------------- */
