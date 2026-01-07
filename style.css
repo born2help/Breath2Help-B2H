@@ -200,3 +200,17 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 .parallax-layer {
   transition: transform 0.1s linear;
 }
+
+/* ===== HERO TEXT ANIMATION ===== */
+.hero-content .line {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroFade 0.8s forwards;
+}
+
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
