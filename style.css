@@ -117,7 +117,7 @@ body {
 .burn-logo {
   position: fixed;
   top: 1.5in;
-  right: 1.5in;
+  right: 1.0in;
   width: 360px;
   z-index: 4;
   opacity: 0.95;
