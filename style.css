@@ -393,3 +393,125 @@ ul.readable-text li {
   .tokenomics-grid, .board-members, .governance-flow { flex-direction: column; }
 }
 
+/* ================= TOKENOMICS SECTION ================= */
+.tokenomics {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f2027, #1a3a4d, #255468);
+  overflow: hidden;
+  color: #e0f7fa;
+  text-align: center;
+}
+
+/* Section Title */
+.tokenomics .section-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.7);
+}
+
+/* Section Intro */
+.tokenomics .section-intro {
+  font-size: 1.2rem;
+  color: #b0e0e6;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+  text-shadow: 0 0 10px rgba(176, 224, 230, 0.5);
+}
+
+/* Tokenomics Grid */
+.tokenomics-grid {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Token Box Cards */
+.token-box {
+  background: rgba(0, 255, 204, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 255, 204, 0.3);
+  border-radius: 20px;
+  padding: 30px 25px;
+  max-width: 300px;
+  flex: 1 1 250px;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Glow effect on hover */
+.token-box.glow-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 255, 204, 0.6), 0 0 50px rgba(0, 255, 204, 0.3) inset;
+}
+
+/* Highlight numbers */
+.token-box .highlight {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #00ffcc;
+  text-shadow: 0 0 15px rgba(0, 255, 204, 0.6);
+  margin: 15px 0;
+}
+
+/* Tokenomics list */
+.token-box ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.token-box ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #b0e0e6;
+  position: relative;
+  padding-left: 25px;
+}
+
+.token-box ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00ffcc;
+  font-size: 1.2rem;
+}
+
+/* Tokenomics Particles */
+.tokenomics-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.tokenomics-particles span {
+  position: absolute;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 255, 204, 0.25);
+  border-radius: 50%;
+  animation: floatToken 12s infinite ease-in-out;
+}
+
+@keyframes floatToken {
+  0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+  50% { transform: translateY(-15px) translateX(10px); opacity: 0.7; }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .tokenomics .section-title { font-size: 2rem; }
+  .tokenomics-grid { flex-direction: column; gap: 20px; }
+  .token-box { max-width: 100%; }
+}
