@@ -59,3 +59,31 @@ mouseParticles.forEach((p, i) => {
     p.style.transform = `translate(${x}px, ${y}px)`;
   }, 16);
 });
+
+// ================= 3D PARALLAX HERO =================
+const heroSection = document.querySelector('.hero');
+const layers = document.querySelectorAll('.parallax-layer');
+
+heroSection.addEventListener('mousemove', (e) => {
+  const rect = heroSection.getBoundingClientRect();
+  const x = e.clientX - rect.left - rect.width / 2;
+  const y = e.clientY - rect.top - rect.height / 2;
+
+  layers.forEach(layer => {
+    const depth = layer.classList.contains('depth-logo') ? 40 :
+                  layer.classList.contains('depth-front') ? 25 :
+                  layer.classList.contains('depth-mid') ? 15 : 8;
+
+    const moveX = (x / rect.width) * depth;
+    const moveY = (y / rect.height) * depth;
+
+    layer.style.transform =
+      `translate3d(${moveX}px, ${-moveY}px, ${layer.style.z || 0})`;
+  });
+});
+
+heroSection.addEventListener('mouseleave', () => {
+  layers.forEach(layer => {
+    layer.style.transform = '';
+  });
+});
