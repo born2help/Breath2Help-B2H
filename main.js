@@ -87,3 +87,18 @@ heroSection.addEventListener('mouseleave', () => {
     layer.style.transform = '';
   });
 });
+
+// ===== SCROLL PARALLAX EFFECT =====
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+
+  document.documentElement.style.setProperty(
+    '--scroll-bg',
+    scrollY * 0.15 + 'px'
+  );
+
+  document.documentElement.style.setProperty(
+    '--scroll-text',
+    scrollY * 0.3 + 'px'
+  );
+});
