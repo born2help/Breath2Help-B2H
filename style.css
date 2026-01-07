@@ -166,3 +166,32 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   z-index: 9999;
   transition: transform 0.05s linear;
 }
+
+/* ===== FLOATING PARTICLES (DEPTH) ===== */
+.particles span {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  filter: blur(0.5px);
+  animation: floatUp linear infinite;
+}
+
+/* depth layers */
+.particles span:nth-child(3n) {
+  width: 4px;
+  height: 4px;
+  opacity: 0.4;
+  animation-duration: 16s;
+}
+.particles span:nth-child(3n+1) {
+  width: 6px;
+  height: 6px;
+  opacity: 0.6;
+  animation-duration: 12s;
+}
+.particles span:nth-child(3n+2) {
+  width: 8px;
+  height: 8px;
+  opacity: 0.8;
+  animation-duration: 9s;
+}
