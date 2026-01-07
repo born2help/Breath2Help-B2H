@@ -1053,3 +1053,19 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   transform: translateX(3px);
   box-shadow: 0 0 12px rgba(255,255,255,0.45);
 }
+
+.hero > .hero-blocks {
+  position: absolute !important;
+  left: 24px !important;
+  bottom: 24px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  z-index: 20 !important;
+}
+
+.hero > .hero-blocks > .hero-block {
+  width: 96px !important;
+  height: 28px !important;
+  border-radius: 999px !important;
+}
