@@ -50,7 +50,6 @@ animation: gradientMove 18s ease infinite;
 
 /* ================= PARTICLES ================= */
 .particles { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
-.particles span { width: 6px; height: 6px; position: absolute; border-radius: 50%; background: rgba(255,255,255,0.3); animation: floatUp 12s linear infinite; }
 @keyframes floatUp { 0% { transform: translateY(0); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(-120vh); opacity: 0; } }
 
 /* ================= HERO TEXT LINE-BY-LINE ANIMATION ================= */
@@ -172,35 +171,6 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   transition: transform 0.05s linear;
 }
 
-/* ===== FLOATING PARTICLES (DEPTH) ===== */
-.particles span {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.35);
-  filter: blur(0.5px);
-  animation: floatUp linear infinite;
-}
-
-/* depth layers */
-.particles span:nth-child(3n) {
-  width: 4px;
-  height: 4px;
-  opacity: 0.4;
-  animation-duration: 16s;
-}
-.particles span:nth-child(3n+1) {
-  width: 6px;
-  height: 6px;
-  opacity: 0.6;
-  animation-duration: 12s;
-}
-.particles span:nth-child(3n+2) {
-  width: 8px;
-  height: 8px;
-  opacity: 0.8;
-  animation-duration: 9s;
-}
-
 /* ===== MOUSE PARALLAX ===== */
 .parallax-layer {
   transition: transform 0.1s linear;
@@ -231,4 +201,20 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   box-shadow:
     0 0 25px rgba(255,140,0,0.9),
     0 0 50px rgba(255,140,0,0.5);
+}
+
+.particles span {
+  position: absolute;
+  bottom: -20px;
+  width: 6px;
+  height: 6px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 50%;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  to { transform: translateY(-120vh); opacity: 0; }
 }
