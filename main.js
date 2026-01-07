@@ -122,3 +122,24 @@ if (founderImage) {
 
   founderImage.appendChild(auraContainer);
 }
+
+// ================= FLOATING GLOW BEHIND CARDS =================
+function createCardGlows(sectionClass, numGlows = 8) {
+  const section = document.querySelector(sectionClass);
+  if (!section) return;
+
+  for (let i = 0; i < numGlows; i++) {
+    const glow = document.createElement('div');
+    glow.classList.add('card-glow');
+    glow.style.width = glow.style.height = `${10 + Math.random() * 20}px`;
+    glow.style.left = `${Math.random() * 90}%`;
+    glow.style.top = `${Math.random() * 90}%`;
+    glow.style.animationDuration = `${8 + Math.random() * 12}s`;
+    section.appendChild(glow);
+  }
+}
+
+// Apply to Governance, Constitution, and Trustee sections
+createCardGlows('.governance-section', 10);
+createCardGlows('.constitution-section', 10);
+createCardGlows('.trustee-section', 10);
