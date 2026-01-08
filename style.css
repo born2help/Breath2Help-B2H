@@ -1567,14 +1567,13 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 }
 
 <style>
-/* SECTION BASE */
+/* BASE STYLING */
 .how-humanity-works {
   background: #f5f7fa;
   padding: 80px 20px;
   text-align: center;
   font-family: 'Arial', sans-serif;
 }
-
 .section-header h2 {
   font-size: 42px;
   font-weight: 700;
@@ -1583,9 +1582,7 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   -webkit-text-fill-color: transparent;
   margin-bottom: 10px;
   text-transform: uppercase;
-  position: relative;
 }
-
 .section-header .underline {
   width: 80px;
   height: 5px;
@@ -1593,20 +1590,18 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   background: linear-gradient(90deg, #14b8a6, #0f766e);
   border-radius: 3px;
 }
-
-.section-header p {
+.section-header .subheading {
   font-size: 18px;
-  color: #4b5563;
+  color: #374151; /* Dark gray for readability */
   margin-bottom: 60px;
 }
 
-/* FLOW CONTAINER & LINE */
+/* FLOW LINE & ARROWS */
 .flow-container {
   position: relative;
   display: flex;
   justify-content: center;
 }
-
 .flow-line {
   position: absolute;
   top: 50%;
@@ -1617,16 +1612,21 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   z-index: 0;
   border-radius: 2px;
 }
-
-/* MOVING ARROWS (CONTINUOUS) */
 .moving-arrow {
   position: absolute;
   top: 50%;
   font-size: 28px;
   color: #14b8a6;
-  animation: arrowMove 4s linear infinite;
+  animation: arrowMove 4s linear infinite, arrowGlow 4s ease-in-out infinite;
   z-index: 1;
   transform: translateY(-50%);
+}
+
+/* Glow pulse when passing */
+@keyframes arrowGlow {
+  0% { text-shadow: 0 0 5px #14b8a6; transform: scale(1); }
+  50% { text-shadow: 0 0 20px #14b8a6, 0 0 30px #0f766e; transform: scale(1.3); }
+  100% { text-shadow: 0 0 5px #14b8a6; transform: scale(1); }
 }
 
 /* FLOW STEPS */
@@ -1638,7 +1638,6 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   z-index: 2;
   flex-wrap: wrap;
 }
-
 .flow-steps .step {
   background: #ffffff;
   border-radius: 20px;
@@ -1648,51 +1647,25 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   transition: transform 0.4s, box-shadow 0.4s;
 }
-
 .flow-steps .step:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
-
-/* ICONS WITH GLOW */
-.flow-steps .step .icon {
-  font-size: 50px;
+.flow-steps .step .icon img {
+  width: 60px;
+  height: 60px;
   margin-bottom: 20px;
-  color: #14b8a6;
-  transition: text-shadow 0.3s ease, transform 0.3s ease;
+  animation: iconPulse 4s ease-in-out infinite;
 }
-
-/* Glow trigger animation when arrow passes */
-@keyframes glowPulse {
-  0% { text-shadow: 0 0 0px #14b8a6; transform: scale(1); }
-  50% { text-shadow: 0 0 20px #14b8a6, 0 0 30px #0f766e; transform: scale(1.15); }
-  100% { text-shadow: 0 0 0px #14b8a6; transform: scale(1); }
+@keyframes iconPulse {
+  0%,100% { transform: scale(1); filter: drop-shadow(0 0 0 #14b8a6); }
+  50% { transform: scale(1.15); filter: drop-shadow(0 0 15px #14b8a6); }
 }
+.flow-steps .step h3 { font-size: 24px; color: #111827; margin-bottom: 10px; font-weight: 700; }
+.flow-steps .step p { font-size: 16px; color: #4b5563; line-height: 1.5; }
 
-/* Each step icon glows in sequence */
-.flow-steps .step:nth-child(1) .icon { animation: glowPulse 4s infinite 0s; }
-.flow-steps .step:nth-child(2) .icon { animation: glowPulse 4s infinite 1s; }
-.flow-steps .step:nth-child(3) .icon { animation: glowPulse 4s infinite 2s; }
-.flow-steps .step:nth-child(4) .icon { animation: glowPulse 4s infinite 3s; }
-
-.flow-steps .step h3 {
-  font-size: 24px;
-  color: #111827;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.flow-steps .step p {
-  font-size: 16px;
-  color: #6b7280;
-  line-height: 1.5;
-}
-
-/* CTA BUTTON */
-.how-humanity-works .cta {
-  margin-top: 60px;
-}
-
+/* CTA */
+.how-humanity-works .cta { margin-top: 60px; }
 .how-humanity-works .btn {
   padding: 16px 40px;
   background: #14b8a6;
@@ -1702,13 +1675,9 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   font-weight: 700;
   transition: background 0.3s, transform 0.3s;
 }
+.how-humanity-works .btn:hover { background: #0f766e; transform: scale(1.05); }
 
-.how-humanity-works .btn:hover {
-  background: #0f766e;
-  transform: scale(1.05);
-}
-
-/* ARROW ANIMATION */
+/* ARROW MOVE */
 @keyframes arrowMove {
   0% { left: 5%; }
   100% { left: 95%; }
@@ -1716,26 +1685,9 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .flow-steps {
-    flex-direction: column;
-    gap: 35px;
-  }
-  .flow-line {
-    width: 4px;
-    height: 80%;
-    top: 10%;
-    left: 50%;
-    right: auto;
-    background: linear-gradient(to bottom, #14b8a6, #0f766e);
-  }
-  .moving-arrow {
-    animation: arrowMoveVertical 4s linear infinite;
-    top: 10%;
-    left: 50%;
-  }
-  @keyframes arrowMoveVertical {
-    0% { top: 10%; }
-    100% { top: 90%; }
-  }
+  .flow-steps { flex-direction: column; gap: 35px; }
+  .flow-line { width: 4px; height: 80%; top: 10%; left: 50%; right: auto; background: linear-gradient(to bottom, #14b8a6, #0f766e); }
+  .moving-arrow { animation: arrowMoveVertical 4s linear infinite, arrowGlow 4s ease-in-out infinite; top: 10%; left: 50%; }
+  @keyframes arrowMoveVertical { 0% { top: 10%; } 100% { top: 90%; } }
 }
 </style>
