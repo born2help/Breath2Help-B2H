@@ -1672,3 +1672,135 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   }
 }
 </style>
+
+<style>
+/* SECTION BASE */
+.how-humanity-works {
+  background: #f5f7fa;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.section-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #14b8a6, #0f766e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-header p {
+  font-size: 18px;
+  color: #4b5563;
+  margin-bottom: 60px;
+}
+
+/* FLOW CONTAINER & LINE */
+.flow-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.flow-line {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 4px;
+  background: linear-gradient(to right, #14b8a6, #0f766e);
+  z-index: 0;
+  border-radius: 2px;
+  animation: lineMove 2s infinite alternate;
+}
+
+/* FLOW STEPS */
+.flow-steps {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.flow-steps .step {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 35px 20px;
+  flex: 1 1 220px;
+  max-width: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.flow-steps .step:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.flow-steps .step .icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #14b8a6;
+}
+
+.flow-steps .step h3 {
+  font-size: 24px;
+  color: #111827;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.flow-steps .step p {
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* CTA BUTTON */
+.how-humanity-works .cta {
+  margin-top: 60px;
+}
+
+.how-humanity-works .btn {
+  padding: 16px 40px;
+  background: #14b8a6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.how-humanity-works .btn:hover {
+  background: #0f766e;
+  transform: scale(1.05);
+}
+
+/* ANIMATION */
+@keyframes lineMove {
+  0% { background-position: 0% 0; }
+  100% { background-position: 100% 0; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .flow-steps {
+    flex-direction: column;
+    gap: 35px;
+  }
+  .flow-line {
+    width: 4px;
+    height: 80%;
+    top: 10%;
+    left: 50%;
+    right: auto;
+    background: linear-gradient(to bottom, #14b8a6, #0f766e);
+  }
+}
+</style>
