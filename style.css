@@ -1651,3 +1651,110 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   }
 }
 </style>
+
+<style>
+.how-humanity-works {
+  background: #f5f7fa;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.how-humanity-works .section-header h2 {
+  font-size: 36px;
+  color: #1f2937;
+  margin-bottom: 10px;
+}
+
+.how-humanity-works .section-header p {
+  font-size: 18px;
+  color: #4b5563;
+  margin-bottom: 50px;
+}
+
+.flow-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+}
+
+.flow-steps .step {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  flex: 1 1 220px;
+  max-width: 250px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.flow-steps .step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.flow-steps .step .icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: #14b8a6; /* turquoise accent */
+}
+
+.flow-steps .step h3 {
+  font-size: 22px;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.flow-steps .step p {
+  font-size: 16px;
+  color: #6b7280;
+}
+
+/* Arrows between steps */
+.flow-steps .arrow {
+  font-size: 28px;
+  margin-top: 15px;
+  color: #14b8a6;
+  display: block;
+}
+
+/* Remove arrow for last step */
+.flow-steps .step:last-child .arrow {
+  display: none;
+}
+
+/* CTA Button */
+.how-humanity-works .cta {
+  margin-top: 50px;
+}
+
+.how-humanity-works .btn {
+  padding: 14px 35px;
+  background: #14b8a6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.how-humanity-works .btn:hover {
+  background: #0f766e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flow-steps {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .flow-steps .arrow {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+}
+</style>
