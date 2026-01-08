@@ -1231,3 +1231,116 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 .hero-block.contact {
   background: linear-gradient(135deg, #111, #000);
 }
+
+.governance-section {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0f2027, #1f3a43, #255468); /* darker turquoise-blue gradient */
+  color: #d0f0e6; /* soft turquoise text */
+  text-align: center;
+}
+
+.governance-section h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #00ffd5; /* soft bright turquoise */
+  margin-bottom: 25px;
+  text-shadow: 0 0 15px rgba(0, 255, 213, 0.4);
+}
+
+.governance-intro {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  font-size: 1.2rem;
+  color: #b0f2e6; /* softer cyan */
+  line-height: 1.8;
+}
+
+/* Constitution List Modern Look */
+.constitution-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 750px;
+  margin: 0 auto 50px;
+  text-align: left;
+}
+
+.constitution-list li {
+  margin: 15px 0;
+  font-size: 1.05rem;
+  position: relative;
+  padding-left: 30px;
+  color: #e0f7fa;
+  line-height: 1.7;
+}
+
+.constitution-list li::before {
+  content: "✔"; /* modern check mark instead of bullet */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #00ffd5; 
+  font-size: 1.2rem;
+}
+
+/* Governance Flow Boxes */
+.governance-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.governance-node {
+  background: rgba(0, 255, 213, 0.08);
+  border: 1px solid rgba(0, 255, 213, 0.25);
+  border-radius: 20px;
+  padding: 25px 20px;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 255, 213, 0.2);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.governance-node:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 255, 213, 0.4), 0 0 50px rgba(0, 255, 213, 0.2) inset;
+}
+
+.governance-arrow {
+  font-size: 2rem;
+  color: #00ffd5;
+  margin: 0;
+}
+
+/* Board Cards */
+.board-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.board-card {
+  background: rgba(0, 255, 204, 0.08);
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.board-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(0, 255, 204, 0.4), 0 0 50px rgba(0, 255, 204, 0.2) inset;
+}
+
+.board-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+  border: 3px solid #00ffd5;
+}
