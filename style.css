@@ -909,24 +909,6 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* ================= COLORS FOR EACH BLOCK ================= */
-.hero-block.donate {
-  background: #1e90ff;  /* blue */
-}
-.hero-block.tokenomics {
-  background: #32cd32;  /* green */
-}
-.hero-block.mission {
-  background: #ffd700;  /* yellow */
-  color: #000;
-}
-.hero-block.governance {
-  background: #ff4500;  /* red */
-}
-.hero-block.contact {
-  background: #000;     /* black */
-}
-
 /* ================= HOVER EFFECT ================= */
 .hero-block:hover {
   transform: translateX(6px);
