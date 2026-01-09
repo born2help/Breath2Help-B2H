@@ -1308,3 +1308,144 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   filter: brightness(1.8) invert(1);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
+
+/* ================= GOVERNANCE SECTION ================= */
+
+.governance-section {
+  background: linear-gradient(180deg, #020617, #0f172a);
+  color: #e5e7eb;
+}
+
+.governance-header {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.governance-header h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.governance-header p {
+  font-size: 1.05rem;
+  color: #cbd5f5;
+  line-height: 1.7;
+}
+
+/* ===== CARDS ===== */
+
+.governance-card {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  padding: 40px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+}
+
+.governance-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: #00f0b5;
+}
+
+/* ===== CONSTITUTION ===== */
+
+.constitution-list {
+  list-style: none;
+  padding: 0;
+}
+
+.constitution-list li {
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.constitution-list a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.constitution-list a:hover {
+  text-decoration: underline;
+}
+
+/* ===== GOVERNANCE FLOW ===== */
+
+.flow-card {
+  text-align: center;
+}
+
+.governance-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.flow-node {
+  width: 100%;
+  max-width: 520px;
+  padding: 22px;
+  border-radius: 16px;
+  background: rgba(0,255,180,0.08);
+  box-shadow: 0 0 30px rgba(0,255,180,0.2);
+}
+
+.flow-node h4 {
+  color: #00f0b5;
+  margin-bottom: 8px;
+}
+
+.flow-node p {
+  font-size: 0.9rem;
+  color: #d1fae5;
+}
+
+.flow-line {
+  width: 2px;
+  height: 28px;
+  background: linear-gradient(to bottom, transparent, #00f0b5, transparent);
+}
+
+/* ===== TRUSTEES ===== */
+
+.trustee-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.trustee-card {
+  text-align: center;
+  padding: 25px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.05);
+  transition: transform 0.3s ease;
+}
+
+.trustee-card:hover {
+  transform: translateY(-6px);
+}
+
+.trustee-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #00f0b5;
+}
+
+.trustee-card h4 {
+  margin-bottom: 6px;
+  color: #e0f2fe;
+}
+
+.trustee-card p {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
