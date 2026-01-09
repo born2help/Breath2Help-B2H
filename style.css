@@ -1449,3 +1449,152 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   font-size: 0.85rem;
   color: #cbd5f5;
 }
+
+/* ================= GOVERNANCE — FINAL FOUNDATION GRADE ================= */
+
+.governance-section {
+  background: linear-gradient(180deg, #020617 0%, #0b1120 100%);
+  color: #e5e7eb;
+}
+
+/* HEADER */
+.gov-header {
+  max-width: 900px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.gov-header h2 {
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+}
+
+.gov-header p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #cbd5f5;
+}
+
+/* PANELS */
+.gov-panel {
+  max-width: 1050px;
+  margin: 0 auto 55px;
+  padding: 42px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.035);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.gov-panel h3 {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: #00f0b5;
+}
+
+/* CONSTITUTION LIST */
+.gov-list {
+  list-style: none;
+  padding: 0;
+}
+
+.gov-list li {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 25px;
+  margin-bottom: 18px;
+  font-size: 0.95rem;
+}
+
+.gov-list strong {
+  color: #e0f2fe;
+  font-weight: 600;
+}
+
+.gov-list span {
+  color: #d1d5db;
+  line-height: 1.6;
+}
+
+.gov-list a {
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+.gov-list a:hover {
+  text-decoration: underline;
+}
+
+/* FLOW */
+.flow-panel {
+  text-align: center;
+}
+
+.gov-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gov-node {
+  max-width: 520px;
+  padding: 24px;
+  border-radius: 18px;
+  background: rgba(0,255,180,0.06);
+  border: 1px solid rgba(0,255,180,0.2);
+}
+
+.gov-node h4 {
+  color: #00f0b5;
+  margin-bottom: 8px;
+}
+
+.gov-node p {
+  font-size: 0.9rem;
+  color: #d1fae5;
+}
+
+.gov-connector {
+  width: 2px;
+  height: 32px;
+  background: linear-gradient(to bottom, transparent, #00f0b5, transparent);
+  margin: 10px 0;
+}
+
+/* TRUSTEES */
+.trustee-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 35px;
+}
+
+.trustee {
+  text-align: center;
+}
+
+.trustee img {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00f0b5;
+  margin-bottom: 14px;
+}
+
+.trustee h4 {
+  margin-bottom: 4px;
+}
+
+.trustee span {
+  display: block;
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.trustee p {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+}
