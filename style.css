@@ -1230,6 +1230,13 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   filter: brightness(1.8) contrast(1.2);
 }
 
+/* How Humanity Works – text readability */
+.how-humanity .humanity-card p {
+  color: #b9dcd6;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
 <style>
 /* BASE STYLING */
 .how-humanity-works {
