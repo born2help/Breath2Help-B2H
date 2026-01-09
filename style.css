@@ -1204,6 +1204,32 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   border: 3px solid #00ffd5;
 }
 
+/* How Humanity Works – Heading underline fix */
+.how-humanity .section-underline {
+  width: 110px;
+  height: 4px;
+  margin: 12px auto 24px;
+  background: linear-gradient(90deg, #00ffc6, #00bfa6);
+  box-shadow: 0 0 14px rgba(0,255,200,0.6);
+  border-radius: 2px;
+}
+
+/* How Humanity Works – Block headings */
+.how-humanity .humanity-card h3 {
+  color: #eafffb;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 14px;
+}
+
+/* How Humanity Works – Icon visibility */
+.how-humanity .humanity-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+  filter: brightness(1.8) contrast(1.2);
+}
+
 <style>
 /* BASE STYLING */
 .how-humanity-works {
