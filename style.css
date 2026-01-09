@@ -1625,3 +1625,93 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
     font-size: 2.2rem;
   }
 }
+
+/* ================= ROADMAP ================= */
+.roadmap {
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
+  color: #e0f7fa;
+  text-align: center;
+  overflow: hidden;
+}
+
+.roadmap .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #00ffcc;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+/* ROADMAP LIST */
+.roadmap-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+/* INDIVIDUAL ITEM */
+.roadmap-list li {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  padding: 18px 22px;
+  font-weight: 600;
+  color: #e0f7fa;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  position: relative;
+}
+
+/* Hover effect */
+.roadmap-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.5), 0 0 40px rgba(0, 255, 204, 0.2) inset;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* STEP NUMBER / COLOR CIRCLE */
+.step-number {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 15px;
+  text-align: center;
+  line-height: 36px;
+  font-weight: 700;
+  color: #fff;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* On hover, number glows */
+.roadmap-list li:hover .step-number {
+  transform: scale(1.2);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .roadmap-list li {
+    flex-direction: row;
+    gap: 10px;
+    padding: 15px 18px;
+  }
+  .step-number {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+  }
+}
