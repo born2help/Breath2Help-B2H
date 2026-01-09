@@ -1267,6 +1267,16 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   margin-bottom: 60px;
 }
 
+section {
+  position: relative;
+  z-index: 1;
+}
+
+#join-movement {
+  margin-top: 120px;
+  padding-top: 100px;
+}
+
 /* FLOW LINE & ARROWS */
 .flow-container {
   position: relative;
