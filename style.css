@@ -586,7 +586,8 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
-/* ================= CHARITY ================= */
+/* ================= CHARITY SECTION (ENHANCED) ================= */
+
 .charity-section {
   background: linear-gradient(135deg, #0f172a, #020617);
 }
@@ -643,7 +644,6 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   line-height: 1.6;
   color: #e5e7eb;
 }
-
 /* Tokenomics Section */
 .tokenomics {
   padding: 100px 20px;
