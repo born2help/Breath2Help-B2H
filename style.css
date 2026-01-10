@@ -1385,7 +1385,7 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 .glow-line {
   position: absolute;
   left: 50%;
-  top: 40px;
+  top: 20px;
   bottom: 0;
   width: 4px;
   margin-left: -2px;
@@ -1406,12 +1406,25 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   position: relative;
   z-index: 1;
   max-width: 320px;
-  margin: 40px auto;
+  margin: 18px auto;
   padding: 20px;
   border-radius: 14px;
   background: rgba(0,200,150,0.08);
   box-shadow: 0 0 15px rgba(0,255,150,0.2);
   text-align: center;
+}
+
+.governance-node::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 12px #22c55e;
 }
 
 .governance-node h4 {
@@ -1428,8 +1441,8 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
 
 .governance-arrow {
   font-size: 1.8rem;
-  margin: 10px 0;
-  color: #0fffc3;
+  margin: 2px 0;
+  line-height: 1;
 }
 
 /* ================= BOARD OF TRUSTEES ================= */
