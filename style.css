@@ -1587,3 +1587,21 @@ footer { background: linear-gradient(135deg, #003a8f, #004aad); color: #fff; tex
   font-size: 0.8rem;
   color: #94a3b8;
 }
+
+nav {
+  background-color: #1a1a1a; /* Dark background */
+  padding: 10px 20px;
+  text-align: center;
+}
+
+nav a {
+  color: #fff; /* White text */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+nav a:hover {
+  color: #f39c12; /* Highlight on hover */
+}
