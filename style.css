@@ -202,6 +202,55 @@ p, li {
   box-shadow: 0 6px 15px rgba(0,0,0,0.35);
 }
 
+/* ================= HERO TOP NAVIGATION ================= */
+.hero-nav {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 30px;
+  background: rgba(0, 0, 0, 0.65); /* semi-transparent black */
+  padding: 10px 25px;
+  border-radius: 50px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.hero-nav .nav-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.hero-nav .nav-link:hover {
+  background: linear-gradient(90deg, #00d084, #00ffc6);
+  color: #111;
+  box-shadow: 0 4px 15px rgba(0,255,198,0.5);
+  transform: translateY(-3px);
+}
+
+/* Small Screen Responsiveness */
+@media (max-width: 768px) {
+  .hero-nav {
+    flex-direction: column;
+    top: 15px;
+    padding: 15px 20px;
+    gap: 15px;
+  }
+
+  .hero-nav .nav-link {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+}
+
 /* ================= FOUNDER SECTION ================= */
 .founder-section {
   background: linear-gradient(180deg, #111827, #1f2937);
