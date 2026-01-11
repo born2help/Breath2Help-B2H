@@ -304,6 +304,25 @@ p, li {
   to { opacity: 1; }
 }
 
+/* ================= HERO NAV STICKY FLOAT ================= */
+.hero-nav.sticky {
+  position: fixed;
+  top: 10px; /* slight margin from top */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+
+/* Optional: slightly shrink on scroll */
+.hero-nav.sticky .nav-link {
+  padding: 6px 12px;
+  font-size: 0.95rem;
+}
+
 /* ================= FOUNDER SECTION ================= */
 .founder-section {
   background: linear-gradient(180deg, #111827, #1f2937);
