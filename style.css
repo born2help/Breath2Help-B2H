@@ -504,59 +504,6 @@ p, li {
   box-shadow: 0 0 35px rgba(0, 255, 213, 0.6), 0 0 50px rgba(0, 255, 213, 0.3) inset;
 }
 
-/* ================= DONATIONS & REAL ASSETS ================= */
-.assets {
-  position: relative;
-  padding: 100px 20px;
-  background: linear-gradient(135deg, #0a1f28, #144655, #1e6077);
-  color: #e0f7fa;
-  text-align: center;
-  overflow: hidden;
-}
-
-.assets .section-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-  color: #00ffcc;
-  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
-}
-
-.assets .readable-text {
-  font-size: 1.15rem;
-  max-width: 750px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  text-shadow: 0 0 10px rgba(176, 224, 230, 0.3);
-}
-
-/* Asset list */
-.assets ul {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 600px;
-  margin: 0 auto 40px;
-}
-
-.assets ul li {
-  background: rgba(0, 255, 204, 0.1);
-  backdrop-filter: blur(8px);
-  border-radius: 15px;
-  padding: 15px 20px;
-  font-weight: 600;
-  color: #b0e0e6;
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.assets ul li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 35px rgba(0, 255, 204, 0.6), 0 0 50px rgba(0, 255, 204, 0.3) inset;
-}
-
 /* ================= MISSION & VISION ================= */
 .mission {
   position: relative;
