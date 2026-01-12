@@ -1695,3 +1695,14 @@ p, li {
     0 0 28px rgba(255,255,255,0.35);
   opacity: 0.85;
 }
+
+/* ================= TOKENOMICS PARTICLES ================= */
+
+.tokenomics {
+  position: relative;
+  overflow: hidden;
+}
+
+.tokenomics .bg-particles {
+  opacity: 0.9;
+}
