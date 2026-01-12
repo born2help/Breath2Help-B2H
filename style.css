@@ -1846,3 +1846,89 @@ p, li {
   position: relative;
   z-index: 2;
 }
+
+/* ======================================================
+   PARTICLE LAYER FIX (SAFE ADDITION – DO NOT REMOVE)
+   ====================================================== */
+
+/* ---------- HERO PARTICLES ---------- */
+.hero {
+  position: relative;
+}
+
+.hero-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 1; /* behind content, above background */
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hero-particles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  animation: heroFloat 12s linear infinite;
+}
+
+/* Floating animation */
+@keyframes heroFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) translateX(40px);
+    opacity: 0;
+  }
+}
+
+/* ---------- TOKENOMICS PARTICLES ---------- */
+.tokenomics {
+  position: relative;
+  overflow: hidden;
+}
+
+.tokenomics-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.tokenomics-particles span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: rgba(0, 255, 204, 0.35);
+  border-radius: 50%;
+  animation: tokenFloat 15s linear infinite;
+}
+
+@keyframes tokenFloat {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+/* Ensure content stays above particles */
+.hero-content,
+.burn-logo,
+.main-logo-hero,
+.hero-nav {
+  position: relative;
+  z-index: 5;
+}
