@@ -1769,3 +1769,23 @@ p, li {
   opacity: 1;
   transform: translateX(-6px);
 }
+
+/* Transparency enhancements */
+.transparency-page .lead {
+  font-size: 1.15rem;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.glass-divider {
+  border: none;
+  height: 1px;
+  margin: 40px 0;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,0.25), transparent);
+}
+
+.transparency-page .closing {
+  font-size: 1.1rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
