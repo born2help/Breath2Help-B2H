@@ -1,16 +1,12 @@
-// ================== HERO PARALLAX & PARTICLES ==================
-const hero = document.querySelector('.hero');
-const parallaxLayers = document.querySelectorAll('.parallax-layer');
+/* ================= HERO BG PARTICLES ================= */
+const bgParticles = document.querySelectorAll('.bg-particles span');
 
-// Floating background particles
-const bgParticles = document.querySelectorAll('.particles span');
 bgParticles.forEach(p => {
-  p.style.left = Math.random() * window.innerWidth + 'px';
-  p.style.bottom = Math.random() * 50 + 'px';
-  p.style.width = 4 + Math.random() * 6 + 'px';
-  p.style.height = p.style.width;
-  p.style.animationDuration = 8 + Math.random() * 6 + 's';
-  p.style.animationDelay = Math.random() * 5 + 's';
+  p.style.left = Math.random() * 100 + '%';
+  const size = 3 + Math.random() * 6;
+  p.style.width = p.style.height = size + 'px';
+  p.style.animationDuration = 10 + Math.random() * 15 + 's';
+  p.style.animationDelay = Math.random() * 10 + 's';
 });
 
 // Hero lines animation
