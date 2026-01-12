@@ -623,49 +623,6 @@ p, li {
   font-weight: 600;
 }
 
-/* ================= ROADMAP ================= */
-.roadmap-section {
-  padding: 80px 20px;
-  background: #111827;
-  color: #fff;
-}
-
-.roadmap {
-  position: relative;
-  margin: 0 auto;
-  max-width: 900px;
-}
-
-.roadmap::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(#00d084, #00ffc6);
-  transform: translateX(-50%);
-}
-
-.roadmap-step {
-  position: relative;
-  width: 50%;
-  padding: 20px 40px;
-}
-
-.roadmap-step.left { left: -50%; text-align: right; }
-.roadmap-step.right { left: 50%; text-align: left; }
-
-.roadmap-step .circle {
-  position: absolute;
-  top: 20px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #00d084;
-  border: 3px solid #00ffc6;
-}
-
 /* ================= JOIN / CTA ================= */
 .join-section {
   padding: 100px 20px;
