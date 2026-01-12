@@ -1,185 +1,41 @@
-/* ===============================
-   B2H GLOBAL FOUNDATION CSS
-   Unified & Optimized
-   =============================== */
+/* =============================== B2H GLOBAL FOUNDATION CSS FULL EXTENDED & OPTIMIZED with HERO PARTICLES =============================== */
 
 /* ------------------- GLOBAL ------------------- */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.6;
-  color: #eee;
-  background: #0f0f1a;
-  overflow-x: hidden;
-}
+{ box-sizing: border-box; margin: 0; padding: 0; }
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 800;
-  margin-bottom: 0.5em;
-}
+body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #eee; background: #0f0f1a; overflow-x: hidden; }
 
-p, li {
-  font-weight: 400;
-}
+.container { width: 90%; max-width: 1200px; margin: auto; }
 
-/* ================= HERO SECTION ================= */
-.hero {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 50px 20px;
-  background: linear-gradient(135deg, #1e3c72, #2a5298, #00c6ff, #00ffb7);
-  color: #fff;
-  overflow: hidden;
-}
+h1, h2, h3, h4, h5, h6 { font-weight: 800; margin-bottom: 0.5em; }
 
-/* Hero Logos */
-.hero img.burn-logo {
-  position: absolute;
-  top: 1.5in;
-  right: 0.5in;
-  width: 400px;
-  max-width: 20%;
-  z-index: 2;
-}
+p, li { font-weight: 400; }
 
-.hero img.main-logo-hero {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 150px;
-  max-width: 12%;
-  z-index: 3;
-}
+/* ================= HERO SECTION WITH PARTICLES ================= */ .hero { position: relative; width: 100%; min-height: 100vh; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; padding: 50px 20px; background: linear-gradient(135deg, #1e3c72, #2a5298, #00c6ff, #00ffb7); color: #fff; overflow: hidden; }
 
-/* Hero Content & Animation */
-.hero-content {
-  position: relative;
-  z-index: 4;
-  max-width: 800px;
-  padding: 0 20px;
-  animation: depth-float 4s ease-in-out infinite alternate;
-  margin-top: 80px;
-}
+/* PARTICLE BACKGROUND */ .hero .particles-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
 
-@keyframes depth-float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-8px); }
-}
+.hero .particles-container span { position: absolute; width: 4px; height: 4px; background: rgba(255, 255, 255, 0.6); border-radius: 50%; animation: particleFloat 6s linear infinite; }
 
-.hero-title {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  color: #fffb00;
-  text-shadow: 1px 1px 15px rgba(0,0,0,0.5);
-}
+@keyframes particleFloat { 0% { transform: translateY(0) translateX(0); opacity: 0.5; } 50% { transform: translateY(-50px) translateX(30px); opacity: 1; } 100% { transform: translateY(0) translateX(-30px); opacity: 0.5; } }
 
-.hero-subtitle, .hero-subtext {
-  font-size: 1.2rem;
-  color: rgba(255,255,255,0.9);
-  margin-top: 15px;
-}
+/* Hero Logos */ .hero img.burn-logo { position: absolute; top: 1.5in; right: 0.5in; width: 400px; max-width: 20%; z-index: 2; } .hero img.main-logo-hero { position: absolute; top: 20px; left: 20px; width: 150px; max-width: 12%; z-index: 3; }
 
-/* Hero Line Animation */
-.hero-content .line {
-  display: block;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slide-in 1s forwards;
-}
+/* Hero Content & Animation */ .hero-content { position: relative; z-index: 4; max-width: 800px; padding: 0 20px; animation: depth-float 4s ease-in-out infinite alternate; margin-top: 80px; }
 
-.hero-content .line:nth-child(1) { animation-delay: 0.2s; }
-.hero-content .line:nth-child(2) { animation-delay: 0.5s; }
-.hero-content .line:nth-child(3) { animation-delay: 0.8s; }
+@keyframes depth-float { 0% { transform: translateY(0); } 100% { transform: translateY(-8px); } }
 
-@keyframes slide-in {
-  to { opacity: 1; transform: translateY(0); }
-}
+.hero-title { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; color: #fffb00; text-shadow: 1px 1px 15px rgba(0,0,0,0.5); } .hero-subtitle, .hero-subtext { font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-top: 15px; }
 
-/* Hero Buttons */
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+/* Hero Line Animation */ .hero-content .line { display: block; opacity: 0; transform: translateY(20px); animation: slide-in 1s forwards; } .hero-content .line:nth-child(1) { animation-delay: 0.2s; } .hero-content .line:nth-child(2) { animation-delay: 0.5s; } .hero-content .line:nth-child(3) { animation-delay: 0.8s; }
 
-.hero-buttons .btn {
-  margin: 10px;
-  padding: 12px 25px;
-  border-radius: 50px;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+@keyframes slide-in { to { opacity: 1; transform: translateY(0); } }
 
-.hero-buttons .btn.primary {
-  background: #00d084;
-  color: #fff;
-  box-shadow: 0 0 20px #00d08488;
-}
+/* Hero Buttons */ .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; } .hero-buttons .btn { margin: 10px; padding: 12px 25px; border-radius: 50px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; } .hero-buttons .btn.primary { background: #00d084; color: #fff; box-shadow: 0 0 20px #00d08488; } .hero-buttons .btn.outline { background: transparent; border: 2px solid #ffe600; color: #ffe600; box-shadow: 0 0 15px #ffe60066; } .hero-buttons .btn:hover { transform: scale(1.1); box-shadow: 0 0 25px rgba(255,255,255,0.8); }
 
-.hero-buttons .btn.outline {
-  background: transparent;
-  border: 2px solid #ffe600;
-  color: #ffe600;
-  box-shadow: 0 0 15px #ffe60066;
-}
-
-.hero-buttons .btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 25px rgba(255,255,255,0.8);
-}
-
-/* Hero Block Fixed */
-.hero > .hero-blocks {
-  position: absolute !important;
-  left: 24px !important;
-  bottom: 24px !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 12px !important;
-  z-index: 20 !important;
-}
-
-.hero > .hero-blocks > .hero-block {
-  width: 120px !important;
-  height: 32px !important;
-  border-radius: 999px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-weight: 600;
-  font-size: 14px;
-  color: #fff !important;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero-block:hover {
-  transform: translateX(6px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.35);
-}
+/* ================= HERO NAV, FOUNDER, MISSION, CHARITY, TOKENOMICS, ASSETS, ROADMAP, HUMANITARIAN FLOW, etc. ================= / / [All your previous CSS sections remain unchanged below this point.] */
 
 /* ================= HERO NAV ANIMATION ================= */
 .hero-nav {
