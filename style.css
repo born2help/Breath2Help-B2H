@@ -1881,3 +1881,162 @@ p {
   text-shadow: 0 0 2px rgba(0,0,0,0.5);
   line-height: 1.8;
 }
+
+/* ================= Modern Visual Upgrade for B2H Pages ================= */
+
+/* ---------------- Body Background ---------------- */
+body.dark-page {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #e0e0e0;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.5s ease;
+}
+
+/* ---------------- Headings ---------------- */
+h1, h2, h3 {
+  font-weight: 800;
+  text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin-bottom: 20px;
+}
+
+.white-paper-section h1,
+.white-paper-section h2 {
+  color: #00cfff; /* Neon Blue for White Paper */
+  text-shadow: 0 0 15px rgba(0, 207, 255, 0.7);
+}
+
+.transparency-section h1,
+.transparency-section h2 {
+  color: #00ffd5; /* Neon Teal for Transparency */
+  text-shadow: 0 0 15px rgba(0, 255, 213, 0.7);
+}
+
+.tokenomics-section h1,
+.tokenomics-section h2 {
+  color: #7fff00; /* Neon Green for Tokenomics */
+  text-shadow: 0 0 15px rgba(127, 255, 0, 0.7);
+}
+
+.donate-section h1,
+.donate-section h2 {
+  color: #ffa500; /* Neon Orange for Donate */
+  text-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
+}
+
+.about-section h1,
+.about-section h2 {
+  color: #c47fff; /* Neon Purple for About */
+  text-shadow: 0 0 15px rgba(196, 127, 255, 0.7);
+}
+
+/* ---------------- Paragraphs ---------------- */
+p {
+  color: #e0e0e0;
+  line-height: 1.8;
+  text-shadow: 0 0 2px rgba(0,0,0,0.4);
+}
+
+/* ---------------- Buttons ---------------- */
+.btn-primary, .btn-secondary {
+  padding: 12px 28px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.btn-primary {
+  background: #00ffd5;
+  color: #0a0a0a;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 15px #00ffd5, 0 0 25px #00ffd5;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: #ffb347;
+  color: #0a0a0a;
+}
+.btn-secondary:hover {
+  box-shadow: 0 0 15px #ffb347, 0 0 25px #ffb347;
+  transform: translateY(-2px);
+}
+
+/* ---------------- Glass / Container ---------------- */
+.glass-container {
+  backdrop-filter: blur(12px) brightness(1.1);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1100px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ---------------- Section Dividers ---------------- */
+hr.section-divider {
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, #00ffd5, #00cfff);
+  margin: 30px 0;
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgba(0,255,213,0.5);
+}
+
+/* ---------------- Links ---------------- */
+a {
+  color: #00cfff;
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: #00ffd5;
+  text-shadow: 0 0 8px rgba(0, 255, 213, 0.6);
+}
+
+/* ---------------- Footer ---------------- */
+.site-footer {
+  background: rgba(0,0,0,0.85);
+  color: #e0e0e0;
+  padding: 25px 0;
+}
+.site-footer a {
+  color: #00cfff;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #00ffd5;
+  text-shadow: 0 0 6px rgba(0, 255, 213, 0.6);
+}
+
+/* ---------------- Hero Sections ---------------- */
+.page-hero {
+  text-align: center;
+  padding: 50px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  margin-bottom: 40px;
+}
+
+/* ---------------- Hero Buttons ---------------- */
+.hero-buttons a {
+  margin: 15px 10px;
+}
+
+/* ---------------- Glass Back Button ---------------- */
+.glass-back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: #00cfff;
+  text-decoration: none;
+  box-shadow: 0 0 8px rgba(0, 207, 255, 0.5);
+  transition: all 0.3s ease;
+}
+.glass-back:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px #00ffd5, 0 0 25px #00cfff;
+}
