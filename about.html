@@ -8,6 +8,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+  <script>
+  const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  sections.forEach(section => observer.observe(section));
+</script>
+
 <body class="dark-page glass-page">
 
   <section class="glass-container">
