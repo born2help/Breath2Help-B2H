@@ -2019,3 +2019,37 @@ a:hover::after {
   background: linear-gradient(135deg, #00ffd5, #00cfff);
   color: #002b2b;
 }
+
+.toc {
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+}
+.toc h3 {
+  color: #00FF7F;
+  margin-bottom: 10px;
+}
+.toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+.toc ul li {
+  margin: 8px 0;
+}
+.toc a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.toc a:hover {
+  color: #00FF7F;
+}
+.toc a.active {
+  color: #00FF7F;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00FF7F;
+}
+@media screen and (max-width:1024px){
+  .toc { display: none; }
+}
