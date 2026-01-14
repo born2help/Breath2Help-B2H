@@ -1932,3 +1932,84 @@ a:hover::after {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
+/* ===============================
+   HERO ACTION BUTTONS – FINAL
+=============================== */
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 35px;
+  z-index: 5;
+  position: relative;
+}
+
+/* Base Button */
+.hero-actions a {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #00ffd5, #00cfff);
+  color: #002b2b;
+  box-shadow:
+    0 0 12px rgba(0,255,213,0.5),
+    0 0 25px rgba(0,207,255,0.3);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Glow Pulse */
+.hero-actions a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.4), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.hero-actions a:hover::before {
+  opacity: 1;
+}
+
+/* Hover Motion */
+.hero-actions a:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow:
+    0 0 20px rgba(255,209,102,0.8),
+    0 0 40px rgba(255,111,97,0.6);
+}
+
+/* Individual Accent Buttons */
+.hero-actions a.donate {
+  background: linear-gradient(135deg, #ffd166, #ff6f61);
+  color: #3a1f00;
+}
+
+.hero-actions a.tokenomics {
+  background: linear-gradient(135deg, #00cfff, #00ffd5);
+}
+
+.hero-actions a.about,
+.hero-actions a.whitepaper,
+.hero-actions a.transparency {
+  background: linear-gradient(135deg, #1f2933, #0f172a);
+  color: #e5f6ff;
+  border: 1px solid rgba(0,255,213,0.4);
+}
+
+/* Hover for dark buttons */
+.hero-actions a.about:hover,
+.hero-actions a.whitepaper:hover,
+.hero-actions a.transparency:hover {
+  background: linear-gradient(135deg, #00ffd5, #00cfff);
+  color: #002b2b;
+}
