@@ -2282,3 +2282,32 @@ p, li, span {
 h1, h2, h3, h4, h5, h6 {
   color: #00ffd5; /* neon teal as heading color */
 }
+
+/* ================= TEXT SAFETY OVERRIDE ================= */
+
+/* Force visibility of all main content */
+.section,
+.wp-section,
+.glass-container,
+.page-hero {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+/* Force readable text */
+.section p,
+.section li,
+.wp-section p,
+.wp-section li,
+.page-hero p {
+    color: #f1f1f1 !important;
+}
+
+/* Headings always visible */
+h1, h2, h3, h4 {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
