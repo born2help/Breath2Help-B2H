@@ -3,6 +3,12 @@
    Unified & Optimized
    =============================== */
 
+.toc a.active {
+  color: #00FF7F; /* Bright green glow for active section */
+  font-weight: bold;
+  text-shadow: 0 0 8px #00FF7F;
+}
+
 /* ------------------- GLOBAL ------------------- */
 * {
   box-sizing: border-box;
