@@ -1843,3 +1843,41 @@ p, li {
     margin-bottom: 20px;
   }
 }
+
+body.dark-page {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+
+h1, h2, h3 {
+  color: #00ffd5; /* Example neon teal */
+  text-shadow: 0 0 10px rgba(0, 255, 213, 0.7), 0 0 20px rgba(0, 255, 213, 0.5);
+}
+
+.btn-primary {
+  background: #00ffd5;
+  color: #0a0a0a;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 15px #00ffd5, 0 0 25px #00ffd5;
+}
+.btn-secondary {
+  background: #ffb347;
+  color: #0a0a0a;
+}
+.btn-secondary:hover {
+  box-shadow: 0 0 15px #ffb347, 0 0 25px #ffb347;
+}
+
+hr.section-divider {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #00ffd5, #008080);
+  margin: 30px 0;
+  border-radius: 5px;
+}
+
+p {
+  color: #e0e0e0;
+  text-shadow: 0 0 2px rgba(0,0,0,0.5);
+  line-height: 1.8;
+}
