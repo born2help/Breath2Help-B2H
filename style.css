@@ -2125,3 +2125,14 @@ a:hover::after {
   height: 18px;
   border-radius: 50%;
 }
+
+/* Adjust roadmap text spacing */
+.compact-roadmap-list li {
+  position: relative;
+  padding-left: 50px; /* increased from 40px to 50px */
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #ddd;
+  text-align: left;
+}
