@@ -2129,7 +2129,7 @@ a:hover::after {
 /* Adjust roadmap text spacing */
 .compact-roadmap-list li {
   position: relative;
-  padding-left: 50px; /* increased from 40px to 50px */
+  padding-left: 75px; /* increased from 40px to 75px */
   margin-bottom: 20px;
   font-size: 0.95rem;
   line-height: 1.5;
