@@ -2027,3 +2027,54 @@ a:hover::after {
   color: #ccc;
   line-height: 1.4;
 }
+
+/* ===== Compact Mission & Vision ===== */
+.mission.compact-section {
+  padding: 50px 20px;
+}
+
+.section-header .subheading {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.mission-vision-cards.compact-mv-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.mv-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mv-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.mv-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.mv-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.mv-card p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #ccc;
+}
