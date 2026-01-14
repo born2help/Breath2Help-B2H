@@ -4,35 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tokenomics — B2H Global Foundation</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-  <script>
-  const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.2 });
-
-  sections.forEach(section => observer.observe(section));
-</script>
-
 <body class="dark-page glass-page">
+
   <section class="glass-container">
 
-    <!-- ================= HERO ================= -->
+    <!-- ================= PAGE HERO ================= -->
     <section class="page-hero">
       <h1 class="green-glow">B2H Tokenomics</h1>
-      <p class="subtitle">Designed for Responsibility · Not Speculation</p>
-      <div class="hero-buttons">
-        <a href="donate.html" class="btn-primary">Donate Now</a>
-        <a href="white-paper.html" class="btn-secondary">Read White Paper</a>
+      <p class="subtitle">
+        Designed for Responsibility • Not Speculation
+      </p>
+
+      <div class="hero-actions">
+        <a href="donate.html" class="donate">Donate Now</a>
+        <a href="white-paper.html" class="whitepaper">Read White Paper</a>
       </div>
+
       <hr class="section-divider">
     </section>
 
@@ -45,80 +40,89 @@
           <li><strong>Token Name:</strong> B2H</li>
           <li><strong>Meaning:</strong> Burn to Help · Born for Humanity</li>
           <li><strong>Total Supply:</strong> 500,000,000,000 B2H</li>
-          <li><strong>Supply Type:</strong> Fixed — No future minting</li>
+          <li><strong>Supply Model:</strong> Fixed — No future minting</li>
         </ul>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Fixed Supply Principle</h2>
         <p>
           B2H has a permanently fixed supply. No additional tokens can ever be created.
-          This ensures predictability, prevents dilution, and supports long-term trust.
+          This design prevents dilution, ensures predictability, and supports long-term trust
+          for humanitarian stewardship.
         </p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Burn-to-Help Mechanism</h2>
         <p>
           The Burn-to-Help mechanism permanently removes tokens from circulation
-          while triggering predefined allocations toward humanitarian initiatives
+          while activating predefined allocations toward humanitarian initiatives
           and project sustainability.
         </p>
         <p>
-          Burns are not designed to manipulate price or guarantee value.
-          They exist to align participation with social impact.
+          Token burns are not intended to influence market price or guarantee value.
+          Their sole purpose is to align participation with real-world impact.
         </p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Allocation Philosophy</h2>
         <ul>
-          <li>Humanitarian assistance and aid programs (5%)</li>
-          <li>Operational sustainability and infrastructure (3%)</li>
+          <li><strong>5%</strong> — Humanitarian relief and aid programs</li>
+          <li><strong>3%</strong> — Operational sustainability and infrastructure</li>
           <li>Security, compliance, and ethical governance</li>
-          <li>Minimal administration and coordination</li>
+          <li>Minimal and responsible administration</li>
         </ul>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">What Tokenomics Do NOT Promise</h2>
         <ul>
           <li>No guaranteed returns</li>
-          <li>No price appreciation targets</li>
           <li>No profit-sharing claims</li>
+          <li>No price appreciation targets</li>
           <li>No speculative incentives</li>
         </ul>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Participation Ethics</h2>
         <p>
-          Participation in B2H is voluntary and should be based on alignment
-          with humanitarian values — not financial expectations.
+          Participation in B2H should be based on alignment with humanitarian values
+          and ethical intent — not financial expectations or trading behavior.
         </p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Founder Stewardship</h2>
         <p>
-          Tokenomics decisions are guided by ethical responsibility.
-          The founder retains stewardship authority to protect the mission,
-          not to extract personal benefit.
+          Tokenomic decisions are guided by responsibility and long-term mission protection.
+          The founder retains stewardship authority solely to safeguard the humanitarian vision,
+          never for personal financial extraction.
         </p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section highlight">
         <h2 class="section-title green-glow">Risk Disclosure</h2>
         <p>
-          Participation involves risk. B2H does not guarantee financial outcomes.
-          Individuals should engage only with full understanding of its humanitarian nature.
+          Participation involves risk. B2H does not guarantee financial outcomes,
+          returns, or asset appreciation. Individuals should engage only with full
+          understanding of its humanitarian-first nature.
         </p>
       </div>
 
@@ -131,19 +135,37 @@
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer dark-section">
     <div class="container footer-container">
+
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="white-paper.html">White Paper</a>
         <a href="transparency.html">Transparency</a>
-        <a href="donate.html">Donate</a>
         <a href="tokenomics.html">Tokenomics</a>
+        <a href="donate.html">Donate</a>
       </div>
+
       <div class="footer-bottom">
         <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
       </div>
+
     </div>
   </footer>
+
+  <!-- ================= SCROLL ANIMATION SCRIPT ================= -->
+  <script>
+    const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
