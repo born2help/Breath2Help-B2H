@@ -6,8 +6,41 @@
   <title>White Paper — B2H Global Foundation</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <!-- Icon library for sections -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* ===================== TOC STYLING ===================== */
+    .toc {
+      position: fixed;
+      top: 150px;
+      right: 20px;
+      background: rgba(0,0,0,0.6);
+      padding: 15px 20px;
+      border-radius: 12px;
+      max-width: 250px;
+      font-size: 14px;
+      z-index: 100;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+    .toc h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #7CFC00;
+    }
+    .toc a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+      margin: 6px 0;
+      transition: color 0.2s;
+    }
+    .toc a:hover {
+      color: #7CFC00;
+    }
+    @media(max-width: 1024px){
+      .toc { display: none; }
+    }
+  </style>
 </head>
 
 <body class="dark-page glass-page">
@@ -15,7 +48,7 @@
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
-    <section class="page-hero">
+    <section class="page-hero" id="hero">
       <h1 class="green-glow">White Paper — B2H Global Foundation</h1>
       <p class="subtitle">Built for Humanity · Driven by Purpose · Guided by Ethics</p>
       <div class="hero-buttons">
@@ -25,10 +58,25 @@
       <hr class="section-divider">
     </section>
 
+    <!-- ================= TOC ================= -->
+    <nav class="toc">
+      <h3>Jump to Section</h3>
+      <a href="#overview"><i class="fas fa-eye"></i> Overview</a>
+      <a href="#values"><i class="fas fa-heart"></i> Purpose & Core Values</a>
+      <a href="#token"><i class="fas fa-coins"></i> Token Overview</a>
+      <a href="#burn"><i class="fas fa-fire"></i> Burn-to-Help</a>
+      <a href="#ethics"><i class="fas fa-balance-scale"></i> Transparency & Ethics</a>
+      <a href="#vision"><i class="fas fa-binoculars"></i> Vision & Mission</a>
+      <a href="#framework"><i class="fas fa-shield-alt"></i> Ethical Framework</a>
+      <a href="#impact"><i class="fas fa-globe"></i> Long-Term Impact</a>
+      <a href="#participation"><i class="fas fa-users"></i> How to Participate</a>
+      <a href="#commitment"><i class="fas fa-handshake"></i> Our Commitment</a>
+    </nav>
+
     <!-- ================= CONTENT ================= -->
     <section class="section">
 
-      <div class="wp-section">
+      <div class="wp-section" id="overview">
         <h2 class="section-title"><i class="fas fa-eye"></i> Overview</h2>
         <p>
           <strong>B2H (Burn to Help | Born for Humanity)</strong> is a humanitarian-first initiative
@@ -40,7 +88,7 @@
       </div>
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section" id="values">
         <h2 class="section-title"><i class="fas fa-heart"></i> Purpose & Core Values</h2>
         <ul>
           <li>Embed compassion and responsibility into technology</li>
@@ -54,7 +102,7 @@
       </div>
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section" id="token">
         <h2 class="section-title"><i class="fas fa-coins"></i> Token Overview</h2>
         <ul>
           <li><strong>Name:</strong> B2H (Burn to Help | Born for Humanity)</li>
@@ -65,7 +113,7 @@
       </div>
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section" id="burn">
         <h2 class="section-title"><i class="fas fa-fire"></i> Burn-to-Help Mechanism</h2>
         <p>
           Defined burn events permanently reduce the circulating supply while activating humanitarian allocations
@@ -76,7 +124,7 @@
       </div>
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section" id="ethics">
         <h2 class="section-title"><i class="fas fa-balance-scale"></i> Transparency & Ethics</h2>
         <ul>
           <li>No promised profits or financial returns</li>
@@ -88,7 +136,7 @@
       </div>
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section" id="vision">
         <h2 class="section-title"><i class="fas fa-binoculars"></i> Vision & Mission</h2>
         <p>
           <strong>Vision:</strong> A world where helping others is built into systems, creating lasting relief
@@ -101,7 +149,7 @@
       </div>
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section" id="framework">
         <h2 class="section-title"><i class="fas fa-shield-alt"></i> Ethical Framework</h2>
         <ul>
           <li>Transparency in all operations and reporting</li>
@@ -112,7 +160,7 @@
       </div>
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section" id="impact">
         <h2 class="section-title"><i class="fas fa-globe"></i> Long-Term Impact</h2>
         <p>
           Contributions to B2H are transformed into permanent assets generating continuous support for the poor and vulnerable.
@@ -122,7 +170,7 @@
       </div>
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section" id="participation">
         <h2 class="section-title"><i class="fas fa-users"></i> How to Participate</h2>
         <p>
           Participation is voluntary, transparent, and open to all. Contributors gain satisfaction in knowing their engagement creates
@@ -131,7 +179,7 @@
       </div>
       <hr class="section-divider">
 
-      <div class="wp-section highlight">
+      <div class="wp-section highlight" id="commitment">
         <h2 class="section-title green-glow"><i class="fas fa-handshake"></i> Our Commitment</h2>
         <p>
           B2H is more than a token; it is a humanitarian instrument.
@@ -142,8 +190,8 @@
       </div>
 
       <a href="index.html" class="glass-back">← Back Home</a>
-
     </section>
+
   </section>
 
   <!-- ================= FOOTER ================= -->
