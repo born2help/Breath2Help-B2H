@@ -2107,7 +2107,7 @@ a:hover::after {
 
 .compact-roadmap-list li {
   position: relative;
-  padding-left: 40px;
+  padding-left:50px;
   margin-bottom: 20px;
   font-size: 0.95rem;
   line-height: 1.5;
@@ -2117,7 +2117,7 @@ a:hover::after {
 
 .compact-roadmap-list .step-circle {
   position: absolute;
-  left: 0;
+  left: 1;
   top: 50%;
   transform: translateY(-50%);
   display: inline-block;
