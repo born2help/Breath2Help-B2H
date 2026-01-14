@@ -1797,3 +1797,94 @@ a:hover::after {
   font-weight: 700;
   text-shadow: 0 0 12px rgba(255,255,255,0.3);
 }
+
+/* ---------------- Hero Button Glow & Floating ---------------- */
+.hero-buttons a.btn-primary,
+.hero-buttons a.btn-secondary {
+  position: relative;
+  display: inline-block;
+  padding: 15px 35px;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatButton 3s ease-in-out infinite alternate;
+}
+
+/* Primary Button Glow */
+.hero-buttons a.btn-primary {
+  background: #00ffd5;
+  color: #0a0a0a;
+  box-shadow: 0 0 15px #00ffd5, 0 0 25px #00ffd5;
+}
+
+.hero-buttons a.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #00ffd5, 0 0 50px #00ffd5;
+}
+
+/* Secondary Button Glow */
+.hero-buttons a.btn-secondary {
+  background: #ffb347;
+  color: #0a0a0a;
+  box-shadow: 0 0 15px #ffb347, 0 0 25px #ffb347;
+}
+
+.hero-buttons a.btn-secondary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px #ffb347, 0 0 50px #ffb347;
+}
+
+/* Floating Animation for Buttons */
+@keyframes floatButton {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* ---------------- Hero Navigation Top Panel ---------------- */
+.hero-nav {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  display: flex;
+  gap: 25px;
+  padding: 10px 20px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 12px;
+  z-index: 10;
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
+}
+
+.hero-nav .nav-link {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 12px;
+  transition: 0.3s;
+}
+
+.hero-nav .nav-link:hover {
+  color: #00ffd5;
+  text-shadow: 0 0 8px #00ffd5;
+}
+
+/* Sticky behavior for nav */
+.hero-nav.sticky {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  z-index: 999;
+}
+
+/* Optional: shrink nav links on sticky */
+.hero-nav.sticky .nav-link {
+  padding: 5px 10px;
+  font-size: 0.95rem;
+}
