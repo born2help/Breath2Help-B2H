@@ -1888,3 +1888,47 @@ a:hover::after {
   padding: 5px 10px;
   font-size: 0.95rem;
 }
+
+/* ---------------- Hero Titles Glowing Gradient ---------------- */
+
+/* Main Hero Title - Born To Help */
+.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(270deg, #00ffd5, #00cfff, #ffd166, #ff6f61, #ffb347);
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientGlow 10s ease infinite;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 20px rgba(0,255,213,0.5),
+    0 0 30px rgba(255,209,102,0.5);
+}
+
+/* Sub Hero Title - Burn for Humanity */
+.hero-tagline {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 25px;
+  background: linear-gradient(270deg, #ffb347, #ff6f61, #ffd166, #00cfff, #00ffd5);
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientGlow 12s ease infinite reverse;
+  text-shadow:
+    0 0 8px rgba(255,179,71,0.7),
+    0 0 15px rgba(255,111,97,0.6),
+    0 0 25px rgba(255,209,102,0.5);
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
