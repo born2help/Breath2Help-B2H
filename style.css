@@ -1881,23 +1881,6 @@ a:hover::after {
   pointer-events: none;
 }
 
-/* Hero inner content – above burn logo */
-.hero-inner {
-  position: relative;
-  z-index: 2;
-  max-width: 760px;
-  text-align: center;
-}
-
-/* Brand section */
-.brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
 /* Particle Styling */
 .bg-particles span {
   position: absolute;
