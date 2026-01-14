@@ -1960,6 +1960,62 @@ a:hover::after {
   </div>
 </section>
 
+/* ================= ROADMAP – COMPACT & COLORFUL ================= */
+.roadmap {
+  position: relative;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
+  color: #e0f7fa;
+  text-align: center;
+  overflow: hidden;
+}
+
+.roadmap .section-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #00ffcc;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.6);
+}
+
+.roadmap-list {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.roadmap-list li {
+  background: rgba(0, 255, 204, 0.1);
+  backdrop-filter: blur(8px);
+  border-radius: 15px;
+  padding: 12px 18px;
+  font-weight: 600;
+  color: #b0e0e6;
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.roadmap-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.6), 0 0 45px rgba(0, 255, 204, 0.3) inset;
+}
+
+.step-circle {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
 /* ================= ROADMAP – COLORFUL TIMELINE ================= */
 .roadmap {
   position: relative;
