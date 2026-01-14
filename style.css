@@ -1811,3 +1811,35 @@ p, li {
   background: rgba(11, 94, 58, 0.1);
   border-left: 4px solid #0b5e3a;
 }
+
+/* ================= HERO NAV POSITION FIX ================= */
+
+/* Keep hero nav above particles and logos */
+.hero-nav {
+  position: absolute;
+  top: 30px;              /* move it slightly down from top */
+  right: 40px;            /* push away from burn logo */
+  z-index: 10;
+  display: flex;
+  gap: 22px;
+}
+
+/* Responsive safety */
+@media (max-width: 992px) {
+  .hero-nav {
+    top: 20px;
+    right: 20px;
+    gap: 16px;
+  }
+}
+
+/* Mobile: stack neatly */
+@media (max-width: 768px) {
+  .hero-nav {
+    position: relative;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+}
