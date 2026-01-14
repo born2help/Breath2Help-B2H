@@ -1779,3 +1779,21 @@ a:hover::after {
   transform: translateY(-3px);
   box-shadow: 0 0 25px #ffb347, 0 0 40px #ffb347;
 }
+
+/* Motivational tagline */
+.hero-motivation {
+  font-size: 1.35rem;
+  color: #fff;
+  margin: 20px 0;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2), 0 0 15px rgba(0,255,213,0.3);
+  animation: fadeUp 1.5s ease forwards;
+}
+
+/* Highlighted gradient text */
+.hero-motivation .highlight {
+  background: linear-gradient(90deg, #00ffd5, #ffd166, #ff6f61);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(255,255,255,0.3);
+}
