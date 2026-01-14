@@ -1730,3 +1730,48 @@ a:hover::after {
     transition: none !important;
   }
 }
+
+/* ================= HERO CONTENT UPGRADE ================= */
+
+.hero {
+  position: relative;
+  padding: 140px 20px 120px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #ffd166;
+  margin-bottom: 12px;
+}
+
+.hero-tagline {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #06d6a0;
+  margin-bottom: 24px;
+}
+
+.hero-description {
+  font-size: 1.15rem;
+  max-width: 720px;
+  margin: 0 auto 36px;
+  opacity: 0.95;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
