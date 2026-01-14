@@ -194,6 +194,31 @@
 
   </section>
 
+  <script>
+  // Scroll-aware TOC
+  const tocLinks = document.querySelectorAll('.toc a');
+  const wpSections = document.querySelectorAll('.wp-section, .page-hero');
+
+  function updateTOC() {
+    let index = wpSections.length - 1;
+    for (let i = 0; i < wpSections.length; i++) {
+      const sectionTop = wpSections[i].getBoundingClientRect().top;
+      if (sectionTop > 120) { // 120px from top
+        index = i - 1;
+        break;
+      }
+    }
+    tocLinks.forEach(link => link.classList.remove('active'));
+    if (index >= 0 && tocLinks[index]) {
+      tocLinks[index].classList.add('active');
+    }
+  }
+
+  window.addEventListener('scroll', updateTOC);
+  updateTOC(); // initial highlight
+
+</script>
+
   <!-- ================= FOOTER ================= -->
   <footer class="site-footer dark-section">
     <div class="container footer-container">
