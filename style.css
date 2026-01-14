@@ -2093,3 +2093,20 @@ h1, h2 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Reset body text color */
+body {
+  color: #e0e0e0; /* light gray for readability on dark/blue background */
+  background-color: #0d1117; /* or your chosen background */
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Paragraphs, list items, and general text */
+p, li, span {
+  color: #e0e0e0; /* ensures visibility */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #00ffd5; /* neon teal as heading color */
+}
