@@ -1970,3 +1970,60 @@ a:hover::after {
   background: linear-gradient(135deg, #00ffd5, #00cfff);
   color: #002b2b;
 }
+
+/* ===== Compact Charity Grid ===== */
+.charity-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.charity-header p.charity-intro {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.charity-grid.compact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+.charity-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.charity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.charity-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.charity-content {
+  padding: 15px 10px;
+}
+
+.charity-content h3 {
+  margin: 8px 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.charity-content p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.4;
+}
