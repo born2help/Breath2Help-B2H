@@ -2060,6 +2060,21 @@ a:hover::after {
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
+/* Glow effect behind image */
+.founder-image::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(20,184,166,0.3) 0%, rgba(20,184,166,0) 70%);
+  filter: blur(20px);
+  z-index: 1;
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
 .founder-text {
   flex: 2 1 500px;
 }
@@ -2273,4 +2288,98 @@ a:hover::after {
 .founder-text {
   flex: 1;
   min-width: 250px;
+}
+
+/* ================= FOUNDER SECTION ================= */
+.founder-section .founder-image img {
+  width: 180px;        /* Adjust size as needed */
+  height: 180px;
+  object-fit: cover;   /* Ensures image fills the circle */
+  border-radius: 50%;  /* Makes it perfectly round */
+  border: 4px solid #14b8a6;  /* Optional: subtle border */
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.6); /* glow effect */
+  float: right;        /* Position right; change to left if needed */
+  margin-left: 30px;
+}
+
+/* ================= GOVERNANCE SECTION ================= */
+/* Trustee Images Equal Size & Round */
+.trustee-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;   /* Circle shape */
+  border: 3px solid #14b8a6; /* Optional subtle border */
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.5); /* glow behind trustee images */
+  display: block;
+  margin: 0 auto 15px;  /* Center and spacing */
+}
+
+/* Trustee Cards Equal Height */
+.board-card {
+  text-align: center;
+  padding: 20px;
+  flex: 1;
+  min-width: 220px;
+  max-width: 300px;
+  margin: 10px;
+  background: rgba(20, 184, 166, 0.05);  /* subtle glassy bg */
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.board-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(20, 184, 166, 0.4);
+}
+
+/* Governance Flow Nodes Glowing Effect */
+.governance-node.glow-node {
+  position: relative;
+  padding: 20px;
+  margin: 20px auto;
+  background: rgba(20, 184, 166, 0.05);  /* subtle glass */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
+  text-align: center;
+}
+
+/* Glow Line Connecting Nodes */
+.governance-flow-container .glow-line {
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #14b8a6, #ffffff, #14b8a6);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Responsive Trustee Cards */
+@media screen and (max-width: 1024px) {
+  .board-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .board-card {
+    flex: 1 1 45%;
+    margin: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .founder-section .founder-image {
+    float: none;
+    text-align: center;
+    margin: 0 auto 20px;
+  }
+
+  .founder-section .founder-image img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .board-card {
+    flex: 1 1 90%;
+  }
 }
