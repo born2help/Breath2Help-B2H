@@ -49,6 +49,41 @@ p, li {
   overflow: hidden;
 }
 
+/* ================= TRUSTEE SECTION ================= */
+.trustee-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.trustee-card {
+  width: 200px;
+  text-align: center;
+}
+
+.trustee-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 0 30px rgba(20, 184, 166, 0.6);
+}
+
+.trustee-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.trustee-card p {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
 .humanitarian-flow .section-title {
   font-size: 2.5rem;
   font-weight: 800;
