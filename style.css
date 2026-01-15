@@ -2108,3 +2108,72 @@ a:hover::after {
     padding-left: 40px;
   }
 }
+
+Css for founder
+
+
+.founder-section {
+  padding: 80px 20px;
+  background: rgba(20, 184, 166, 0.05);
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.founder-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.founder-image img {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.founder-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.founder-text p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+.founder-intro {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.signature {
+  margin-top: 20px;
+  font-style: italic;
+  font-weight: 600;
+  color: #14b8a6;
+}
+
+.highlight {
+  color: #14b8a6;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(20, 184, 166, 0.6);
+}
+
+@media (max-width: 900px) {
+  .founder-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .founder-image img {
+    max-width: 100%;
+  }
+}
