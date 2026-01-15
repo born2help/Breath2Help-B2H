@@ -2383,3 +2383,76 @@ Css for tokenomics
 .roadmap-list li {
   word-break: break-word;
 }
+
+.roadmap-list {
+  max-width: 600px;
+  margin: 40px auto 0;
+  list-style: none;
+  padding: 0;
+}
+
+.roadmap-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px; /* KEY: spacing between circle & text */
+  margin-bottom: 26px;
+  position: relative;
+}
+
+.step-circle {
+  width: 14px;
+  height: 14px;
+  min-width: 14px;
+  border-radius: 50%;
+  background: #14b8a6;
+  box-shadow: 0 0 12px rgba(20,184,166,0.9);
+  margin-top: 6px;
+}
+
+.roadmap-text {
+  line-height: 1.6;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.compact-section {
+  padding: 60px 0;
+}
+
+.compact-block {
+  margin-bottom: 32px;
+}
+
+.compact-list li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.compact-tokenomics .token-box {
+  padding: 16px;
+}
+
+.compact-bars {
+  gap: 18px;
+}
+
+.token-box h3 {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.compact-grid {
+  gap: 20px;
+}
+
+.charity-card {
+  max-height: 360px;
+}
+
+.compact-mv-cards {
+  gap: 24px;
+}
+
+.mv-card {
+  padding: 24px;
+}
