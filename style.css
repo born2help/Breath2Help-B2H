@@ -2217,3 +2217,60 @@ a:hover::after {
   margin-bottom: 10px;
   border: 3px solid #14b8a6;
 }
+
+.founder-content {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* spacing between image and text */
+  flex-wrap: wrap;
+}
+
+.founder-image {
+  position: relative;
+  width: 150px;       /* fixed size */
+  height: 150px;
+  flex-shrink: 0;
+}
+
+.founder-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* perfect round */
+  border: 4px solid #14b8a6; /* optional highlight border */
+  position: relative;
+  z-index: 2;
+}
+
+/* Glow effect behind image */
+.founder-image::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(20,184,166,0.3) 0%, rgba(20,184,166,0) 70%);
+  filter: blur(20px);
+  z-index: 1;
+  animation: glowPulse 3s infinite ease-in-out;
+}
+
+/* subtle pulsing animation */
+@keyframes glowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+/* Founder text */
+.founder-text {
+  flex: 1;
+  min-width: 250px;
+}
