@@ -2208,3 +2208,12 @@ a:hover::after {
     align-items: center;
   }
 }
+
+.board-card img {
+  width: 120px;       /* fixed width */
+  height: 120px;      /* fixed height */
+  object-fit: cover;  /* ensures image fills the circle without stretching */
+  border-radius: 50%; /* makes it round */
+  margin-bottom: 10px;
+  border: 3px solid #14b8a6;
+}
