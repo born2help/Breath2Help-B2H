@@ -2433,3 +2433,75 @@ a:hover::after {
   );
   box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
 }
+
+/* =======================================
+   GLOBAL HEADING FIX — Remove all side green lines 
+   and standardize heading colors & alignment
+======================================= */
+
+/* Remove all pseudo-elements adding lines beside headings */
+.section-title::before,
+.section-title::after,
+.section-header::before,
+.section-header::after,
+.section-header-center::before,
+.section-header-center::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* Standardize all section titles */
+.section-title {
+    text-align: center !important;       /* center headings */
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: #22c55e;                      /* Emerald green */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #22c55e;    /* ensure solid color */
+    margin: 0 auto;
+}
+
+/* Optional: Add your colorful underline below every heading */
+.section-underline {
+    width: 90px;
+    height: 4px;
+    margin: 12px auto 20px;
+    border-radius: 4px;
+    background: linear-gradient(
+        90deg,
+        #facc15,   /* gold */
+        #38bdf8,   /* blue */
+        #ef4444    /* red */
+    );
+    box-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+/* Additional: fix How Humanity Works heading color */
+.humanity-section .section-title {
+    color: #22c55e !important;  /* same green as other headings */
+}
+
+/* Donation & Real Assets heading */
+.donation-section .section-title {
+    color: #22c55e !important;
+}
+
+/* Mission & Vision heading */
+.mission-section .section-title {
+    color: #22c55e !important;
+}
+
+/* Roadmap heading */
+.roadmap-section .section-title {
+    color: #22c55e !important;
+}
+
+/* Join the Movement heading */
+.join-section .section-title {
+    color: #22c55e !important;
+}
+
+/* Our Charities heading */
+.charities-section .section-title {
+    color: #22c55e !important;
+}
