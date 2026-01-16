@@ -2807,3 +2807,54 @@ a:hover::after {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+/* ================= SUBTLE GLOW BEHIND BOXES ================= */
+
+/* Mission & Vision Cards Glow */
+.mission-vision-cards .mv-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.mission-vision-cards .mv-card::before {
+  content: "";
+  position: absolute;
+  inset: -5%;
+  background: radial-gradient(circle, rgba(0,255,198,0.25) 0%, rgba(0,255,198,0) 70%);
+  filter: blur(20px);
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.mission-vision-cards .mv-card:hover::before {
+  transform: scale(1.15);
+  opacity: 0.9;
+}
+
+/* Donation & Real Assets Cards Glow */
+.assets-grid .asset-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.assets-grid .asset-card::before {
+  content: "";
+  position: absolute;
+  inset: -5%;
+  background: radial-gradient(circle, rgba(0,255,198,0.2) 0%, rgba(0,255,198,0) 70%);
+  filter: blur(18px);
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.assets-grid .asset-card:hover::before {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* Ensure text/content stays above glow */
+.mission-vision-cards .mv-card > *,
+.assets-grid .asset-card > * {
+  position: relative;
+  z-index: 1;
+}
