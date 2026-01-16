@@ -2667,3 +2667,143 @@ a:hover::after {
 .mission-section .mission-card {
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35) !important;
 }
+
+/* ================= SAFE PATCH — B2H VISUAL FIXES ================= */
+
+/* ---------------- HEADINGS UNIFIED ---------------- */
+.section h2,
+.hero-section h2,
+.mission .section-header h2,
+.assets-header h2,
+.charity-header h2,
+.join-movement .section-title {
+  color: #00ffc6 !important; /* unified bright gradient color */
+  text-align: center !important; /* center all headings */
+  border-left: none !important; /* remove side green lines */
+  border-right: none !important;
+  padding-left: 0 !important;
+  margin-bottom: 18px !important;
+}
+
+/* Unified single underline for headings */
+.section h2::after,
+.mission .section-header h2::after,
+.assets-header h2::after,
+.charity-header h2::after,
+.join-movement .section-title::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 5px;
+  margin: 10px auto 25px auto;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #00ffc6, #00bfa6);
+  box-shadow: 0 0 12px rgba(0,255,198,0.6);
+}
+
+/* Remove extra green lines in Mission & Vision and Our Charities */
+.mission .section-header,
+.charity-header,
+.assets-header {
+  border-left: none !important;
+  border-right: none !important;
+}
+
+/* ---------------- RESTORE HERO PARTICLES ---------------- */
+.hero .bg-particles,
+.hero .bg-particles span {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------------- FOUNDER & CARD GLOWS ---------------- */
+.founder-card,
+.charity-card,
+.asset-card,
+.mv-card {
+  box-shadow: 0 10px 25px rgba(0,255,198,0.35);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.founder-card:hover,
+.charity-card:hover,
+.asset-card:hover,
+.mv-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 15px 35px rgba(0,255,198,0.45),
+    0 0 40px rgba(0,255,198,0.2) inset;
+}
+
+/* Restore subtle glowing background for Mission & Vision cards */
+.mission-vision-cards .mv-card {
+  background: rgba(0,255,198,0.05);
+  backdrop-filter: blur(12px);
+}
+
+/* ---------------- MISSION & VISION FIX ---------------- */
+.mission {
+  background: linear-gradient(135deg, #0f2734, #1a4459, #215d77);
+}
+
+.mission .section-header .underline {
+  width: 110px !important;
+  height: 5px !important;
+  margin: 10px auto 25px !important;
+  background: linear-gradient(90deg, #00ffc6, #00bfa6);
+  box-shadow: 0 0 12px rgba(0,255,198,0.6);
+}
+
+/* Remove double underline in Mission & Vision heading */
+.mission .section-header h2::before,
+.mission .section-header h2::after {
+  display: none !important;
+}
+
+/* ---------------- BUTTON & HERO GLOW ---------------- */
+.hero-buttons a.btn-primary,
+.hero-buttons a.btn-secondary {
+  box-shadow: 0 0 15px #00ffd5, 0 0 25px #00ffd5 !important;
+}
+
+.hero-buttons a.btn-primary:hover,
+.hero-buttons a.btn-secondary:hover {
+  box-shadow: 0 0 30px #00ffd5, 0 0 50px #00ffd5 !important;
+}
+
+/* ---------------- SAFE CARD HIGHLIGHTS ---------------- */
+.asset-card.highlight,
+.charity-card.highlight,
+.founder-card.highlight {
+  border: 1px solid rgba(0,255,198,0.35);
+  box-shadow: 0 0 25px rgba(0,255,198,0.25);
+}
+
+/* ---------------- SUBTLE GLOW BACKGROUND ---------------- */
+.section,
+.mission-vision-cards,
+.charity-grid,
+.assets-grid {
+  background: rgba(0,0,0,0.05);
+  backdrop-filter: blur(8px);
+}
+
+/* ---------------- PARTICLES BACKUP ---------------- */
+.hero .bg-particles span {
+  animation: particleFloat 22s linear infinite !important;
+}
+
+/* ---------------- SAFETY OVERRIDE ---------------- */
+.section,
+.hero,
+.hero-content,
+.hero-buttons,
+.charity-card,
+.asset-card,
+.mv-card,
+.founder-card {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
