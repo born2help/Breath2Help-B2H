@@ -2661,3 +2661,155 @@ a:hover::after {
   0%, 100% { box-shadow: 0 0 20px rgba(0,255,198,0.5), 0 0 40px rgba(0,255,198,0.3) inset; }
   50% { box-shadow: 0 0 35px rgba(0,255,198,0.7), 0 0 60px rgba(0,255,198,0.4) inset; }
 }
+
+/* =========================================================
+   B2H HERO & TOKENOMICS PARTICLES + FOUNDER GLOW
+   Safe End-of-CSS Paste
+========================================================= */
+
+/* ================= HERO & TOKENOMICS BASE ================= */
+.hero,
+.tokenomics {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* ================= HERO PARTICLES ================= */
+.bg-particles {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.bg-particles span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(255,255,255,0.7) 35%, rgba(255,255,255,0.3) 60%, transparent 70%);
+  animation: particleFloat 20s linear infinite;
+  opacity: 0.9;
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.8),
+    0 0 20px rgba(255,255,255,0.4);
+}
+
+/* Spread particles across hero & tokenomics */
+.bg-particles span:nth-child(1) { left: 5%; animation-duration: 18s; }
+.bg-particles span:nth-child(2) { left: 15%; animation-duration: 22s; }
+.bg-particles span:nth-child(3) { left: 25%; animation-duration: 20s; }
+.bg-particles span:nth-child(4) { left: 35%; animation-duration: 24s; }
+.bg-particles span:nth-child(5) { left: 45%; animation-duration: 26s; }
+.bg-particles span:nth-child(6) { left: 55%; animation-duration: 21s; }
+.bg-particles span:nth-child(7) { left: 65%; animation-duration: 23s; }
+.bg-particles span:nth-child(8) { left: 75%; animation-duration: 25s; }
+.bg-particles span:nth-child(9) { left: 85%; animation-duration: 19s; }
+.bg-particles span:nth-child(10){ left: 95%; animation-duration: 27s; }
+
+@keyframes particleFloat {
+  0% { transform: translateY(0) scale(0.8); opacity: 0; }
+  20% { opacity: 0.6; }
+  50% { opacity: 0.9; }
+  100% { transform: translateY(-120vh) scale(1.3); opacity: 0; }
+}
+
+/* ================= HERO CONTENT ================= */
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+/* ================= HERO TITLE GLOW ================= */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #00ffd5, #00cfff, #ffd166, #ff6f61);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3),
+               0 0 20px rgba(0,255,213,0.5),
+               0 0 30px rgba(255,209,102,0.5);
+  animation: glowText 2.5s infinite alternate;
+}
+
+@keyframes glowText {
+  0% {
+    filter: brightness(1);
+    text-shadow: 0 0 10px rgba(255,255,255,0.3),
+                 0 0 20px rgba(0,255,213,0.5),
+                 0 0 30px rgba(255,209,102,0.5);
+  }
+  50% {
+    filter: brightness(1.3);
+    text-shadow: 0 0 15px rgba(255,255,255,0.5),
+                 0 0 25px rgba(0,255,213,0.7),
+                 0 0 40px rgba(255,209,102,0.7);
+  }
+  100% {
+    filter: brightness(1);
+    text-shadow: 0 0 10px rgba(255,255,255,0.3),
+                 0 0 20px rgba(0,255,213,0.5),
+                 0 0 30px rgba(255,209,102,0.5);
+  }
+}
+
+/* ================= FOUNDER IMAGE GLOW ================= */
+.founder-img {
+  position: relative;
+  z-index: 2;
+  border-radius: 50%;
+  max-width: 240px; /* make it bigger */
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0,255,198,0.7),
+              0 0 40px rgba(0,255,198,0.4) inset;
+  animation: founderGlow 2.8s ease-in-out infinite alternate;
+  transition: transform 0.4s ease;
+}
+
+.founder-img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes founderGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(0,255,198,0.6),
+                0 0 40px rgba(0,255,198,0.3) inset;
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(0,255,198,0.9),
+                0 0 50px rgba(0,255,198,0.5) inset;
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0,255,198,0.6),
+                0 0 40px rgba(0,255,198,0.3) inset;
+  }
+}
+
+/* ================= BUTTON GLOW FLOAT ================= */
+.hero-buttons a.btn-primary,
+.hero-buttons a.btn-secondary {
+  animation: floatButton 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatButton {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* ================= TOKENOMICS PARTICLES ================= */
+.tokenomics .bg-particles {
+  z-index: 0;
+}
+
+.tokenomics .bg-particles span {
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.5) 35%, transparent 60%);
+  box-shadow: 0 0 8px rgba(255,255,255,0.6);
+  animation-duration: 28s;
+}
