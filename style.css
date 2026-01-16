@@ -2957,3 +2957,8 @@ a:hover::after {
   z-index: -1;
   pointer-events: none;
 }
+
+/* Kill legacy global particles safely */
+.bg-particles {
+  display: none !important;
+}
