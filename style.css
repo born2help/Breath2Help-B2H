@@ -2614,6 +2614,40 @@ a:hover::after {
   border-right: none !important;
 }
 
+/* ---------------- RESTORE HERO PARTICLES ---------------- */
+.hero .bg-particles,
+.hero .bg-particles span {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---------------- FOUNDER & CARD GLOWS ---------------- */
+.founder-card,
+.charity-card,
+.asset-card,
+.mv-card {
+  box-shadow: 0 10px 25px rgba(0,255,198,0.35);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.founder-card:hover,
+.charity-card:hover,
+.asset-card:hover,
+.mv-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 15px 35px rgba(0,255,198,0.45),
+    0 0 40px rgba(0,255,198,0.2) inset;
+}
+
+/* Restore subtle glowing background for Mission & Vision cards */
+.mission-vision-cards .mv-card {
+  background: rgba(0,255,198,0.05);
+  backdrop-filter: blur(12px);
+}
+
 /* ---------------- MISSION & VISION FIX ---------------- */
 .mission {
   background: linear-gradient(135deg, #0f2734, #1a4459, #215d77);
@@ -2659,6 +2693,11 @@ a:hover::after {
 .assets-grid {
   background: rgba(0,0,0,0.05);
   backdrop-filter: blur(8px);
+}
+
+/* ---------------- PARTICLES BACKUP ---------------- */
+.hero .bg-particles span {
+  animation: particleFloat 22s linear infinite !important;
 }
 
 /* ---------------- SAFETY OVERRIDE ---------------- */
@@ -2723,44 +2762,4 @@ a:hover::after {
 .assets-grid .asset-card > * {
   position: relative;
   z-index: 1;
-}
-
-/* ================= HERO PARTICLES ================= */
-.hero .bg-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 0; /* behind all hero content */
-  pointer-events: none;
-}
-
-.hero .bg-particles span {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.4) 60%, transparent 80%);
-  animation: floatParticle 20s linear infinite;
-  opacity: 0.7;
-  box-shadow: 0 0 6px rgba(255,255,255,0.6);
-}
-
-@keyframes floatParticle {
-  0% { transform: translateY(0) scale(0.6); opacity: 0; }
-  20% { opacity: 0.6; }
-  50% { opacity: 0.9; }
-  100% { transform: translateY(-120vh) scale(1.2); opacity: 0; }
-}
-
-/* ================= FOUNDER IMAGE GLOW ================= */
-.founder-img {
-  position: relative;
-  z-index: 2;
-  border-radius: 50%; /* perfectly round */
-  box-shadow: 0 0 20px rgba(0, 255, 198, 0.5), 0 0 40px rgba(0, 255, 198, 0.3) inset;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.founder-img:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 45px rgba(0, 255, 198, 0.8), 0 0 60px rgba(0, 255, 198, 0.4) inset;
 }
