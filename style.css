@@ -2506,3 +2506,41 @@ a:hover::after {
   background: linear-gradient(90deg, #facc15, #3b82f6, #ef4444);
   border-radius: 3px;
 }
+
+/* =================================================
+   FORCE FIX — HOW HUMANITY WORKS HEADING (OVERRIDE)
+   ================================================= */
+
+/* Catch ANY heading inside How Humanity Works */
+.how-humanity-works h1,
+.how-humanity-works h2,
+.how-humanity-works h3 {
+  color: #22c55e !important;      /* emerald green */
+  text-align: center !important;
+  font-weight: 800 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  border: none !important;
+}
+
+/* Remove ANY side lines attached via pseudo elements */
+.how-humanity-works h1::before,
+.how-humanity-works h1::after,
+.how-humanity-works h2::before,
+.how-humanity-works h2::after,
+.how-humanity-works h3::before,
+.how-humanity-works h3::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Add ONE clean underline */
+.how-humanity-works h2::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 4px;
+  margin: 12px auto 28px;
+  background: linear-gradient(90deg, #facc15, #3b82f6, #ef4444);
+  border-radius: 3px;
+}
