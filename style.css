@@ -2130,3 +2130,69 @@ a:hover::after {
   0%, 100% { box-shadow: 0 0 20px rgba(0,255,198,0.5), 0 0 40px rgba(0,255,198,0.3) inset; }
   50% { box-shadow: 0 0 35px rgba(0,255,198,0.7), 0 0 60px rgba(0,255,198,0.4) inset; }
 }
+
+/* ================= GOVERNANCE FLOW — VERTICAL ================= */
+.governance-flow-container {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  z-index: 2;
+}
+
+.glow-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  margin-left: -2px;
+  background: linear-gradient(180deg, #22c55e, #0fffc3);
+  box-shadow: 0 0 20px #22c55e, 0 0 40px #0fffc3;
+  border-radius: 2px;
+  z-index: 0;
+  animation: glowLine 2.5s infinite alternate;
+}
+
+.governance-node {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 300px;
+  padding: 18px 22px;
+  border-radius: 16px;
+  background: rgba(0,255,180,0.08);
+  box-shadow: 0 0 15px rgba(0,255,180,0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.governance-node:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,255,180,0.35);
+}
+
+.governance-node h4 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.governance-node p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .governance-flow-container {
+    max-width: 95%;
+    gap: 25px;
+  }
+  .governance-node {
+    width: 100%;
+  }
+}
