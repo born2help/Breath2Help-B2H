@@ -2892,3 +2892,30 @@ a:hover::after {
 .bg-particles span:nth-child(1) { left: 10%; animation-duration: 24s; }
 .bg-particles span:nth-child(2) { left: 20%; animation-duration: 20s; }
 /* ... etc. up to nth-child(10) */
+
+.founder-img {
+  width: 220px; /* increase size */
+  max-width: 30%; /* responsive */
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(0, 255, 198, 0.6),
+              0 0 45px rgba(0, 255, 198, 0.4) inset;
+  animation: floatFounder 4s ease-in-out infinite alternate,
+             glowFounder 2.5s ease-in-out infinite alternate;
+  transition: all 0.3s ease;
+  z-index: 3;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Floating animation */
+@keyframes floatFounder {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+/* Glow pulsation */
+@keyframes glowFounder {
+  0%, 100% { box-shadow: 0 0 20px rgba(0,255,198,0.5), 0 0 40px rgba(0,255,198,0.3) inset; }
+  50% { box-shadow: 0 0 35px rgba(0,255,198,0.7), 0 0 60px rgba(0,255,198,0.4) inset; }
+}
