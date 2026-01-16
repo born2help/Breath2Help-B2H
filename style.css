@@ -2130,14 +2130,6 @@ a:hover::after {
   color: #9ca3af;
 }
 
-/* ---------- PARTICLES SAFE ---------- */
-.bg-particles {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-}
-
 /* ---------- MOBILE ---------- */
 @media (max-width: 768px) {
   .trustee-row {
