@@ -139,7 +139,7 @@ window.addEventListener('scroll', fadeOnScroll);
 fadeOnScroll();
 
 // ================== STICKY HERO NAVIGATION & SMOOTH SCROLL ==================
-const heroNav = document.querySelector('.hero-nav'); // added hero nav inside hero
+const heroNav = document.querySelector('.hero-action'); // added hero nav inside hero
 const navOffset = heroNav ? heroNav.offsetTop : 0;
 
 window.addEventListener('scroll', () => {
