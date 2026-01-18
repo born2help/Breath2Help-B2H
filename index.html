@@ -451,5 +451,43 @@
 <script src="js/transparency.js"></script>
 <script src="js/whitepaper.js"></script>
 
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 160, density: { enable: true, value_area: 900 } },
+    color: { value: "#f5c76a" },
+    shape: { type: "circle" },
+    opacity: { value: 0.6, random: true },
+    size: { value: 3, random: true },
+    line_linked: {
+      enable: true,
+      distance: 130,
+      color: "#f5c76a",
+      opacity: 0.25,
+      width: 1
+    },
+    move: {
+      enable: true,
+      speed: 1.2,
+      direction: "none",
+      out_mode: "out"
+    }
+  },
+  interactivity: {
+    events: {
+      onhover: { enable: true, mode: "repulse" }
+    }
+  },
+  retina_detect: true
+});
+
+particlesJS("particles-tokenomics", {
+  particles: {
+    number: { value: 120 },
+    color: { value: "#3aa0ff" },
+    move: { speed: 0.8 }
+  }
+});
+</script>        
 </body>
 </html>
