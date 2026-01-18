@@ -528,11 +528,12 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ================= GLOW BEHIND SECTIONS ================= */
+/* ================= WORKING GLOW BEHIND SECTIONS ================= */
 .assets-section, 
 .charity-section, 
 .how-humanity-works {
   position: relative;
+  overflow: hidden; /* ensure glow stays inside section */
   z-index: 1;
 }
 
@@ -541,15 +542,23 @@ img { max-width: 100%; display: block; }
 .how-humanity-works::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(135deg, #22c55e, #0fffc3, #3b82f6, #f59e0b);
-  opacity: 0.06; /* subtle glow, adjust if needed */
-  filter: blur(40px);
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(34,197,94,0.25), rgba(15,255,198,0.15), rgba(59,130,246,0.1), transparent 70%);
+  animation: glowPulse 6s ease-in-out infinite alternate;
   z-index: 0;
-  border-radius: 20px; /* optional, gives soft edges */
+  pointer-events: none;
 }
 
-/* Ensure content appears above the glow */
+@keyframes glowPulse {
+  0% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+  50% { transform: scale(1.1) rotate(10deg); opacity: 0.8; }
+  100% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+}
+
+/* Ensure content stays above glow */
 .assets-section .container,
 .charity-section .container,
 .how-humanity-works .container {
