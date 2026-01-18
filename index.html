@@ -18,8 +18,8 @@
 
 <!-- ================= HERO SECTION ================= -->
 <section class="hero" id="hero">
-  <div id="particles-js" class="bg-particles">
-    <!-- Particles will be injected here by JS -->
+  <div id="particles-js" class="bg-particles"></div>
+        <!-- Particles will be injected here by JS -->
   </div>
 
   <!-- Logos -->
@@ -175,7 +175,7 @@
 <section id="tokenomics" class="tokenomics">
   <div class="tokenomics-container">
     <div id="particles-tokenomics" class="bg-particles token-particles"></div>
-
+   
     <h2 class="tokenomics-title">Tokenomics</h2>
     <div class="tokenomics-underline"></div>
     <p class="tokenomics-subtitle">
@@ -433,5 +433,45 @@
       </div>
     </div>
 
+    <!-- PARTICLES JS -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  /* ================= HERO PARTICLES ================= */
+  particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 120,
+        "density": { "enable": true, "value_area": 800 }
+      },
+      "color": { "value": "#00ffc6" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.6, "random": true },
+      "size": { "value": 3, "random": true },
+      "line_linked": { "enable": true, "distance": 120, "color": "#00ffc6", "opacity": 0.3, "width": 1 },
+      "move": { "enable": true, "speed": 2, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
+      "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.5 } }, "push": { "particles_nb": 4 } }
+    },
+    "retina_detect": true
+  });
+
+  /* ================= TOKENOMICS PARTICLES (optional) ================= */
+  particlesJS("particles-tokenomics", {
+    "particles": {
+      "number": { "value": 80, "density": { "enable": true, "value_area": 700 } },
+      "color": { "value": "#22c55e" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.5, "random": true },
+      "size": { "value": 4, "random": true },
+      "line_linked": { "enable": false },
+      "move": { "enable": true, "speed": 1.5, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
+    },
+    "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": false }, "onclick": { "enable": false } } },
+    "retina_detect": true
+  });
+</script>
 </body>
 </html>
