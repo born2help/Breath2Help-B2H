@@ -151,5 +151,8 @@ img { max-width: 100%; display: block; }
 .footer a { color:#22c55e; text-decoration:none; }
 .footer a:hover { text-decoration:underline; }
 
+/* ================= PARTICLES ADJUSTMENT ================= */
+.particles-js-canvas-el { position:absolute !important; top:0; left:0; width:100% !important; height:100% !important; z-index:0; }
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
