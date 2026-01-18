@@ -527,3 +527,32 @@ img { max-width: 100%; display: block; }
     padding-left: 50px;
   }
 }
+
+/* ================= GLOW BEHIND SECTIONS ================= */
+.assets-section, 
+.charity-section, 
+.how-humanity-works {
+  position: relative;
+  z-index: 1;
+}
+
+.assets-section::before,
+.charity-section::before,
+.how-humanity-works::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #22c55e, #0fffc3, #3b82f6, #f59e0b);
+  opacity: 0.06; /* subtle glow, adjust if needed */
+  filter: blur(40px);
+  z-index: 0;
+  border-radius: 20px; /* optional, gives soft edges */
+}
+
+/* Ensure content appears above the glow */
+.assets-section .container,
+.charity-section .container,
+.how-humanity-works .container {
+  position: relative;
+  z-index: 2;
+}
