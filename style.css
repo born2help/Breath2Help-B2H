@@ -793,3 +793,7 @@ img { max-width: 100%; display: block; }
     transform: translateY(-3px);
     text-shadow: 0 0 8px currentColor, 0 0 12px currentColor;
 }
+
+body {
+  background: red !important;
+}
