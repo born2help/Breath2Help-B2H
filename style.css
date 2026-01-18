@@ -89,3 +89,155 @@ p,li { font-weight: 400; }
 .join-card h3 { font-size:1.4rem; color:#e0f7fa; margin-bottom:12px; font-weight:700;}
 .join-card p { font-size:1rem; color:#b0e0e6; line-height:1.6;}
 .join-movement .btn-join { display:inline-block; margin-top:40px; padding:16px 42px; border-radius:30px; background:linear-gradient(90deg,#22c55e,#0fffc3,#3b82f6,#f59e0b); color:#062e2a; font-weight:700; text-decoration:none; box-shadow:0 0 25px rgba(34,197,94,0.6),0 0 45px rgba(15,255,195,0.4); transition: transform 0.
+
+.3s ease, box-shadow 0.3s ease;
+}
+
+.join-movement .btn-join:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow:
+    0 0 35px rgba(34,197,94,0.8),
+    0 0 65px rgba(15,255,195,0.6),
+    0 0 90px rgba(59,130,246,0.4);
+}
+
+/* ================= TOKENOMICS ================= */
+.tokenomics {
+  position: relative;
+  padding: 120px 20px;
+  background: linear-gradient(180deg,#081821,#0f2f44,#0b1f2a);
+  color: #e6fdf9;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tokenomics::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(0,255,198,0.18), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(59,130,246,0.18), transparent 45%);
+  pointer-events:none;
+}
+
+.tokenomics h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #22c55e;
+  text-shadow: 0 0 25px rgba(34,197,94,0.7);
+  margin-bottom: 20px;
+}
+
+.tokenomics .underline {
+  width: 130px;
+  height: 5px;
+  margin: 0 auto 60px;
+  border-radius: 3px;
+  background: linear-gradient(90deg,#3b82f6,#facc15,#22c55e,#ef4444);
+  box-shadow: 0 0 18px rgba(255,255,255,0.5);
+}
+
+.tokenomics-bars {
+  max-width: 820px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.bar {
+  position: relative;
+  height: 46px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+  box-shadow: inset 0 0 12px rgba(0,0,0,0.6);
+}
+
+.bar span {
+  position:absolute;
+  left:0;
+  top:0;
+  height:100%;
+  display:flex;
+  align-items:center;
+  padding-left:18px;
+  font-weight:700;
+  color:#021c17;
+  text-shadow:none;
+  border-radius:25px;
+  animation: fillBar 2.5s ease forwards;
+}
+
+/* Individual bar colors */
+.bar.blue span    { background: linear-gradient(90deg,#3b82f6,#60a5fa); }
+.bar.green span   { background: linear-gradient(90deg,#22c55e,#4ade80); }
+.bar.yellow span  { background: linear-gradient(90deg,#facc15,#fde047); }
+.bar.red span     { background: linear-gradient(90deg,#ef4444,#f87171); }
+.bar.orange span  { background: linear-gradient(90deg,#f59e0b,#fdba74); }
+
+@keyframes fillBar {
+  from { width: 0; }
+  to   { width: var(--w); }
+}
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #020617;
+  color: #b0e0e6;
+  padding: 60px 20px 30px;
+  text-align: center;
+}
+
+.footer h3 {
+  color: #22c55e;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  max-width: 720px;
+  margin: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 0.85rem;
+  color: #6ee7b7;
+}
+
+/* ================= PARTICLES (HERO + TOKENOMICS) ================= */
+.particles {
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  z-index:0;
+  pointer-events:none;
+}
+
+.particles span {
+  position:absolute;
+  width:6px;
+  height:6px;
+  background:rgba(0,255,198,0.8);
+  border-radius:50%;
+  box-shadow: 0 0 12px rgba(0,255,198,0.9);
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0%   { transform: translateY(0) translateX(0); opacity:0; }
+  20%  { opacity:1; }
+  100% { transform: translateY(-120vh) translateX(60px); opacity:0; }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  h2 { font-size: 2.2rem; }
+  .founder-image img { width: 220px; height: 220px; }
+  .mission-vision-cards,
+  .join-cards { flex-direction: column; }
+}
