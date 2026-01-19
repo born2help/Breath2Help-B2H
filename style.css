@@ -680,3 +680,40 @@ img { max-width: 100%; display: block; }
   margin-top: 20px !important;
   position: relative !important;
 }
+
+/* ================= HERO CENTER RESET ================= */
+.hero {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.main-logo-hero {
+  width: 150px !important; /* Adjust size */
+  margin: 0 auto 20px auto !important;
+  display: block !important;
+}
+
+.burn-logo {
+  width: 120px !important; /* optional size */
+  position: absolute !important;
+  top: 20px !important;
+  right: 20px !important;
+}
+
+.hero-content {
+  max-width: 700px !important;
+  margin: 0 auto !important;
+}
+
+.hero-actions {
+  display: flex !important;
+  justify-content: center !important;
+  flex-wrap: wrap !important;
+  gap: 15px !important;
+  margin-top: 20px !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
