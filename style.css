@@ -29,9 +29,9 @@ img { max-width: 100%; display: block; }
   z-index: 0;
 }
 
-/* Main logo slightly smaller (15% reduction) */
+/* Main logo */
 .main-logo-hero {
-  width: 153px; /* previous 180px reduced by ~15% */
+  width: 180px;
   max-width: 40%;
   margin-bottom: 20px;
   z-index: 2;
@@ -701,3 +701,10 @@ img { max-width: 100%; display: block; }
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
 
+/* Main logo slightly smaller (15% reduction) */
+.main-logo-hero {
+  width: 153px; /* previous 180px reduced by ~15% */
+  max-width: 40%;
+  margin-bottom: 20px;
+  z-index: 2;
+}
