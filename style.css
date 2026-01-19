@@ -824,3 +824,59 @@ img { max-width: 100%; display: block; }
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
 
+/* ================= CENTER GOVERNANCE & BOARD SECTIONS ================= */
+
+/* Governance section - center text and compact line */
+.governance-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything horizontally */
+  text-align: center; 
+}
+
+.governance-section h2 {
+  text-align: center; 
+  margin-bottom: 20px;
+}
+
+.governance-intro {
+  text-align: center;
+  max-width: 700px; /* compact width */
+  margin: 0 auto 40px;
+}
+
+/* Compact the vertical glow line */
+.governance-flow-container {
+  padding-left: 20px; /* reduced from 40px */
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.glow-line {
+  left: 10px; /* moved closer to center */
+  width: 3px;  /* slightly thinner */
+  box-shadow: 0 0 12px rgba(0,255,198,0.4); /* same style, smaller blur */
+}
+
+/* Center the nodes content */
+.governance-node {
+  margin-bottom: 25px;
+  position: relative;
+  text-align: left; /* keep left for node text but container is centered */
+  max-width: 650px; /* compact width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Board of Trustees heading centered */
+.board-members-section h2 {
+  text-align: center; 
+  margin-bottom: 25px;
+}
+
+/* Center all board cards horizontally */
+.board-members {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
