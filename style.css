@@ -868,3 +868,46 @@ img { max-width: 100%; display: block; }
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
 
+/* ================= FOUNDATIONAL CONSTITUTION ================= */
+.constitution-section {
+  background: #081821;
+  color: #b0e0e6;
+  text-align: center; /* center all content */
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.constitution-section h2 {
+  font-size: 2.4rem;
+  color: #22c55e; /* green heading for main title */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.constitution-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #b0e0e6; /* normal text color */
+  text-align: justify;
+}
+
+.constitution-section p span.orange {
+  color: #f59e0b; /* transparency framework highlight */
+  font-weight: 600;
+}
+
+/* Board of Trustees heading adjustment */
+.board-section h2 {
+  font-size: 2.2rem;
+  color: #f59e0b; /* orange heading */
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Compact spacing inside Board content */
+.board-members {
+  gap: 20px;
+  justify-content: center;
+}
