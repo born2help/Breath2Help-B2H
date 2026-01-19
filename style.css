@@ -122,14 +122,110 @@ img { max-width: 100%; display: block; }
   .hero-actions { margin-top: 20px; }
 }
 
-/* ================= FOUNDER SECTION ================= */
-.founder-section { background: #0f2734; color: #e0f7fa; padding: 80px 20px; }
-.founder-section h2 { text-align: center; font-size: 2.6rem; margin-bottom: 15px; }
-.founder-intro { text-align: center; margin-bottom: 50px; color: #b0e0e6; font-size: 1.1rem; }
-.founder-content { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; align-items: flex-start; }
-.founder-image img { width: 250px; border-radius: 12px; }
-.founder-text { max-width: 650px; color: #b0e0e6; font-size: 1rem; line-height: 1.7; }
-.signature { font-weight: 700; margin-top: 15px; color: #22c55e; }
+/* ================= FOUNDER SECTION BEAUTIFIED ================= */
+.founder-section {
+  background: #0f2734;
+  color: #e0f7fa;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.founder-section h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #22c55e; /* glowing green heading */
+}
+
+.founder-intro {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #b0e0e6;
+  font-size: 1.15rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Founder content layout */
+.founder-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Founder image with round shape and glow */
+.founder-image {
+  position: relative;
+}
+
+.founder-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 2;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Glow effect behind founder image */
+.founder-image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34,197,94,0.4), rgba(34,197,94,0));
+  z-index: 1;
+  animation: pulseGlow 2.5s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+  100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.4; }
+}
+
+/* Founder text */
+.founder-text {
+  max-width: 650px;
+  color: #c0f0e0; /* soft blue-green */
+  font-size: 1.05rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+/* Signature styling */
+.signature {
+  font-weight: 700;
+  margin-top: 15px;
+  color: #22c55e;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .founder-image img {
+    width: 180px;
+    height: 180px;
+  }
+  .founder-image::before {
+    width: 210px;
+    height: 210px;
+  }
+  .founder-section h2 {
+    font-size: 2.2rem;
+  }
+  .founder-intro, .founder-text {
+    font-size: 1rem;
+  }
+}
 
 /* ================= GOVERNANCE ================= */
 .governance-section { background: #081821; }
