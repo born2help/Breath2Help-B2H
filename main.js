@@ -21,7 +21,6 @@ const heroContent = document.querySelector('.hero-content');
 if(heroContent) heroContent.classList.add('depth-float');
 
 /* ================= HERO MOUSE PARALLAX ================= */
-const parallaxLayers = document.querySelectorAll('.depth-bg, .depth-mid, .depth-logo, .depth-front');
 hero.addEventListener('mousemove', e => {
   const centerX = window.innerWidth / 2;
   const centerY = window.innerHeight / 2;
