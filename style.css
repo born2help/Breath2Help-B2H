@@ -644,6 +644,76 @@ img { max-width: 100%; display: block; }
 @media (max-width: 768px){
 
 /* =========================
+   HERO FINAL FIX (SAFE)
+========================= */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 140px;
+  padding-bottom: 220px; /* THIS FIXES BUTTON OVERLAP */
+  overflow: hidden;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+}
+
+/* Hero Logos */
+.hero-logo-main {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 120px;
+  z-index: 6;
+}
+
+.hero-logo-secondary {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  width: 90px;
+  z-index: 6;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 160px;
+    padding-bottom: 280px;
+  }
+
+  .hero-logo-main {
+    width: 95px;
+    top: 20px;
+    right: 20px;
+  }
+
+  .hero-logo-secondary {
+    width: 70px;
+    top: 20px;
+    left: 20px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+  
+/* =========================
    HERO LOGO FIX
 ========================= */
 
