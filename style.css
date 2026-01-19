@@ -642,78 +642,53 @@ img { max-width: 100%; display: block; }
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
 
-/* ================= HERO CENTER RESET ================= */
+/* ===== HERO LAYOUT FIX ===== */
 .hero {
   position: relative;
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
-  height: 100vh !important;
-  padding: 20px !important;
-  overflow: hidden !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
 }
 
-.hero .hero-content {
-  position: relative !important;
-  margin: 0 auto !important;
-  max-width: 800px !important;
-  text-align: center !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-}
-
-.hero .main-logo-hero {
-  width: 130px !important;
-  height: auto !important;
-  margin: 0 auto 15px !important;
-  display: block !important;
-}
-
-.hero-actions {
-  display: flex !important;
-  justify-content: center !important;
-  gap: 15px !important;
-  flex-wrap: wrap !important;
-  margin-top: 20px !important;
-  position: relative !important;
-}
-
-/* ================= HERO CENTER RESET ================= */
-.hero {
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-items: center !important;
-  text-align: center !important;
+.bg-particles {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
 }
 
 .main-logo-hero {
-  width: 150px !important; /* Adjust size */
-  margin: 0 auto 20px auto !important;
-  display: block !important;
+  width: 150px; /* adjust as needed */
+  margin: 0 auto 20px auto;
+  display: block;
+  z-index: 2;
 }
 
 .burn-logo {
-  width: 120px !important; /* optional size */
-  position: absolute !important;
-  top: 20px !important;
-  right: 20px !important;
+  width: 120px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
 }
 
 .hero-content {
-  max-width: 700px !important;
-  margin: 0 auto !important;
+  max-width: 700px;
+  margin: 0 auto;
+  z-index: 2;
 }
 
 .hero-actions {
-  display: flex !important;
-  justify-content: center !important;
-  flex-wrap: wrap !important;
-  gap: 15px !important;
-  margin-top: 20px !important;
-  position: relative !important;
-  z-index: 2 !important;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  z-index: 2;
 }
