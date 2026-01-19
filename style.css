@@ -1,7 +1,9 @@
-/* =========================== MASTER STYLE.CSS FOR B2H =========================== */
 body {
   background: red !important;
 }
+
+/* =========================== MASTER STYLE.CSS FOR B2H =========================== */
+
 /* ================= GLOBAL RESET & FONTS ================= */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
 body { background: #0b1c2b; color: #e0f7fa; overflow-x: hidden; }
