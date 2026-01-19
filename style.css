@@ -642,116 +642,41 @@ img { max-width: 100%; display: block; }
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
 
-/* ================= HERO SECTION (REBUILT) ================= */
-
+/* ================= HERO CENTER RESET ================= */
 .hero {
   position: relative;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
-  overflow: hidden;
-  padding: 120px 20px 100px;
-  text-align: center;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  height: 100vh !important;
+  padding: 20px !important;
+  overflow: hidden !important;
 }
 
-/* Particles stay behind */
-.bg-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+.hero .hero-content {
+  position: relative !important;
+  margin: 0 auto !important;
+  max-width: 800px !important;
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 
-/* Logo */
-.main-logo-hero {
-  width: 140px;
-  max-width: 140px;
-  height: auto;
-  margin: 0 auto 20px;
-  display: block;
-  position: relative;
-  z-index: 3;
-}
-
-/* Burn logo */
-.burn-logo {
-  width: 200px;
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  z-index: 3;
-}
-
-/* Content */
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 3;
-}
-
-.hero-title {
-  font-size: 4rem;
-  font-weight: 800;
-  background: linear-gradient(90deg,#00ffc6,#00bfa6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 15px;
-}
-
-.hero-tagline {
-  font-size: 2rem;
-  color: #b0e0e6;
-  margin-bottom: 25px;
-}
-
-.hero-motivation {
-  font-size: 1.2rem;
-  color: #c0f0e0;
-  margin-bottom: 15px;
-}
-
-.hero-description,
-.hero-subtext {
-  color: #b0e0e6;
-  font-size: 1rem;
-  margin-bottom: 10px;
-}
-
-/* Buttons */
-.hero-actions {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 3;
-}
-
-.hero-actions a {
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.hero-actions a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(0,255,198,0.5);
-}
-
-/* === HERO LOGO FINAL LOCK === */
 .hero .main-logo-hero {
   width: 130px !important;
-  max-width: 130px !important;
   height: auto !important;
-  margin: 0 auto 18px !important;
+  margin: 0 auto 15px !important;
   display: block !important;
-  transform: none !important;
 }
 
-/* Force hero content center */
-.hero .hero-content {
-  margin-left: auto !important;
-  margin-right: auto !important;
-  text-align: center !important;
+.hero-actions {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 15px !important;
+  flex-wrap: wrap !important;
+  margin-top: 20px !important;
+  position: relative !important;
 }
