@@ -150,3 +150,51 @@ document.querySelectorAll('.hero-nav a').forEach(link => {
     }
   });
 });
+
+// ================== CARD HOVER + GLOW EFFECT ==================
+
+// Select all card types
+const cardSelectors = [
+  '.asset-card',
+  '.charity-card',
+  '.board-card',
+  '.mv-card'
+];
+
+cardSelectors.forEach(selector => {
+  const cards = document.querySelectorAll(selector);
+  
+  cards.forEach(card => {
+    // Create glow element
+    const glow = document.createElement('div');
+    glow.classList.add('card-hover-glow');
+    card.style.position = 'relative';
+    glow.style.position = 'absolute';
+    glow.style.top = '50%';
+    glow.style.left = '50%';
+    glow.style.transform = 'translate(-50%, -50%) scale(0)';
+    glow.style.width = '120%';
+    glow.style.height = '120%';
+    glow.style.background = 'radial-gradient(circle, rgba(34, 197, 94, 0.5), rgba(34, 197, 94, 0))';
+    glow.style.borderRadius = '15px';
+    glow.style.pointerEvents = 'none';
+    glow.style.transition = 'transform 0.4s ease, opacity 0.4s ease';
+    glow.style.opacity = '0';
+    glow.style.zIndex = '0';
+    card.appendChild(glow);
+
+    // Hover effect
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'translateY(-10px)';
+      card.style.transition = 'transform 0.4s ease';
+      glow.style.transform = 'translate(-50%, -50%) scale(1)';
+      glow.style.opacity = '1';
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'translateY(0)';
+      glow.style.transform = 'translate(-50%, -50%) scale(0)';
+      glow.style.opacity = '0';
+    });
+  });
+});
