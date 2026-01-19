@@ -14,91 +14,51 @@ img { max-width: 100%; display: block; }
 .section-underline { width: 100px; height: 5px; margin: 10px auto 40px; border-radius: 3px; background: linear-gradient(90deg, #22c55e, #0fffc3); box-shadow: 0 0 12px rgba(0,255,198,0.5); }
 .readable-text { font-size: 1.1rem; line-height: 1.6; color: #b0e0e6; text-align: center; }
 
-/* ===== HERO SECTION FINAL FIX ===== */
+/* ===== HERO SECTION FINAL CENTERED VERSION ===== */
 .hero {
   position: relative;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
   text-align: center;
   overflow: hidden;
   padding: 20px;
   background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
-  z-index: 1;
-}
-
-.bg-particles {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
   z-index: 0;
 }
 
-/* Main Logo centered */
+/* Main logo */
 .main-logo-hero {
-  width: 180px; /* slightly bigger than before */
+  width: 180px;
   max-width: 40%;
-  display: block;
-  margin: 0 auto 20px auto;
-  z-index: 2;
-}
-
-/* Burn logo top-right corner, doubled in size */
-.burn-logo {
-  width: 240px; /* doubled */
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  z-index: 2;
-}
-
-/* Hero Content */
-.hero-content {
-  max-width: 700px;
-  margin: 0 auto;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero-title {
-  font-size: 3.2rem;
-  font-weight: 800;
-  background: linear-gradient(90deg,#00ffc6,#00bfa6);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 15px;
-}
-
-.hero-tagline {
-  font-size: 2rem;
-  color: #b0e0e6;
   margin-bottom: 20px;
+  z-index: 2;
 }
 
-.hero-motivation, .hero-description, .hero-subtext {
-  color: #b0e0e6;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  line-height: 1.6;
+/* Burn logo */
+.burn-logo {
+  width: 240px;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  z-index: 2;
 }
 
-.highlight {
-  color: #0fffc3;
-  font-weight: 700;
+/* Hero content */
+.hero-content {
+  max-width: 800px;
+  z-index: 2;
 }
 
-/* Hero Buttons */
+/* Hero buttons */
 .hero-actions {
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
-  margin-top: 25px;
+  margin-top: 30px; /* space between content and buttons */
   z-index: 2;
 }
 
@@ -107,7 +67,6 @@ img { max-width: 100%; display: block; }
   border-radius: 8px;
   font-weight: 700;
   transition: all 0.3s;
-  display: inline-block;
 }
 
 .hero-actions a.donate { background: #22c55e; color: #fff; }
@@ -121,20 +80,20 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 15px rgba(0,255,198,0.5);
 }
 
-/* Responsive adjustments */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .main-logo-hero { width: 160px; }
-  .burn-logo { width: 200px; }
-  .hero-title { font-size: 2.8rem; }
-  .hero-tagline { font-size: 1.8rem; }
+  .hero-actions { margin-top: 25px; }
 }
 
 @media (max-width: 768px) {
   .main-logo-hero { width: 140px; }
-  .burn-logo { width: 180px; }
-  .hero-title { font-size: 2.4rem; }
-  .hero-tagline { font-size: 1.6rem; }
-  .hero-actions { flex-direction: column; gap: 10px; margin-top: 20px; }
+  .hero-actions { margin-top: 20px; }
+}
+
+@media (max-width: 480px) {
+  .main-logo-hero { width: 120px; }
+  .hero-actions { margin-top: 15px; }
 }
 
 /* ================= FOUNDER SECTION ================= */
@@ -742,122 +701,3 @@ img { max-width: 100%; display: block; }
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px){
 
-/* ===== HERO SECTION VERTICAL ADJUSTMENT ===== */
-.hero {
-  padding: 40px 20px; /* extra top padding to bring main logo down */
-  justify-content: flex-start; /* start from top and adjust with padding */
-  position: relative;
-}
-
-.main-logo-hero {
-  margin-top: 60px; /* push logo down from top */
-  margin-bottom: 25px; /* space between logo and content */
-}
-
-.hero-content {
-  margin-top: 20px; /* push content slightly below logo */
-}
-
-.hero-actions {
-  margin-top: 40px; /* push buttons down below content */
-}
-
-/* Responsive adjustments for vertical spacing */
-@media (max-width: 1024px) {
-  .main-logo-hero { margin-top: 50px; margin-bottom: 20px; }
-  .hero-content { margin-top: 15px; }
-  .hero-actions { margin-top: 30px; }
-}
-
-@media (max-width: 768px) {
-  .main-logo-hero { margin-top: 40px; margin-bottom: 15px; }
-  .hero-content { margin-top: 10px; }
-  .hero-actions { margin-top: 25px; }
-}
-
-/* ===== HERO SECTION FINAL ADJUSTMENTS ===== */
-.hero {
-  padding: 40px 20px; /* extra top padding to bring main logo down */
-  justify-content: flex-start; /* align items from top */
-  position: relative;
-  height: 100vh; /* full viewport height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  background: linear-gradient(135deg, #081821, #0f3a50, #1a5670);
-}
-
-/* Main logo */
-.main-logo-hero {
-  width: 180px; /* reduce size for proportion */
-  max-width: 40%; /* responsive */
-  margin-top: 50px; /* vertical spacing from top */
-  margin-bottom: 20px; /* spacing below logo */
-  z-index: 2;
-}
-
-/* Burn logo stays on top-right */
-.burn-logo {
-  width: 240px;
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  z-index: 2;
-}
-
-/* Hero content */
-.hero-content {
-  max-width: 800px;
-  z-index: 2;
-  margin-top: 20px;
-}
-
-/* Hero buttons */
-.hero-actions {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 50px; /* push buttons below content */
-  z-index: 2;
-  position: relative;
-}
-
-.hero-actions a {
-  padding: 12px 25px;
-  border-radius: 8px;
-  font-weight: 700;
-  transition: all 0.3s;
-}
-
-.hero-actions a.donate { background: #22c55e; color: #fff; }
-.hero-actions a.tokenomics { background: #3b82f6; color: #fff; }
-.hero-actions a.about { background: #f59e0b; color: #fff; }
-.hero-actions a.white-paper { background: #ef4444; color: #fff; }
-.hero-actions a.transparency { background: #10b981; color: #fff; }
-
-.hero-actions a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 15px rgba(0,255,198,0.5);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .main-logo-hero { width: 160px; margin-top: 40px; margin-bottom: 15px; }
-  .hero-content { margin-top: 15px; }
-  .hero-actions { margin-top: 40px; }
-}
-
-@media (max-width: 768px) {
-  .main-logo-hero { width: 140px; margin-top: 30px; margin-bottom: 10px; }
-  .hero-content { margin-top: 10px; }
-  .hero-actions { margin-top: 35px; }
-}
-
-@media (max-width: 480px) {
-  .main-logo-hero { width: 120px; margin-top: 20px; margin-bottom: 10px; }
-  .hero-content { margin-top: 5px; }
-  .hero-actions { margin-top: 30px; }
-}
