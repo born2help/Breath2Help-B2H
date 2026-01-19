@@ -29,9 +29,9 @@ img { max-width: 100%; display: block; }
   z-index: 0;
 }
 
-/* Main logo */
+/* Main logo slightly smaller (15% reduction) */
 .main-logo-hero {
-  width: 180px;
+  width: 153px; /* previous 180px reduced by ~15% */
   max-width: 40%;
   margin-bottom: 20px;
   z-index: 2;
