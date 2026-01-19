@@ -14,7 +14,7 @@ img { max-width: 100%; display: block; }
 .section-underline { width: 100px; height: 5px; margin: 10px auto 40px; border-radius: 3px; background: linear-gradient(90deg, #22c55e, #0fffc3); box-shadow: 0 0 12px rgba(0,255,198,0.5); }
 .readable-text { font-size: 1.1rem; line-height: 1.6; color: #b0e0e6; text-align: center; }
 
-/* ===== HERO SECTION CLEAN FIX ===== */
+/* ===== HERO SECTION FINAL FIX ===== */
 .hero {
   position: relative;
   height: 100vh;
@@ -39,16 +39,16 @@ img { max-width: 100%; display: block; }
 
 /* Main Logo centered */
 .main-logo-hero {
-  width: 150px; /* adjust smaller than before */
+  width: 180px; /* slightly bigger than before */
   max-width: 40%;
   display: block;
   margin: 0 auto 20px auto;
   z-index: 2;
 }
 
-/* Burn logo top-right corner */
+/* Burn logo top-right corner, doubled in size */
 .burn-logo {
-  width: 120px;
+  width: 240px; /* doubled */
   position: absolute;
   top: 20px;
   right: 20px;
@@ -66,7 +66,7 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 800;
   background: linear-gradient(90deg,#00ffc6,#00bfa6);
   -webkit-background-clip: text;
@@ -75,7 +75,7 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-tagline {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: #b0e0e6;
   margin-bottom: 20px;
 }
@@ -84,6 +84,7 @@ img { max-width: 100%; display: block; }
   color: #b0e0e6;
   font-size: 1rem;
   margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 .highlight {
@@ -97,7 +98,7 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 25px;
   z-index: 2;
 }
 
@@ -121,10 +122,19 @@ img { max-width: 100%; display: block; }
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .main-logo-hero { width: 160px; }
+  .burn-logo { width: 200px; }
+  .hero-title { font-size: 2.8rem; }
+  .hero-tagline { font-size: 1.8rem; }
+}
+
 @media (max-width: 768px) {
-  .main-logo-hero { width: 120px; }
-  .hero-title { font-size: 2.2rem; }
-  .hero-tagline { font-size: 1.5rem; }
+  .main-logo-hero { width: 140px; }
+  .burn-logo { width: 180px; }
+  .hero-title { font-size: 2.4rem; }
+  .hero-tagline { font-size: 1.6rem; }
+  .hero-actions { flex-direction: column; gap: 10px; margin-top: 20px; }
 }
 
 /* ================= FOUNDER SECTION ================= */
