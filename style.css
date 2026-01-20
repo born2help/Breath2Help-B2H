@@ -194,54 +194,49 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
-/* Glow effect behind founder image - vivid green */
-.founder-image::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(34,197,94,0.6), rgba(34,197,94,0.05));
-  z-index: 1;
-  filter: blur(20px); /* soft blur for a stronger glow */
-  animation: pulseGlow 2.5s infinite alternate;
-}
-
-/* ===== FOUNDER IMAGE BACK GLOW ===== */
+/* ===== FOUNDER IMAGE HOVER EFFECT (BOARD-CARD STYLE) ===== */
 .founder-image {
-  position: relative; /* needed for glow behind */
+  position: relative;
   display: inline-block;
+  width: 250px;   /* founder picture size */
+  height: 250px;
 }
 
 .founder-image img {
-  width: 250px;
-  border-radius: 50%; /* circular image */
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;   /* perfectly round */
+  transition: transform 0.4s, box-shadow 0.4s;
   position: relative;
-  transition: transform 0.3s;
+  z-index: 1;
 }
 
-/* Remove any previous glow inside image if exists */
-.founder-image img::after {
-  display: none;
-}
-
-/* Glow behind founder image on hover */
-.founder-image:hover::before {
+/* Glow behind image (hidden by default) */
+.founder-image::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 280px; /* slightly bigger than image */
-  height: 280px;
-  transform: translate(-50%, -50%);
+  width: 270px;   /* slightly bigger than image */
+  height: 270px;
+  transform: translate(-50%, -50%) scale(1);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(34,197,94,0.3), transparent 70%);
+  background: radial-gradient(circle, rgba(34,197,94,0.4), transparent 70%);
   filter: blur(25px);
+  opacity: 0;
+  transition: opacity 0.4s, transform 0.4s;
   z-index: 0;
+}
+
+/* Hover effect: lift + glow */
+.founder-image:hover img {
+  transform: translateY(-10px);   /* slight lift */
+}
+
+.founder-image:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.05);  /* glow expands slightly */
 }
 
 /* Responsive adjustments */
