@@ -72,72 +72,43 @@ cardSelectors.forEach(selector => {
   });
 });
 
-/* ================= TOKENOMICS BAR ANIMATION + PARTICLES ================= */
+/* ================= TOKENOMICS BAR ANIMATION ================= */
 document.addEventListener('DOMContentLoaded', () => {
+
   const bars = document.querySelectorAll('.bar-fill');
 
-  // Animate width based on class or data attribute
-  const observerBar = new IntersectionObserver(entries => {
+  if (!bars.length) return;
+
+  const animateBar = (bar) => {
+    const target = parseInt(bar.dataset.width, 10);
+    const span = bar.querySelector('span');
+    let current = 0;
+
+    bar.style.width = '0%';
+    span.textContent = '0%';
+
+    const interval = setInterval(() => {
+      if (current >= target) {
+        clearInterval(interval);
+        bar.style.width = target + '%';
+        span.textContent = target + '%';
+      } else {
+        current++;
+        bar.style.width = current + '%';
+        span.textContent = current + '%';
+      }
+    }, 18); // smooth speed
+  };
+
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        const el = entry.target;
-        const targetWidth = el.dataset.width || el.style.getPropertyValue('--bar-width') || '50%';
-        let current = 0;
-        const maxWidth = parseFloat(targetWidth);
-
-        const anim = () => {
-          if (current < maxWidth) {
-            current += 0.5; // growth speed
-            el.style.width = current + '%';
-            requestAnimationFrame(anim);
-          } else {
-            el.style.width = targetWidth;
-          }
-        };
-        anim();
-        observerBar.unobserve(el);
-
-        // Add floating particles inside this bar
-        for (let i = 0; i < 4; i++) {
-          const particle = document.createElement('span');
-          particle.classList.add('bar-particle');
-          particle.style.position = 'absolute';
-          particle.style.width = (2 + Math.random() * 4) + 'px';
-          particle.style.height = particle.style.width;
-          particle.style.background = 'rgba(255,255,255,0.6)';
-          particle.style.borderRadius = '50%';
-          particle.style.top = Math.random() * 100 + '%';
-          particle.style.left = Math.random() * 100 + '%';
-          particle.style.pointerEvents = 'none';
-          particle.style.animation = `floatParticle ${3 + Math.random()*2}s ease-in-out infinite alternate`;
-          el.appendChild(particle);
-        }
+        animateBar(entry.target);
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.4 });
 
-  bars.forEach(bar => observerBar.observe(bar));
+  bars.forEach(bar => observer.observe(bar));
 
-  // Add keyframes for floating particles
-  const floatParticleStyle = document.createElement('style');
-  floatParticleStyle.innerHTML = `
-    @keyframes floatParticle {
-      0% { transform: translate(0,0); opacity: 0.6; }
-      50% { transform: translate(0,-8px); opacity: 0.9; }
-      100% { transform: translate(0,0); opacity: 0.6; }
-    }
-    .bar-fill span { pointer-events: none; }
-  `;
-  document.head.appendChild(floatParticleStyle);
-
-  // Add subtle particle movement inside bar tracks (optional)
-  const barParticleStyle = document.createElement('style');
-  barParticleStyle.textContent = `
-    @keyframes barParticleMove {
-      0% { transform: translateY(0) translateX(0); opacity: 0.6; }
-      50% { transform: translateY(-6px) translateX(4px); opacity: 1; }
-      100% { transform: translateY(0) translateX(0); opacity: 0.6; }
-    }
-  `;
-  document.head.appendChild(barParticleStyle);
 });
