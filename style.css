@@ -536,6 +536,26 @@ img { max-width: 100%; display: block; }
   animation-delay: 0.5s;
 }
 
+/* REQUIRED FOR BAR ANIMATION */
+.bar-fill {
+  height: 100%;
+  width: 0%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  border-radius: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.bar-fill span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #ffffff;
+  opacity: 1;
+}
+
 /* Animate percentage fade-in */
 @keyframes showPercent {
   0% { opacity: 0; transform: translateX(10px); }
