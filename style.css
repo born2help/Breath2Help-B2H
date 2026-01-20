@@ -506,19 +506,53 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
-/* Bar fill */
+/* ================= TOKENOMICS PERCENTAGE SMOOTH ================= */
 .bar-fill {
-  height: 100%;
-  width: 0;
-  border-radius: 12px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding-right: 6px;
+  overflow: hidden;
   color: #fff;
   font-weight: 700;
-  padding-right: 6px;
-  box-shadow: 0 0 8px rgba(255,255,255,0.25);
+  font-size: 0.85rem;
+}
+
+/* Inner span for smooth percentage */
+.bar-fill span {
+  display: inline-block;
+  opacity: 1;
+}
+
+/* Animate number from 0 to 100% visually using CSS variable */
+.bar-fill[data-width] span::after {
+  content: "0%";
+  animation: countUp 1.6s forwards;
+}
+
+/* Keyframes counting up smoothly */
+@keyframes countUp {
+  0% { content: "0%"; }
+  5% { content: "1%"; }
+  10% { content: "2%"; }
+  15% { content: "3%"; }
+  20% { content: "4%"; }
+  25% { content: "5%"; }
+  30% { content: "6%"; }
+  35% { content: "7%"; }
+  40% { content: "8%"; }
+  45% { content: "9%"; }
+  50% { content: "10%"; }
+  55% { content: "20%"; }
+  60% { content: "30%"; }
+  65% { content: "40%"; }
+  70% { content: "50%"; }
+  75% { content: "60%"; }
+  80% { content: "70%"; }
+  85% { content: "80%"; }
+  90% { content: "90%"; }
+  100% { content: attr(data-width); }
 }
 
 /* ================= TOKENOMICS PERCENTAGE ================= */
