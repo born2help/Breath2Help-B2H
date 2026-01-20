@@ -125,3 +125,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   bars.forEach(bar => observer.observe(bar));
 });
+
+// ================= TOKENOMICS FLOATING PARTICLES =================
+document.addEventListener('DOMContentLoaded', () => {
+  const bars = document.querySelectorAll('.bar-fill');
+
+  bars.forEach(bar => {
+    // Create a container for floating particles
+    const particleContainer = document.createElement('div');
+    particleContainer.classList.add('bar-particles');
+    particleContainer.style.position = 'absolute';
+    particleContainer.style.top = '0';
+    particleContainer.style.left = '0';
+    particleContainer.style.width = '100%';
+    particleContainer.style.height = '100%';
+    particleContainer.style.pointerEvents = 'none';
+    particleContainer.style.overflow = 'hidden';
+    bar.appendChild(particleContainer);
+
+    // Add 6 subtle particles per bar
+    for (let i = 0; i < 6; i++) {
+      const p = document.createElement('span');
+      p.style.position = 'absolute';
+      p.style.width = Math.random() * 4 + 2 + 'px';
+      p.style.height = Math.random() * 4 + 2 + 'px';
+      p.style.background = 'rgba(255,255,255,0.6)';
+      p.style.borderRadius = '50%';
+      p.style.top = Math.random() * 100 + '%';
+      p.style.left = Math.random() * 100 + '%';
+      p.style.animation = `barParticleMove ${1.5 + Math.random()}s linear infinite alternate`;
+      particleContainer.appendChild(p);
+    }
+  });
+});
+
+// ================= KEYFRAMES FOR FLOATING PARTICLES =================
+const style = document.createElement('style');
+style.textContent = `
+@keyframes barParticleMove {
+  0% { transform: translateY(0) translateX(0); opacity: 0.6; }
+  50% { transform: translateY(-6px) translateX(4px); opacity: 1; }
+  100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+}
+`;
+document.head.appendChild(style);
