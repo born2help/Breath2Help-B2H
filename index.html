@@ -466,5 +466,17 @@
     "retina_detect": true
   });
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const bars = document.querySelectorAll('.bar');
+  bars.forEach(bar => {
+    // Trigger width animation after short delay
+    setTimeout(() => {
+      bar.classList.add('animate');
+    }, 200);
+  });
+});
+</script>    
 </body>
 </html>
