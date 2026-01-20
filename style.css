@@ -1052,15 +1052,15 @@ img { max-width: 100%; display: block; }
   margin-top: 80px;
 }
 
-/* Transparency Framework special link */
-.governance-intro a {
-  color: #f59e0b; /* warm ethical gold */
+/* ================= TRANSPARENCY FRAMEWORK LINK ================= */
+.governance-intro a.orange {
+  color: #f59e0b !important; /* orange highlight */
   font-weight: 700;
   text-decoration: none;
   position: relative;
 }
 
-.governance-intro a::after {
+.governance-intro a.orange::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1071,11 +1071,12 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 10px rgba(245,158,11,0.6);
 }
 
-.governance-intro a:hover {
-  color: #22c55e;
+.governance-intro a.orange:hover {
+  color: #22c55e !important;
 }
 
-/* Center only Governance Framework heading */
-.governance-block h3 {
-  text-align: center;
+/* ================= CENTER GOVERNANCE FRAMEWORK HEADING ================= */
+/* Target exact heading inside .governance-block */
+.governance-section .governance-block h3 {
+  text-align: center !important;
 }
