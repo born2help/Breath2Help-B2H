@@ -539,6 +539,12 @@ img { max-width: 100%; display: block; }
   to   { left: 120%; }
 }
 
+.red    { background: linear-gradient(90deg, #ff4d4d, #ff8080); }
+.orange { background: linear-gradient(90deg, #ff9f1c, #ffd166); }
+.blue   { background: linear-gradient(90deg, #3a86ff, #7db9ff); }
+.green  { background: linear-gradient(90deg, #2ec4b6, #8ef1df); }
+.lgreen { background: linear-gradient(90deg, #90db7b, #caffbf); }
+
 .bar-fill span {
   font-size: 0.85rem;
   opacity: 0.9;
