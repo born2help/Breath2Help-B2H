@@ -1008,3 +1008,7 @@ img { max-width: 100%; display: block; }
 .governance-section .governance-intro a.transparency-link:hover {
   text-decoration: underline;
 }  
+
+.governance-block h3 {
+  text-align: center;
+}
