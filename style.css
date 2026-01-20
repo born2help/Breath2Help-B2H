@@ -606,6 +606,42 @@ img { max-width: 100%; display: block; }
   .tokenomics-subtitle { font-size: 1rem; }
 }
 
+/* ================= FIXED TOKENOMICS BAR ANIMATION ================= */
+
+/* Bar track */
+.bar {
+  width: 100%;
+  height: 24px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Bar fill – PURE CSS animation */
+.bar-fill {
+  height: 100%;
+  width: 100%;                 /* IMPORTANT */
+  transform: scaleX(0);        /* Start from zero */
+  transform-origin: left;
+  animation: fillBar 1.8s ease-out forwards;
+  border-radius: 12px;
+}
+
+/* Animation */
+@keyframes fillBar {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Colors (unchanged) */
+.bar-fill.red    { background: linear-gradient(90deg, #ff4d4d, #ff8080); }
+.bar-fill.orange { background: linear-gradient(90deg, #ff9f1c, #ffd166); }
+.bar-fill.blue   { background: linear-gradient(90deg, #3a86ff, #7db9ff); }
+.bar-fill.green  { background: linear-gradient(90deg, #2ec4b6, #8ef1df); }
+.bar-fill.lgreen { background: linear-gradient(90deg, #90db7b, #caffbf); }
+
 /* ================= HOW HUMANITY WORKS ================= */
 .how-humanity-works { background: #081821; color: #b0e0e6; text-align: center; }
 .flow-container { position: relative; max-width: 900px; margin: 0 auto; }
