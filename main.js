@@ -87,38 +87,23 @@ cardSelectors.forEach(selector => {
 
 /* ================= TOKENOMICS BAR ANIMATION (FIXED) ================= */
 document.addEventListener('DOMContentLoaded', () => {
-  const bars = [
-    { selector: '.bar-charity', width: 5 },
-    { selector: '.bar-ops', width: 3 },
-    { selector: '.bar-burn', width: 2 },
-    { selector: '.bar-liquidity', width: 10 },
-    { selector: '.bar-community', width: 80 },
-  ];
+  const bars = document.querySelectorAll('.bar-fill');
 
-  bars.forEach(bar => {
-    document.querySelectorAll(bar.selector).forEach(el => {
-      el.style.width = '0%';
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
 
-      let animated = false;
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting && !animated) {
-            animated = true;
-            let current = 0;
+        if (el.classList.contains('bar-charity')) el.style.width = '5%';
+        if (el.classList.contains('bar-ops')) el.style.width = '3%';
+        if (el.classList.contains('bar-burn')) el.style.width = '2%';
+        if (el.classList.contains('bar-liquidity')) el.style.width = '10%';
+        if (el.classList.contains('bar-community')) el.style.width = '80%';
 
-            const animate = () => {
-              if (current < bar.width) {
-                current += 1;
-                el.style.width = current + '%';
-                requestAnimationFrame(animate);
-              }
-            };
-            animate();
-          }
-        });
-      }, { threshold: 0.3 });
-
-      observer.observe(el);
+        observer.unobserve(el);
+      }
     });
-  });
+  }, { threshold: 0.4 });
+
+  bars.forEach(bar => observer.observe(bar));
 });
