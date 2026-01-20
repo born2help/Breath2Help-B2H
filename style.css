@@ -439,43 +439,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* ================= TOKENOMICS ================= */
-.tokenomics {
-  background: #0f2734;
-  color: #e0f7fa;
-  text-align: center;
-  padding: 80px 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-.tokenomics-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.tokenomics-title {
-  font-size: 2.6rem;
-  color: #22c55e;
-  margin-bottom: 10px;
-  text-shadow: 0 0 15px rgba(34,197,94,0.5);
-}
-
-.tokenomics-underline {
-  width: 100px;
-  height: 5px;
-  margin: 10px auto 25px;
-  background: linear-gradient(90deg, #22c55e, #0fffc3);
-  border-radius: 3px;
-  box-shadow: 0 0 12px rgba(0,255,198,0.5);
-}
-
-.tokenomics-subtitle {
-  color: #b0e0e6;
-  margin-bottom: 50px;
-  font-size: 1.05rem;
-}
-
-/* Bars container */
 .tokenomics-bars {
   display: flex;
   flex-wrap: wrap;
@@ -488,30 +451,34 @@ img { max-width: 100%; display: block; }
   max-width: 220px;
   text-align: center;
   transition: transform 0.3s;
+  position: relative;
 }
 .token-box:hover {
   transform: translateY(-6px);
 }
 
+/* Main bar container */
 .bar {
   width: 100%;
-  height: 26px;
+  height: 28px;
   background: rgba(255,255,255,0.08);
-  border-radius: 14px;
+  border-radius: 16px;
   position: relative;
   overflow: hidden;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
 }
 
+/* Filled bar */
 .bar-fill {
   height: 100%;
   width: 0;
-  border-radius: 14px;
+  border-radius: 16px;
   position: relative;
   color: #fff;
   font-weight: 700;
   text-align: right;
-  padding-right: 8px;
-  line-height: 26px;
+  padding-right: 10px;
+  line-height: 28px;
   animation: fillBar 2s ease-out forwards;
   box-shadow: 0 0 12px rgba(0,255,198,0.4);
   background-size: 200% 100%;
@@ -519,7 +486,7 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
-/* Shimmer stripe */
+/* Floating shimmer inside bar */
 .bar-fill::after {
   content: "";
   position: absolute;
@@ -534,6 +501,24 @@ img { max-width: 100%; display: block; }
     transparent
   );
   animation: shimmer 2s linear infinite;
+  pointer-events: none;
+}
+
+/* Hover glow behind bar */
+.bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(34,197,94,0.6);
+  transition: width 0.4s ease;
+  z-index: 0;
+}
+.bar:hover::before {
+  width: 100%;
 }
 
 /* Colors */
@@ -543,18 +528,23 @@ img { max-width: 100%; display: block; }
 .green  { background: linear-gradient(90deg, #14b8a6, #7ae582); }
 .lgreen { background: linear-gradient(90deg, #90db7b, #caffbf); }
 
-/* Animation keyframes */
+/* Keyframes */
 @keyframes fillBar {
   from { width: 0; }
   to { width: var(--bar-width, 50%); }
 }
-
 @keyframes shimmer {
   from { left: -50%; }
   to { left: 100%; }
 }
 
-/* Headings */
+/* Labels inside bars */
+.bar-fill span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Token box headings */
 .token-box h3 {
   margin-bottom: 8px;
   color: #0fffc3;
