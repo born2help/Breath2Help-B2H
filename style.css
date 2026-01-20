@@ -438,23 +438,172 @@ img { max-width: 100%; display: block; }
   font-weight: 600;
 }
 
-/* ================= TOKENOMICS ================= */
-.tokenomics { background: #0f2734; color: #e0f7fa; text-align: center; padding: 80px 20px; position: relative; }
-.tokenomics-container { max-width: 1000px; margin: 0 auto; }
-.tokenomics-title { font-size: 2.6rem; color: #22c55e; margin-bottom: 10px; }
-.tokenomics-underline { width: 100px; height: 5px; margin: 10px auto 25px; background: linear-gradient(90deg, #22c55e,#0fffc3); border-radius: 3px; box-shadow: 0 0 12px rgba(0,255,198,0.5); }
-.tokenomics-subtitle { color: #b0e0e6; margin-bottom: 50px; }
-.tokenomics-bars { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-.token-box { flex: 1 1 200px; max-width: 220px; text-align: center; }
-.bar { height: 25px; border-radius: 12px; margin-bottom: 15px; position: relative; background: rgba(255,255,255,0.1); }
-.bar span { position: absolute; right: 10px; color: #fff; font-weight: 700; top: 50%; transform: translateY(-50%); }
-.bar-charity { background: #ef4444; width: 5%; }
-.bar-ops { background: #f59e0b; width: 3%; }
-.bar-burn { background: #3b82f6; width: 2%; }
-.bar-liquidity { background: #14b8a6; width: 10%; }
-.bar-community { background: #22c55e; width: 80%; }
-.token-box h3 { margin-bottom: 8px; color: #0fffc3; }
-.token-box p { font-size: 0.95rem; color: #b0e0e6; }
+/* ================= TOKENOMICS BEAUTIFIED ================= */
+.tokenomics {
+  background: #0f2734;
+  color: #e0f7fa;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tokenomics-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Title with glow */
+.tokenomics-title {
+  font-size: 3rem;
+  color: #22c55e;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #22c55e, 0 0 20px #0fffc3;
+}
+
+.tokenomics-underline {
+  width: 120px;
+  height: 6px;
+  margin: 10px auto 35px;
+  background: linear-gradient(90deg, #22c55e, #0fffc3);
+  border-radius: 3px;
+  box-shadow: 0 0 15px rgba(0, 255, 198, 0.5);
+}
+
+.tokenomics-subtitle {
+  color: #b0e0e6;
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+}
+
+/* Bars container */
+.tokenomics-bars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* Individual token box */
+.token-box {
+  flex: 1 1 200px;
+  max-width: 220px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 15px;
+  background: rgba(0, 255, 198, 0.05);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 255, 198, 0.1);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Hover effect on token box */
+.token-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 255, 198, 0.3),
+              0 0 40px rgba(0, 255, 198, 0.2) inset;
+}
+
+/* Token box heading */
+.token-box h3 {
+  margin-bottom: 12px;
+  color: #0fffc3;
+  font-size: 1.25rem;
+  text-shadow: 0 0 6px #0fffc3;
+}
+
+/* Token box description */
+.token-box p {
+  font-size: 0.95rem;
+  color: #b0e0e6;
+  line-height: 1.4;
+}
+
+/* Bars */
+.bar {
+  height: 25px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.bar span {
+  position: absolute;
+  right: 10px;
+  color: #fff;
+  font-weight: 700;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Individual token bar styles with glow */
+.bar-charity {
+  background: linear-gradient(90deg, #ff4d4f, #ef4444);
+  width: 5%;
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.6);
+}
+
+.bar-ops {
+  background: linear-gradient(90deg, #fbbf24, #f59e0b);
+  width: 3%;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.6);
+}
+
+.bar-burn {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+  width: 2%;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+}
+
+.bar-liquidity {
+  background: linear-gradient(90deg, #2dd4bf, #14b8a6);
+  width: 10%;
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.6);
+}
+
+.bar-community {
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+  width: 80%;
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.6);
+}
+
+/* Glow animation for bars */
+.bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  background: inherit;
+  filter: blur(8px);
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+.bar:hover::after {
+  opacity: 0.7;
+  filter: blur(15px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .tokenomics-title {
+    font-size: 2.4rem;
+  }
+  .token-box {
+    max-width: 180px;
+  }
+  .bar {
+    height: 20px;
+  }
+}
 
 /* ================= HOW HUMANITY WORKS ================= */
 .how-humanity-works { background: #081821; color: #b0e0e6; text-align: center; }
