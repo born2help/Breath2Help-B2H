@@ -996,3 +996,26 @@ img { max-width: 100%; display: block; }
   max-width: 900px;
   margin: 0 auto;
 }
+
+/* ===== FORCE VERTICAL GLOW LINE VISIBILITY ===== */
+
+.governance-flow-container {
+  position: relative;
+  min-height: 100%;
+}
+
+/* Restore glow line height & visibility */
+.glow-line {
+  top: 0;
+  bottom: auto;
+  height: 100%;
+  min-height: 320px;   /* ensures visibility */
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Ensure nodes sit above the line */
+.governance-node {
+  position: relative;
+  z-index: 2;
+}
