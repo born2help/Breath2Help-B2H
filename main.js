@@ -48,19 +48,6 @@ const observer = new IntersectionObserver(entries => {
 
 document.querySelectorAll(".founder-text").forEach(el => observer.observe(el));
 
-/* ================= SAFE TOKENOMICS PARTICLES ================= */
-const tokenParticles = document.querySelectorAll('.tokenomics-particles span');
-if (tokenParticles.length) {
-  document.addEventListener('mousemove', e => {
-    const x = (e.clientX / window.innerWidth) - 0.5;
-    const y = (e.clientY / window.innerHeight) - 0.5;
-    tokenParticles.forEach((particle, index) => {
-      const speed = (index + 1) * 5;
-      particle.style.transform = `translate(${x * speed}px, ${y * speed - 20}px)`;
-    });
-  });
-}
-
 /* ================= CARD HOVER GLOW ================= */
 const cardSelectors = ['.asset-card', '.charity-card', '.board-card', '.mv-card'];
 
@@ -85,12 +72,31 @@ cardSelectors.forEach(selector => {
   });
 });
 
-// ================= TOKENOMICS FLOATING PARTICLES =================
+/* ================= TOKENOMICS BAR ANIMATION ================= */
 document.addEventListener('DOMContentLoaded', () => {
   const bars = document.querySelectorAll('.bar-fill');
 
+  const observerBar = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+
+        // Set width based on class
+        if (el.classList.contains('bar-charity')) el.style.width = '5%';
+        if (el.classList.contains('bar-ops')) el.style.width = '3%';
+        if (el.classList.contains('bar-burn')) el.style.width = '2%';
+        if (el.classList.contains('bar-liquidity')) el.style.width = '10%';
+        if (el.classList.contains('bar-community')) el.style.width = '80%';
+
+        observerBar.unobserve(el);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  bars.forEach(bar => observerBar.observe(bar));
+
+  // ================= FLOATING PARTICLES INSIDE BARS =================
   bars.forEach(bar => {
-    // Create a container for floating particles
     const particleContainer = document.createElement('div');
     particleContainer.classList.add('bar-particles');
     particleContainer.style.position = 'absolute';
@@ -102,7 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
     particleContainer.style.overflow = 'hidden';
     bar.appendChild(particleContainer);
 
-    // Add 6 subtle particles per bar
     for (let i = 0; i < 6; i++) {
       const p = document.createElement('span');
       p.style.position = 'absolute';
@@ -116,15 +121,15 @@ document.addEventListener('DOMContentLoaded', () => {
       particleContainer.appendChild(p);
     }
   });
-});
 
-// ================= KEYFRAMES FOR FLOATING PARTICLES =================
-const style = document.createElement('style');
-style.textContent = `
-@keyframes barParticleMove {
-  0% { transform: translateY(0) translateX(0); opacity: 0.6; }
-  50% { transform: translateY(-6px) translateX(4px); opacity: 1; }
-  100% { transform: translateY(0) translateX(0); opacity: 0.6; }
-}
-`;
-document.head.appendChild(style);
+  // Add keyframes dynamically
+  const style = document.createElement('style');
+  style.textContent = `
+  @keyframes barParticleMove {
+    0% { transform: translateY(0) translateX(0); opacity: 0.6; }
+    50% { transform: translateY(-6px) translateX(4px); opacity: 1; }
+    100% { transform: translateY(0) translateX(0); opacity: 0.6; }
+  }
+  `;
+  document.head.appendChild(style);
+});
