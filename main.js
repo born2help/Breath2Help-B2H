@@ -72,47 +72,6 @@ cardSelectors.forEach(selector => {
   });
 });
 
-/* ================= TOKENOMICS BAR ANIMATION ================= */
-document.addEventListener('DOMContentLoaded', () => {
-
-  const bars = document.querySelectorAll('.bar-fill');
-
-  if (!bars.length) return;
-
-  const animateBar = (bar) => {
-    const target = parseInt(bar.dataset.width, 10);
-    const span = bar.querySelector('span');
-    let current = 0;
-
-    bar.style.width = '0%';
-    span.textContent = '0%';
-
-    const interval = setInterval(() => {
-      if (current >= target) {
-        clearInterval(interval);
-        bar.style.width = target + '%';
-        span.textContent = target + '%';
-      } else {
-        current++;
-        bar.style.width = current + '%';
-        span.textContent = current + '%';
-      }
-    }, 18); // smooth speed
-  };
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateBar(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.4 });
-
-  bars.forEach(bar => observer.observe(bar));
-
-});
-
 document.addEventListener("DOMContentLoaded", () => {
   const tokenBars = document.querySelectorAll(".bar-fill");
 
@@ -122,7 +81,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const target = parseInt(span.getAttribute("data-width"));
     let current = 0;
-    const duration = 1800; // match CSS animation duration (ms)
+
+    // Animate bar width
+    const widthAnim = bar.animate(
+      [
+        { width: '0%' },
+        { width: target + '%' }
+      ],
+      { duration: 1800, fill: 'forwards', easing: 'ease-out' }
+    );
+
+    // Animate percentage number
+    const duration = 1800;
     const stepTime = Math.round(duration / target);
 
     const counter = setInterval(() => {
