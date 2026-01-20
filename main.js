@@ -112,3 +112,27 @@ document.addEventListener('DOMContentLoaded', () => {
   bars.forEach(bar => observer.observe(bar));
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tokenBars = document.querySelectorAll(".bar-fill");
+
+  tokenBars.forEach(bar => {
+    const span = bar.querySelector("span");
+    if (!span) return;
+
+    const target = parseInt(span.getAttribute("data-width"));
+    let current = 0;
+    const duration = 1800; // match CSS animation duration (ms)
+    const stepTime = Math.round(duration / target);
+
+    const counter = setInterval(() => {
+      if (current < target) {
+        current++;
+        span.textContent = current + "%";
+      } else {
+        span.textContent = target + "%";
+        clearInterval(counter);
+      }
+    }, stepTime);
+  });
+});
