@@ -168,7 +168,7 @@ cardSelectors.forEach(selector => {
   });
 });
 
-/* ================= TOKENOMICS BAR ANIMATION ================= */
+/* ================= TOKENOMICS BAR ANIMATION FIXED ================= */
 document.addEventListener('DOMContentLoaded', () => {
   const bars = [
     { selector: '.bar-charity', width: 5 },
@@ -179,25 +179,29 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   bars.forEach(bar => {
-    const el = document.querySelector(bar.selector);
-    let current = 0;
+    // select ALL matching bars, not just the first
+    const elements = document.querySelectorAll(bar.selector);
+    elements.forEach(el => {
+      let current = 0;
 
-    function animate() {
-      if (current < bar.width) {
-        current += 1;
-        el.style.width = current + '%';
-        requestAnimationFrame(animate);
-      } else {
-        el.style.width = bar.width + '%';
+      function animate() {
+        if (current < bar.width) {
+          current += 1;
+          el.style.width = current + '%';
+          requestAnimationFrame(animate);
+        } else {
+          el.style.width = bar.width + '%';
+        }
       }
-    }
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) animate();
-      });
-    }, { threshold: 0.3 });
+      // animate only when bar is in viewport
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) animate();
+        });
+      }, { threshold: 0.3 });
 
-    observer.observe(el);
+      observer.observe(el);
+    });
   });
 });
