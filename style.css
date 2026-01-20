@@ -506,7 +506,7 @@ img { max-width: 100%; display: block; }
   position: relative;
 }
 
-/* ================= TOKENOMICS PERCENTAGE SMOOTH ================= */
+/* ================= BAR FILL & PERCENTAGE ================= */
 .bar-fill {
   position: relative;
   display: flex;
@@ -517,69 +517,26 @@ img { max-width: 100%; display: block; }
   color: #fff;
   font-weight: 700;
   font-size: 0.85rem;
+  width: 0; /* start from 0 for animation */
+  border-radius: 12px;
 }
 
-/* Inner span for smooth percentage */
+/* Inner span for particles and percentage text */
 .bar-fill span {
   display: inline-block;
-  opacity: 1;
-}
-
-/* Animate number from 0 to 100% visually using CSS variable */
-.bar-fill[data-width] span::after {
-  content: "0%";
-  animation: countUp 1.6s forwards;
-}
-
-/* Keyframes counting up smoothly */
-@keyframes countUp {
-  0% { content: "0%"; }
-  5% { content: "1%"; }
-  10% { content: "2%"; }
-  15% { content: "3%"; }
-  20% { content: "4%"; }
-  25% { content: "5%"; }
-  30% { content: "6%"; }
-  35% { content: "7%"; }
-  40% { content: "8%"; }
-  45% { content: "9%"; }
-  50% { content: "10%"; }
-  55% { content: "20%"; }
-  60% { content: "30%"; }
-  65% { content: "40%"; }
-  70% { content: "50%"; }
-  75% { content: "60%"; }
-  80% { content: "70%"; }
-  85% { content: "80%"; }
-  90% { content: "90%"; }
-  100% { content: attr(data-width); }
-}
-
-/* ================= TOKENOMICS PERCENTAGE ================= */
-.bar-fill {
+  pointer-events: none;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; /* Percentage at the right */
-  color: #ffffff;
-  font-weight: 700;
-  font-size: 0.85rem;
-  padding-right: 6px;
-  overflow: hidden;
 }
 
-/* Animate percentage text as bar grows */
-.bar-fill::after {
+/* Smooth percentage count-up using data-width */
+.bar-fill span::after {
   content: attr(data-width);
-  position: absolute;
-  right: 6px;
-  color: #fff;
-  font-weight: 700;
   opacity: 0;
   animation: showPercent 1.6s forwards;
-  animation-delay: 0.2s;
+  animation-delay: 0.5s;
 }
 
+/* Animate percentage fade-in */
 @keyframes showPercent {
   0% { opacity: 0; transform: translateX(10px); }
   100% { opacity: 1; transform: translateX(0); }
