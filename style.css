@@ -122,7 +122,7 @@ img { max-width: 100%; display: block; }
   .hero-actions { margin-top: 20px; }
 }
 
-/* -------- Hero Section Mobile Fix -------- */
+/* ================= HERO MOBILE FIX ================= */
 @media (max-width: 768px) {
   .hero .main-logo-hero,
   .hero .burn-logo {
@@ -1229,9 +1229,7 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ================= FOOTER – COMPACT & HERO MOBILE FIX ================= */
-
-/* -------- Compact Footer -------- */
+/* ================= FOOTER – COMPACT ================= */
 .footer {
   background: #0f2734;
   color: #b0e0e6;
