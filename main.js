@@ -72,9 +72,8 @@ cardSelectors.forEach(selector => {
   });
 });
 
-<!-- ================= TOKENOMICS JS ================= -->
-<script>
-window.addEventListener("load", () => {
+/* ================= TOKENOMICS BAR + PERCENTAGE ANIMATION ================= */
+(() => {
   const section = document.getElementById("tokenomics");
   if (!section) return;
 
@@ -99,9 +98,10 @@ window.addEventListener("load", () => {
         let current = 0;
 
         // Animate bar width
+        bar.style.transition = "width 1.8s ease-out";
         bar.style.width = target + "%";
 
-        // Animate percentage number
+        // Animate percentage number smoothly
         const interval = setInterval(() => {
           if (current < target) {
             current++;
@@ -110,7 +110,7 @@ window.addEventListener("load", () => {
             span.textContent = target + "%";
             clearInterval(interval);
           }
-        }, 20);
+        }, 18); // 18ms for smooth count
       });
 
       obs.unobserve(section); // run once only
@@ -118,5 +118,4 @@ window.addEventListener("load", () => {
   }, { threshold: 0.35 });
 
   observer.observe(section);
-});
-</script>
+})();
