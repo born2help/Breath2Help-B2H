@@ -1068,11 +1068,11 @@ img { max-width: 100%; display: block; }
 .btn-join:hover { transform:translateY(-3px); box-shadow:0 0 15px rgba(255,255,255,0.4); }
 .join-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px; }
 
-/* ================= FOOTER – COMPACT & MODERN ================= */
+/* ================= FOOTER – PREMIUM COMPACT ================= */
 .footer {
   background: #0f2734;
   color: #b0e0e6;
-  padding: 20px 20px; /* compact height */
+  padding: 20px 20px;
   font-size: 0.9rem;
   position: relative;
   overflow: hidden;
@@ -1080,7 +1080,7 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
-/* Glowing radial background (subtle) */
+/* Overall glowing background */
 .footer::before {
   content: '';
   position: absolute;
@@ -1089,7 +1089,7 @@ img { max-width: 100%; display: block; }
   width: 180%;
   height: 180%;
   background: radial-gradient(circle at center, rgba(0,255,198,0.05) 0%, transparent 70%);
-  animation: glowFooter 8s infinite alternate;
+  animation: glowFooter 10s infinite alternate;
   z-index: 0;
   pointer-events: none;
 }
@@ -1111,12 +1111,39 @@ img { max-width: 100%; display: block; }
   z-index: 1;
 }
 
-/* Footer columns: Quick Links, Contact, Social */
+/* Footer Columns */
 .footer-links,
 .footer-contact,
 .footer-social {
   flex: 1 1 200px;
   margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Glow behind each column */
+.footer-links::before,
+.footer-contact::before,
+.footer-social::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 15px;
+  background: radial-gradient(circle, rgba(0,255,198,0.08) 0%, transparent 70%);
+  filter: blur(10px);
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+/* Hover glow intensifies */
+.footer-links:hover::before,
+.footer-contact:hover::before,
+.footer-social:hover::before {
+  background: radial-gradient(circle, rgba(0,255,198,0.15) 0%, transparent 70%);
+  filter: blur(14px);
 }
 
 /* Headings */
@@ -1165,10 +1192,6 @@ img { max-width: 100%; display: block; }
 }
 
 /* Social Icons */
-.footer-social {
-  position: relative;
-}
-
 .footer-social a {
   display: inline-block;
   margin-right: 6px;
@@ -1176,7 +1199,6 @@ img { max-width: 100%; display: block; }
   transition: color 0.3s, transform 0.3s, text-shadow 0.3s;
 }
 
-/* Social icon colors */
 .footer-social a:nth-child(1) { color: #3b5998; } /* Facebook */
 .footer-social a:nth-child(2) { color: #1da1f2; } /* Twitter */
 .footer-social a:nth-child(3) { color: #e1306c; } /* Instagram */
@@ -1231,6 +1253,79 @@ img { max-width: 100%; display: block; }
   .footer-social-divider {
     width: 80%;
   }
+}
+
+/* Neon glow and float animation for social icons */
+.footer-social a {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 1.1rem;
+  color: currentColor;
+  text-shadow: 0 0 4px currentColor, 0 0 8px currentColor;
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+  animation: floatNeon 3s ease-in-out infinite;
+}
+
+/* Slightly offset animation delays for each icon for natural movement */
+.footer-social a:nth-child(1) { animation-delay: 0s; }
+.footer-social a:nth-child(2) { animation-delay: 0.3s; }
+.footer-social a:nth-child(3) { animation-delay: 0.6s; }
+.footer-social a:nth-child(4) { animation-delay: 0.9s; }
+.footer-social a:nth-child(5) { animation-delay: 1.2s; }
+
+/* Hover effect for glow intensification */
+.footer-social a:hover {
+  transform: translateY(-4px) scale(1.2);
+  text-shadow: 0 0 8px currentColor, 0 0 16px currentColor, 0 0 24px currentColor;
+}
+
+/* Floating animation keyframes */
+@keyframes floatNeon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Neon glow and float animation for social icons with brand colors */
+.footer-social a {
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 1.1rem;
+  color: currentColor;
+  text-shadow: 0 0 4px currentColor, 0 0 8px currentColor;
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+  animation: floatNeon 3s ease-in-out infinite;
+}
+
+/* Brand colors */
+.footer-social a:nth-child(1) { color: #3b5998; } /* Facebook */
+.footer-social a:nth-child(2) { color: #1da1f2; } /* Twitter */
+.footer-social a:nth-child(3) { color: #e1306c; } /* Instagram */
+.footer-social a:nth-child(4) { color: #0077b5; } /* LinkedIn */
+.footer-social a:nth-child(5) { color: #ff0000; } /* YouTube */
+
+/* Animation delay for natural staggered float */
+.footer-social a:nth-child(1) { animation-delay: 0s; }
+.footer-social a:nth-child(2) { animation-delay: 0.3s; }
+.footer-social a:nth-child(3) { animation-delay: 0.6s; }
+.footer-social a:nth-child(4) { animation-delay: 0.9s; }
+.footer-social a:nth-child(5) { animation-delay: 1.2s; }
+
+/* Hover effect – float higher, scale up, glow more */
+.footer-social a:hover {
+  transform: translateY(-4px) scale(1.25);
+  text-shadow:
+    0 0 8px currentColor,
+    0 0 16px currentColor,
+    0 0 24px currentColor,
+    0 0 32px currentColor;
+}
+
+/* Floating animation keyframes */
+@keyframes floatNeon {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0px); }
 }
 
 /* ================= UNIFIED CARD STYLING ================= */
