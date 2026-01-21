@@ -1269,6 +1269,69 @@ img { max-width: 100%; display: block; }
   100% { transform: translateY(0px); }
 }
 
+  /* ================= UNIFIED CARD STYLING ================= */
+.mv-card, .board-card, .charity-card, .asset-card {
+  background: rgba(0,255,198,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+/* Images inside cards */
+.mv-card img, .board-card img, .charity-card img, .asset-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Hover effect - lift and glow */
+.mv-card:hover, .board-card:hover, .charity-card:hover, .asset-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,255,198,0.4), 
+              0 0 40px rgba(0,255,198,0.2) inset;
+}
+
+/* Headings inside cards */
+.mv-card h3, .board-card h4, .charity-card h3, .asset-card h3 {
+  color: #0fffc3;
+  margin-bottom: 8px;
+}
+
+/* Paragraph text inside cards */
+.mv-card p, .board-card p, .charity-card p, .asset-card p {
+  color: #b0e0e6;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Optional glow behind images */
+.mv-card img::after, .board-card img::after, .charity-card img::after, .asset-card img::after {
+  content: '';
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,255,198,0.15), transparent 70%);
+  filter: blur(25px);
+  z-index: -1;
+}
+
+/* ================= PARTICLES ADJUSTMENT ================= */
+.particles-js-canvas-el { position:absolute !important; top:0; left:0; width:100% !important; height:100% !important; z-index:0; }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px){
+
 /* ================= ABOUT PAGE MODERN ================= */
 body.dark-page.glass-page {
   font-family: 'Montserrat', sans-serif;
@@ -1417,67 +1480,3 @@ body.dark-page.glass-page {
 
 /* ================= FOOTER ================= */
 /* Use the compact footer CSS we finalized earlier */
-
-/* ================= UNIFIED CARD STYLING ================= */
-.mv-card, .board-card, .charity-card, .asset-card {
-  background: rgba(0,255,198,0.05);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 25px 15px;
-  text-align: center;
-  transition: transform 0.4s, box-shadow 0.4s;
-  position: relative;
-  z-index: 1;
-}
-
-/* Images inside cards */
-.mv-card img, .board-card img, .charity-card img, .asset-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  transition: transform 0.4s, box-shadow 0.4s;
-}
-
-/* Hover effect - lift and glow */
-.mv-card:hover, .board-card:hover, .charity-card:hover, .asset-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0,255,198,0.4), 
-              0 0 40px rgba(0,255,198,0.2) inset;
-}
-
-/* Headings inside cards */
-.mv-card h3, .board-card h4, .charity-card h3, .asset-card h3 {
-  color: #0fffc3;
-  margin-bottom: 8px;
-}
-
-/* Paragraph text inside cards */
-.mv-card p, .board-card p, .charity-card p, .asset-card p {
-  color: #b0e0e6;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-/* Optional glow behind images */
-.mv-card img::after, .board-card img::after, .charity-card img::after, .asset-card img::after {
-  content: '';
-  position: absolute;
-  width: 140px;
-  height: 140px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(0,255,198,0.15), transparent 70%);
-  filter: blur(25px);
-  z-index: -1;
-}
-
-/* ================= PARTICLES ADJUSTMENT ================= */
-.particles-js-canvas-el { position:absolute !important; top:0; left:0; width:100% !important; height:100% !important; z-index:0; }
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px){
-
