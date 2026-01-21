@@ -72,81 +72,50 @@ cardSelectors.forEach(selector => {
   });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const tokenBars = document.querySelectorAll(".bar-fill");
+/* ================= TOKENOMICS BAR + PERCENTAGE ANIMATION ================= */
+window.addEventListener("load", () => {
+  const section = document.getElementById("tokenomics");
+  if (!section) return;
 
-  tokenBars.forEach(bar => {
+  const bars = section.querySelectorAll(".bar-fill");
+
+  // Reset bars (important)
+  bars.forEach(bar => {
+    bar.style.width = "0%";
     const span = bar.querySelector("span");
-    if (!span) return;
-
-    const target = parseInt(span.getAttribute("data-width"));
-    let current = 0;
-
-    // Animate bar width
-    const widthAnim = bar.animate(
-      [
-        { width: '0%' },
-        { width: target + '%' }
-      ],
-      { duration: 1800, fill: 'forwards', easing: 'ease-out' }
-    );
-
-    // Animate percentage number
-    const duration = 1800;
-    const stepTime = Math.round(duration / target);
-
-    const counter = setInterval(() => {
-      if (current < target) {
-        current++;
-        span.textContent = current + "%";
-      } else {
-        span.textContent = target + "%";
-        clearInterval(counter);
-      }
-    }, stepTime);
+    if (span) span.textContent = "0%";
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
-  const tokenomicsSection = document.getElementById("tokenomics");
-  if (!tokenomicsSection) return;
-
-  const bars = tokenomicsSection.querySelectorAll(".bar-fill");
-
-  // Intersection Observer to animate only when section enters viewport
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        bars.forEach(bar => {
-          const span = bar.querySelector("span");
-          if (!span) return;
+      if (!entry.isIntersecting) return;
 
-          const target = parseInt(span.getAttribute("data-width"));
-          let current = 0;
+      bars.forEach(bar => {
+        const span = bar.querySelector("span");
+        if (!span) return;
 
-          // Animate bar width
-          bar.style.transition = "width 1.8s ease-out";
-          bar.style.width = target + "%";
+        const target = parseInt(span.getAttribute("data-width"), 10);
+        let current = 0;
 
-          // Animate percentage number
-          const duration = 1800; // match transition duration
-          const stepTime = Math.max(Math.floor(duration / target), 20); // prevent too fast
+        // Animate bar width
+        bar.style.transition = "width 1.8s ease-out";
+        bar.style.width = target + "%";
 
-          const counter = setInterval(() => {
-            if (current < target) {
-              current++;
-              span.textContent = current + "%";
-            } else {
-              span.textContent = target + "%";
-              clearInterval(counter);
-            }
-          }, stepTime);
-        });
+        // Animate percentage number
+        const interval = setInterval(() => {
+          if (current < target) {
+            current++;
+            span.textContent = current + "%";
+          } else {
+            span.textContent = target + "%";
+            clearInterval(interval);
+          }
+        }, 20);
+      });
 
-        obs.unobserve(entry.target); // animate only once
-      }
+      obs.unobserve(section); // run once only
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.35 });
 
-  observer.observe(tokenomicsSection);
+  observer.observe(section);
 });
