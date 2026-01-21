@@ -40,13 +40,13 @@ if (hero) {
 }
 
 /* ================= FOUNDER TEXT OBSERVER ================= */
-const observer = new IntersectionObserver(entries => {
+const founderObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add("show");
   });
 }, { threshold: 0.4 });
 
-document.querySelectorAll(".founder-text").forEach(el => observer.observe(el));
+document.querySelectorAll(".founder-text").forEach(el => founderObserver.observe(el));
 
 /* ================= CARD HOVER GLOW ================= */
 const cardSelectors = ['.asset-card', '.charity-card', '.board-card', '.mv-card'];
@@ -72,21 +72,22 @@ cardSelectors.forEach(selector => {
   });
 });
 
-/* ================= TOKENOMICS BAR + PERCENTAGE ANIMATION ================= */
-window.addEventListener("load", () => {
-  const section = document.getElementById("tokenomics");
-  if (!section) return;
+/* ================= TOKENOMICS BAR + PERCENTAGE (FIXED & FINAL) ================= */
+document.addEventListener("DOMContentLoaded", () => {
+  const tokenomics = document.getElementById("tokenomics");
+  if (!tokenomics) return;
 
-  const bars = section.querySelectorAll(".bar-fill");
+  const bars = tokenomics.querySelectorAll(".bar-fill");
 
-  // Reset bars (important)
+  // Reset everything once
   bars.forEach(bar => {
     bar.style.width = "0%";
+    bar.style.transition = "none";
     const span = bar.querySelector("span");
     if (span) span.textContent = "0%";
   });
 
-  const observer = new IntersectionObserver((entries, obs) => {
+  const tokenObserver = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
 
@@ -94,28 +95,28 @@ window.addEventListener("load", () => {
         const span = bar.querySelector("span");
         if (!span) return;
 
-        const target = parseInt(span.getAttribute("data-width"), 10);
+        const target = parseInt(bar.dataset.width, 10);
         let current = 0;
 
-        // Animate bar width
+        // Enable smooth width animation
         bar.style.transition = "width 1.8s ease-out";
         bar.style.width = target + "%";
 
-        // Animate percentage number
-        const interval = setInterval(() => {
+        // Animate percentage text
+        const counter = setInterval(() => {
           if (current < target) {
             current++;
             span.textContent = current + "%";
           } else {
             span.textContent = target + "%";
-            clearInterval(interval);
+            clearInterval(counter);
           }
         }, 20);
       });
 
-      obs.unobserve(section); // run once only
+      obs.unobserve(tokenomics); // animate ONCE only
     });
   }, { threshold: 0.35 });
 
-  observer.observe(section);
+  tokenObserver.observe(tokenomics);
 });
