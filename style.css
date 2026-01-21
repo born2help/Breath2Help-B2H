@@ -1532,3 +1532,8 @@ img { max-width: 100%; display: block; }
 .site-footer a:hover {
   color: #ffffff;
 }
+
+/* ================= CSS DIAGNOSTIC TEST ================= */
+body {
+  outline: 5px solid red !important;
+}
