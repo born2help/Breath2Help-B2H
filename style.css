@@ -1311,16 +1311,13 @@ img { max-width: 100%; display: block; }
   line-height: 1.4;
 }
 
-/* Optional glow behind images */
-.mv-card img::after, .board-card img::after, .charity-card img::after, .asset-card img::after {
+.mv-card::before,
+.board-card::before,
+.charity-card::before,
+.asset-card::before {
   content: '';
   position: absolute;
-  width: 140px;
-  height: 140px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
+  inset: -20px;
   background: radial-gradient(circle, rgba(0,255,198,0.15), transparent 70%);
   filter: blur(25px);
   z-index: -1;
