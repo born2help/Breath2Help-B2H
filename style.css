@@ -933,6 +933,18 @@ img { max-width: 100%; display: block; }
   text-align: center; /* keep centered */
 }
 
+/* ================= CHARITY SECTION – REDUCE VERTICAL SPACING ================= */
+
+/* Reduce the gap between charity cards */
+.charity-grid {
+  gap: 15px 20px; /* vertical 15px, horizontal 20px */
+}
+
+/* Optional: reduce padding inside card for a slightly more compact look */
+.charity-content {
+  padding: 12px 15px;
+}
+
 /* ================= DONATIONS & ASSETS ================= */
 .assets-section { background: #081821; color: #b0e0e6; text-align: center; padding: 80px 20px; }
 .assets-header h2 { color: #22c55e; margin-bottom: 10px; }
