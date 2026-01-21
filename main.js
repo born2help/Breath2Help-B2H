@@ -72,22 +72,22 @@ cardSelectors.forEach(selector => {
   });
 });
 
-/* ================= TOKENOMICS BAR + PERCENTAGE (FIXED & FINAL) ================= */
-document.addEventListener("DOMContentLoaded", () => {
-  const tokenomics = document.getElementById("tokenomics");
-  if (!tokenomics) return;
+<!-- ================= TOKENOMICS JS ================= -->
+<script>
+window.addEventListener("load", () => {
+  const section = document.getElementById("tokenomics");
+  if (!section) return;
 
-  const bars = tokenomics.querySelectorAll(".bar-fill");
+  const bars = section.querySelectorAll(".bar-fill");
 
-  // Reset everything once
+  // Reset bars to 0
   bars.forEach(bar => {
     bar.style.width = "0%";
-    bar.style.transition = "none";
     const span = bar.querySelector("span");
     if (span) span.textContent = "0%";
   });
 
-  const tokenObserver = new IntersectionObserver((entries, obs) => {
+  const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
 
@@ -95,28 +95,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const span = bar.querySelector("span");
         if (!span) return;
 
-        const target = parseInt(bar.dataset.width, 10);
+        const target = parseInt(bar.getAttribute("data-width"), 10);
         let current = 0;
 
-        // Enable smooth width animation
-        bar.style.transition = "width 1.8s ease-out";
+        // Animate bar width
         bar.style.width = target + "%";
 
-        // Animate percentage text
-        const counter = setInterval(() => {
+        // Animate percentage number
+        const interval = setInterval(() => {
           if (current < target) {
             current++;
             span.textContent = current + "%";
           } else {
             span.textContent = target + "%";
-            clearInterval(counter);
+            clearInterval(interval);
           }
         }, 20);
       });
 
-      obs.unobserve(tokenomics); // animate ONCE only
+      obs.unobserve(section); // run once only
     });
   }, { threshold: 0.35 });
 
-  tokenObserver.observe(tokenomics);
+  observer.observe(section);
 });
+</script>
