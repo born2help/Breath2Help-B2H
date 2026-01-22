@@ -1406,6 +1406,15 @@ img { max-width: 100%; display: block; }
   z-index: -1;
 }
 
+/* ================= SUBPAGE HERO SPACING FIX ================= */
+.page-hero {
+  padding-bottom: 20px; /* reduces space below hero */
+}
+
+.section {
+  margin-top: 20px; /* reduces space before first content section */
+}
+
 /* ================= PARTICLES ADJUSTMENT ================= */
 .particles-js-canvas-el { position:absolute !important; top:0; left:0; width:100% !important; height:100% !important; z-index:0; }
 
