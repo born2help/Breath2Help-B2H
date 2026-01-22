@@ -4,24 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Transparency — B2H Global Foundation</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="dark-page glass-page">
 
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
-    <section class="page-hero">
+    <section class="page-hero visible">
       <h1 class="green-glow">Transparency Framework</h1>
       <p class="subtitle">Trust through responsibility — not exposure</p>
       <div class="hero-actions">
-        <a href="donate.html" class="donate"><i class="fas fa-hand-holding-heart"></i> Donate</a>
-        <a href="tokenomics.html" class="whitepaper"><i class="fas fa-coins"></i> Explore Tokenomics</a>
+        <a href="donate.html" class="donate">Donate</a>
+        <a href="tokenomics.html" class="whitepaper">Explore Tokenomics</a>
+        <a href="index.html" class="donate">← Back Home</a>
       </div>
       <hr class="section-divider">
     </section>
@@ -36,8 +34,10 @@
 
       <div class="wp-section">
         <h2 class="section-title">Why Transparency Has Limits</h2>
-        <p>Absolute transparency is not always ethical. In humanitarian work, uncontrolled exposure can create misuse, targeting, and real-world danger.</p>
-        <p>B2H rejects transparency theater. <strong>Responsibility matters more than visibility.</strong></p>
+        <p>
+          Absolute transparency is not always ethical. In humanitarian work, uncontrolled exposure can create misuse, targeting, and real-world danger.
+        </p>
+        <p><strong>Responsibility matters more than visibility.</strong></p>
       </div>
       <hr class="section-divider">
 
@@ -117,6 +117,7 @@
       </div>
 
       <a href="index.html" class="glass-back">← Back Home</a>
+
     </section>
 
   </section>
@@ -125,7 +126,7 @@
   <footer class="site-footer dark-section">
     <div class="container footer-container">
       <div class="footer-links">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="back-home">← Back Home</a>
         <a href="about.html">About</a>
         <a href="white-paper.html">White Paper</a>
         <a href="transparency.html">Transparency</a>
@@ -138,24 +139,19 @@
     </div>
   </footer>
 
-  <!-- ================= SCROLL REVEAL SCRIPT ================= -->
+  <!-- ================= SCROLL ANIMATION ================= -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
+    const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
 
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.2 });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
 
-      sections.forEach(section => observer.observe(section));
-
-      // Safety fallback to ensure content always visible
-      sections.forEach(section => section.classList.add('visible'));
-    });
+    sections.forEach(section => observer.observe(section));
   </script>
 
 </body>
