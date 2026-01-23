@@ -119,20 +119,10 @@
     <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
 
-  <!-- ================= SCROLL ANIMATION ================= -->
-  <script>
-    const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.2 });
-    sections.forEach(section => observer.observe(section));
-  </script>
-
+  <!-- ================= FADE-IN SCRIPT ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll('.page-hero, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
+    const elements = document.querySelectorAll('.page-hero, .section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
 
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
