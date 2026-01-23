@@ -99,6 +99,22 @@ a:hover {
     box-shadow: 0 0 15px #00ff95;
 }
 
+/* ---------------- GLOW EFFECT FOR PARAGRAPHS AND SECTIONS ---------------- */
+.section, p, li {
+    transition: all 0.8s ease-out;
+}
+
+.section:hover, p:hover, li:hover {
+    color: #00ffcc;
+    text-shadow: 0 0 8px #00ff95, 0 0 15px #00ff95;
+}
+
+.section:hover {
+    box-shadow: 0 0 20px #00ff95;
+    border-left-color: #00ffd1;
+    transform: translateY(-2px);
+}
+
 /* ---------------- SECTIONS ---------------- */
 .section {
     padding: 2rem 1.5rem;
