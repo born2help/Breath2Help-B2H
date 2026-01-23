@@ -53,13 +53,13 @@
         <h2 class="section-title">Purpose of the Constitution</h2>
         <p>
           The B2H Constitution defines the rules, ethical boundaries, and operational safeguards
-          to ensure that every action serves humanity, preserves dignity, and aligns with faith-based principles.
+          to ensure every action serves humanity, preserves dignity, and aligns with faith-based principles.
         </p>
       </div>
 
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section light">
         <h2 class="section-title">Core Principles</h2>
         <ul>
           <li>Humanitarian Intent — All contributions serve the needy and vulnerable</li>
@@ -75,8 +75,8 @@
       <div class="wp-section">
         <h2 class="section-title">Participation Safeguards</h2>
         <p>
-          Contributors participate voluntarily and with understanding.
-          B2H ensures that no participant is exposed to undue risk.
+          Contributors participate voluntarily and with full understanding.
+          B2H ensures no participant is exposed to undue risk.
         </p>
         <p>
           Learn more about <a href="participation-safeguard.html">Participation Safeguard & Burn Ethics →</a>
@@ -85,14 +85,14 @@
 
       <hr class="section-divider">
 
-      <div class="wp-section">
+      <div class="wp-section light">
         <h2 class="section-title">Stress Testing & Stability</h2>
         <p>
           All processes, token mechanisms, and humanitarian allocations are stress-tested
-          to maintain stability and trust under various scenarios.
+          to maintain stability, trust, and continuous service under varying scenarios.
         </p>
         <p>
-          See <a href="stress-test.html">Stress Test Protocol →</a> for details.
+          See <a href="stress-test.html">Stress Test Protocol →</a> for more details.
         </p>
       </div>
 
@@ -101,7 +101,7 @@
       <div class="wp-section">
         <h2 class="section-title">Vision & Mission Alignment</h2>
         <p>
-          The Constitution ensures that every action, burn, and contribution aligns with B2H's
+          The Constitution ensures every action, burn, and contribution aligns with B2H's
           long-term vision and mission.
         </p>
         <p>
@@ -141,6 +141,21 @@
       </div>
     </div>
   </footer>
+
+  <!-- ================= SCROLL ANIMATION ================= -->
+  <script>
+    const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
