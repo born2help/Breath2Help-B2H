@@ -23,10 +23,10 @@
       <p class="subtitle">Trust through responsibility — not exposure</p>
 
       <div class="hero-actions">
-        <a href="about.html">About B2H</a>
-        <a href="white-paper.html">White Paper</a>
-        <a href="tokenomics.html">Tokenomics</a>
-        <a href="index.html" class="hero-home">← Back Home</a>
+        <a href="about.html" class="btn-secondary">About B2H</a>
+        <a href="white-paper.html" class="btn-secondary">White Paper</a>
+        <a href="tokenomics.html" class="btn-secondary">Tokenomics</a>
+        <a href="index.html" class="btn-primary">← Back Home</a>
       </div>
 
       <hr class="section-divider">
@@ -138,25 +138,25 @@
       <a href="tokenomics.html">Tokenomics</a>
       <a href="donate.html">Donate</a>
     </div>
-    <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
+    <div class="footer-bottom">
+      <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
+    </div>
   </footer>
 
-  <!-- ================= FADE-IN SCRIPT ================= -->
+  <!-- ================= SCROLL ANIMATION ================= -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
+    const sections = document.querySelectorAll('.page-hero, .section, .wp-section');
 
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if(entry.isIntersecting){
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
 
-      elements.forEach(el => observer.observe(el));
-    });
+    sections.forEach(section => observer.observe(section));
   </script>
 
 </body>
