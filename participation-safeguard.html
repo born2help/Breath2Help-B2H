@@ -8,8 +8,8 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Unified Subpage CSS -->
+  <link rel="stylesheet" href="subpage.css">
 </head>
 
 <body class="dark-page glass-page">
@@ -45,59 +45,35 @@
       <hr class="section-divider">
     </section>
 
-    <!-- ================= BURN SECTION ================= -->
+    <!-- ================= CONTENT ================= -->
     <section class="section">
       <h2 class="section-title">Burn to Help — What It Means</h2>
-      <p>
-        In B2H, burning is not destruction. It is a conscious act of responsibility.
-        Every burn exists to protect dignity, reduce suffering, and sustain the mission.
-      </p>
-      <p>
-        Unlike other projects that burn for hype or scarcity, B2H burns represent intentional reduction of value
-        to create real-world impact, stability, and relief.
-      </p>
-      <p>
-        If a burn does not serve humanity, strengthen the mission, or protect participants, it does not belong in B2H.
-      </p>
+      <p>In B2H, burning is not destruction. It is a conscious act of responsibility.</p>
+      <p>Every burn exists to protect dignity, reduce suffering, and sustain the mission.</p>
+      <p>Unlike other projects that burn for hype, B2H burns create real-world impact, stability, and relief.</p>
     </section>
 
     <section class="section light">
       <h2 class="section-title">How Burns Serve Humanity</h2>
-      <p>
-        A portion of what is sacrificed is directed toward humanitarian purpose,
-        operational sustainability, and continued service.
-      </p>
-      <p>
-        Helping people is not treated as a marketing strategy — it is an obligation.
-      </p>
+      <p>A portion of what is sacrificed is directed toward humanitarian purpose, operational sustainability, and continued service.</p>
+      <p>Helping people is an obligation, not a marketing strategy.</p>
     </section>
 
     <section class="section">
       <h2 class="section-title">Protection for Participants</h2>
-      <p>
-        B2H designs burns with balance: never reckless, never emotional, never driven by short-term pressure.
-        The goal is sustainability so helping others does not sacrifice trust.
-      </p>
+      <p>B2H designs burns with balance: never reckless, never emotional, never driven by short-term pressure.</p>
+      <p>The goal is sustainability so helping others does not sacrifice trust.</p>
     </section>
 
     <section class="section light">
       <h2 class="section-title">Faith, Accountability & Permanence</h2>
-      <p>
-        Every burn is carried out with accountability, transparency, and respect for human dignity.
-      </p>
+      <p>Every burn is carried out with accountability, transparency, and respect for human dignity.</p>
     </section>
 
-    <!-- ================= ETHICS SECTION ================= -->
     <section class="section">
       <h2 class="section-title">Ethics in B2H</h2>
-      <p>
-        All actions are guided by responsibility, transparency, and fairness.
-        Every participant, decision, and movement aligns with humanitarian and faith-based principles.
-      </p>
-      <p>
-        B2H rejects exploitation, interest (Riba), and any personal enrichment.
-        Every contribution serves humanity only.
-      </p>
+      <p>All actions are guided by responsibility, transparency, and fairness.</p>
+      <p>Every contribution serves humanity only. Exploitation or personal enrichment is rejected.</p>
     </section>
 
     <section class="section light">
@@ -110,17 +86,10 @@
       </ul>
     </section>
 
-    <!-- ================= FOUNDER SAFEGUARDS ================= -->
     <section class="section">
       <h2 class="section-title">Founder Safeguards</h2>
-      <p>
-        The Founder holds no ownership or financial privilege. Authority exists only to safeguard
-        values, prevent misuse, and activate protections when ethical deviations occur.
-      </p>
-      <p>
-        Transparency rules, financial locks, audit pathways, and mission-freeze mechanisms
-        ensure that no single individual can override purpose or accountability.
-      </p>
+      <p>The Founder holds no ownership or financial privilege. Authority exists only to safeguard values and prevent misuse.</p>
+      <p>Transparency rules, financial locks, audit pathways, and mission-freeze mechanisms ensure no single individual can override purpose.</p>
     </section>
 
     <a href="index.html" class="glass-back">← Back Home</a>
@@ -144,6 +113,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- ================= SCROLL ANIMATION ================= -->
+  <script>
+    const sections = document.querySelectorAll('.section, .wp-section, .page-hero');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){ entry.target.classList.add('visible'); }
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+  </script>
 
 </body>
 </html>
