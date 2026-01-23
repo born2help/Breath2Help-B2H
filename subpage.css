@@ -1,17 +1,15 @@
 /* ===============================
-   SUBPAGE.CSS – Unified Premium Edition
-   B2H Global Foundation
+   SUBPAGE.CSS - Unified for all B2H Subpages
+   Enhanced Modern Glass + Glow Edition
 =============================== */
 
-/* ============== GLOBAL ============== */
+/* ================= GLOBAL ================= */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  color: #eaeaea;
-  background:
-    radial-gradient(circle at top, rgba(124,252,0,0.08), transparent 40%),
-    #0b0b0b;
+  color: #eee;
+  background: radial-gradient(circle at top, #111 0%, #0a0a0a 45%, #050505 100%);
   line-height: 1.7;
   scroll-behavior: smooth;
 }
@@ -19,10 +17,10 @@ body {
 a { text-decoration: none; color: inherit; }
 a:hover { color: #7CFC00; }
 
-/* ============== GLASS CONTAINER ============== */
+/* ================= GLASS CONTAINER ================= */
 .glass-container {
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 30px auto;
   padding: 24px;
   backdrop-filter: blur(14px);
   background: linear-gradient(
@@ -32,18 +30,79 @@ a:hover { color: #7CFC00; }
   );
   border-radius: 16px;
   box-shadow:
-    0 0 40px rgba(0,0,0,0.6),
-    inset 0 0 40px rgba(124,252,0,0.05);
+    0 0 40px rgba(124,252,0,0.05),
+    inset 0 0 20px rgba(255,255,255,0.03);
 }
 
-/* ============== HERO ============== */
+/* ================= NAVIGATION ================= */
+.site-nav {
+  width: 100%;
+  background: rgba(8,8,8,0.92);
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  border-bottom: 1px solid #222;
+  backdrop-filter: blur(10px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px;
+}
+
+.nav-logo a {
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #7CFC00;
+  text-shadow: 0 0 10px #7CFC00;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links li a {
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #7CFC00;
+  transition: width 0.3s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+.nav-links li a.active {
+  color: #7CFC00;
+}
+
+/* ================= HERO ================= */
 .page-hero {
   text-align: center;
-  padding: 60px 20px;
-  margin-bottom: 40px;
+  padding: 60px 20px 40px;
+  margin-bottom: 20px;
   opacity: 0;
-  transform: translateY(35px);
-  transition: all 0.9s ease;
+  transform: translateY(30px);
+  transition: all 0.9s ease-out;
 }
 
 .page-hero.visible {
@@ -55,62 +114,63 @@ a:hover { color: #7CFC00; }
   font-size: 2.9rem;
   color: #7CFC00;
   text-shadow:
-    0 0 14px rgba(124,252,0,0.9),
-    0 0 40px rgba(124,252,0,0.4);
-  margin-bottom: 14px;
+    0 0 12px #7CFC00,
+    0 0 26px rgba(124,252,0,0.7);
+  margin-bottom: 12px;
 }
 
 .page-hero .subtitle {
   font-size: 1.15rem;
-  color: #cfcfcf;
-  max-width: 760px;
-  margin: 0 auto;
+  color: #ccc;
+  max-width: 800px;
+  margin: 0 auto 24px;
 }
 
-/* ============== BUTTONS ============== */
+/* ================= BUTTONS ================= */
 .hero-actions a,
-.hero-buttons a,
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.donate,
+.whitepaper {
   display: inline-block;
-  margin: 8px;
-  padding: 12px 22px;
+  margin: 6px 8px;
+  padding: 11px 20px;
   border-radius: 10px;
   font-weight: 600;
-  letter-spacing: 0.4px;
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
+  transition: 0.35s;
 }
 
-.btn-primary {
+.btn-primary,
+.donate {
   background: linear-gradient(135deg, #7CFC00, #4dff4d);
   color: #0a0a0a;
+  box-shadow: 0 0 14px rgba(124,252,0,0.35);
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.donate:hover {
   transform: translateY(-2px);
-  box-shadow:
-    0 0 18px rgba(124,252,0,0.9),
-    0 0 50px rgba(124,252,0,0.4);
+  box-shadow: 0 0 22px rgba(124,252,0,0.8);
 }
 
-.btn-secondary {
-  background: rgba(30,30,30,0.8);
+.btn-secondary,
+.whitepaper {
+  background: rgba(30,30,30,0.85);
   color: #eee;
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
-.btn-secondary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 14px rgba(124,252,0,0.6);
+.btn-secondary:hover,
+.whitepaper:hover {
+  box-shadow: 0 0 14px rgba(124,252,0,0.4);
 }
 
-/* ============== SECTIONS ============== */
+/* ================= SECTIONS ================= */
 .section {
-  padding: 45px 20px;
+  padding: 40px 10px;
   opacity: 0;
-  transform: translateY(35px);
-  transition: all 0.9s ease;
+  transform: translateY(26px);
+  transition: all 0.8s ease-out;
 }
 
 .section.visible {
@@ -118,115 +178,125 @@ a:hover { color: #7CFC00; }
   transform: translateY(0);
 }
 
-/* ============== CONTENT BOXES ============== */
+/* ================= CONTENT BOXES ================= */
 .wp-section {
-  margin-bottom: 34px;
-  padding: 26px 28px;
+  margin-bottom: 32px;
+  padding: 26px 26px;
   border-radius: 16px;
   position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(22,22,22,0.85),
-    rgba(12,12,12,0.7)
-  );
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
   box-shadow:
-    0 0 25px rgba(0,0,0,0.7),
-    inset 0 0 30px rgba(124,252,0,0.05);
-  transition: all 0.4s ease;
+    0 0 20px rgba(124,252,0,0.08),
+    inset 0 0 12px rgba(255,255,255,0.02);
+  opacity: 1; /* 🔑 FIX for White Paper */
 }
 
-/* Glow aura */
 .wp-section::before {
   content: "";
   position: absolute;
-  inset: -1px;
-  border-radius: 18px;
+  inset: 0;
+  border-radius: 16px;
   background: linear-gradient(
     120deg,
     transparent,
-    rgba(124,252,0,0.15),
+    rgba(124,252,0,0.12),
     transparent
   );
   opacity: 0;
-  transition: 0.4s;
-  pointer-events: none;
-}
-
-.wp-section:hover {
-  transform: translateY(-4px);
-  box-shadow:
-    0 0 35px rgba(124,252,0,0.35),
-    inset 0 0 40px rgba(124,252,0,0.08);
+  transition: opacity 0.4s;
 }
 
 .wp-section:hover::before {
   opacity: 1;
 }
 
-/* ============== TITLES ============== */
+.section.light .wp-section {
+  background: rgba(255,255,255,0.06);
+}
+
+/* ================= TITLES ================= */
 .section-title {
   font-size: 1.85rem;
   color: #7CFC00;
+  text-shadow: 0 0 10px #7CFC00;
   margin-bottom: 14px;
-  text-shadow: 0 0 10px rgba(124,252,0,0.8);
 }
 
-/* ============== TEXT & LISTS ============== */
 .wp-section p,
 .wp-section li {
-  font-size: 1.02rem;
+  font-size: 1rem;
   color: #ddd;
-  transition: color 0.3s ease;
-}
-
-.wp-section:hover p,
-.wp-section:hover li {
-  color: #f1fff1;
 }
 
 .wp-section ul {
   padding-left: 22px;
 }
 
-/* Highlighted box */
+/* ================= HIGHLIGHT ================= */
 .wp-section.highlight {
-  background: linear-gradient(
-    180deg,
-    rgba(124,252,0,0.12),
-    rgba(20,20,20,0.8)
-  );
+  background: rgba(124,252,0,0.1);
   border-left: 4px solid #7CFC00;
+  box-shadow: 0 0 18px rgba(124,252,0,0.35);
 }
 
-/* ============== DIVIDER ============== */
+/* ================= DIVIDER ================= */
 .section-divider {
   border: 0;
-  height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(124,252,0,0.5),
-    transparent
-  );
+  border-top: 1px solid rgba(255,255,255,0.12);
   margin: 40px 0;
 }
 
-/* ============== FOOTER ============== */
+/* ================= BACK BUTTON ================= */
+.glass-back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 11px 18px;
+  background: rgba(30,30,30,0.85);
+  border-radius: 10px;
+  transition: 0.35s;
+}
+
+.glass-back:hover {
+  box-shadow: 0 0 16px rgba(124,252,0,0.6);
+}
+
+/* ================= FOOTER ================= */
 .site-footer {
-  background: rgba(8,8,8,0.95);
-  padding: 28px 20px;
+  background: rgba(8,8,8,0.96);
+  padding: 30px 20px;
   text-align: center;
   margin-top: 60px;
-  box-shadow: inset 0 0 30px rgba(124,252,0,0.04);
 }
 
-.site-footer a:hover {
+.site-footer .footer-links a {
+  margin: 0 10px;
+  font-weight: 600;
+}
+
+.site-footer .footer-links a:hover {
   color: #7CFC00;
-  text-shadow: 0 0 8px rgba(124,252,0,0.7);
 }
 
-/* ============== RESPONSIVE ============== */
+.site-footer .footer-bottom p {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 14px;
+}
+
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .page-hero h1 { font-size: 2.1rem; }
-  .wp-section { padding: 22px; }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .page-hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .wp-section {
+    padding: 20px;
+  }
 }
