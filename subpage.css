@@ -1,6 +1,6 @@
 /* ===============================
-   SUBPAGE.CSS - Unified for all B2H Subpages
-   Enhanced Modern Glass + Glow Edition
+   SUBPAGE.CSS - Modern Unified for all B2H Subpages
+   Author: B2H Project
 =============================== */
 
 /* ================= GLOBAL ================= */
@@ -9,294 +9,259 @@ body {
   margin: 0;
   padding: 0;
   color: #eee;
-  background: radial-gradient(circle at top, #111 0%, #0a0a0a 45%, #050505 100%);
-  line-height: 1.7;
+  background: linear-gradient(160deg, #0c0c0c 0%, #050505 100%);
+  line-height: 1.6;
   scroll-behavior: smooth;
 }
 
-a { text-decoration: none; color: inherit; }
+a { text-decoration: none; color: inherit; transition: 0.3s ease; }
 a:hover { color: #7CFC00; }
 
 /* ================= GLASS CONTAINER ================= */
 .glass-container {
   max-width: 1100px;
-  margin: 30px auto;
-  padding: 24px;
+  margin: 0 auto;
+  padding: 25px;
   backdrop-filter: blur(14px);
-  background: linear-gradient(
-    180deg,
-    rgba(20,20,20,0.75),
-    rgba(10,10,10,0.65)
-  );
-  border-radius: 16px;
-  box-shadow:
-    0 0 40px rgba(124,252,0,0.05),
-    inset 0 0 20px rgba(255,255,255,0.03);
+  background: rgba(20, 20, 20, 0.6);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
 }
 
 /* ================= NAVIGATION ================= */
-.site-nav {
+.site-nav, .top-nav {
   width: 100%;
-  background: rgba(8,8,8,0.92);
+  background: rgba(10,10,10,0.9);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
   position: sticky;
   top: 0;
   z-index: 200;
   border-bottom: 1px solid #222;
-  backdrop-filter: blur(10px);
 }
 
-.nav-container {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 24px;
-}
-
-.nav-logo a {
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #7CFC00;
-  text-shadow: 0 0 10px #7CFC00;
-}
-
-.nav-links {
+.site-nav .nav-links, .top-nav {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 18px;
 }
 
-.nav-links li a {
+.nav-links li a, .top-nav a {
+  color: #eee;
   font-weight: 600;
-  position: relative;
-  transition: 0.3s;
 }
 
-.nav-links li a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background: #7CFC00;
-  transition: width 0.3s;
-}
-
-.nav-links li a:hover::after,
-.nav-links li a.active::after {
-  width: 100%;
-}
-
-.nav-links li a.active {
+.nav-links li a:hover, .top-nav a:hover, .nav-links li a.active, .top-nav a.active {
   color: #7CFC00;
+  text-shadow: 0 0 10px #7CFC00;
 }
 
 /* ================= HERO ================= */
 .page-hero {
   text-align: center;
-  padding: 60px 20px 40px;
-  margin-bottom: 20px;
+  padding: 60px 20px;
+  margin-bottom: 40px;
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.9s ease-out;
+  transition: all 0.8s ease-out;
+  position: relative;
 }
 
-.page-hero.visible {
-  opacity: 1;
-  transform: translateY(0);
+.page-hero::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(124,252,0,0.15) 0%, transparent 70%);
+  z-index: -1;
+  border-radius: 20px;
 }
+
+.page-hero.visible { opacity: 1; transform: translateY(0); }
 
 .page-hero h1 {
-  font-size: 2.9rem;
+  font-size: 3rem;
   color: #7CFC00;
-  text-shadow:
-    0 0 12px #7CFC00,
-    0 0 26px rgba(124,252,0,0.7);
+  text-shadow: 0 0 12px #7CFC00, 0 0 30px #0f0;
   margin-bottom: 12px;
 }
 
 .page-hero .subtitle {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   color: #ccc;
-  max-width: 800px;
-  margin: 0 auto 24px;
+  margin-bottom: 25px;
+  animation: subtitleFade 1s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes subtitleFade {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* ================= BUTTONS ================= */
-.hero-actions a,
-.btn-primary,
-.btn-secondary,
-.donate,
-.whitepaper {
+.hero-actions a, .hero-buttons a, .btn-primary, .btn-secondary, .donate {
   display: inline-block;
-  margin: 6px 8px;
-  padding: 11px 20px;
+  margin: 5px 10px;
+  padding: 12px 20px;
   border-radius: 10px;
   font-weight: 600;
-  transition: 0.35s;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.btn-primary,
-.donate {
-  background: linear-gradient(135deg, #7CFC00, #4dff4d);
-  color: #0a0a0a;
-  box-shadow: 0 0 14px rgba(124,252,0,0.35);
+.btn-primary, .donate { 
+  background: #7CFC00; 
+  color: #0c0c0c;
 }
 
-.btn-primary:hover,
-.donate:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 0 22px rgba(124,252,0,0.8);
+.btn-primary:hover, .donate:hover {
+  box-shadow: 0 0 20px #7CFC00, 0 0 40px #0f0;
+  transform: scale(1.05);
 }
 
-.btn-secondary,
-.whitepaper {
-  background: rgba(30,30,30,0.85);
-  color: #eee;
-  border: 1px solid rgba(255,255,255,0.08);
+.btn-secondary, .whitepaper { 
+  background: rgba(30,30,30,0.85); 
+  color: #eee; 
 }
 
-.btn-secondary:hover,
-.whitepaper:hover {
-  box-shadow: 0 0 14px rgba(124,252,0,0.4);
+.btn-secondary:hover, .whitepaper:hover {
+  box-shadow: 0 0 12px #7CFC00;
+  transform: scale(1.03);
 }
 
 /* ================= SECTIONS ================= */
 .section {
-  padding: 40px 10px;
+  padding: 45px 25px;
   opacity: 0;
-  transform: translateY(26px);
+  transform: translateY(30px);
   transition: all 0.8s ease-out;
 }
 
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.section.visible { opacity: 1; transform: translateY(0); }
 
-/* ================= CONTENT BOXES ================= */
 .wp-section {
-  margin-bottom: 32px;
-  padding: 26px 26px;
-  border-radius: 16px;
+  margin-bottom: 35px;
+  padding: 25px;
+  border-radius: 14px;
   position: relative;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-  box-shadow:
-    0 0 20px rgba(124,252,0,0.08),
-    inset 0 0 12px rgba(255,255,255,0.02);
-  opacity: 1; /* 🔑 FIX for White Paper */
+  background: rgba(25,25,25,0.5);
+  border: 1px solid rgba(124,252,0,0.15);
+  box-shadow: 0 4px 20px rgba(124,252,0,0.15);
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.wp-section::before {
-  content: "";
+.wp-section::after {
+  content: '';
   position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(124,252,0,0.12),
-    transparent
-  );
-  opacity: 0;
-  transition: opacity 0.4s;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(to right, rgba(124,252,0,0.3), transparent, rgba(124,252,0,0.3));
+  border-radius: 8px;
 }
 
-.wp-section:hover::before {
-  opacity: 1;
+.wp-section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 40px rgba(124,252,0,0.35);
 }
 
-.section.light .wp-section {
-  background: rgba(255,255,255,0.06);
-}
+/* Alternating section background */
+.section.light .wp-section, .wp-section.light { background: rgba(255,255,255,0.05); }
 
-/* ================= TITLES ================= */
+/* Section titles */
 .section-title {
   font-size: 1.85rem;
   color: #7CFC00;
   text-shadow: 0 0 10px #7CFC00;
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 }
 
-.wp-section p,
-.wp-section li {
-  font-size: 1rem;
-  color: #ddd;
-}
-
+/* Lists */
 .wp-section ul {
-  padding-left: 22px;
+  padding-left: 25px;
+  margin-bottom: 12px;
 }
 
-/* ================= HIGHLIGHT ================= */
+.wp-section li {
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.wp-section li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #7CFC00;
+  text-shadow: 0 0 6px #7CFC00;
+}
+
+/* Highlight boxes */
 .wp-section.highlight {
-  background: rgba(124,252,0,0.1);
   border-left: 4px solid #7CFC00;
-  box-shadow: 0 0 18px rgba(124,252,0,0.35);
+  box-shadow: 0 0 20px rgba(124,252,0,0.3);
+  background: rgba(124,252,0,0.08);
 }
 
-/* ================= DIVIDER ================= */
+/* ================= HR / DIVIDER ================= */
 .section-divider {
   border: 0;
-  border-top: 1px solid rgba(255,255,255,0.12);
-  margin: 40px 0;
+  border-top: 1px solid #222;
+  margin: 35px 0;
 }
 
 /* ================= BACK BUTTON ================= */
 .glass-back {
   display: inline-block;
-  margin-top: 30px;
-  padding: 11px 18px;
+  margin-top: 20px;
+  padding: 12px 18px;
   background: rgba(30,30,30,0.85);
+  color: #fff;
   border-radius: 10px;
-  transition: 0.35s;
+  transition: 0.3s;
 }
 
-.glass-back:hover {
-  box-shadow: 0 0 16px rgba(124,252,0,0.6);
-}
+.glass-back:hover { box-shadow: 0 0 18px #7CFC00; transform: scale(1.03); }
 
 /* ================= FOOTER ================= */
 .site-footer {
-  background: rgba(8,8,8,0.96);
+  background: rgba(10,10,10,0.95);
   padding: 30px 20px;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 50px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
 }
 
 .site-footer .footer-links a {
-  margin: 0 10px;
+  margin: 0 12px;
+  color: #eee;
   font-weight: 600;
+  transition: 0.3s ease;
 }
 
-.site-footer .footer-links a:hover {
-  color: #7CFC00;
+.site-footer .footer-links a:hover { 
+  color: #7CFC00; 
+  text-shadow: 0 0 8px #7CFC00;
 }
 
 .site-footer .footer-bottom p {
-  font-size: 0.85rem;
-  color: #999;
-  margin-top: 14px;
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 12px;
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-
-  .page-hero h1 {
-    font-size: 2.1rem;
-  }
-
-  .wp-section {
-    padding: 20px;
-  }
+  .site-nav .nav-links, .top-nav { flex-direction: column; gap: 10px; }
+  .page-hero h1 { font-size: 2rem; }
+  .page-hero .subtitle { font-size: 1.05rem; }
+  .wp-section { padding: 18px; }
 }
