@@ -1,5 +1,6 @@
 /* ========================================
    B2H Global Foundation — Refined Subpage CSS
+   Applies to all subpages (About → Vision)
    ======================================== */
 
 /* ---------------- BODY & TYPOGRAPHY ---------------- */
@@ -9,49 +10,36 @@ body {
     color: #f4f4f9;
     margin: 0;
     padding: 0;
-    line-height: 1.75;
-    transition: background 0.5s;
+    line-height: 1.7;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4 {
     font-weight: 800;
     color: #00ff95;
-    text-shadow: 0 0 8px #00ff95, 0 0 12px #00ffc6;
     margin-top: 0;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(0,255,149,0.6);
 }
 
+/* Paragraphs and lists */
 p, li {
     font-weight: 400;
-    color: #d8f4e3;
-    font-size: 1.05rem;
-    line-height: 1.8;
-    transition: color 0.3s ease;
-}
-
-p:hover {
-    color: #00ffcc;
+    color: #ddd;
+    opacity: 0;        /* for fade-in */
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
 }
 
 ul {
-    padding-left: 1.8rem;
+    padding-left: 1.5rem;
 }
 
-ul li {
-    margin-bottom: 0.8rem;
-    position: relative;
-    padding-left: 0.8rem;
+li {
+    margin-bottom: 0.5rem;
 }
 
-ul li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #00ff95;
-    font-size: 1.2rem;
-}
-
-/* ---------------- LINKS & BUTTONS ---------------- */
+/* Links */
 a {
     text-decoration: none;
     color: #00ff95;
@@ -60,88 +48,64 @@ a {
 }
 
 a:hover {
-    color: #00ffc6;
-    text-shadow: 0 0 6px #00ffc6;
+    color: #00ffcc;
+    text-shadow: 0 0 5px #00ff95;
 }
 
-/* Hero / page buttons */
-.hero-actions a,
-.glass-container .hero-actions a,
-.page-hero a {
-    display: inline-block;
-    margin: 0.5rem;
-    padding: 0.7rem 1.5rem;
-    border-radius: 10px;
-    border: 2px solid #00ff95;
-    background: rgba(0,255,149,0.1);
-    color: #00ff95;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 0 8px #00ff9550, 0 0 16px #00ff9520;
-    transition: all 0.3s ease;
-}
-
-.hero-actions a:hover,
-.glass-container .hero-actions a:hover {
-    background: #00ff95;
-    color: #0e0f12;
-    transform: translateY(-2px);
-    box-shadow: 0 0 12px #00ff9580, 0 0 24px #00ff9540;
-}
-
-/* ---------------- GLASS CONTAINER ---------------- */
+/* ---------------- GLASS CONTAINER & HERO ---------------- */
 .glass-container {
-    padding: 2.5rem;
-    background: rgba(15,16,18,0.85);
-    backdrop-filter: blur(14px) saturate(180%);
-    border-radius: 1.2rem;
+    padding: 2rem;
+    background: rgba(15, 16, 18, 0.75);
+    backdrop-filter: blur(12px) saturate(180%);
+    border-radius: 1rem;
     margin: 2rem auto;
     max-width: 1100px;
-    box-shadow: 0 12px 28px rgba(0,255,149,0.3);
-    transition: all 0.4s ease;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 
-.glass-container:hover {
-    box-shadow: 0 16px 32px rgba(0,255,149,0.5);
-}
-
-/* ---------------- PAGE HERO ---------------- */
 .page-hero {
     text-align: center;
-    margin-bottom: 2.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
-}
-
-.page-hero.visible {
-    opacity: 1;
-    transform: translateY(0);
+    margin-bottom: 2rem;
 }
 
 .page-hero h1 {
     font-size: 3rem;
-    text-shadow: 0 0 10px #00ff95, 0 0 20px #00ff95;
+    color: #00ff95;
 }
 
 .subtitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #a0f0c0;
-    margin-bottom: 1.2rem;
-    text-shadow: 0 0 6px #00ff9530;
+    margin-bottom: 1rem;
+}
+
+/* Hero buttons */
+.hero-actions a {
+    display: inline-block;
+    margin: 0.5rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    border: 2px solid #00ff95;
+    background: transparent;
+    color: #00ff95;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.hero-actions a:hover {
+    background: #00ff95;
+    color: #0e0f12;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff95;
 }
 
 /* ---------------- SECTIONS ---------------- */
 .section {
-    padding: 2.2rem 1.8rem;
-    margin-bottom: 2.5rem;
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
     border-left: 5px solid #00ff95;
-    background: rgba(20, 21, 25, 0.9);
-    border-radius: 1rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
+    background: rgba(20, 21, 25, 0.85);
+    border-radius: 0.8rem;
 }
 
 .section.light {
@@ -149,61 +113,48 @@ a:hover {
     border-left-color: #00ffd1;
 }
 
-.section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* Section titles */
 .section h2.section-title {
-    font-size: 2rem;
-    color: #00ff95;
     margin-bottom: 1rem;
-    text-shadow: 0 0 10px #00ff9540;
+    color: #00ff95;
 }
 
+/* Highlight sections */
 .wp-section.highlight {
     background: rgba(0, 255, 149, 0.1);
     border-left-color: #00ff95;
     padding: 2rem;
     border-radius: 1rem;
-    box-shadow: 0 0 12px #00ff9520 inset;
 }
 
-/* ---------------- DIVIDERS ---------------- */
+/* Dividers */
 .section-divider {
     border: none;
     height: 1px;
     margin: 2rem 0;
-    background: linear-gradient(to right, rgba(0,255,149,0), rgba(0,255,149,0.6), rgba(0,255,149,0));
+    background: linear-gradient(to right, rgba(0,255,149,0), rgba(0,255,149,0.5), rgba(0,255,149,0));
 }
 
-/* ---------------- GLASS BACK BUTTON ---------------- */
-.glass-back {
-    display: inline-block;
-    margin-top: 1.5rem;
-    padding: 0.6rem 1.3rem;
-    background: rgba(0,255,149,0.1);
-    color: #00ff95;
-    border-radius: 10px;
-    border: 1px solid #00ff95;
+/* Buttons inside content */
+.glass-back, .btn, .hero-actions a {
+    cursor: pointer;
     transition: all 0.3s ease;
-    font-weight: 600;
 }
 
-.glass-back:hover {
+.glass-back:hover, .btn:hover {
     background: #00ff95;
     color: #0e0f12;
-    transform: translateY(-2px);
-    box-shadow: 0 0 12px #00ff9580;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff95;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* Footer */
 .site-footer {
     background: #0b0c0f;
     color: #bbb;
     padding: 2rem 1rem;
     text-align: center;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .site-footer .footer-links {
@@ -213,12 +164,30 @@ a:hover {
 .site-footer .footer-links a {
     margin: 0 0.6rem;
     color: #00ff95;
-    transition: all 0.3s ease;
 }
 
 .site-footer .footer-links a:hover {
     color: #00ffd1;
-    text-shadow: 0 0 6px #00ff95;
+}
+
+/* ---------------- FADE-IN ANIMATION FOR ALL ---------------- */
+.page-hero, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.page-hero.visible,
+p.visible,
+li.visible,
+h1.visible,
+h2.visible,
+h3.visible,
+h4.visible,
+.hero-actions a.visible,
+.glass-back.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ---------------- RESPONSIVE ---------------- */
