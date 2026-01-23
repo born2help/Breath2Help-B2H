@@ -3,27 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>B2H Global Foundation — Subpage</title>
+  <title>B2H Global Foundation — About</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="subpage.css"> <!-- Refined CSS file -->
+  <link rel="stylesheet" href="subpage.css">
 </head>
-
 <body class="b2h-subpage">
 
-    <!-- ================= MAIN GLASS CONTAINER ================= -->
+  <!-- ================= MAIN GLASS CONTAINER ================= -->
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
     <section class="page-hero">
-      <h1>B2H Global Foundation</h1>
-      <p class="subtitle">Built for Humanity • Driven by Purpose • Guided by Ethics</p>
+      <h1 class="green-glow">B2H Global Foundation</h1>
+      <p class="subtitle glow-text">Built for Humanity • Driven by Purpose • Guided by Ethics</p>
 
       <div class="hero-actions">
-        <a href="donate.html">Donate Now</a>
-        <a href="white-paper.html">Read White Paper</a>
-        <a href="burn-ethics.html">Burn & Ethics</a>
-        <a href="founder-continuity.html">Founder Continuity</a>
-        <a href="index.html" class="hero-home">← Back Home</a>
+        <a href="donate.html" class="btn-glow">Donate Now</a>
+        <a href="white-paper.html" class="btn-glow">Read White Paper</a>
+        <a href="burn-ethics.html" class="btn-glow">Burn & Ethics</a>
+        <a href="founder-continuity.html" class="btn-glow">Founder Continuity</a>
+        <a href="index.html" class="hero-home btn-glow">← Back Home</a>
       </div>
 
       <hr class="section-divider">
@@ -31,27 +30,24 @@
 
     <!-- ================= PAGE CONTENT ================= -->
     <section class="section">
-      
-      <!-- Who We Are -->
+
       <div class="wp-section">
-        <h2 class="section-title">Who We Are</h2>
+        <h2 class="section-title green-glow">Who We Are</h2>
         <p>
           <strong>B2H</strong> (Burn to Help | Born for Humanity) is a humanitarian-first foundation.
-          We convert every effort into measurable, sustainable aid. Ethics, responsibility, and long-term impact guide all our decisions.
+          Every effort is converted into measurable, sustainable aid. Ethics, responsibility, and long-term impact guide all decisions.
         </p>
       </div>
 
       <hr class="section-divider">
 
-      <!-- Founder Quote -->
-      <blockquote>
+      <blockquote class="glow-quote">
         "Technology should serve humanity without compromising ethics."
         <br>— <strong>Mubashir Munnawar</strong>
       </blockquote>
 
-      <!-- Our Vision -->
       <div class="wp-section">
-        <h2 class="section-title">Our Vision</h2>
+        <h2 class="section-title green-glow">Our Vision</h2>
         <p>
           A world where relief, dignity, education, and care persist regardless of wealth or economic conditions.
           Systems exist not just for the present but for generations to come.
@@ -60,9 +56,8 @@
 
       <hr class="section-divider">
 
-      <!-- Our Mission -->
       <div class="wp-section">
-        <h2 class="section-title">Our Mission</h2>
+        <h2 class="section-title green-glow">Our Mission</h2>
         <p>
           We transform contributions into sustainable mechanisms that continuously serve humanity,
           creating a true <strong>Sadaqah Jariyah</strong> for participants and beneficiaries alike.
@@ -71,9 +66,8 @@
 
       <hr class="section-divider">
 
-      <!-- Core Values -->
       <div class="wp-section highlight">
-        <h2 class="section-title">Core Values</h2>
+        <h2 class="section-title green-glow">Core Values</h2>
         <ul>
           <li><strong>Integrity</strong> — over shortcuts or speed</li>
           <li><strong>Trust</strong> — over hype or trends</li>
@@ -83,23 +77,21 @@
         </ul>
       </div>
 
-      <!-- Info Box Example -->
-      <div class="info-box">
+      <div class="info-box glow-box">
         <strong>Impact:</strong> Over 500,000 people reached this year through humanitarian programs.
       </div>
 
       <hr class="section-divider">
 
-      <!-- Founder’s Intention -->
       <div class="wp-section">
-        <h2 class="section-title">Founder’s Intention</h2>
+        <h2 class="section-title green-glow">Founder’s Intention</h2>
         <p>
           B2H was founded by <strong>Mubashir Munnawar</strong> with a single principle: technology should serve humanity without personal gain.
           Every decision is made with patience, accountability, and full ethical responsibility.
         </p>
       </div>
 
-      <a href="index.html" class="glass-back">← Back Home</a>
+      <a href="index.html" class="glass-back btn-glow">← Back Home</a>
     </section>
 
   </section>
@@ -120,22 +112,24 @@
   </footer>
 
   <!-- ================= FADE-IN SCRIPT ================= -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll('.page-hero, .section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(
+        '.page-hero, .section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back, blockquote, .info-box'
+      );
 
-    const observer = new IntersectionObserver((entries, observer) => {
+      const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-            if(entry.isIntersecting){
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
+          if(entry.isIntersecting){
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
         });
-    }, { threshold: 0.2 });
+      }, { threshold: 0.2 });
 
-    elements.forEach(el => observer.observe(el));
-});
-</script>
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
 
 </body>
 </html>
