@@ -14,11 +14,71 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 
-  </head>
+  <style>
+    /* ================= HERO SUBPAGES BUTTONS ================= */
+    .hero-subpages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .hero-subpages a {
+      padding: 8px 18px;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.88rem;
+      font-family: 'Montserrat', sans-serif;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: transform 0.25s ease, opacity 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .hero-subpages a:hover {
+      transform: translateY(-3px);
+      opacity: 0.9;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    }
+
+    /* Individual colors for buttons */
+    .btn-about { background: #14b8a6; }
+    .btn-white-paper { background: #3b82f6; }
+    .btn-tokenomics { background: #f59e0b; }
+    .btn-transparency { background: #10b981; }
+    .btn-donate { background: #ef4444; }
+    .btn-constitution { background: #8b5cf6; }
+    .btn-burn-ethics { background: #06b6d4; }
+    .btn-founder-continuity { background: #f43f5e; }
+    .btn-participation-safeguard { background: #eab308; }
+    .btn-disclaimer { background: #64748b; }
+    .btn-vision { background: #0ea5e9; }
+
+    /* Responsive adjustments */
+    @media screen and (max-width: 768px) {
+      .hero-subpages {
+        gap: 8px;
+        margin-top: 15px;
+      }
+      .hero-subpages a {
+        padding: 7px 14px;
+        font-size: 0.8rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .hero-subpages a {
+        padding: 6px 12px;
+        font-size: 0.75rem;
+      }
+    }
+  </style>
+</head>
 <body>
 
 <!-- ================= HERO SECTION ================= -->
- <section class="hero" id="hero">
+<section class="hero" id="hero">
   <div id="particles-js" class="bg-particles"></div>
 
   <!-- Logos -->
@@ -44,15 +104,21 @@
       Join us in building a sustainable humanitarian impact. 
       Your help today shapes a brighter tomorrow.
     </p>
-  </div>
 
-  <!-- Hero Buttons -->
-  <div class="hero-actions">
-    <a href="donate.html" class="donate">Donate</a>
-    <a href="tokenomics.html" class="tokenomics">Tokenomics</a>
-    <a href="about.html" class="about">About</a>
-    <a href="white-paper.html" class="white-paper">White Paper</a>
-    <a href="transparency.html" class="transparency">Transparency</a>
+    <!-- ================= HERO SUBPAGES BUTTONS ================= -->
+    <div class="hero-subpages">
+      <a href="about.html" class="btn-about">About</a>
+      <a href="white-paper.html" class="btn-white-paper">White Paper</a>
+      <a href="tokenomics.html" class="btn-tokenomics">Tokenomics</a>
+      <a href="transparency.html" class="btn-transparency">Transparency</a>
+      <a href="donate.html" class="btn-donate">Donate</a>
+      <a href="constitution.html" class="btn-constitution">Constitution</a>
+      <a href="burn-ethics.html" class="btn-burn-ethics">Burn & Ethics</a>
+      <a href="founder-continuity.html" class="btn-founder-continuity">Founder Continuity</a>
+      <a href="participation-safeguard.html" class="btn-participation-safeguard">Participation Safeguard</a>
+      <a href="disclaimer.html" class="btn-disclaimer">Disclaimer</a>
+      <a href="vision.html" class="btn-vision">Vision</a>
+    </div>
   </div>
 </section>
   
