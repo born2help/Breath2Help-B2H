@@ -1395,6 +1395,58 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ================= HERO BUTTONS VIBRANT & GLOW ================= */
+.hero-subpages a {
+  color: #000; /* default text black for better readability */
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Glow and lift effect on hover */
+.hero-subpages a:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 12px rgba(255,255,255,0.4);
+}
+
+/* Vibrant colors for buttons */
+.hero-subpages a.btn-about { background: #1E90FF; }           /* Dodger Blue */
+.hero-subpages a.btn-white-paper { background: #F5F5F5; color: #000; } /* Bright Silver */
+.hero-subpages a.btn-tokenomics { background: #00CED1; }      /* Dark Turquoise */
+.hero-subpages a.btn-transparency { background: #40E0D0; }    /* Turquoise */
+.hero-subpages a.btn-donate { background: #FF4500; color: #fff; } /* Orange Red */
+.hero-subpages a.btn-constitution { background: #FFD700; color: #000; } /* Gold */
+.hero-subpages a.btn-burn-ethics { background: #FF8C00; }      /* Dark Orange */
+.hero-subpages a.btn-founder-continuity { background: #FF69B4; } /* Hot Pink */
+.hero-subpages a.btn-participation-safeguard { background: #32CD32; } /* Lime Green */
+.hero-subpages a.btn-disclaimer { background: #DC143C; color: #fff; } /* Crimson */
+.hero-subpages a.btn-vision { background: #8A2BE2; }           /* Blue Violet */
+.hero-subpages a.btn-stress-test { background: #FF6347; }      /* Tomato */
+
+/* Optional subtle shine animation */
+.hero-subpages a::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.15);
+  transform: rotate(45deg) translateX(-100%);
+  transition: all 0.7s ease;
+}
+
+.hero-subpages a:hover::before {
+  transform: rotate(45deg) translateX(100%);
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
