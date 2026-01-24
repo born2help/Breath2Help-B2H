@@ -1239,31 +1239,37 @@ img { max-width: 100%; display: block; }
   }
 }
 
- /* ================= HERO SUBPAGE BUTTONS - VIBRANT & GLOW ================= */
+/* ================= HERO SUBPAGE BUTTONS ================= */
 .hero-subpages {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
+  gap: 12px;
   margin-top: 25px;
-  z-index: 10; /* above particles */
-  position: relative;
+  position: relative; /* ensures buttons are above particles */
+  z-index: 20;       /* must be higher than particles (which are ~z-index:10) */
 }
 
 .hero-subpages a {
-  padding: 12px 20px;
+  padding: 12px 22px;
   border-radius: 28px;
   font-weight: 700;
   font-size: 15px;
   text-decoration: none;
-  color: #000; /* default black text for light buttons */
+  color: #000; /* default black for readability */
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
 }
 
-/* Micro shine animation */
+/* Hover lift & glow effect */
+.hero-subpages a:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.2) inset;
+}
+
+/* Micro shine animation on hover */
 .hero-subpages a::before {
   content: '';
   position: absolute;
@@ -1276,19 +1282,12 @@ img { max-width: 100%; display: block; }
   transition: all 0.6s ease;
   pointer-events: none;
 }
-
 .hero-subpages a:hover::before {
   left: 100%;
   top: 100%;
 }
 
-/* Hover lift & glow effect */
-.hero-subpages a:hover {
-  transform: translateY(-4px) scale(1.07);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35), 0 0 12px rgba(255,255,255,0.2) inset;
-}
-
-/* ================= INDIVIDUAL BUTTON COLORS ================= */
+/* ================= VIBRANT BUTTON COLORS ================= */
 .hero-subpages a.btn-about { background: #1e3a8a; color: #fff; }          /* Dark Blue */
 .hero-subpages a.btn-white-paper { background: #06b6d4; color: #000; }    /* Bright Cyan */
 .hero-subpages a.btn-tokenomics { background: #0ea5e9; color: #fff; }     /* Sky Blue */
@@ -1319,7 +1318,7 @@ img { max-width: 100%; display: block; }
     padding: 6px 12px;
     font-size: 0.75rem;
   }
-} 
+}
 
  /* Ensure subpage buttons are above the particles canvas */
 .hero-subpages {
