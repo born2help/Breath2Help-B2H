@@ -18,14 +18,14 @@
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
-    <section class="page-hero">
+    <section class="page-hero visible">
       <h1 class="green-glow">B2H Tokenomics</h1>
       <p class="subtitle">Designed for Responsibility — Not Speculation</p>
 
       <div class="hero-actions">
-        <a href="donate.html">Donate</a>
-        <a href="white-paper.html">Read White Paper</a>
-        <a href="index.html" class="hero-home">← Back Home</a>
+        <a href="donate.html" class="donate">Donate</a>
+        <a href="white-paper.html" class="whitepaper">Read White Paper</a>
+        <a href="index.html" class="whitepaper">← Back Home</a>
       </div>
 
       <hr class="section-divider">
@@ -40,7 +40,7 @@
           <li><strong>Token Name:</strong> B2H</li>
           <li><strong>Meaning:</strong> Burn to Help · Born for Humanity</li>
           <li><strong>Total Supply:</strong> 500,000,000,000 B2H</li>
-          <li><strong>Supply Model:</strong> Fixed — No future minting</li>
+          <li><strong>Supply Model:</strong> Permanently fixed — no future minting</li>
         </ul>
       </div>
 
@@ -49,8 +49,10 @@
       <div class="wp-section">
         <h2 class="section-title">Fixed Supply Principle</h2>
         <p>
-          B2H operates on a permanently fixed supply. No additional tokens can ever be created.
-          This prevents dilution, ensures predictability, and preserves long-term humanitarian trust.
+          B2H operates on a permanently fixed supply.
+          No additional tokens can ever be created.
+          This prevents dilution, preserves predictability,
+          and safeguards long-term humanitarian trust.
         </p>
       </div>
 
@@ -59,12 +61,13 @@
       <div class="wp-section">
         <h2 class="section-title">Burn-to-Help Mechanism</h2>
         <p>
-          The Burn-to-Help mechanism permanently removes tokens from circulation while activating
-          predefined allocations for humanitarian assistance and project sustainability.
+          The Burn-to-Help mechanism permanently removes tokens from circulation
+          while activating predefined allocations for humanitarian assistance
+          and project sustainability.
         </p>
         <p>
-          Burns are ethical actions — not financial signals. They do not promise, influence,
-          or target market value.
+          Burns are ethical actions — not financial signals.
+          They do not promise, influence, or target market value.
         </p>
       </div>
 
@@ -98,8 +101,8 @@
         <h2 class="section-title">Participation Ethics</h2>
         <p>
           Participation in B2H is value-driven, not profit-driven.
-          Engagement should reflect humanitarian intent, ethical alignment,
-          and long-term responsibility.
+          Engagement should reflect humanitarian intent,
+          ethical alignment, and long-term responsibility.
         </p>
       </div>
 
@@ -109,7 +112,8 @@
         <h2 class="section-title">Founder Stewardship</h2>
         <p>
           Stewardship authority exists solely to protect the humanitarian mission.
-          It cannot be used for personal enrichment, extraction, or speculative influence.
+          It cannot be used for personal enrichment,
+          extraction, or speculative influence.
         </p>
       </div>
 
@@ -118,8 +122,10 @@
       <div class="wp-section highlight">
         <h2 class="section-title green-glow">Risk Disclosure</h2>
         <p>
-          Participation involves risk. B2H offers no guarantees of financial outcomes,
-          asset appreciation, or liquidity. Engage only with full understanding
+          Participation involves risk.
+          B2H offers no guarantees of financial outcomes,
+          asset appreciation, or liquidity.
+          Engage only with full understanding
           of its humanitarian-first nature.
         </p>
       </div>
@@ -136,8 +142,9 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="white-paper.html">White Paper</a>
-      <a href="transparency.html">Transparency</a>
-      <a href="tokenomics.html">Tokenomics</a>
+      <a href="burn-ethics.html">Burn & Ethics</a>
+      <a href="founder-continuity.html">Founder Continuity</a>
+      <a href="tokenomics.html" class="active">Tokenomics</a>
       <a href="donate.html">Donate</a>
     </div>
     <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
@@ -146,11 +153,13 @@
   <!-- ================= FADE-IN SCRIPT ================= -->
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, h3, h4, .hero-actions a, .glass-back');
+      const elements = document.querySelectorAll(
+        '.page-hero, .section, .wp-section'
+      );
 
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
-          if(entry.isIntersecting){
+          if (entry.isIntersecting) {
             entry.target.classList.add('visible');
             observer.unobserve(entry.target);
           }
