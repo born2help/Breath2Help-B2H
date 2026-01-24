@@ -1277,62 +1277,58 @@ img { max-width: 100%; display: block; }
   z-index: 1;  /* behind everything */
 }
 
-/* ================= HERO PARTICLES LAYER FIX ================= */
-#particles-js {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none; /* particles NEVER block clicks */
-}
+/* ================= HERO SUBPAGE BUTTON MICRO ANIMATION ================= */
 
-/* ================= HERO CONTENT ABOVE PARTICLES ================= */
-.hero-content {
-  position: relative;
-  z-index: 5;
-}
-
-/* ================= SUBPAGE BUTTON STRIP ================= */
-.hero-subpages {
-  position: relative;
-  z-index: 10; /* highest layer */
-  margin-top: 30px;
-
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-}
-
-/* ================= SUBPAGE BUTTON STYLE ================= */
 .hero-subpages a {
   position: relative;
-  z-index: 11;
-  pointer-events: none;
-
-  padding: 10px 16px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.4px;
-  text-decoration: none;
-
-  border-radius: 999px;
-  background: rgba(0, 255, 198, 0.12);
-  color: #eafff9;
-
-  border: 1px solid rgba(0, 255, 198, 0.35);
-  backdrop-filter: blur(6px);
-
-  transition: all 0.3s ease;
+  overflow: hidden;
+  transform: translateY(0);
+  animation: heroFloat 6s ease-in-out infinite;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
 }
 
-/* ================= HOVER EFFECT ================= */
+/* soft breathing glow */
+.hero-subpages a::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(
+    circle at top left,
+    rgba(255,255,255,0.35),
+    transparent 60%
+  );
+  opacity: 0.35;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+/* hover effect */
 .hero-subpages a:hover {
-  transform: translateY(-2px) scale(1.05);
-  background: rgba(0, 255, 198, 0.22);
+  transform: translateY(-4px) scale(1.03);
   box-shadow:
-    0 0 10px rgba(0, 255, 198, 0.6),
-    0 0 22px rgba(0, 255, 198, 0.4);
-  color: #ffffff;
+    0 0 12px rgba(0,255,198,0.35),
+    0 0 28px rgba(0,255,198,0.15);
+}
+
+.hero-subpages a:hover::before {
+  opacity: 0.65;
+}
+
+/* click feedback */
+.hero-subpages a:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow:
+    0 0 6px rgba(0,255,198,0.25);
+}
+
+/* floating animation */
+@keyframes heroFloat {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
 }
 
   /* ================= UNIFIED CARD STYLING ================= */
