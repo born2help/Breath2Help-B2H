@@ -132,6 +132,28 @@ img { max-width: 100%; display: block; }
     margin: 0 auto 10px; /* vertical stack with spacing */
   }
 
+  /* Ensure subpage buttons are above the particles canvas */
+.hero-subpages {
+  position: relative;  /* establish stacking context */
+  z-index: 10;         /* above the particles canvas */
+}
+
+/* Also make sure hero-content stays above particles */
+.hero-content {
+  position: relative;
+  z-index: 5;  /* above particles but below buttons */
+}
+
+/* Ensure particles canvas stays behind */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  /* behind everything */
+} 
+
   /* ================= FOUNDER SECTION BEAUTIFIED (FIXED) ================= */
 .founder-section {
   background: #0f2734;
@@ -1239,110 +1261,7 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ================= HERO SUBPAGE BUTTONS ================= */
-.hero-subpages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 25px;
-  position: relative; /* ensures buttons are above particles */
-  z-index: 20;       /* must be higher than particles (which are ~z-index:10) */
-}
-
-.hero-subpages a {
-  padding: 12px 22px;
-  border-radius: 28px;
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none;
-  color: #000; /* default black for readability */
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-}
-
-/* Hover lift & glow effect */
-.hero-subpages a:hover {
-  transform: translateY(-5px) scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4), 0 0 15px rgba(255,255,255,0.2) inset;
-}
-
-/* Micro shine animation on hover */
-.hero-subpages a::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: rgba(255,255,255,0.15);
-  transform: rotate(25deg);
-  transition: all 0.6s ease;
-  pointer-events: none;
-}
-.hero-subpages a:hover::before {
-  left: 100%;
-  top: 100%;
-}
-
-/* ================= VIBRANT BUTTON COLORS ================= */
-.hero-subpages a.btn-about { background: #1e3a8a; color: #fff; }          /* Dark Blue */
-.hero-subpages a.btn-white-paper { background: #06b6d4; color: #000; }    /* Bright Cyan */
-.hero-subpages a.btn-tokenomics { background: #0ea5e9; color: #fff; }     /* Sky Blue */
-.hero-subpages a.btn-transparency { background: #dc2626; color: #fff; }   /* Red */
-.hero-subpages a.btn-donate { background: #f59e0b; color: #000; }         /* Amber */
-.hero-subpages a.btn-constitution { background: #f97316; color: #fff; }  /* Deep Orange */
-.hero-subpages a.btn-burn-ethics { background: #fde047; color: #000; }    /* Yellow */
-.hero-subpages a.btn-founder-continuity { background: #16a34a; color: #fff; } /* Green */
-.hero-subpages a.btn-participation-safeguard { background: #ef4444; color: #fff; } /* Crimson */
-.hero-subpages a.btn-disclaimer { background: #8b5cf6; color: #fff; }     /* Purple */
-.hero-subpages a.btn-vision { background: #f973d6; color: #000; }         /* Pink/Fuchsia */
-.hero-subpages a.btn-stress-test { background: #ff8c42; color: #000; }    /* Orange */
-
-/* ================= RESPONSIVE ================= */
-@media screen and (max-width: 768px) {
-  .hero-subpages {
-    gap: 10px;
-    margin-top: 15px;
-  }
-  .hero-subpages a {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero-subpages a {
-    padding: 6px 12px;
-    font-size: 0.75rem;
-  }
-}
-
- /* Ensure subpage buttons are above the particles canvas */
-.hero-subpages {
-  position: relative;  /* establish stacking context */
-  z-index: 10;         /* above the particles canvas */
-}
-
-/* Also make sure hero-content stays above particles */
-.hero-content {
-  position: relative;
-  z-index: 5;  /* above particles but below buttons */
-}
-
-/* Ensure particles canvas stays behind */
-#particles-js {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;  /* behind everything */
-} 
-
-  /* ================= UNIFIED CARD STYLING ================= */
+   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
   backdrop-filter: blur(12px);
