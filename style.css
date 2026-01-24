@@ -85,41 +85,86 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
 }
 
-/* Hero Buttons */
-.hero-actions {
+/* ================= HERO SUBPAGE BUTTONS - MODERN VIBRANT ================= */
+.hero-subpages {
   display: flex;
-  justify-content: center;
-  gap: 15px;
   flex-wrap: wrap;
-  margin-top: 30px; /* enough space from content */
-  z-index:2;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 25px;
+  z-index: 10; /* above particles */
   position: relative;
 }
 
-.hero-actions a {
-  padding: 12px 25px;
-  border-radius: 8px;
+.hero-subpages a {
+  padding: 12px 20px;
+  border-radius: 28px;
   font-weight: 700;
-  transition: all 0.3s;
+  font-size: 15px;
+  text-decoration: none;
+  color: #000; /* default text black */
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.hero-actions a.donate { background: #22c55e; color: #fff; }
-.hero-actions a.tokenomics { background: #3b82f6; color: #fff; }
-.hero-actions a.about { background: #f59e0b; color: #fff; }
-.hero-actions a.white-paper { background: #ef4444; color: #fff; }
-.hero-actions a.transparency { background: #10b981; color: #fff; }
-
-.hero-actions a:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 12px rgba(34,197,94,0.4);
+/* Micro shine animation */
+.hero-subpages a::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.15);
+  transform: rotate(25deg);
+  transition: all 0.6s ease;
+  pointer-events: none;
 }
+
+.hero-subpages a:hover::before {
+  left: 100%;
+  top: 100%;
+}
+
+/* Hover effect */
+.hero-subpages a:hover {
+  transform: translateY(-4px) scale(1.07);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35), 0 0 12px rgba(255,255,255,0.2) inset;
+}
+
+/* Individual button colors with readable text */
+.hero-subpages a.btn-about { background: #1e3a8a; color: #fff; }          /* dark blue */
+.hero-subpages a.btn-white-paper { background: #f3f4f6; color: #000; }    /* light silver */
+.hero-subpages a.btn-tokenomics { background: #06b6d4; color: #000; }     /* cyan */
+.hero-subpages a.btn-transparency { background: #0ea5e9; color: #fff; }   /* sky blue */
+.hero-subpages a.btn-donate { background: #dc2626; color: #fff; }         /* red */
+.hero-subpages a.btn-constitution { background: #f59e0b; color: #000; }  /* amber */
+.hero-subpages a.btn-burn-ethics { background: #f97316; color: #fff; }    /* deep orange */
+.hero-subpages a.btn-founder-continuity { background: #fde047; color: #000; } /* yellow */
+.hero-subpages a.btn-participation-safeguard { background: #16a34a; color: #fff; } /* green */
+.hero-subpages a.btn-disclaimer { background: #ef4444; color: #fff; }     /* crimson */
+.hero-subpages a.btn-vision { background: #8b5cf6; color: #fff; }         /* purple */
+.hero-subpages a.btn-sress-test { background: #f97316; color: #fff; }     /* orange */
 
 /* Responsive adjustments */
-@media (max-width: 900px) {
-  .hero-title { font-size: 3rem; }
-  .hero-tagline { font-size: 1.5rem; }
-  .main-logo-hero { width: 160px; }
-  .hero-actions { margin-top: 20px; }
+@media screen and (max-width: 768px) {
+  .hero-subpages {
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .hero-subpages a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-subpages a {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
 }
 
 /* ================= HERO MOBILE FIX ================= */
