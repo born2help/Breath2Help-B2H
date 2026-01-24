@@ -1307,7 +1307,7 @@ img { max-width: 100%; display: block; }
 .hero-subpages a {
   position: relative;
   z-index: 11;
-  pointer-events: auto;
+  pointer-events: none;
 
   padding: 10px 16px;
   font-size: 0.75rem;
