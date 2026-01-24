@@ -1255,6 +1255,28 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* Ensure subpage buttons are above the particles canvas */
+.hero-subpages {
+  position: relative;  /* establish stacking context */
+  z-index: 10;         /* above the particles canvas */
+}
+
+/* Also make sure hero-content stays above particles */
+.hero-content {
+  position: relative;
+  z-index: 5;  /* above particles but below buttons */
+}
+
+/* Ensure particles canvas stays behind */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  /* behind everything */
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
