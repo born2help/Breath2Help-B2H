@@ -627,81 +627,114 @@ img { max-width: 100%; display: block; }
   margin: 0 auto 60px;
 }
 
-/* Flow container */
-.flow-container {
+/* Container for line and arrows */
+.flow-line-container {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
+  height: 4px;
+  margin: 50px 0;
 }
 
-/* Vertical glowing line */
+/* The horizontal line */
 .flow-line {
   position: absolute;
-  top: 50%; /* adjust if line is off-center */
+  top: 50%;
   left: 0;
   width: 100%;
-  height: 4px; /* thickness of the line */
-  background: linear-gradient(to right, #14b8a6, #22c55e); /* gradient or solid color */
-  z-index: 1; /* make sure it's above the section background but below icons/arrows */
+  height: 4px;
+  background: linear-gradient(to right, #14b8a6, #22c55e);
+  z-index: 1;
+  transform: translateY(-50%);
 }
 
-.flow-steps .step {
-  position: relative;
-  z-index: 2; /* steps above the line */
-}
-
+/* Moving arrows */
 .moving-arrow {
   position: absolute;
-  z-index: 3; /* arrows above line */
+  top: 50%;
   font-size: 1.5rem;
   color: #14b8a6;
-  animation: moveArrow 2s linear infinite;
+  transform: translateY(-50%);
+  z-index: 2;
+  animation: moveArrow 3s linear infinite;
 }
 
-/* optional delay for second/third arrow */
+/* Stagger arrows */
 .moving-arrow.delay-1 { animation-delay: 0.5s; }
 .moving-arrow.delay-2 { animation-delay: 1s; }
 
+/* Keyframes for left→right movement */
 @keyframes moveArrow {
-  0% { left: 0; opacity: 0; }
-  50% { left: 50%; opacity: 1; }
+  0%   { left: 0; opacity: 0; }
+  10%  { opacity: 1; }
+  50%  { left: calc(100% - 20px); opacity: 1; }
+  90%  { opacity: 0; }
   100% { left: 100%; opacity: 0; }
 }
 
-/* Steps */
+/* Steps layout */
 .flow-steps {
   display: flex;
-  flex-direction: column;
-  gap: 60px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   position: relative;
-  z-index: 1;
+  margin-top: 30px;
 }
 
 .step {
-  background: rgba(255,255,255,0.04);
-  border-radius: 18px;
-  padding: 25px 20px;
-  max-width: 420px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  text-align: center;
+  width: 22%; /* 4 steps side by side */
+  min-width: 150px;
 }
 
-.step h3 {
-  color: #22c55e;
-  font-size: 1.6rem;
-  margin-bottom: 8px;
-}
-
-.step p {
-  color: #cdebf1;
-  line-height: 1.6;
-}
-
-/* Icons glow */
 .step-icon {
-  width: 70px;
-  margin-bottom: 14px;
-  filter: drop-shadow(0 0 10px rgba(34,197,94,0.6));
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .flow-steps {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flow-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  .step {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Moving arrows with vertical motion */
+.moving-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+  color: #14b8a6;
+  transform: translateY(-50%);
+  z-index: 2;
+  animation: moveArrowBounce 3s linear infinite;
+}
+
+/* Stagger arrows */
+.moving-arrow.delay-1 { animation-delay: 0.5s; }
+.moving-arrow.delay-2 { animation-delay: 1s; }
+
+/* Keyframes for horizontal + vertical bounce */
+@keyframes moveArrowBounce {
+  0%   { left: 0; transform: translateY(-50%) translateY(0); opacity: 0; }
+  10%  { opacity: 1; }
+  25%  { transform: translateY(-50%) translateY(-5px); }
+  50%  { left: calc(100% - 20px); transform: translateY(-50%) translateY(0); opacity: 1; }
+  75%  { transform: translateY(-50%) translateY(5px); }
+  90%  { opacity: 0; }
+  100% { left: 100%; opacity: 0; transform: translateY(-50%) translateY(0); }
 }
 
 /* CTA button */
