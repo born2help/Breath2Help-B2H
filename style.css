@@ -1395,6 +1395,39 @@ img { max-width: 100%; display: block; }
   }
 }
 
+.flow-line {
+  position: absolute;
+  top: 50%; /* adjust if line is off-center */
+  left: 0;
+  width: 100%;
+  height: 4px; /* thickness of the line */
+  background: linear-gradient(to right, #14b8a6, #22c55e); /* gradient or solid color */
+  z-index: 1; /* make sure it's above the section background but below icons/arrows */
+}
+
+.flow-steps .step {
+  position: relative;
+  z-index: 2; /* steps above the line */
+}
+
+.moving-arrow {
+  position: absolute;
+  z-index: 3; /* arrows above line */
+  font-size: 1.5rem;
+  color: #14b8a6;
+  animation: moveArrow 2s linear infinite;
+}
+
+/* optional delay for second/third arrow */
+.moving-arrow.delay-1 { animation-delay: 0.5s; }
+.moving-arrow.delay-2 { animation-delay: 1s; }
+
+@keyframes moveArrow {
+  0% { left: 0; opacity: 0; }
+  50% { left: 50%; opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
 /* ================= HERO BUTTONS VIBRANT & GLOW ================= */
 .hero-subpages a {
   color: #000; /* default text black for better readability */
