@@ -655,20 +655,36 @@ img { max-width: 100%; display: block; }
   z-index: 1;
 }
 
+/* ================= FLOW LINE + MULTICOLORED ARROWS ================= */
+
+/* Base arrow */
 .moving-arrow {
   position: absolute;
   top: 50%;
-  font-size: 1.5rem;
-  color: #14b8a6;
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #22c55e, #f59e0b, #ef4444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
   transform: translateY(-50%);
   z-index: 2;
-  animation: moveArrowBounce 3s linear infinite;
+  animation: moveArrowRainbow 6s linear infinite; /* slower movement */
 }
 
-.moving-arrow.delay-1 { animation-delay: 0.5s; }
-.moving-arrow.delay-2 { animation-delay: 1s; }
+/* Additional arrows with slight gradient shift for rainbow effect */
+.moving-arrow.delay-1 {
+  animation-delay: 1s;
+  background: linear-gradient(90deg, #f59e0b, #ef4444, #22c55e);
+}
 
-@keyframes moveArrowBounce {
+.moving-arrow.delay-2 {
+  animation-delay: 2s;
+  background: linear-gradient(90deg, #ef4444, #22c55e, #f59e0b);
+}
+
+/* Keyframes for horizontal movement + vertical bounce */
+@keyframes moveArrowRainbow {
   0%   { left: 0; transform: translateY(-50%) translateY(0); opacity: 0; }
   10%  { opacity: 1; }
   25%  { transform: translateY(-50%) translateY(-5px); }
