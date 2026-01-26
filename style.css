@@ -1207,6 +1207,58 @@ img { max-width: 100%; display: block; }
 .btn-join:hover { transform:translateY(-3px); box-shadow:0 0 15px rgba(255,255,255,0.4); }
 .join-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px; }
 
+/* ================= JOIN THE MOVEMENT – ENHANCED HOVER ================= */
+.btn-join {
+  padding: 14px 28px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  transition: all 0.35s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover glow effect */
+.btn-join::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-radius: 12px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.btn-join:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 20px rgba(255,255,255,0.35), 0 0 30px rgba(255,255,255,0.2) inset;
+}
+
+.btn-join:hover::before {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Individual button colors (keep your original ones) */
+.btn-join.donate { background: #22c55e; }
+.btn-join.volunteer { background: #3b82f6; }
+.btn-join.spread { background: #f59e0b; }
+
+/* Join buttons container */
+.join-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
 /* ================= FOOTER – REFINED ================= */
 .footer {
   background: #0f2734;
