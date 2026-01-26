@@ -931,6 +931,18 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ===== FORCE HOW B2H WORKS TO FULL WIDTH ===== */
+#how-B2H-works {
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+}
+
 /* ================= CHARITY ================= */
 .charity-section { background: #0f2734; padding: 80px 20px; }
 .charity-header h2 { color: #22c55e; margin-bottom: 10px; text-align: center; }
