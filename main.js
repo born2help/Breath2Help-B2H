@@ -132,3 +132,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+document.querySelectorAll('.bar-fill').forEach(bar => {
+  const width = bar.getAttribute('data-width');
+  setTimeout(() => { bar.style.width = width; }, 500);
+});
