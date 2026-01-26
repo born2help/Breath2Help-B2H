@@ -594,12 +594,12 @@ img { max-width: 100%; display: block; }
   .tokenomics-subtitle { font-size: 1rem; }
 }
 
-/* ================= HOW B2H WORKS – FINAL ================= */
+/* ================= HOW B2H WORKS – FINAL RESTORE ================= */
 .how-B2H-works {
   background: radial-gradient(circle at top, #0b2230, #06131b);
   color: #cfeff5;
   text-align: center;
-  padding: 80px 20px 60px 20px;
+  padding: 90px 20px 60px 20px;
   position: relative;
   overflow: hidden;
 }
@@ -611,9 +611,9 @@ img { max-width: 100%; display: block; }
 }
 
 .how-B2H-works .section-header h2 {
-  font-size: 2.8rem;
+  font-size: 2.8rem; /* original font size */
   font-weight: 800;
-  color: #22c55e; /* original green glow accent */
+  color: #22c55e; /* green glow */
   text-shadow: 0 0 14px rgba(34,197,94,0.6);
   margin-bottom: 12px;
 }
@@ -630,20 +630,20 @@ img { max-width: 100%; display: block; }
   color: #b6e6ee;
   max-width: 620px;
   margin: 0 auto;
-  font-size: 1.05rem; /* slightly bigger */
+  font-size: 1.05rem; /* original font size */
   line-height: 1.6;
   text-align: center;
 }
 
-/* Container for line and arrows */
+/* Flow line + moving arrows */
 .flow-line-container {
   position: relative;
   width: 100%;
   height: 4px;
-  margin: 40px 0 30px 0;
+  margin: 40px 0 30px;
+  z-index: 1;
 }
 
-/* The horizontal line */
 .flow-line {
   position: absolute;
   top: 50%;
@@ -651,11 +651,10 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 4px;
   background: linear-gradient(to right, #14b8a6, #22c55e);
-  z-index: 1;
   transform: translateY(-50%);
+  z-index: 1;
 }
 
-/* Moving arrows */
 .moving-arrow {
   position: absolute;
   top: 50%;
@@ -669,7 +668,6 @@ img { max-width: 100%; display: block; }
 .moving-arrow.delay-1 { animation-delay: 0.5s; }
 .moving-arrow.delay-2 { animation-delay: 1s; }
 
-/* Keyframes for horizontal + vertical bounce */
 @keyframes moveArrowBounce {
   0%   { left: 0; transform: translateY(-50%) translateY(0); opacity: 0; }
   10%  { opacity: 1; }
@@ -680,29 +678,46 @@ img { max-width: 100%; display: block; }
   100% { left: 100%; opacity: 0; transform: translateY(-50%) translateY(0); }
 }
 
-/* Steps layout */
+/* Steps layout – alternate left/right */
 .flow-steps {
   display: flex;
-  justify-content: space-around; /* closer spacing */
-  align-items: flex-start;
   flex-wrap: wrap;
+  align-items: center;
   position: relative;
   margin-top: 30px;
-  gap: 20px; /* reduce gap between boxes */
+  gap: 40px; /* smaller gap */
 }
 
 .step {
   text-align: center;
-  width: 22%;
-  min-width: 150px;
+  width: 45%;
+  min-width: 250px;
   position: relative;
   padding: 12px 18px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: stepFadeUp 0.9s ease forwards;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.step:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 35px rgba(0,255,198,0.45);
+.step:nth-child(1) { animation-delay: 0.2s; }
+.step:nth-child(2) { animation-delay: 0.4s; }
+.step:nth-child(3) { animation-delay: 0.6s; }
+.step:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes stepFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Alternate positioning */
+.step:nth-child(odd) {
+  align-self: flex-start;
+  margin-right: auto;
+}
+
+.step:nth-child(even) {
+  align-self: flex-end;
+  margin-left: auto;
 }
 
 .step::before {
@@ -715,6 +730,11 @@ img { max-width: 100%; display: block; }
   border-radius: 22px;
 }
 
+.step:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 35px rgba(0,255,198,0.45);
+}
+
 .step-icon {
   width: 60px;
   height: 60px;
@@ -722,10 +742,9 @@ img { max-width: 100%; display: block; }
   filter: drop-shadow(0 0 14px rgba(34,197,94,0.7));
 }
 
-/* Step headings and text */
 .step h3 {
-  margin-bottom: 6px;
   font-size: 1.1rem;
+  margin-bottom: 6px;
   color: #fff;
 }
 
@@ -739,7 +758,7 @@ img { max-width: 100%; display: block; }
 /* CTA button */
 .cta {
   margin-top: 40px;
-  text-align: center; /* center button */
+  text-align: center;
 }
 
 .cta .btn {
@@ -758,9 +777,9 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 40px rgba(239,68,68,0.9);
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media screen and (max-width: 1024px) {
-  .flow-steps { gap: 18px; }
+  .flow-steps { gap: 30px; }
 }
 
 @media screen and (max-width: 768px) {
@@ -768,11 +787,14 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
     align-items: center;
   }
-  .step { width: 80%; margin-bottom: 30px; }
+  .step, .step:nth-child(odd), .step:nth-child(even) {
+    width: 80%;
+    margin: 0;
+    align-self: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  .step { width: 100%; }
   .subheading { font-size: 1rem; }
   .section-header h2 { font-size: 2.2rem; }
 }
