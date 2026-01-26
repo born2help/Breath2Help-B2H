@@ -931,16 +931,20 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ===== FORCE HOW B2H WORKS TO FULL WIDTH ===== */
+/* ================= FORCE FULL WIDTH & STACKING ================= */
+.how-B2H-works-container {
+  width: 100%;
+  max-width: 1200px; /* or container width you prefer */
+  margin: 0 auto;    /* center it */
+  display: block;    
+  clear: both;       /* ensure it starts below any floated content */
+}
+
 #how-B2H-works {
   display: block;
   width: 100%;
   clear: both;
-}
-
-section {
-  width: 100%;
-  max-width: 100%;
+  overflow: hidden; /* prevent children from escaping */
 }
 
 /* ================= CHARITY ================= */
