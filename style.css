@@ -1169,6 +1169,36 @@ img { max-width: 100%; display: block; }
   .section-title { font-size: 2.4rem; }
 }
 
+/* ================= ROADMAP – HOVER EFFECT ================= */
+.roadmap-list li {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+}
+
+.roadmap-list li::before {
+  /* optional subtle glow behind each step */
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-radius: 20px;
+  background: radial-gradient(circle, rgba(0,255,198,0.12) 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.roadmap-list li:hover {
+  transform: translateY(-10px);
+}
+
+.roadmap-list li:hover::before {
+  opacity: 1;
+}
+
 /* ================= JOIN THE MOVEMENT ================= */
 .join-movement .btn-join { padding: 14px 28px; margin:10px; border-radius: 8px; font-weight:700; color:#fff; display:inline-block; transition:all 0.3s; }
 .btn-join.donate { background:#22c55e; }
