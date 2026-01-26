@@ -594,7 +594,15 @@ img { max-width: 100%; display: block; }
   .tokenomics-subtitle { font-size: 1rem; }
 }
 
-/* ================= HOW B2H WORKS – FINAL LOCKED VERSION ================= */
+/* ================= HOW B2H WORKS – FINAL READY-TO-PASTE ================= */
+
+#how-B2H-works {
+  display: block;
+  width: 100%;
+  clear: both;
+  overflow: hidden;
+  margin-top: 80px; /* space from previous section */
+}
 
 .how-B2H-works {
   background: radial-gradient(circle at top, #0b2230, #06131b);
@@ -603,6 +611,14 @@ img { max-width: 100%; display: block; }
   color: #cfeff5;
   position: relative;
   overflow: hidden;
+}
+
+.how-B2H-works-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  clear: both;
 }
 
 /* ---------- HEADER ---------- */
@@ -614,8 +630,8 @@ img { max-width: 100%; display: block; }
 .how-B2H-works .section-header h2 {
   font-size: 2.9rem;
   font-weight: 800;
-  color: #22c55e;
-  text-shadow: 0 0 16px rgba(34,197,94,0.6);
+  color: #f59e0b;
+  text-shadow: 0 0 16px rgba(245,158,11,0.6);
   margin-bottom: 14px;
 }
 
@@ -639,35 +655,28 @@ img { max-width: 100%; display: block; }
 .how-B2H-works .flow-container {
   position: relative;
   width: 100%;
-  margin: 70px 0 60px;
+  margin: 60px 0;
   height: 6px;
 }
 
 .how-B2H-works .flow-line {
   position: absolute;
-  inset: 0;
+  top: 50%;
+  left: 0;
+  width: 100%;
   height: 6px;
   border-radius: 3px;
-  background: linear-gradient(
-    to right,
-    #14b8a6,
-    #22c55e,
-    #f59e0b,
-    #ef4444
-  );
+  background: linear-gradient(to right, #22c55e, #14b8a6, #f59e0b, #ef4444);
+  transform: translateY(-50%);
+  z-index: 1;
 }
 
-/* Soft energy glow */
+/* Soft energy glow effect along line */
 .how-B2H-works .flow-line::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.4),
-    transparent
-  );
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
   animation: flowGlow 5s ease-in-out infinite;
 }
 
@@ -677,164 +686,13 @@ img { max-width: 100%; display: block; }
   100% { transform: translateX(100%); opacity: 0.2; }
 }
 
-/* Arrows */
+/* ---------- MOVING ARROWS ---------- */
 .how-B2H-works .moving-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 1.7rem;
-  font-weight: 700;
-  animation: arrowMove 7s linear infinite;
-}
-
-.how-B2H-works .moving-arrow:nth-child(2) {
-  color: #22c55e;
-}
-
-.how-B2H-works .moving-arrow:nth-child(3) {
-  color: #f59e0b;
-  animation-delay: 1.6s;
-}
-
-.how-B2H-works .moving-arrow:nth-child(4) {
-  color: #ef4444;
-  animation-delay: 3.2s;
-}
-
-@keyframes arrowMove {
-  0% { left: -40px; opacity: 0; }
-  10% { opacity: 1; }
-  90% { left: calc(100% - 40px); opacity: 1; }
-  100% { left: 100%; opacity: 0; }
-}
-
-/* ---------- STEPS ---------- */
-.how-B2H-works .flow-steps {
-  display: flex;
-  justify-content: space-between;
-  gap: 28px;
-  margin-top: 20px;
-  flex-wrap: wrap;
-}
-
-.how-B2H-works .step {
-  width: 23%;
-  min-width: 220px;
-  padding: 14px 18px;
-  text-align: center;
-  position: relative;
-  transition: all 0.35s ease;
-}
-
-.how-B2H-works .step::before {
-  content: "";
-  position: absolute;
-  inset: -14px;
-  background: radial-gradient(circle, rgba(0,255,198,0.18), transparent 70%);
-  filter: blur(14px);
-  border-radius: 22px;
-  z-index: -1;
-}
-
-.how-B2H-works .step:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 32px rgba(0,255,198,0.45);
-}
-
-.how-B2H-works .step h3 {
-  color: #ffffff;
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-}
-
-.how-B2H-works .step p {
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: #cfeff5;
-}
-
-/* ---------- CTA ---------- */
-.how-B2H-works .cta {
-  margin-top: 60px;
-  text-align: center;
-}
-
-/* ---------- RESPONSIVE ---------- */
-@media (max-width: 1024px) {
-  .how-B2H-works .flow-steps {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .how-B2H-works .flow-steps {
-    flex-direction: column;
-    align-items: center;
-  }
-  .how-B2H-works .step {
-    width: 85%;
-  }
-}
-
-/* ================= HOW B2H WORKS (CLEAN & FINAL) ================= */
-
-.how-B2H-works {
-  background: radial-gradient(circle at top, #0b2230, #06131b);
-  color: #cfeff5;
-  padding: 90px 20px 70px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-/* ===== HEADER ===== */
-.how-B2H-works .section-header h2 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #f59e0b;
-  text-shadow: 0 0 14px rgba(245,158,11,0.6);
-  margin-bottom: 14px;
-}
-
-.how-B2H-works .section-underline {
-  width: 90px;
-  height: 4px;
-  margin: 0 auto 18px;
-  border-radius: 2px;
-  background: linear-gradient(to right, #22c55e, #f59e0b, #ef4444);
-}
-
-.how-B2H-works .subheading {
-  max-width: 620px;
-  margin: 0 auto 50px;
-  font-size: 1.05rem;
-  color: #b6e6ee;
-}
-
-/* ===== FLOW LINE & ARROWS ===== */
-.how-B2H-works .flow-container {
-  position: relative;
-  margin: 40px 0 60px;
-}
-
-.how-B2H-works .flow-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(to right, #22c55e, #14b8a6, #f59e0b, #ef4444);
-  border-radius: 3px;
-  transform: translateY(-50%);
-  z-index: 1;
-}
-
-.how-B2H-works .moving-arrow {
-  position: absolute;
-  top: 50%;
   font-size: 1.8rem;
   font-weight: 700;
-  transform: translateY(-50%);
   z-index: 2;
   animation: moveArrow 7s linear infinite;
 }
@@ -844,28 +702,41 @@ img { max-width: 100%; display: block; }
 .how-B2H-works .moving-arrow:nth-child(4) { color: #ef4444; animation-delay: 3s; }
 
 @keyframes moveArrow {
-  0%   { left: -40px; opacity: 0; }
-  10%  { opacity: 1; }
-  50%  { left: calc(100% - 40px); opacity: 1; }
-  90%  { opacity: 0; }
+  0% { left: -40px; opacity: 0; }
+  10% { opacity: 1; }
+  50% { left: calc(100% - 40px); opacity: 1; }
+  90% { opacity: 0; }
   100% { left: 100%; opacity: 0; }
 }
 
-/* ===== STEPS ===== */
+/* ---------- STEPS ---------- */
 .how-B2H-works .flow-steps {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
+  gap: 28px;
+  margin-top: 30px;
 }
 
 .how-B2H-works .step {
   width: 45%;
   min-width: 260px;
   padding: 18px 22px;
+  text-align: center;
   position: relative;
-  background: transparent;
   transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: stepFadeUp 0.9s ease forwards;
+}
+
+.how-B2H-works .step:nth-child(1) { animation-delay: 0.2s; }
+.how-B2H-works .step:nth-child(2) { animation-delay: 0.4s; }
+.how-B2H-works .step:nth-child(3) { animation-delay: 0.6s; }
+.how-B2H-works .step:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes stepFadeUp {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .how-B2H-works .step:nth-child(odd) { align-self: flex-start; }
@@ -894,13 +765,14 @@ img { max-width: 100%; display: block; }
 
 .how-B2H-works .step p {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: #cfeff5;
 }
 
-/* ===== CTA ===== */
+/* ---------- CTA BUTTON ---------- */
 .how-B2H-works .cta {
   margin-top: 60px;
+  text-align: center;
 }
 
 .how-B2H-works .cta .btn {
@@ -919,32 +791,26 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 40px rgba(239,68,68,0.9);
 }
 
-/* ===== MOBILE ===== */
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .how-B2H-works .flow-steps {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .how-B2H-works .flow-steps {
     flex-direction: column;
     align-items: center;
   }
-
   .how-B2H-works .step {
     width: 85%;
   }
 }
 
-/* ================= FORCE FULL WIDTH & STACKING ================= */
-.how-B2H-works-container {
-  width: 100%;
-  max-width: 1200px; /* or container width you prefer */
-  margin: 0 auto;    /* center it */
-  display: block;    
-  clear: both;       /* ensure it starts below any floated content */
-}
-
-#how-B2H-works {
-  display: block;
-  width: 100%;
-  clear: both;
-  overflow: hidden; /* prevent children from escaping */
+@media (max-width: 480px) {
+  .how-B2H-works .section-header h2 { font-size: 2.2rem; }
+  .how-B2H-works .subheading { font-size: 1rem; }
 }
 
 /* ================= CHARITY ================= */
