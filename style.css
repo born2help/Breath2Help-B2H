@@ -594,130 +594,139 @@ img { max-width: 100%; display: block; }
   .tokenomics-subtitle { font-size: 1rem; }
 }
 
-/* ================= HOW B2H WORKS – SECTION ================= */
+/* ================= HOW B2H WORKS – FINAL LOCKED VERSION ================= */
+
 .how-B2H-works {
   background: radial-gradient(circle at top, #0b2230, #06131b);
-  color: #cfeff5;
+  padding: 90px 20px 70px;
   text-align: center;
-  padding: 90px 20px 60px 20px;
+  color: #cfeff5;
   position: relative;
   overflow: hidden;
 }
 
-/* Section header */
+/* ---------- HEADER ---------- */
 .how-B2H-works .section-header {
   text-align: center;
   margin-bottom: 50px;
 }
 
 .how-B2H-works .section-header h2 {
-  color: #f59e0b;
-  font-size: 2.8rem;
+  font-size: 2.9rem;
   font-weight: 800;
-  text-shadow: 0 0 14px rgba(245,158,11,0.6);
+  color: #22c55e;
+  text-shadow: 0 0 16px rgba(34,197,94,0.6);
   margin-bottom: 14px;
 }
 
 .how-B2H-works .section-underline {
   width: 90px;
   height: 4px;
+  margin: 0 auto 18px;
+  border-radius: 3px;
   background: linear-gradient(to right, #22c55e, #f59e0b, #ef4444);
-  margin: 0 auto 20px;
-  border-radius: 2px;
 }
 
 .how-B2H-works .subheading {
-  color: #cfeff5;
+  max-width: 640px;
+  margin: 0 auto;
   font-size: 1.05rem;
-  max-width: 620px;
-  margin: 0 auto 40px;
-  text-align: center;
   line-height: 1.6;
+  color: #b6e6ee;
 }
 
-/* ================= FLOW LINE + MULTICOLORED ARROWS ================= */
-.flow-container {
+/* ---------- FLOW LINE + ARROWS ---------- */
+.how-B2H-works .flow-container {
   position: relative;
   width: 100%;
-  margin: 50px 0 40px;
-}
-
-.flow-line {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
+  margin: 70px 0 60px;
   height: 6px;
-  background: linear-gradient(to right, #14b8a6, #22c55e, #f59e0b, #ef4444);
-  border-radius: 3px;
-  transform: translateY(-50%);
-  z-index: 1;
 }
 
-/* Moving arrows */
-.moving-arrow {
+.how-B2H-works .flow-line {
+  position: absolute;
+  inset: 0;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(
+    to right,
+    #14b8a6,
+    #22c55e,
+    #f59e0b,
+    #ef4444
+  );
+}
+
+/* Soft energy glow */
+.how-B2H-works .flow-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.4),
+    transparent
+  );
+  animation: flowGlow 5s ease-in-out infinite;
+}
+
+@keyframes flowGlow {
+  0% { transform: translateX(-100%); opacity: 0.2; }
+  50% { transform: translateX(0); opacity: 0.45; }
+  100% { transform: translateX(100%); opacity: 0.2; }
+}
+
+/* Arrows */
+.how-B2H-works .moving-arrow {
   position: absolute;
   top: 50%;
-  font-size: 1.8rem;
-  font-weight: 700;
   transform: translateY(-50%);
-  z-index: 2;
-  animation: moveArrows 8s linear infinite;
+  font-size: 1.7rem;
+  font-weight: 700;
+  animation: arrowMove 7s linear infinite;
 }
 
-/* Each arrow color & stagger */
-.moving-arrow:nth-child(1) { color: #22c55e; }
-.moving-arrow:nth-child(2) { color: #f59e0b; animation-delay: 2s; }
-.moving-arrow:nth-child(3) { color: #ef4444; animation-delay: 4s; }
-.moving-arrow:nth-child(4) { color: #14b8a6; animation-delay: 6s; }
+.how-B2H-works .moving-arrow:nth-child(2) {
+  color: #22c55e;
+}
 
-/* Animate arrows along the line */
-@keyframes moveArrows {
-  0%   { left: -40px; opacity: 0; }
-  10%  { opacity: 1; }
-  50%  { left: calc(100% - 40px); opacity: 1; }
-  90%  { opacity: 0; }
+.how-B2H-works .moving-arrow:nth-child(3) {
+  color: #f59e0b;
+  animation-delay: 1.6s;
+}
+
+.how-B2H-works .moving-arrow:nth-child(4) {
+  color: #ef4444;
+  animation-delay: 3.2s;
+}
+
+@keyframes arrowMove {
+  0% { left: -40px; opacity: 0; }
+  10% { opacity: 1; }
+  90% { left: calc(100% - 40px); opacity: 1; }
   100% { left: 100%; opacity: 0; }
 }
 
-/* ================= STEPS – left/right vertical stagger ================= */
-.flow-steps {
+/* ---------- STEPS ---------- */
+.how-B2H-works .flow-steps {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
-  position: relative;
-  margin-top: 60px;
-  gap: 40px;
+  gap: 28px;
+  margin-top: 20px;
+  flex-wrap: wrap;
 }
 
-.step {
-  position: relative;
-  width: 45%;
-  min-width: 250px;
+.how-B2H-works .step {
+  width: 23%;
+  min-width: 220px;
+  padding: 14px 18px;
   text-align: center;
-  padding: 12px 18px;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: stepFadeUp 0.9s ease forwards;
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+  transition: all 0.35s ease;
 }
 
-.step:nth-child(1) { animation-delay: 0.2s; }
-.step:nth-child(2) { animation-delay: 0.4s; }
-.step:nth-child(3) { animation-delay: 0.6s; }
-.step:nth-child(4) { animation-delay: 0.8s; }
-
-@keyframes stepFadeUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Vertical stagger */
-.step:nth-child(odd) { align-self: flex-start; margin-right: auto; }
-.step:nth-child(even) { align-self: flex-end; margin-left: auto; }
-
-/* Glow behind step */
-.step::before {
+.how-B2H-works .step::before {
   content: "";
   position: absolute;
   inset: -14px;
@@ -727,97 +736,43 @@ img { max-width: 100%; display: block; }
   z-index: -1;
 }
 
-/* Hover effect */
-.step:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 0 35px rgba(0,255,198,0.45);
+.how-B2H-works .step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 32px rgba(0,255,198,0.45);
 }
 
-/* Step text */
-.step h3 {
-  font-size: 1.1rem;
+.how-B2H-works .step h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
   margin-bottom: 6px;
-  color: #fff;
 }
 
-.step p {
+.how-B2H-works .step p {
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: #cfeff5;
-  margin-top: 0;
 }
 
-/* ================= CTA BUTTON ================= */
-.cta {
-  margin-top: 50px;
+/* ---------- CTA ---------- */
+.how-B2H-works .cta {
+  margin-top: 60px;
   text-align: center;
 }
-.cta .btn {
-  padding: 14px 38px;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #fff;
-  background: linear-gradient(135deg, #f59e0b, #ef4444);
-  border-radius: 50px;
-  box-shadow: 0 0 25px rgba(245,158,11,0.6);
-  transition: all 0.35s ease;
-}
-.cta .btn:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 0 40px rgba(239,68,68,0.9);
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .how-B2H-works .flow-steps {
+    justify-content: center;
+  }
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 1024px) { .flow-steps { gap: 30px; } }
 @media (max-width: 768px) {
-  .flow-steps {
+  .how-B2H-works .flow-steps {
     flex-direction: column;
     align-items: center;
   }
-  .step, .step:nth-child(odd), .step:nth-child(even) {
-    width: 80%;
-    margin: 0;
-    align-self: center;
-  }
-}
-@media (max-width: 480px) {
-  .subheading { font-size: 1rem; }
-  .section-header h2 { font-size: 2.2rem; }
-}
-
-/* ================= FLOW LINE SOFT GLOW ANIMATION ================= */
-.flow-line {
-  position: relative;
-  overflow: hidden;
-}
-
-/* glowing pulse */
-.flow-line::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255,255,255,0.35),
-    transparent
-  );
-  animation: flowGlow 4.5s ease-in-out infinite;
-}
-
-/* gentle breathing glow */
-@keyframes flowGlow {
-  0% {
-    opacity: 0.15;
-    transform: translateX(-100%);
-  }
-  50% {
-    opacity: 0.45;
-    transform: translateX(0%);
-  }
-  100% {
-    opacity: 0.15;
-    transform: translateX(100%);
+  .how-B2H-works .step {
+    width: 85%;
   }
 }
 
