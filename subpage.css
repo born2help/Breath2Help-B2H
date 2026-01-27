@@ -249,3 +249,23 @@ h2,
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+
+/* ================= FIX TEXT VISIBILITY ON ABOUT, BUR ETHICS, VISION ================= */
+.b2h-subpage .glass-container,
+.b2h-subpage .glass-container * {
+  color: var(--b2h-text-main) !important; /* Ensure main text is visible */
+}
+
+.b2h-subpage .wp-section blockquote {
+  color: var(--b2h-text-soft) !important; /* Blockquotes slightly softer */
+}
+
+.b2h-subpage .page-hero h1,
+.b2h-subpage .section-title,
+.b2h-subpage .wp-section h2 {
+  color: var(--b2h-text-main) !important; /* Titles always visible */
+}
+
+.b2h-subpage .subtitle {
+  color: var(--b2h-text-soft) !important;
+}
