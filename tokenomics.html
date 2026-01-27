@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="subpage.css">
 </head>
 
-<body class="b2h-subpage">
 <body class="b2h-subpage" style="--page-accent:#00ffd0;">
 
   <!-- ================= MAIN GLASS CONTAINER ================= -->
@@ -24,9 +23,9 @@
       <p class="subtitle">Designed for Responsibility — Not Speculation</p>
 
       <div class="hero-actions">
-        <a href="donate.html" class="donate">Donate</a>
-        <a href="white-paper.html" class="whitepaper">Read White Paper</a>
-        <a href="index.html" class="whitepaper">← Back Home</a>
+        <a href="donate.html" class="btn-glow">Donate</a>
+        <a href="white-paper.html" class="btn-glow">Read White Paper</a>
+        <a href="index.html" class="btn-glow">← Back Home</a>
       </div>
 
       <hr class="section-divider">
@@ -131,7 +130,7 @@
         </p>
       </div>
 
-      <a href="index.html" class="glass-back">← Back Home</a>
+      <a href="index.html" class="glass-back btn-glow">← Back Home</a>
 
     </section>
 
@@ -155,7 +154,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const elements = document.querySelectorAll(
-        '.page-hero, .section, .wp-section'
+        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back'
       );
 
       const observer = new IntersectionObserver((entries, observer) => {
