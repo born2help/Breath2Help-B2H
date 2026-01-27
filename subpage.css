@@ -1,330 +1,251 @@
 /* ===============================
-   SUBPAGE.CSS - Modern Unified for all B2H Subpages
-   Author: B2H Project
-=============================== */
+   B2H Subpage Unified CSS
+   Works for all 12 pages
+   =============================== */
 
-/* ================= GLOBAL ================= */
-body {
-  font-family: 'Montserrat', sans-serif;
+/* ----------------- Root & Variables ----------------- */
+:root {
+  --b2h-bg-dark: #0b0f1a;
+  --b2h-bg-soft: #111827;
+  --b2h-text-main: #e5e7eb;
+  --b2h-text-soft: #9ca3af;
+  --b2h-accent: #32cd32; /* default accent, overridden per page */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-radius: 20px;
+  --glass-padding: 2rem;
+  --transition-speed: 0.6s;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+}
+
+/* ----------------- Global ----------------- */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #eee;
-  background: linear-gradient(160deg, #0c0c0c 0%, #050505 100%);
+  font-family: var(--font-body);
+}
+
+body.b2h-subpage {
+  background-color: var(--b2h-bg-dark);
+  color: var(--b2h-text-main);
   line-height: 1.6;
+  font-size: 16px;
   scroll-behavior: smooth;
 }
 
-a { text-decoration: none; color: inherit; transition: 0.3s ease; }
-a:hover { color: #7CFC00; }
-
-/* ================= GLASS CONTAINER ================= */
-.glass-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 25px;
-  backdrop-filter: blur(14px);
-  background: rgba(20, 20, 20, 0.6);
-  border-radius: 14px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+a {
+  text-decoration: none;
+  color: var(--b2h-accent);
+  transition: color var(--transition-speed);
+}
+a:hover {
+  color: lighten(var(--b2h-accent), 20%);
 }
 
-/* ================= NAVIGATION ================= */
-.site-nav, .top-nav {
-  width: 100%;
-  background: rgba(10,10,10,0.9);
+/* ----------------- Navigation ----------------- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  background: var(--b2h-bg-soft);
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  border-bottom: 1px solid #222;
+  padding: 0.75rem 1rem;
 }
 
-.site-nav .nav-links, .top-nav {
+.nav-links {
   display: flex;
+  gap: 1rem;
+}
+
+.nav-links li {
   list-style: none;
-  gap: 18px;
 }
 
-.nav-links li a, .top-nav a {
-  color: #eee;
-  font-weight: 600;
+.nav-links a {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background var(--transition-speed);
+}
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--b2h-accent);
+  color: var(--b2h-bg-dark);
 }
 
-.nav-links li a:hover, .top-nav a:hover, .nav-links li a.active, .top-nav a.active {
-  color: #7CFC00;
-  text-shadow: 0 0 10px #7CFC00;
+/* ----------------- Glass Container ----------------- */
+.glass-container {
+  backdrop-filter: blur(12px);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--glass-radius);
+  margin: 2rem auto;
+  max-width: 1000px;
+  padding: var(--glass-padding);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.3);
 }
 
-/* ================= HERO ================= */
+/* ----------------- Hero Section ----------------- */
 .page-hero {
   text-align: center;
-  padding: 60px 20px;
-  margin-bottom: 40px;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s ease-out;
-  position: relative;
+  transition: all var(--transition-speed) ease-out;
 }
-
-.page-hero::after {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  height: 120%;
-  background: radial-gradient(circle, rgba(124,252,0,0.15) 0%, transparent 70%);
-  z-index: -1;
-  border-radius: 20px;
+.page-hero.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
-
-.page-hero.visible { opacity: 1; transform: translateY(0); }
 
 .page-hero h1 {
+  font-family: var(--font-heading);
   font-size: 3rem;
-  color: #7CFC00;
-  text-shadow: 0 0 12px #7CFC00, 0 0 30px #0f0;
-  margin-bottom: 12px;
+  color: var(--b2h-accent);
+  text-shadow: 0 0 15px var(--b2h-accent);
+  margin-bottom: 1rem;
 }
 
 .page-hero .subtitle {
-  font-size: 1.3rem;
-  color: #ccc;
-  margin-bottom: 25px;
-  animation: subtitleFade 1s ease-out forwards;
-  opacity: 0;
+  font-size: 1.2rem;
+  color: var(--b2h-text-soft);
+  margin-bottom: 1.5rem;
 }
 
-@keyframes subtitleFade {
-  0% { opacity: 0; transform: translateY(10px); }
-  100% { opacity: 1; transform: translateY(0); }
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
-
-/* ================= BUTTONS ================= */
-.hero-actions a, .hero-buttons a, .btn-primary, .btn-secondary, .donate {
-  display: inline-block;
-  margin: 5px 10px;
-  padding: 12px 20px;
-  border-radius: 10px;
+.hero-actions a {
+  padding: 0.7rem 1.5rem;
+  background: var(--b2h-accent);
+  color: var(--b2h-bg-dark);
+  border-radius: 15px;
   font-weight: 600;
-  transition: all 0.3s ease;
-  text-decoration: none;
+  transition: transform var(--transition-speed), background var(--transition-speed);
+}
+.hero-actions a:hover {
+  transform: translateY(-3px);
+  background: lighten(var(--b2h-accent), 10%);
 }
 
-.btn-primary, .donate { 
-  background: #7CFC00; 
-  color: #0c0c0c;
-}
-
-.btn-primary:hover, .donate:hover {
-  box-shadow: 0 0 20px #7CFC00, 0 0 40px #0f0;
-  transform: scale(1.05);
-}
-
-.btn-secondary, .whitepaper { 
-  background: rgba(30,30,30,0.85); 
-  color: #eee; 
-}
-
-.btn-secondary:hover, .whitepaper:hover {
-  box-shadow: 0 0 12px #7CFC00;
-  transform: scale(1.03);
-}
-
-/* ================= BUTTON GLOW FIX ================= */
-.btn-glow {
-  display: inline-block;
-  margin: 5px 10px;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  text-decoration: none;
-  background: #7CFC00;
-  color: #0c0c0c;
-  transition: all 0.3s ease;
-}
-
-.btn-glow:hover {
-  box-shadow: 0 0 20px #7CFC00, 0 0 40px #0f0;
-  transform: scale(1.05);
-}
-
-/* ================= SECTIONS ================= */
+/* ----------------- Sections ----------------- */
 .section {
-  padding: 45px 25px;
+  margin: 2rem 0;
+  padding: 1rem 0;
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.8s ease-out;
+  transition: all var(--transition-speed) ease-out;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.section.visible { opacity: 1; transform: translateY(0); }
+.section.light {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 1.5rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--b2h-accent);
+  margin-bottom: 0.8rem;
+}
 
 .wp-section {
-  margin-bottom: 35px;
-  padding: 25px;
-  border-radius: 14px;
-  position: relative;
-  background: rgba(25,25,25,0.5);
-  border: 1px solid rgba(124,252,0,0.15);
-  box-shadow: 0 4px 20px rgba(124,252,0,0.15);
-  backdrop-filter: blur(6px);
-  transition: transform 0.3s, box-shadow 0.3s;
+  margin-bottom: 1.5rem;
 }
-
-.wp-section::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(to right, rgba(124,252,0,0.3), transparent, rgba(124,252,0,0.3));
-  border-radius: 8px;
-}
-
-.wp-section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 40px rgba(124,252,0,0.35);
-}
-
-/* Alternating section background */
-.section.light .wp-section, .wp-section.light { background: rgba(255,255,255,0.05); }
-
-/* Section titles */
-.section-title {
-  font-size: 1.85rem;
-  color: #7CFC00;
-  text-shadow: 0 0 10px #7CFC00;
-  margin-bottom: 15px;
-}
-
-/* Lists */
 .wp-section ul {
-  padding-left: 25px;
-  margin-bottom: 12px;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
 }
-
 .wp-section li {
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 12px;
+  margin-bottom: 0.5rem;
 }
 
-.wp-section li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #7CFC00;
-  text-shadow: 0 0 6px #7CFC00;
-}
-
-/* Highlight boxes */
+/* Highlighted Section */
 .wp-section.highlight {
-  border-left: 4px solid #7CFC00;
-  box-shadow: 0 0 20px rgba(124,252,0,0.3);
-  background: rgba(124,252,0,0.08);
+  border-left: 4px solid var(--b2h-accent);
+  padding-left: 1rem;
 }
 
-/* ================= HR / DIVIDER ================= */
+/* Divider */
 .section-divider {
-  border: 0;
-  border-top: 1px solid #222;
-  margin: 35px 0;
+  border: none;
+  height: 1px;
+  background: rgba(255,255,255,0.2);
+  margin: 2rem 0;
 }
 
-/* ================= BACK BUTTON ================= */
-.glass-back {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 18px;
-  background: rgba(30,30,30,0.85);
-  color: #fff;
-  border-radius: 10px;
-  transition: 0.3s;
-}
-
-.glass-back:hover { box-shadow: 0 0 18px #7CFC00; transform: scale(1.03); }
-
-/* ================= FOOTER ================= */
-.site-footer {
-  background: rgba(10,10,10,0.95);
-  padding: 30px 20px;
-  text-align: center;
-  margin-top: 50px;
-  box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
-}
-
-.site-footer .footer-links a {
-  margin: 0 12px;
-  color: #eee;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.site-footer .footer-links a:hover { 
-  color: #7CFC00; 
-  text-shadow: 0 0 8px #7CFC00;
-}
-
-.site-footer .footer-bottom p {
-  font-size: 0.9rem;
-  color: #aaa;
-  margin-top: 12px;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .site-nav .nav-links, .top-nav { flex-direction: column; gap: 10px; }
-  .page-hero h1 { font-size: 2rem; }
-  .page-hero .subtitle { font-size: 1.05rem; }
-  .wp-section { padding: 18px; }
-}
-
-/* Accent text */
-.page-hero h1,
-.section-title {
-  color: var(--page-accent);
-  text-shadow:
-    0 0 10px var(--page-accent),
-    0 0 25px color-mix(in srgb, var(--page-accent) 60%, transparent);
-}
-
-/* Accent buttons */
-.hero-actions a,
+/* ----------------- Buttons ----------------- */
 .glass-back,
-.btn-primary,
-.donate {
-  background: var(--page-accent);
-  color: #0c0c0c;
+.btn-glow {
+  display: inline-block;
+  padding: 0.6rem 1.3rem;
+  margin-top: 1rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 15px;
+  color: var(--b2h-accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-speed);
 }
-
-.hero-actions a:hover,
 .glass-back:hover,
-.btn-primary:hover,
-.donate:hover {
-  box-shadow:
-    0 0 14px var(--page-accent),
-    0 0 32px color-mix(in srgb, var(--page-accent) 60%, transparent);
+.btn-glow:hover {
+  background: var(--b2h-accent);
+  color: var(--b2h-bg-dark);
+  transform: translateY(-2px);
 }
 
-/* Section glow */
-.wp-section {
-  border: 1px solid color-mix(in srgb, var(--page-accent) 30%, transparent);
-  box-shadow:
-    0 4px 20px color-mix(in srgb, var(--page-accent) 20%, transparent);
+/* ----------------- Footer ----------------- */
+.site-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: var(--b2h-text-soft);
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.site-footer a {
+  margin: 0 0.5rem;
+  color: var(--b2h-text-soft);
+}
+.site-footer a:hover {
+  color: var(--b2h-accent);
 }
 
-.wp-section:hover {
-  box-shadow:
-    0 8px 40px color-mix(in srgb, var(--page-accent) 45%, transparent);
+/* ----------------- Fade-in for page elements ----------------- */
+.page-hero,
+.section,
+.wp-section,
+p,
+li,
+h1,
+h2,
+.hero-actions a,
+.glass-back {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all var(--transition-speed) ease-out;
 }
-
-/* Highlight sections */
-.wp-section.highlight {
-  border-left: 4px solid var(--page-accent);
-  background: color-mix(in srgb, var(--page-accent) 10%, transparent);
+.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
