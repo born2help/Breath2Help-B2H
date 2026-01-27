@@ -423,3 +423,179 @@ a:hover {
   transform: scale(1.3) translateX(2px);
   color: #00ffd0;
 }
+
+/* ===============================
+   Ultra-Modern Micro Effects for Subpages
+   =============================== */
+
+/* ----------------- Particle-Like Dots in Sections ----------------- */
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.4;
+  animation: particleShift 30s linear infinite;
+  z-index: 0;
+}
+
+@keyframes particleShift {
+  0% { background-position: 0 0; }
+  100% { background-position: 200px 200px; }
+}
+
+/* Ensure section content is above particles */
+.section > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ----------------- Gradient Borders for WP Sections ----------------- */
+.wp-section {
+  border-left: 4px solid transparent;
+  border-image: linear-gradient(180deg, #32cd32, #00ffd0, #32cd32) 1;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Slight float on hover */
+.wp-section:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* ----------------- Subtle Glow on Section Titles ----------------- */
+.section-title {
+  text-shadow: 0 0 10px rgba(50,205,50,0.3);
+}
+
+/* ----------------- Soft Gradient Backgrounds for Light Sections ----------------- */
+.section.light {
+  background: linear-gradient(135deg, rgba(50,205,50,0.05), rgba(0,255,208,0.05));
+}
+
+/* ----------------- Floating Micro Glimmers ----------------- */
+.section::after {
+  content: "";
+  position: absolute;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  top: 10%; left: 20%;
+  animation: floatGlimmer 8s ease-in-out infinite;
+}
+
+@keyframes floatGlimmer {
+  0% { transform: translate(0,0) scale(1); opacity: 0.2; }
+  50% { transform: translate(50px, 30px) scale(1.5); opacity: 0.5; }
+  100% { transform: translate(0,0) scale(1); opacity: 0.2; }
+}
+
+/* ----------------- Interactive Lists Glow ----------------- */
+.wp-section ul li:hover {
+  text-shadow: 0 0 6px #32cd32, 0 0 10px #00ffd0;
+}
+
+/* ===============================
+   Modern Gradient Link & Button Effects
+   =============================== */
+
+/* ----------------- Gradient Underline on Links ----------------- */
+a {
+  position: relative;
+  display: inline-block;
+  color: var(--b2h-accent);
+  transition: color 0.3s ease;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #32cd32, #00ffd0);
+  transition: width 0.4s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* ----------------- Hero Buttons Glow Trails ----------------- */
+.hero-actions a {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-actions a::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(50,205,50,0.2) 0%, transparent 70%);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  pointer-events: none;
+}
+
+.hero-actions a:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Optional: slight shimmer animation on hover */
+.hero-actions a:hover {
+  animation: shimmer 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes shimmer {
+  0% { box-shadow: 0 0 8px #32cd32, 0 0 15px #00ffd0; }
+  50% { box-shadow: 0 0 12px #32cd32, 0 0 25px #00ffd0; }
+  100% { box-shadow: 0 0 8px #32cd32, 0 0 15px #00ffd0; }
+}
+
+/* ================= Modern Sparkle Hover Effect ================= */
+.hero-actions a,
+.glass-back {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.hero-actions a::before,
+.glass-back::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0) 100%
+  );
+  transform: rotate(25deg) translateX(-100%);
+  transition: transform 0.7s ease;
+  z-index: -1;
+}
+
+.hero-actions a:hover::before,
+.glass-back:hover::before {
+  transform: rotate(25deg) translateX(200%);
+}
+
+.hero-actions a:hover,
+.glass-back:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(50, 205, 50, 0.4);
+}
