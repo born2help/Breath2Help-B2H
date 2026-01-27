@@ -16,127 +16,172 @@
 
   <!-- ================= OPEN GRAPH META TAGS ================= -->
   <meta property="og:title" content="B2H Global Foundation">
-  <meta property="og:description" content="Join us in serving humanity — volunteer for sustainable impact">
+  <meta property="og:description" content="Join the B2H movement — Make a real humanitarian impact.">
   <meta property="og:image" content="images/hero.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/volunteer.html">
+  <meta property="og:url" content="https://yourdomain.com/become-a-volunteer.html">
   <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    /* ================= VOLUNTEER FORM STYLING ================= */
+    .volunteer-section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .volunteer-section h1 {
+      font-size: 2.8rem;
+      color: #22c55e;
+      margin-bottom: 15px;
+      text-shadow: 0 0 14px rgba(34,197,94,0.6);
+    }
+
+    .volunteer-section p.subtitle {
+      font-size: 1.1rem;
+      color: #b0e0e6;
+      margin-bottom: 40px;
+    }
+
+    .volunteer-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .volunteer-form .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .volunteer-form input,
+    .volunteer-form textarea,
+    .volunteer-form select {
+      flex: 1;
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-size: 1rem;
+      border: 1px solid #22c55e;
+      background: #0f2734;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    /* Placeholder color dark gray */
+    .volunteer-form input::placeholder,
+    .volunteer-form textarea::placeholder,
+    .volunteer-form select option[disabled] {
+      color: #555;
+    }
+
+    /* On typing / focus */
+    .volunteer-form input:focus,
+    .volunteer-form textarea:focus,
+    .volunteer-form select:focus {
+      background: #fff;
+      color: #000;
+      outline: none;
+      border-color: #22c55e;
+    }
+
+    .volunteer-form textarea {
+      resize: none;
+    }
+
+    .btn-glow.green-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-weight: 700;
+      border-radius: 10px;
+      background: #22c55e;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.35s ease;
+      text-align: center;
+    }
+
+    .btn-glow.green-btn::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      border-radius: 12px;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .btn-glow.green-btn:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 0 20px rgba(34,197,94,0.35), 0 0 30px rgba(34,197,94,0.2) inset;
+    }
+
+    .btn-glow.green-btn:hover::before {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .volunteer-form .form-row {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 
-<body class="b2h-subpage" style="--page-accent:#3b82f6;">
+<body class="b2h-subpage" style="--page-accent:#22c55e;">
 
-  <section class="glass-container">
+  <section class="glass-container volunteer-section">
 
-    <!-- ================= HERO ================= -->
     <section class="page-hero">
-      <h1 class="blue-glow">Become a Volunteer</h1>
+      <h1 class="green-glow">Become a Volunteer</h1>
       <p class="subtitle glow-text">
-        Serve humanity, gain experience, and make a meaningful impact
+        Join our humanitarian mission — Make a real difference today
       </p>
-
-      <div class="hero-actions">
-        <a href="donate.html" class="btn-glow"><i class="fas fa-heart"></i> Donate</a>
-        <a href="spread-awareness.html" class="btn-glow"><i class="fas fa-bullhorn"></i> Spread Awareness</a>
-        <a href="index.html" class="btn-glow">← Back Home</a>
-      </div>
-
-      <hr class="section-divider">
     </section>
 
-    <!-- ================= PAGE CONTENT ================= -->
-    <section class="section">
-
-      <div class="wp-section">
-        <h2 class="section-title blue-glow"><i class="fas fa-users"></i> Who Can Volunteer</h2>
-        <p>
-          B2H welcomes individuals of all ages and backgrounds who are committed to humanitarian work, ethical participation, and helping communities in need.
-          Volunteering is voluntary, value-driven, and non-profit oriented.
-        </p>
+    <form class="volunteer-form" id="volunteer-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
       </div>
 
-      <hr class="section-divider">
-
-      <div class="wp-section">
-        <h2 class="section-title blue-glow"><i class="fas fa-hands-helping"></i> Volunteer Principles</h2>
-        <ul>
-          <li>Service with integrity, patience, and dedication</li>
-          <li>Adherence to ethical guidelines and accountability</li>
-          <li>Respect for community and participants</li>
-          <li>Contribution to sustainable humanitarian impact</li>
-        </ul>
+      <div class="form-row">
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="text" name="location" placeholder="City / Country">
       </div>
 
-      <hr class="section-divider">
-
-      <div class="wp-section">
-        <h2 class="section-title blue-glow"><i class="fas fa-clipboard-list"></i> How It Works</h2>
-        <p>
-          Once you join, you will receive guidance from our volunteer coordinators.
-          Opportunities include event support, online awareness campaigns, and community assistance.
-          All tasks are aligned with B2H’s long-term mission to serve humanity responsibly.
-        </p>
+      <div class="form-row">
+        <select name="area" required>
+          <option value="" disabled selected>Select Area of Contribution</option>
+          <option value="education">Education</option>
+          <option value="healthcare">Healthcare</option>
+          <option value="logistics">Logistics & Operations</option>
+          <option value="awareness">Spread Awareness</option>
+          <option value="other">Other</option>
+        </select>
       </div>
 
-      <hr class="section-divider">
-
-      <div class="wp-section">
-        <h2 class="section-title blue-glow"><i class="fas fa-user-check"></i> Join as Volunteer</h2>
-        <p>
-          Fill out the form below to express your interest. Our team will contact you to guide you through the next steps.
-        </p>
-
-        <!-- ================= VOLUNTEER FORM ================= -->
-<section class="volunteer-form-section">
-  <div class="container">
-    <h2 class="section-title green-glow"><i class="fas fa-hands-helping"></i> Join as a Volunteer</h2>
-    <p class="subtitle glow-text">
-      Fill out this form to contribute your time and skills for humanity.
-    </p>
-
-    <form class="volunteer-form" action="volunteer-form-handler.php" method="POST">
-  <div class="form-row">
-    <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email Address" required>
-  </div>
-
-  <div class="form-row">
-    <input type="tel" name="phone" placeholder="Phone Number">
-    <input type="text" name="location" placeholder="City / Country">
-  </div>
-
-  <div class="form-row">
-    <select name="area" required>
-      <option value="" disabled selected>Select Area of Contribution</option>
-      <option value="education">Education</option>
-      <option value="healthcare">Healthcare</option>
-      <option value="logistics">Logistics & Operations</option>
-      <option value="awareness">Spread Awareness</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-
-  <div class="form-row">
-    <textarea name="message" rows="4" placeholder="Your Message / Skills"></textarea>
-  </div>
-
-  <button type="submit" class="btn-glow green-btn">Submit Application</button>
-</form>
-  </div>
-</section>
-
-      <hr class="section-divider">
-
-      <div class="wp-section highlight">
-        <h2 class="section-title blue-glow"><i class="fas fa-exclamation-triangle"></i> Important Notice</h2>
-        <p>
-          Participation is voluntary. Volunteers are expected to adhere to B2H’s ethical and faith-aligned principles.
-          No financial return, promises, or benefits are implied by volunteering.
-        </p>
+      <div class="form-row">
+        <textarea name="message" rows="4" placeholder="Your Message / Skills"></textarea>
       </div>
 
-      <a href="index.html" class="glass-back btn-glow">← Back Home</a>
+      <button type="submit" class="btn-glow green-btn">Submit Application</button>
+    </form>
 
-    </section>
+    <a href="index.html" class="glass-back btn-glow">← Back Home</a>
+
   </section>
 
   <!-- ================= FOOTER ================= -->
@@ -152,23 +197,28 @@
     <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
 
-  <!-- ================= FADE-IN SCRIPT ================= -->
+  <!-- ================= GOOGLE SHEET SUBMISSION SCRIPT ================= -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll(
-        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back'
-      );
+    const form = document.getElementById("volunteer-form");
 
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
+    form.addEventListener("submit", e => {
+      e.preventDefault();
 
-      elements.forEach(el => observer.observe(el));
+      const data = new FormData(form);
+
+      fetch("YOUR_GOOGLE_WEBAPP_URL_HERE", { // Replace with your Web App URL
+        method: "POST",
+        body: data
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert("Thank you for volunteering! We will contact you soon.");
+        form.reset();
+      })
+      .catch(err => {
+        alert("Oops! Something went wrong. Please try again.");
+        console.error(err);
+      });
     });
   </script>
 
