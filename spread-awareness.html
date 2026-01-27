@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spread Awareness — B2H Global Foundation</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Subpage CSS -->
+  <link rel="stylesheet" href="subpage.css">
+
+  <!-- ================= OPEN GRAPH META TAGS ================= -->
+  <meta property="og:title" content="B2H Global Foundation">
+  <meta property="og:description" content="Help B2H spread awareness and amplify our humanitarian mission.">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/spread-awareness.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    /* ================= SPREAD AWARENESS FORM ================= */
+    .spread-section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .spread-section h1 {
+      font-size: 2.8rem;
+      color: #f59e0b; /* orange glow */
+      margin-bottom: 15px;
+      text-shadow: 0 0 14px rgba(245,158,11,0.6);
+    }
+
+    .spread-section p.subtitle {
+      font-size: 1.1rem;
+      color: #b0e0e6;
+      margin-bottom: 40px;
+    }
+
+    .spread-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .spread-form .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .spread-form input,
+    .spread-form textarea,
+    .spread-form select {
+      flex: 1;
+      padding: 12px 15px;
+      border-radius: 8px;
+      font-size: 1rem;
+      border: 1px solid #f59e0b;
+      background: #0f2734;
+      color: #fff;
+      transition: all 0.3s ease;
+    }
+
+    .spread-form input::placeholder,
+    .spread-form textarea::placeholder,
+    .spread-form select option[disabled] {
+      color: #555;
+    }
+
+    .spread-form input:focus,
+    .spread-form textarea:focus,
+    .spread-form select:focus {
+      background: #fff;
+      color: #000;
+      outline: none;
+      border-color: #f59e0b;
+    }
+
+    .spread-form textarea { resize: none; }
+
+    .btn-glow.orange-btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-weight: 700;
+      border-radius: 10px;
+      background: #f59e0b;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      transition: all 0.35s ease;
+      text-align: center;
+    }
+
+    .btn-glow.orange-btn::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      border-radius: 12px;
+      background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .btn-glow.orange-btn:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 0 20px rgba(245,158,11,0.35), 0 0 30px rgba(245,158,11,0.2) inset;
+    }
+
+    .btn-glow.orange-btn:hover::before {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .spread-form .form-row { flex-direction: column; }
+    }
+  </style>
+</head>
+
+<body class="b2h-subpage" style="--page-accent:#f59e0b;">
+
+  <section class="glass-container spread-section">
+
+    <section class="page-hero">
+      <h1 class="orange-glow">Spread Awareness</h1>
+      <p class="subtitle glow-text">
+        Help us share B2H’s mission and reach more people.
+      </p>
+    </section>
+
+    <form class="spread-form" id="spread-form">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+
+      <div class="form-row">
+        <input type="tel" name="phone" placeholder="Phone Number">
+        <input type="text" name="location" placeholder="City / Country">
+      </div>
+
+      <div class="form-row">
+        <select name="contribution" required>
+          <option value="" disabled selected>How will you contribute?</option>
+          <option value="social-media">Social Media</option>
+          <option value="events">Events / Outreach</option>
+          <option value="content">Content Creation</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <textarea name="message" rows="4" placeholder="Additional details / Message"></textarea>
+      </div>
+
+      <button type="submit" class="btn-glow orange-btn">Submit Application</button>
+    </form>
+
+    <a href="index.html" class="glass-back btn-glow">← Back Home</a>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="vision.html">Vision</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="tokenomics.html">Tokenomics</a>
+      <a href="constitution.html">Constitution</a>
+    </div>
+    <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ================= GOOGLE SHEET SUBMISSION SCRIPT ================= -->
+  <script>
+    const spreadForm = document.getElementById("spread-form");
+
+    spreadForm.addEventListener("submit", e => {
+      e.preventDefault();
+
+      const data = new FormData(spreadForm);
+
+      fetch("YOUR_GOOGLE_WEBAPP_URL_HERE", { // Replace with your Web App URL
+        method: "POST",
+        body: data
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert("Thank you! We will contact you soon.");
+        spreadForm.reset();
+      })
+      .catch(err => {
+        alert("Oops! Something went wrong. Please try again.");
+        console.error(err);
+      });
+    });
+  </script>
+
+</body>
+</html>
