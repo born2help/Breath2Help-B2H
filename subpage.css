@@ -247,3 +247,179 @@ a:hover {
 .b2h-subpage .subtitle {
   color: var(--b2h-text-soft) !important;
 }
+
+/* ===============================
+   Modern Enhancements for Subpages
+   =============================== */
+
+/* ----------------- Smooth Text Glow ----------------- */
+.page-hero h1,
+.section-title {
+  text-shadow: 0 0 10px rgba(50, 205, 50, 0.3), 0 0 20px rgba(50, 205, 50, 0.2);
+  transition: text-shadow 0.5s ease;
+}
+.page-hero h1:hover,
+.section-title:hover {
+  text-shadow: 0 0 15px rgba(50, 205, 50, 0.6), 0 0 30px rgba(50, 205, 50, 0.4);
+}
+
+/* ----------------- Smooth Button Hover ----------------- */
+.hero-actions a,
+.glass-back {
+  transition: all 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 5px 15px rgba(50, 205, 50, 0.2);
+}
+.hero-actions a:hover,
+.glass-back:hover {
+  box-shadow: 0 10px 25px rgba(50, 205, 50, 0.35);
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* ----------------- Section Background Accent ----------------- */
+.section.light {
+  background: rgba(50, 205, 50, 0.05);
+  border-left: 4px solid var(--b2h-accent);
+  padding: 2rem 1.5rem;
+}
+
+/* ----------------- Smooth List Bullets ----------------- */
+.wp-section ul {
+  list-style: none;
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.wp-section ul li::before {
+  content: "•";
+  color: var(--b2h-accent);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* ----------------- Subtle Fade-in Shadows ----------------- */
+.wp-section,
+.page-hero {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  border-radius: var(--glass-radius);
+}
+
+/* ----------------- Hero Subtitle Accent ----------------- */
+.page-hero .subtitle {
+  font-style: italic;
+  letter-spacing: 0.5px;
+  color: var(--b2h-text-soft);
+  text-shadow: 0 0 5px rgba(50, 205, 50, 0.15);
+}
+
+/* ===============================
+   Super Modern Enhancements for Subpages
+   =============================== */
+
+/* ----------------- Animated Gradient Accent ----------------- */
+:root {
+  --gradient-accent: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
+}
+
+.page-hero h1,
+.section-title {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s ease infinite;
+  font-weight: 800;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ----------------- Glass Reflection Animation ----------------- */
+.glass-container::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border-radius: var(--glass-radius);
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 100%);
+  transform: translateX(-100%) rotate(25deg);
+  animation: glassSweep 8s linear infinite;
+}
+
+@keyframes glassSweep {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(200%) rotate(25deg); }
+}
+
+/* ----------------- Smooth Card Lift on Hover ----------------- */
+.wp-section,
+.section.light {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.wp-section:hover,
+.section.light:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+/* ----------------- Button Micro-Interactions ----------------- */
+.hero-actions a,
+.glass-back {
+  position: relative;
+  overflow: hidden;
+}
+.hero-actions a::after,
+.glass-back::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.15);
+  transform: skewX(-25deg);
+  transition: all 0.5s ease;
+}
+.hero-actions a:hover::after,
+.glass-back:hover::after {
+  left: 200%;
+}
+
+/* ----------------- Floating Blockquote Effect ----------------- */
+.wp-section blockquote {
+  position: relative;
+  padding: 1rem 1.5rem;
+  font-style: italic;
+  border-left: 4px solid var(--b2h-accent);
+  background: rgba(50,205,50,0.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.wp-section blockquote:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* ----------------- Subtitle Pulse ----------------- */
+.page-hero .subtitle {
+  animation: subtitlePulse 3s ease-in-out infinite;
+}
+@keyframes subtitlePulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
+}
+
+/* ----------------- Micro Glimmer on List Bullets ----------------- */
+.wp-section ul li::before {
+  content: "•";
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+  color: var(--b2h-accent);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.wp-section ul li:hover::before {
+  transform: scale(1.3) translateX(2px);
+  color: #00ffd0;
+}
