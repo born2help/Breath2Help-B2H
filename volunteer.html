@@ -93,34 +93,34 @@
       Fill out this form to contribute your time and skills for humanity.
     </p>
 
-    <form class="volunteer-form">
-      <div class="form-row">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-      </div>
+    <form class="volunteer-form" action="volunteer-form-handler.php" method="POST">
+  <div class="form-row">
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+  </div>
 
-      <div class="form-row">
-        <input type="tel" name="phone" placeholder="Phone Number">
-        <input type="text" name="location" placeholder="City / Country">
-      </div>
+  <div class="form-row">
+    <input type="tel" name="phone" placeholder="Phone Number">
+    <input type="text" name="location" placeholder="City / Country">
+  </div>
 
-      <div class="form-row">
-        <select name="area" required>
-          <option value="" disabled selected>Select Area of Contribution</option>
-          <option value="education">Education</option>
-          <option value="healthcare">Healthcare</option>
-          <option value="logistics">Logistics & Operations</option>
-          <option value="awareness">Spread Awareness</option>
-          <option value="other">Other</option>
-        </select>
-      </div>
+  <div class="form-row">
+    <select name="area" required>
+      <option value="" disabled selected>Select Area of Contribution</option>
+      <option value="education">Education</option>
+      <option value="healthcare">Healthcare</option>
+      <option value="logistics">Logistics & Operations</option>
+      <option value="awareness">Spread Awareness</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
 
-      <div class="form-row">
-        <textarea name="message" rows="4" placeholder="Your Message / Skills"></textarea>
-      </div>
+  <div class="form-row">
+    <textarea name="message" rows="4" placeholder="Your Message / Skills"></textarea>
+  </div>
 
-      <button type="submit" class="btn-glow green-btn">Submit Application</button>
-    </form>
+  <button type="submit" class="btn-glow green-btn">Submit Application</button>
+</form>
   </div>
 </section>
 
