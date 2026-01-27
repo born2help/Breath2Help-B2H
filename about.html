@@ -14,7 +14,7 @@
 
 <body class="b2h-subpage dark-page glass-page" style="--page-accent:#9b6bff;">
 
-    <!-- ================= NAVIGATION ================= -->
+  <!-- ================= NAVIGATION ================= -->
   <nav class="site-nav">
     <div class="nav-container">
       <div class="nav-logo"></div>
@@ -35,9 +35,7 @@
     <!-- ================= HERO ================= -->
     <section class="page-hero visible">
       <h1>B2H Global Foundation</h1>
-      <p class="subtitle">
-        Built for Humanity • Driven by Purpose • Guided by Ethics
-      </p>
+      <p class="subtitle">Built for Humanity • Driven by Purpose • Guided by Ethics</p>
 
       <div class="hero-actions">
         <a href="donate.html" class="donate">Donate Now</a>
@@ -55,44 +53,27 @@
 
       <div class="wp-section">
         <h2 class="section-title">Who We Are</h2>
-        <p>
-          <strong>B2H</strong> (Burn to Help | Born for Humanity) is a humanitarian-first foundation
-          built on ethics, responsibility, and long-term impact.
-          Every contribution is transformed into measurable, sustainable aid
-          designed to serve humanity beyond short-term relief.
-        </p>
+        <p><strong>B2H</strong> (Burn to Help | Born for Humanity) is a humanitarian-first foundation built on ethics, responsibility, and long-term impact. Every contribution is transformed into measurable, sustainable aid designed to serve humanity beyond short-term relief.</p>
       </div>
 
       <hr class="section-divider">
 
       <div class="wp-section">
-        <blockquote>
-          “Technology should serve humanity without compromising ethics.”
-          <br><br>
-          — <strong>Mubashir Munnawar</strong>
-        </blockquote>
+        <blockquote>“Technology should serve humanity without compromising ethics.”<br><br>— <strong>Mubashir Munnawar</strong></blockquote>
       </div>
 
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Our Vision</h2>
-        <p>
-          A world where relief, dignity, education, and care continue regardless of
-          economic conditions — through systems designed to serve not just today,
-          but generations to come.
-        </p>
+        <p>A world where relief, dignity, education, and care continue regardless of economic conditions — through systems designed to serve generations to come.</p>
       </div>
 
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Our Mission</h2>
-        <p>
-          To transform contributions into sustainable humanitarian mechanisms
-          that continuously serve humanity, creating true
-          <strong>Sadaqah Jariyah</strong> for both participants and beneficiaries.
-        </p>
+        <p>To transform contributions into sustainable humanitarian mechanisms that continuously serve humanity, creating true <strong>Sadaqah Jariyah</strong> for both participants and beneficiaries.</p>
       </div>
 
       <hr class="section-divider">
@@ -111,22 +92,14 @@
       <hr class="section-divider">
 
       <div class="wp-section">
-        <p>
-          <strong>Impact:</strong> More than 500,000 people reached through humanitarian initiatives,
-          ethical relief systems, and long-term assistance programs.
-        </p>
+        <p><strong>Impact:</strong> More than 500,000 people reached through humanitarian initiatives, ethical relief systems, and long-term assistance programs.</p>
       </div>
 
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Founder’s Intention</h2>
-        <p>
-          B2H was founded by <strong>Mubashir Munnawar</strong> with a single guiding principle:
-          technology must serve humanity without personal gain.
-          Every decision is made with patience, accountability, and ethical responsibility,
-          ensuring the mission remains protected for generations.
-        </p>
+        <p>B2H was founded by <strong>Mubashir Munnawar</strong> with a single guiding principle: technology must serve humanity without personal gain. Every decision is made with patience, accountability, and ethical responsibility, ensuring the mission remains protected for generations.</p>
       </div>
 
       <a href="index.html" class="glass-back">← Back Home</a>
@@ -151,22 +124,16 @@
 
   <!-- ================= FADE-IN SCRIPT ================= -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll(
-        '.page-hero, .section, .wp-section'
-      );
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
-
-      elements.forEach(el => observer.observe(el));
-    });
+    const elements = document.querySelectorAll('.page-hero, .section, .wp-section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    elements.forEach(el => observer.observe(el));
   </script>
 
 </body>
