@@ -8,11 +8,10 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
-  <!-- Unified Subpage CSS -->
+  <!-- Subpage CSS -->
   <link rel="stylesheet" href="subpage.css">
 </head>
 
-<body class="b2h-subpage">
 <body class="b2h-subpage" style="--page-accent:#d6d6d6;">
 
   <!-- ================= MAIN GLASS CONTAINER ================= -->
@@ -24,10 +23,10 @@
       <p class="subtitle">Built for Humanity · Driven by Purpose · Guided by Ethics</p>
 
       <div class="hero-actions">
-        <a href="donate.html" class="donate">Donate Now</a>
-        <a href="tokenomics.html" class="whitepaper">Explore Tokenomics</a>
-        <a href="burn-ethics.html" class="whitepaper">Burn & Ethics</a>
-        <a href="about.html" class="whitepaper">About B2H</a>
+        <a href="donate.html" class="btn-glow">Donate Now</a>
+        <a href="tokenomics.html" class="btn-glow">Explore Tokenomics</a>
+        <a href="burn-ethics.html" class="btn-glow">Burn & Ethics</a>
+        <a href="about.html" class="btn-glow">About B2H</a>
       </div>
 
       <hr class="section-divider">
@@ -44,6 +43,7 @@
           B2H demonstrates that technology can protect dignity and deliver sustainable impact.
         </p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
@@ -56,6 +56,7 @@
         </ul>
         <p><strong>Core Values:</strong> Integrity over speed · Trust over hype · Patience over pressure · Humanity over profit</p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
@@ -67,6 +68,7 @@
         </ul>
         <p>Fixed supply ensures fairness, discipline, and protection from dilution.</p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
@@ -76,6 +78,7 @@
           Burns align participation with responsibility, long-term impact, and sustainability — not speculation.
         </p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
@@ -87,6 +90,7 @@
           <li>Founder stewardship without ownership or personal gain</li>
         </ul>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
@@ -94,6 +98,7 @@
         <p><strong>Vision:</strong> Systems that deliver lasting relief and opportunity, regardless of wealth or location.</p>
         <p><strong>Mission:</strong> Convert contributions into sustainable assets continuously serving humanity, creating true Sadaqah Jariyah.</p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
@@ -105,18 +110,21 @@
           <li>Continuous oversight by rotating ethical council</li>
         </ul>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">Long-Term Impact</h2>
         <p>B2H contributions become permanent assets generating continuous support for vulnerable communities.</p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section">
         <h2 class="section-title">How to Participate</h2>
         <p>Participation is voluntary, transparent, and open to all. Contributors create a living system of good, impacting generations.</p>
       </div>
+
       <hr class="section-divider">
 
       <div class="wp-section highlight">
@@ -124,7 +132,7 @@
         <p>B2H is a humanitarian instrument. We uphold long-term stewardship, transparency, and ethical management, ensuring technology serves humanity with integrity and compassion.</p>
       </div>
 
-      <a href="index.html" class="glass-back">← Back Home</a>
+      <a href="index.html" class="glass-back btn-glow">← Back Home</a>
 
     </section>
   </section>
@@ -146,18 +154,22 @@
 
   <!-- ================= FADE-IN SCRIPT ================= -->
   <script>
-    const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back');
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll(
+        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back'
+      );
 
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
 
-    elements.forEach(el => observer.observe(el));
+      elements.forEach(el => observer.observe(el));
+    });
   </script>
 
 </body>
