@@ -1908,50 +1908,44 @@ a.btn:active {
   justify-content: center;
 }
 
-/* ================= FIX MAIN HERO BUTTONS ================= */
+/* ================= HERO BUTTONS COMPACT FIX ================= */
 .hero-subpages {
-  display: flex !important;       /* ensure flex layout */
-  flex-wrap: nowrap !important;   /* all buttons in one line */
-  justify-content: center !important;
-  gap: 12px;                      /* spacing between buttons */
-  overflow-x: auto;               /* horizontal scroll if screen too small */
-  padding-bottom: 10px;           /* prevent last button from touching founder section */
+  display: flex !important;       /* flex layout */
+  flex-wrap: wrap;                /* allow wrapping if very small screens */
+  justify-content: center;
+  gap: 8px;                       /* slightly smaller gap */
+  margin-top: 15px;               /* keep spacing compact */
 }
 
 .hero-subpages a {
-  white-space: nowrap;            /* prevent text wrapping inside button */
-  font-size: 0.9rem;              /* adjust to fit in one line */
-  padding: 10px 20px;             /* adjust button size */
-  flex-shrink: 0;                 /* prevent button from shrinking too much */
+  white-space: nowrap;            /* prevent button text wrapping */
+  font-size: 0.85rem;             /* slightly smaller font */
+  padding: 6px 14px;              /* compact padding */
+  flex-shrink: 0;                 /* do not shrink */
+  line-height: 1.2;               /* tighter line height */
 }
 
-/* Optional: subtle scroll bar hidden for better look */
-.hero-subpages::-webkit-scrollbar {
-  height: 6px;
-}
-.hero-subpages::-webkit-scrollbar-thumb {
-  background: rgba(34,197,94,0.5);
-  border-radius: 3px;
-}
-.hero-subpages::-webkit-scrollbar-track {
-  background: transparent;
+/* Ensure hero content height stays compact */
+.page-hero {
+  padding: 60px 20px;             /* slightly reduced top/bottom padding */
 }
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
   .hero-subpages a {
-    font-size: 0.85rem;
-    padding: 8px 16px;
+    font-size: 0.8rem;
+    padding: 5px 12px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-subpages {
-    flex-wrap: wrap; /* allow wrapping on very small screens */
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    gap: 6px;
   }
   .hero-subpages a {
-    font-size: 0.8rem;
-    padding: 6px 12px;
+    font-size: 0.75rem;
+    padding: 4px 10px;
   }
 }
 
