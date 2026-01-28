@@ -107,9 +107,20 @@
       <div class="wp-section">
         <h2 class="section-title green-glow"><i class="fas fa-credit-card"></i> Approved Donation Methods</h2>
         <p>
-          All official donation methods will be publicly announced through verified B2H channels.
-          Any private, unofficial, or direct payment requests should be treated as misinformation.
+          You can donate safely using the options below:
         </p>
+
+        <!-- ================= DONATION ACTION BUTTONS ================= -->
+        <div class="wp-section center">
+          <a href="https://wise.com/pay/YOUR_WISE_LINK" class="btn-join donate">Donate via Wise</a>
+          <a href="#" class="btn-join donate">Donate via Bank Transfer</a>
+          <p class="small-text">
+            <strong>Bank: PT Arab Indo Group</strong><br>
+            BCA / BNI — Indonesia<br>
+            Account #: 12345678<br>
+            SWIFT: ABCDIDJA (for international donors)
+          </p>
+        </div>
       </div>
 
       <hr class="section-divider">
@@ -118,51 +129,7 @@
         <h2 class="section-title green-glow"><i class="fas fa-exclamation-triangle"></i> Important Notice</h2>
         <p>
           No one may guarantee financial returns, special access, or benefits in exchange for donations.
-          Always confirm details via official B2H channels and adhere to ethical participation.
         </p>
-      </div>
-
-      <!-- ================= DONATION ACTION ================= -->
-<div class="wp-section center">
-  <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID"
-     class="btn-join donate">
-     Donate via PayPal
-  </a>
-
-  <p class="small-text">
-    Or donate via bank transfer:<br>
-    <strong>PT Arab Indo Group</strong><br>
-    BCA / BNI — Indonesia
-  </p>
-</div>
-
-      <!-- ================= DONATE NOW CTA ================= -->
-      <div class="donation-cta">
-        <a href="#" class="btn-join donate-now">💚 Donate Now</a>
-      </div>
-
-      <!-- ================= OPTIONAL DONATION FORM ================= -->
-      <div class="donation-form">
-        <h3>Select Donation Type</h3>
-        <form>
-          <label>
-            Name: <input type="text" name="donor_name" required>
-          </label>
-          <label>
-            Email: <input type="email" name="donor_email" required>
-          </label>
-          <label>
-            Amount (USD): <input type="number" name="donation_amount" required>
-          </label>
-          <label>
-            Donation Type:
-            <select name="donation_type">
-              <option value="one_time">One-Time</option>
-              <option value="monthly">Monthly</option>
-            </select>
-          </label>
-          <button type="submit" class="btn-join donate-now">Proceed to Donate</button>
-        </form>
       </div>
 
       <a href="index.html" class="glass-back btn-glow">← Back Home</a>
@@ -187,7 +154,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const elements = document.querySelectorAll(
-        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back, .donation-cta, .donation-form'
+        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back, .btn-join'
       );
 
       const observer = new IntersectionObserver((entries, observer) => {
