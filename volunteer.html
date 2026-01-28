@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Become a Volunteer — B2H Global Foundation</title>
+  <title>Volunteer & Spread Awareness — B2H Global Foundation</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
@@ -14,159 +14,104 @@
   <!-- Subpage CSS -->
   <link rel="stylesheet" href="subpage.css">
 
-  <!-- ================= OPEN GRAPH META TAGS ================= -->
+  <!-- Open Graph -->
   <meta property="og:title" content="B2H Global Foundation">
-  <meta property="og:description" content="Join B2H as a Volunteer and help humanity.">
+  <meta property="og:description" content="Built for Humanity · Driven by Purpose · Guided by Ethics">
   <meta property="og:image" content="images/hero.jpg">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://yourdomain.com/become-a-volunteer.html">
-  <meta name="twitter:card" content="summary_large_image">
-
-  <style>
-    /* ================= VOLUNTEER FORM STYLING ================= */
-    .volunteer-form {
-      max-width: 650px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      color: #fff;
-    }
-
-    .volunteer-form input,
-    .volunteer-form textarea {
-      width: 100%;
-      padding: 12px 15px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.2);
-      background-color: #111827;
-      color: #fff;
-      font-size: 1rem;
-      transition: all 0.3s ease;
-    }
-
-    .volunteer-form input::placeholder,
-    .volunteer-form textarea::placeholder {
-      color: #999999; /* light gray when empty */
-    }
-
-    .volunteer-form input:focus,
-    .volunteer-form textarea:focus {
-      outline: none;
-      border-color: #22c55e;
-      background-color: #1e293b; /* slightly lighter black */
-      color: #fff;
-    }
-
-    .volunteer-form input:focus::placeholder,
-    .volunteer-form textarea:focus::placeholder {
-      color: #ccc; /* lighter placeholder */
-    }
-
-    .volunteer-form button {
-      padding: 14px 28px;
-      border: none;
-      border-radius: 10px;
-      background: #22c55e;
-      color: #0b0f1a;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .volunteer-form button:hover {
-      background: #16a34a;
-      transform: translateY(-2px) scale(1.02);
-      box-shadow: 0 6px 18px rgba(34,197,94,0.5);
-    }
-
-    /* Subtle visual accent between paragraphs */
-    .volunteer-form p {
-      margin: 0;
-      padding: 5px 0;
-      border-left: 3px solid rgba(34,197,94,0.3);
-      padding-left: 10px;
-      font-size: 0.95rem;
-    }
-  </style>
+  <meta property="og:url" content="https://yourdomain.com/volunteer.html">
 </head>
 
-<body class="b2h-subpage" style="--page-accent:#3b82f6;">
+<body class="b2h-subpage" style="--b2h-accent:#7CFC00;">
 
-  <section class="glass-container">
+<!-- ================= GLASS CONTAINER ================= -->
+<section class="glass-container">
 
-    <!-- ================= HERO ================= -->
-    <section class="page-hero">
-      <h1 class="blue-glow">Become a Volunteer</h1>
-      <p class="subtitle glow-text">
-        Join our mission to help humanity.
+  <!-- ================= HERO ================= -->
+  <section class="page-hero">
+    <h1 class="green-glow">Volunteer & Spread Awareness</h1>
+    <p class="subtitle glow-text">
+      Join hands with B2H to make a real difference
+    </p>
+
+    <div class="hero-actions">
+      <a href="donate.html" class="btn-glow"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+      <a href="index.html" class="btn-glow">← Back Home</a>
+    </div>
+
+    <hr class="section-divider">
+  </section>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <section class="section">
+
+    <!-- ================= VOLUNTEER FORM ================= -->
+    <div class="wp-section" id="volunteer">
+      <h2 class="section-title green-glow"><i class="fas fa-hands-helping"></i> Volunteer With Us</h2>
+      <p>
+        Fill out the form below to become a B2H volunteer. Your time, skills, and energy can help us reach more people in need.
       </p>
 
-      <div class="join-buttons">
-  <a href="donate.html" class="btn-glow glass-donate">Donate</a>
-    <a href="spread-awareness.html" class="btn-glow glass-spread">Spread Awareness</a>
-</div>
-
-<div style="text-align:center; margin-top:30px;">
-  <a href="index.html" class="btn-glow glass-back">← Back Home</a>
-</div>
-
-      <hr class="section-divider">
-    </section>
-
-    <!-- ================= FORM SECTION ================= -->
-    <section class="section">
-      <form id="volunteer-form" class="volunteer-form" 
-            action="https://docs.google.com/forms/d/e/1FAIpQLSfO8rgIKMYKBbWBwGsdM98exCeCYP1VpT6o5sKXhp1W4D-JhQ/formResponse" 
-            method="POST" target="_blank">
-
-        <input type="text" name="entry.123456" placeholder="Full Name" required>
-        <input type="email" name="entry.654321" placeholder="Email Address" required>
-        <input type="tel" name="entry.112233" placeholder="Phone Number" required>
-        <textarea name="entry.445566" rows="5" placeholder="Why do you want to volunteer?"></textarea>
-        <button type="submit">Submit Application</button>
-
-        <p>All information provided will be treated confidentially.</p>
-        <p>Participation is voluntary and aligned with B2H’s ethical mission.</p>
+      <form class="volunteer-form">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="Full Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-row">
+          <input type="text" name="phone" placeholder="Phone Number" required>
+          <select name="interest" required>
+            <option value="" disabled selected>Select Area of Interest</option>
+            <option value="field-work">Field Work</option>
+            <option value="education">Education & Awareness</option>
+            <option value="fundraising">Fundraising</option>
+            <option value="administration">Administration</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <textarea name="message" placeholder="Why do you want to volunteer?" rows="4"></textarea>
+        </div>
+        <button type="submit" class="green-btn">Join as Volunteer</button>
       </form>
-    </section>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- ================= SPREAD AWARENESS ================= -->
+    <div class="wp-section" id="spread-awareness">
+      <h2 class="section-title green-glow"><i class="fas fa-bullhorn"></i> Spread Awareness</h2>
+      <p>
+        Help us reach more people by sharing B2H initiatives on your social media or in your community. Every voice counts!
+      </p>
+
+      <div class="donation-cta">
+        <a href="https://twitter.com/intent/tweet?text=Join%20B2H%20Global%20Foundation%20and%20help%20humanity!" target="_blank" class="btn-join donate-now">
+          Share on Twitter
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com" target="_blank" class="btn-join donate-now">
+          Share on Facebook
+        </a>
+        <a href="mailto:?subject=Join B2H Global Foundation&body=I invite you to join B2H Global Foundation and support humanitarian initiatives." class="btn-join donate-now">
+          Share via Email
+        </a>
+      </div>
+    </div>
 
   </section>
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="site-footer">
-    <div class="footer-links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="vision.html">Vision</a>
-      <a href="donate.html">Donate</a>
-      <a href="disclaimer.html">Disclaimer</a>
-      <a href="tokenomics.html">Tokenomics</a>
-      <a href="constitution.html">Constitution</a>
-    </div>
-    <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
-  </footer>
+</section>
 
-  <!-- ================= FADE-IN SCRIPT ================= -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const elements = document.querySelectorAll(
-        '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back, .join-buttons, .volunteer-form'
-      );
-
-      const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      }, { threshold: 0.2 });
-
-      elements.forEach(el => observer.observe(el));
-    });
-  </script>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="vision.html">Vision</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="constitution.html">Constitution</a>
+  </div>
+  <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
