@@ -1956,6 +1956,189 @@ body, html {
   box-shadow: 0 0 15px rgba(50,205,50,0.5);
 }
 
+.founder-message {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #f5f5f5, #e0f7f7); /* subtle gradient, not pure white */
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  color: #333; /* text dark for visibility */
+  line-height: 1.8;
+}
+
+.founder-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.founder-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+
+.founder-img {
+  max-width: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+.founder-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #14b8a6;
+}
+
+.section-underline.multi-glow {
+  width: 100px;
+  height: 4px;
+  margin: 0 auto 30px auto;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #14b8a6, #f59e0b, #f43f5e, #6366f1);
+}
+
+.highlight-quote {
+  font-style: italic;
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 25px 0;
+  position: relative;
+}
+
+.highlight-quote::before {
+  content: "“";
+  font-size: 2.5rem;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  color: #f59e0b;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.5s; }
+.fade-in.delay-2 { animation-delay: 1s; }
+.fade-in.delay-3 { animation-delay: 1.5s; }
+.fade-in.delay-4 { animation-delay: 2s; }
+.fade-in.delay-5 { animation-delay: 2.5s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .founder-img {
+    margin-bottom: 20px;
+  }
+}
+
+.founder-img {
+  width: 150px;            /* smaller size */
+  height: 150px;           /* keep it square for perfect circle */
+  border-radius: 50%;      /* makes it round */
+  object-fit: cover;       /* ensures image fills the circle without distortion */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* subtle shadow */
+  flex-shrink: 0;
+}
+
+.footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 50px 20px 20px 20px;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer h4 {
+  color: #14b8a6;
+  margin-bottom: 10px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #f59e0b;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+
+.footer-contact, .footer-social, .footer-newsletter {
+  max-width: 250px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.footer-newsletter input[type="email"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+}
+
+.footer-newsletter button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #14b8a6;
+  color: #fff;
+  cursor: pointer;
+}
+
+.footer-newsletter button:hover {
+  background: #f59e0b;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
