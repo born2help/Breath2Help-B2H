@@ -1824,7 +1824,7 @@ img { max-width: 100%; display: block; }
 .hero-subpages a.btn-participation-safeguard { background: #32CD32; } /* Lime Green */
 .hero-subpages a.btn-disclaimer { background: #DC143C; color: #fff; } /* Crimson */
 .hero-subpages a.btn-vision { background: #8A2BE2; }           /* Blue Violet */
-.hero-subpages a.btn-stress-test { background: #40E0D0; }      /* Tomato */
+.hero-subpages a.btn-stress-test { background: #40E0D0; }      /* Turquoise */
 
 /* Optional subtle shine animation */
 .hero-subpages a::before {
