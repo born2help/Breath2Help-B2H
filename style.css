@@ -298,26 +298,6 @@ img { max-width: 100%; display: block; }
   transform: translateY(-10px);
 }
 
- .founder-image {
-    width: 180px;
-    height: 180px;
-  }
-  .founder-image img {
-    width: 180px;
-    height: 180px;
-  }
-  .founder-image::before {
-    width: 210px;
-    height: 210px;
-  }
-  .founder-section h2 {
-    font-size: 2.2rem;
-  }
-  .founder-intro, .founder-text {
-    font-size: 1rem;
-  }
-}
-
 /* ================= PHILOSOPHY (CARDS) ================= */
 .philosophy-section {
   background: #081821;
