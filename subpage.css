@@ -306,3 +306,29 @@ Css
   transform: translateY(-3px) scale(1.03);
   box-shadow: 0 0 15px rgba(14,165,233,0.5);
 }
+
+.language-toggle {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(124,252,0,0.5);
+  color: #7CFC00;
+  padding: 6px 14px;
+  margin: 0 4px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  background: rgba(124,252,0,0.15);
+}
+
+.lang-btn.active {
+  background: #7CFC00;
+  color: #000;
+}
