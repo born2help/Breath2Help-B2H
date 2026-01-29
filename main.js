@@ -120,3 +120,31 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(floatArrow, index * 400);
   });
 });
+
+/* ======== FOUNDER FLOATING PARTICLES ======== */
+const founderWrapper = document.querySelector('.founder-img-wrapper');
+
+if (founderWrapper) {
+  const numParticles = 15; // gentle number of particles
+  for (let i = 0; i < numParticles; i++) {
+    const p = document.createElement('span');
+    p.classList.add('founder-particle');
+
+    // random size between 4px and 8px
+    const size = 4 + Math.random() * 4;
+    p.style.width = p.style.height = size + 'px';
+
+    // random position around image
+    p.style.left = 50 + Math.random() * 120 - 60 + '%';
+    p.style.top = 50 + Math.random() * 120 - 60 + '%';
+
+    // assign random movement offsets for animation
+    p.style.setProperty('--x', (Math.random() * 40 - 20).toFixed(2));
+    p.style.setProperty('--y', (Math.random() * 40 - 20).toFixed(2));
+
+    // random animation delay
+    p.style.animationDelay = (Math.random() * 5) + 's';
+
+    founderWrapper.appendChild(p);
+  }
+}
