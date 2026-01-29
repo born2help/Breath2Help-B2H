@@ -149,150 +149,103 @@ img { max-width: 100%; display: block; }
 }
 
 /* ================= FOUNDER SECTION BEAUTIFIED (ENHANCED + ACCENTS) ================= */
-.founder-section {
-  background: #0f2734;
-  color: #e0f7fa;
-  padding: 80px 20px;
-  position: relative;
-  overflow: hidden;
+.founder-message {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom right, #f5f5f5, #e0f7f7); /* subtle gradient, not pure white */
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1000px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  color: #333; /* text dark for visibility */
+  line-height: 1.8;
 }
 
-.founder-section h2 {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  color: #22c55e; /* glowing green heading */
-}
-
-.founder-intro {
-  text-align: center;
-  margin-bottom: 50px;
-  color: #b0e0e6;
-  font-size: 1.15rem;
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7;
-}
-
-/* Founder content layout */
-.founder-content {
+.founder-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
+  gap: 30px;
   align-items: flex-start;
 }
 
-/* Founder image with round shape and glow */
-.founder-image {
-  position: relative;
-  width: 220px;
-  height: 220px;
-}
-
-.founder-image img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  transition: transform 0.4s, box-shadow 0.4s;
-  position: relative;
-  z-index: 2;
-}
-
-/* ================= FOUNDER GLOW FIX ================= */
-.founder-image::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 270px;
-  height: 270px;
-  transform: translate(-50%, -50%) scale(1);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(34,197,94,0.5), transparent 60%);
-  filter: blur(40px);
-  opacity: 0.6;
-  transition: opacity 0.4s, transform 0.4s;
-  z-index: 1;
-}
-
-/* Hover effect: brighter and lift */
-.founder-image:hover::before {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1.1);
-  background: radial-gradient(circle, rgba(34,197,94,0.7), transparent 60%);
-  filter: blur(45px);
-}
-
-.founder-image:hover img {
-  transform: translateY(-10px);
-}
-
-/* Founder text */
-.founder-text {
-  max-width: 650px;
-  color: #c0f0e0;
-  font-size: 1.05rem;
-  line-height: 1.75;
-  text-align: justify;
-}
-
-/* Paragraph spacing & subtle accents */
-.founder-text p {
-  margin-bottom: 1.25rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-.founder-text p:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
+.founder-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
   width: 100%;
-  height: 1px;
-  background: rgba(34,197,94,0.2); /* faint green accent */
-  box-shadow: 0 0 4px rgba(34,197,94,0.2);
 }
 
-/* Signature styling */
-.signature {
-  font-weight: 700;
-  margin-top: 20px;
-  color: #22c55e;
+.founder-img {
+  max-width: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  flex-shrink: 0;
+}
+
+.founder-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-title {
+  font-size: 2.4rem;
   text-align: center;
+  margin-bottom: 10px;
+  color: #14b8a6;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .founder-content {
+.section-underline.multi-glow {
+  width: 100px;
+  height: 4px;
+  margin: 0 auto 30px auto;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #14b8a6, #f59e0b, #f43f5e, #6366f1);
+}
+
+.highlight-quote {
+  font-style: italic;
+  color: #f59e0b;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 25px 0;
+  position: relative;
+}
+
+.highlight-quote::before {
+  content: "“";
+  font-size: 2.5rem;
+  position: absolute;
+  left: -20px;
+  top: -10px;
+  color: #f59e0b;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+.fade-in.delay-1 { animation-delay: 0.5s; }
+.fade-in.delay-2 { animation-delay: 1s; }
+.fade-in.delay-3 { animation-delay: 1.5s; }
+.fade-in.delay-4 { animation-delay: 2s; }
+.fade-in.delay-5 { animation-delay: 2.5s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .founder-wrapper {
     flex-direction: column;
     align-items: center;
   }
-  .founder-text {
-    text-align: center;
-  }
-  .founder-image {
-    width: 180px;
-    height: 180px;
-  }
-  .founder-image img {
-    width: 180px;
-    height: 180px;
-  }
-  .founder-image::before {
-    width: 210px;
-    height: 210px;
-  }
-  .founder-section h2 {
-    font-size: 2.2rem;
-  }
-  .founder-intro, .founder-text {
-    font-size: 1rem;
+  .founder-img {
+    margin-bottom: 20px;
   }
 }
 
