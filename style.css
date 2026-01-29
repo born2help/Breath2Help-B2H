@@ -244,8 +244,77 @@ img { max-width: 100%; display: block; }
     flex-direction: column;
     align-items: center;
   }
+  
   .founder-img {
     margin-bottom: 20px;
+  }
+}
+
+/* Founder image with round shape and glow */
+.founder-image {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.founder-image img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+  z-index: 2;
+}
+
+/* ================= FOUNDER GLOW FIX ================= */
+.founder-image::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 270px;
+  height: 270px;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(34,197,94,0.5), transparent 60%);
+  filter: blur(40px);
+  opacity: 0.6;
+  transition: opacity 0.4s, transform 0.4s;
+  z-index: 1;
+}
+
+/* Hover effect: brighter and lift */
+.founder-image:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+  background: radial-gradient(circle, rgba(34,197,94,0.7), transparent 60%);
+  filter: blur(45px);
+}
+
+.founder-image:hover img {
+  transform: translateY(-10px);
+}
+
+ .founder-image {
+    width: 180px;
+    height: 180px;
+  }
+  .founder-image img {
+    width: 180px;
+    height: 180px;
+  }
+  .founder-image::before {
+    width: 210px;
+    height: 210px;
+  }
+  .founder-section h2 {
+    font-size: 2.2rem;
+  }
+  .founder-intro, .founder-text {
+    font-size: 1rem;
   }
 }
 
