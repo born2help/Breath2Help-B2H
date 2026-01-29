@@ -5,122 +5,145 @@
 <title>Volunteer — B2H Global Foundation</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Fonts & FontAwesome -->
+<!-- Language Toggle -->
+<div class="language-toggle">
+  <button onclick="setLanguage('en')" class="lang-btn active">EN</button>
+  <button onclick="setLanguage('id')" class="lang-btn">ID</button>
+</div>
+
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="subpage.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body class="b2h-subpage">
 
-<!-- ================= HERO ================= -->
-<section class="page-hero">
-  <h1 class="green-glow">Become a Volunteer</h1>
-  <p class="subtitle">Help Us Make a Real Difference</p>
+<section class="glass-container">
 
-  <div class="participate-nav">
-    <a href="#donate"><i class="fas fa-hand-holding-heart"></i> Donate</a>
-    <a href="#volunteer"><i class="fas fa-hands-helping"></i> Volunteer</a>
-    <a href="#awareness"><i class="fas fa-bullhorn"></i> Spread Awareness</a>
-    <a href="index.html">← Home</a>
-  </div>
+  <!-- ================= HERO ================= -->
+  <section class="page-hero">
+    <h1 class="green-glow">Become a Volunteer</h1>
+    <p class="subtitle">Join hands to make a difference</p>
 
-  <div class="scroll-indicator"><span></span></div>
+    <div class="participate-nav">
+      <a href="#donate"><i class="fas fa-hand-holding-heart"></i> Donate</a>
+      <a href="#volunteer"><i class="fas fa-hands-helping"></i> Volunteer</a>
+      <a href="#awareness"><i class="fas fa-bullhorn"></i> Spread Awareness</a>
+      <a href="index.html">← Home</a>
+    </div>
 
-  <!-- Participation Form -->
-  <div class="participation-form" style="max-width:500px; margin:25px auto;">
-    <h3>Join Our Mission</h3>
-    <form id="participationForm">
-      <input type="text" id="name" required placeholder="Full Name">
-      <input type="email" id="email" required placeholder="Email Address">
-      <textarea id="message" rows="4" placeholder="Message / Interest"></textarea>
-      <button type="submit" class="green-btn">Submit</button>
+    <div class="scroll-indicator">
+      <span></span>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ================= DONATE ================= -->
+  <section id="donate" class="section participate-section">
+    <h2 class="section-title green-glow">Donate</h2>
+
+    <div class="donate-box">
+      <p>
+        Your donation is a <strong>Sadaqah Jariyah</strong>.  
+        No financial returns, no privileges, no guarantees — only impact.
+      </p>
+
+      <p><strong>Bank Transfer (Indonesia)</strong></p>
+      <p>
+        PT Arab Indo Group<br>
+        BCA / BNI — Indonesia
+      </p>
+
+      <p><strong>WISE Transfer</strong></p>
+      <p>
+        Use WISE to send directly to our Indonesian company account.
+      </p>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ================= VOLUNTEER ================= -->
+  <section id="volunteer" class="section participate-section">
+    <h2 class="section-title green-glow">Volunteer Form</h2>
+
+    <form class="volunteer-form">
+      <div class="form-row">
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+      </div>
+
+      <div class="form-row">
+        <input type="text" placeholder="Country / City">
+        <select>
+          <option disabled selected>How would you like to help?</option>
+          <option>Field Work</option>
+          <option>Education</option>
+          <option>Fundraising</option>
+          <option>Online Awareness</option>
+        </select>
+      </div>
+
+      <textarea rows="4" placeholder="Why do you want to volunteer?"></textarea>
+
+      <button type="button" class="green-btn">
+        Become a Volunteer
+      </button>
     </form>
-    <p id="formSuccess" style="display:none; color:#22c55e; margin-top:15px; font-weight:600;">
-      Thank you! Your message has been received.
-    </p>
-  </div>
 
-  <!-- WhatsApp Volunteer Connect -->
-  <div class="whatsapp-cta" style="text-align:center; margin-top:15px;">
-    <a href="https://wa.me/6285396622600" target="_blank" class="green-btn">
-      Chat with a Volunteer on WhatsApp
-    </a>
-  </div>
-
-  <!-- Google Form Connect -->
-  <div class="google-form-cta" style="text-align:center; margin-top:15px;">
-    <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="green-btn google-btn">
-      Fill Participation Form via Google
-    </a>
-  </div>
-
-</section>
-
-<hr class="section-divider">
-
-<!-- ================= DONATE ================= -->
-<section id="donate" class="section participate-section">
-  <h2 class="section-title green-glow">Donate</h2>
-  <div class="info-box">
-    <p>Your donation is a <strong>Sadaqah Jariyah</strong> — purely for impact, no returns.</p>
-    <p><strong>Bank Transfer (Indonesia)</strong><br>PT Arab Indo Group<br>BCA / BNI — Indonesia</p>
-    <p><strong>WISE Transfer</strong><br>Send directly to our Indonesian company account</p>
-  </div>
-</section>
-
-<hr class="section-divider">
-
-<!-- ================= VOLUNTEER ================= -->
-<section id="volunteer" class="section participate-section">
-  <h2 class="section-title green-glow">Volunteer Opportunities</h2>
-  <form class="volunteer-form" style="max-width:500px; margin:auto;">
-    <input type="text" placeholder="Full Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <input type="text" placeholder="Country / City">
-    <select>
-      <option disabled selected>How would you like to help?</option>
-      <option>Field Work</option>
-      <option>Education</option>
-      <option>Fundraising</option>
-      <option>Online Awareness</option>
-    </select>
-    <textarea rows="4" placeholder="Why do you want to volunteer?"></textarea>
-    <button type="button" class="green-btn">Become a Volunteer</button>
-  </form>
-</section>
-
-<hr class="section-divider">
-
-<!-- ================= AWARENESS ================= -->
-<section id="awareness" class="section participate-section">
-  <h2 class="section-title green-glow">Spread Awareness</h2>
-  <div class="info-box" style="text-align:center;">
-    <p>You may not donate or volunteer — but your voice matters.</p>
-    <div class="hero-actions">
-      <a class="btn-glow" target="_blank"
-         href="https://twitter.com/intent/tweet?text=Support%20B2H%20Global%20Foundation">
-         Share on Twitter
-      </a>
-      <a class="btn-glow" target="_blank"
-         href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com">
-         Share on Facebook
-      </a>
-      <a class="btn-glow"
-         href="mailto:?subject=Join B2H&body=Support humanitarian work with B2H Global Foundation">
-         Share via Email
+    <!-- WhatsApp Volunteer Connect -->
+    <div class="whatsapp-cta" style="text-align:center; margin-top:25px;">
+      <a href="https://wa.me/6285396622600" target="_blank" class="green-btn">
+        Chat with a Volunteer on WhatsApp
       </a>
     </div>
-  </div>
+
+    <!-- Google Form Connect -->
+    <div class="google-form-cta" style="text-align:center; margin-top:15px;">
+      <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="google-btn">
+        Fill Volunteer Form via Google
+      </a>
+    </div>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- ================= AWARENESS ================= -->
+  <section id="awareness" class="section participate-section">
+    <h2 class="section-title green-glow">Spread Awareness</h2>
+
+    <div class="info-box">
+      <p>
+        You may not donate or volunteer — but your voice matters.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn-glow" target="_blank"
+           href="https://twitter.com/intent/tweet?text=Support%20B2H%20Global%20Foundation">
+           Share on Twitter
+        </a>
+
+        <a class="btn-glow" target="_blank"
+           href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com">
+           Share on Facebook
+        </a>
+
+        <a class="btn-glow"
+           href="mailto:?subject=Join B2H&body=Support humanitarian work with B2H Global Foundation">
+           Share via Email
+        </a>
+      </div>
+    </div>
+  </section>
+
 </section>
 
-<!-- Footer -->
 <footer class="site-footer">
   <p>© 2026 B2H Global Foundation — Built for Humanity</p>
 </footer>
 
-<!-- ================= Scripts ================= -->
 <script>
-  // Scroll indicator fade
   const indicator = document.querySelector('.scroll-indicator');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
@@ -129,23 +152,20 @@
       indicator.style.opacity = '1';
     }
   });
+</script>
 
-  // Participation form success
-  const form = document.getElementById('participationForm');
-  const successMsg = document.getElementById('formSuccess');
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    successMsg.style.display = 'block';
-    form.reset();
-  });
-
-  // Language toggle
+<script>
   function setLanguage(lang) {
     document.querySelectorAll('[data-en]').forEach(el => {
       el.innerText = el.getAttribute(`data-${lang}`);
     });
-    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    document.querySelector(`.lang-btn[onclick*="${lang}"]`).classList.add('active');
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+
+    document.querySelector(`.lang-btn[onclick*="${lang}"]`)
+      .classList.add('active');
   }
 </script>
 
