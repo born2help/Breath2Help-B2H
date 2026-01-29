@@ -14,101 +14,13 @@
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- ================= OPEN GRAPH META TAGS ================= -->
+  <!-- Subpage meta -->
   <meta property="og:title" content="B2H Global Foundation">
   <meta property="og:description" content="Built for Humanity · Driven by Purpose · Guided by Ethics">
   <meta property="og:image" content="images/hero.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yourdomain.com/index.html">
   <meta name="twitter:card" content="summary_large_image">
-</head>
-
-<style>
-/* ================= HERO SUBPAGE BUTTONS — MODERNIZED ================= */
-.hero-subpages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
-  margin-top: 25px;
-}
-
-.hero-subpages a {
-  position: relative;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: 600;
-  font-size: 14px;
-  text-decoration: none;
-  color: #fff;
-  overflow: hidden;
-  z-index: 0;
-  transition: all 0.35s ease, box-shadow 0.35s ease;
-}
-
-/* Sparkle overlay effect for modern touch */
-.hero-subpages a::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    rgba(255,255,255,0) 0%,
-    rgba(255,255,255,0.3) 50%,
-    rgba(255,255,255,0) 100%
-  );
-  transform: rotate(25deg) translateX(-100%);
-  transition: transform 0.7s ease;
-  z-index: -1;
-  border-radius: 25px;
-}
-
-/* Hover effect */
-.hero-subpages a:hover::before {
-  transform: rotate(25deg) translateX(200%);
-}
-
-.hero-subpages a:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-/* Individual button colors */
-.hero-subpages a.btn-about { background: #4da6ff; }           /* calm blue */
-.hero-subpages a.btn-white-paper { background: #d6d6d6; color: #000; } /* silver with black text */
-.hero-subpages a.btn-tokenomics { background: #00ffd0; color: #000; }   /* cyan */
-.hero-subpages a.btn-transparency { background: #8B0000; }    /* red */
-.hero-subpages a.btn-donate { background: #7CFC00; color: #000; }       /* life green */
-.hero-subpages a.btn-constitution { background: #f5c542; color: #000; }/* constitution yellow */
-.hero-subpages a.btn-burn-ethics { background: #FF1493; }     /* pink */
-.hero-subpages a.btn-founder-continuity { background: #facc15; color: #000; } /* yellow */
-.hero-subpages a.btn-participation-safeguard { background: #006400; } /* deep green */
-.hero-subpages a.btn-disclaimer { background: #ff6b6b; }      /* soft red */
-.hero-subpages a.btn-vision { background: #9b6bff; }          /* royal purple */
-.hero-subpages a.btn-sress-test { background: #ff8c42; }      /* deep orange */
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-  .hero-subpages {
-    gap: 8px;
-    margin-top: 15px;
-  }
-  .hero-subpages a {
-    padding: 8px 16px;
-    font-size: 0.8rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero-subpages a {
-    padding: 6px 12px;
-    font-size: 0.75rem;
-  }
-}
-</style>
 </head>
 <body>
 
@@ -124,104 +36,41 @@
   <div class="hero-content">
     <h1 class="hero-title">Born To Help</h1>
     <h2 class="hero-tagline">Burn for Humanity</h2>
-
-    <p class="hero-motivation">
-      ✨ One act of kindness can start a <span class="highlight">lifetime of impact</span>. Together, we create hope, change, and lasting relief.
-    </p>
-
-    <p class="hero-description">
-      Transforming compassion into action — every contribution becomes a form of <strong>Sadaqah Jariyah</strong>, 
-      creating education, healthcare, food security, and dignity. 
-      Small acts ripple into lasting change.
-    </p>
-
-    <p class="hero-subtext">
-      Join us in building a sustainable humanitarian impact. 
-      Your help today shapes a brighter tomorrow.
-    </p>
+    <p class="hero-motivation">✨ One act of kindness can start a <span class="highlight">lifetime of impact</span>. Together, we create hope, change, and lasting relief.</p>
+    <p class="hero-description">Transforming compassion into action — every contribution becomes a form of <strong>Sadaqah Jariyah</strong>, creating education, healthcare, food security, and dignity. Small acts ripple into lasting change.</p>
+    <p class="hero-subtext">Join us in building a sustainable humanitarian impact. Your help today shapes a brighter tomorrow.</p>
   </div>
 
-    <!-- ================= HERO SUBPAGE BUTTONS ================= -->
-<div class="hero-subpages">
-  <a href="about.html" class="btn-about">About</a>
-  <a href="white-paper.html" class="btn-white-paper">White Paper</a>
-  <a href="tokenomics.html" class="btn-tokenomics">Tokenomics</a>
-  <a href="transparency.html" class="btn-transparency">Transparency</a>
-  <a href="donate.html" class="btn-donate">Donate</a>
-  <a href="constitution.html" class="btn-constitution">Constitution</a>
-  <a href="burn-ethics.html" class="btn-burn-ethics">Burn & Ethics</a>
-  <a href="founder-continuity.html" class="btn-founder-continuity">Founder Continuity</a>
-  <a href="participation-safeguard.html" class="btn-participation-safeguard">Participation Safeguard</a>
-  <a href="disclaimer.html" class="btn-disclaimer">Disclaimer</a>
-  <a href="vision.html" class="btn-vision">Vision</a>
-  <a href="stress-test.html" class="btn-sress-test">Stress Test</a>
-</div>
+  <!-- Hero Buttons -->
+  <div class="hero-subpages">
+    <a href="about.html" class="btn-about">About</a>
+    <a href="white-paper.html" class="btn-white-paper">White Paper</a>
+    <a href="tokenomics.html" class="btn-tokenomics">Tokenomics</a>
+    <a href="transparency.html" class="btn-transparency">Transparency</a>
+    <a href="donate.html" class="btn-donate">Donate</a>
+    <a href="constitution.html" class="btn-constitution">Constitution</a>
+    <a href="burn-ethics.html" class="btn-burn-ethics">Burn & Ethics</a>
+    <a href="founder-continuity.html" class="btn-founder-continuity">Founder Continuity</a>
+    <a href="participation-safeguard.html" class="btn-participation-safeguard">Participation Safeguard</a>
+    <a href="disclaimer.html" class="btn-disclaimer">Disclaimer</a>
+    <a href="vision.html" class="btn-vision">Vision</a>
+    <a href="stress-test.html" class="btn-sress-test">Stress Test</a>
+  </div>
 </section>
-  
+
 <!-- ================= FOUNDER MESSAGE ================= -->
 <section class="founder-section">
   <div class="container">
     <h2>Message from the Founder</h2>
-    <p class="founder-intro">
-      B2H was founded on one belief: wealth should heal humanity, not divide it.
-      Our mission is not temporary charity, but sustainable impact that lives on for generations.
-    </p>
+    <p class="founder-intro">B2H was founded on one belief: wealth should heal humanity, not divide it. Our mission is not temporary charity, but sustainable impact that lives on for generations.</p>
 
     <div class="founder-content">
       <div class="founder-image">
         <img src="images/founder.jpg" alt="Founder of B2H">
       </div>
-
       <div class="founder-text">
-        <p>
-          My name is <strong>Mubashir Munnawar</strong>.<br>
-          B2H (Burn to Help | Born for Humanity) was born from a simple but powerful belief:
-          that technology, when guided by ethics and faith, can reduce suffering rather than amplify greed.
-        </p>
-
-        <p>
-          B2H is not a promise of wealth, returns, or financial gain. 
-          It is an experiment in responsibility — a long-term humanitarian system
-          designed to convert participation into lasting benefit for humanity.
-          Participation is voluntary and based on shared values, not expectations.
-        </p>
-
-        <p>
-          I do not own B2H, its assets, or its future. 
-          I serve only as a <strong>guardian of vision and ethics</strong>, entrusted with protecting the mission from misuse, deviation, or exploitation.
-          No assets, donations, or funds may ever be used for personal enrichment.
-        </p>
-
-        <p>
-          To ensure continuity and accountability, limited operational support
-          may be allocated strictly for basic administration and sustainability.
-          This is not profit, ownership, or entitlement — it exists solely for responsible and transparent operation.
-        </p>
-
-        <p>
-          I am not a wealthy individual. 
-          What I offer is sincerity, patience, and long-term commitment.
-          Integrity, faith, and accountability matter more than capital, and true impact is measured in lives uplifted, not numbers accumulated.
-        </p>
-
-        <p>
-          B2H exists to explore a new idea: that humanitarian work can be structured as a living system —
-          where donations are transformed into permanent, ethical assets
-          whose benefits flow continuously to those in need.
-        </p>
-
-        <p>
-          These assets are never sold. 
-          Their income is used only for humanitarian purposes — education, healthcare, food security, and dignity —
-          creating a true form of <strong>Sadaqah Jariyah</strong>.
-        </p>
-
-        <p>
-          As long as B2H exists, its purpose remains unchanged:
-          to serve humanity, protect trust, and ensure generosity
-          becomes a lasting source of relief for generations to come.
-        </p>
-
+        <p>My name is <strong>Mubashir Munnawar</strong>. B2H (Burn to Help | Born for Humanity) was born from a simple but powerful belief: that technology, when guided by ethics and faith, can reduce suffering rather than amplify greed.</p>
+        <p>B2H is not a promise of wealth, returns, or financial gain. Participation is voluntary and based on shared values, not expectations.</p>
         <p class="signature">— Founder & Guardian, B2H Global Foundation</p>
       </div>
     </div>
@@ -602,90 +451,19 @@
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-container">
-
-    <!-- Quick Links -->
     <div class="footer-links">
       <h4>Quick Links</h4>
       <ul>
         <li><a href="#how-B2H-works">How B2H Works</a></li>
-        <li><a href="#charity">Charity</a></li>
-        <li><a href="#mission">Mission & Vision</a></li>
-        </ul>
+        <li><a href="#tokenomics">Tokenomics</a></li>
+        <li><a href="#join-movement">Join the Movement</a></li>
+      </ul>
     </div>
-
-    <!-- Contact -->
-    <div class="footer-contact">
-      <h4>Contact</h4>
-      <p>Email: b2h.born2help@gmail.com</p>
-      <p>Whatsapp/Phone: +628112699883</p>
-      <p>Head Office: Menara Cakrawala Lt 12, Unit 05A, Jl. M.H. Thamrin No.9, Central Jakarta, Indonesia</p>
-    </div>
-
-    <!-- Social Icons -->
-    <div class="footer-social">
-  <h4>Follow Us</h4>
-  <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-  <a href="#"><img src="images/twitter.svg" alt="Twitter"></a>
-  <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
-  <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
-  <a href="#"><img src="images/tiktok.svg" alt="YouTube"></a>
-  <div class="footer-social-divider"></div>
-</div>
-
-  </div>
-
-  <!-- Footer bottom -->
-  <div class="footer-bottom">
-    <p>&copy; 2026 B2H Global Foundation. All rights reserved.</p>
   </div>
 </footer>
-  
-    <!-- PARTICLES JS -->
+
+<!-- ================= JS ================= -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-  
-  /* ================= HERO PARTICLES ================= */
-  particlesJS("particles-js", {
-  "particles": {
-    "number": { "value": 150, "density": { "enable": true, "value_area": 900 } },
-    "color": { "value": ["#32cd32","#00ffd0","#7CFC00"] },
-    "shape": { "type": "circle" },
-    "opacity": { "value": 0.7, "random": true },
-    "size": { "value": 3, "random": true },
-    "line_linked": { "enable": true, "distance": 130, "color": "#32cd32", "opacity": 0.25, "width": 1 },
-    "move": { "enable": true, "speed": 2.5, "direction": "none", "random": true, "straight": false, "out_mode": "out" }
-  },
-  "interactivity": {
-    "detect_on": "canvas",
-    "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true },
-    "modes": { "grab": { "distance": 140, "line_linked": { "opacity": 0.6 } }, "push": { "particles_nb": 4 } }
-  },
-  "retina_detect": true
-});
-
-  document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".bar-fill").forEach(bar => {
-    const width = bar.getAttribute("data-width");
-    bar.style.width = "0%";
-    bar.querySelector("span").textContent = "0%";
-
-    setTimeout(() => {
-      bar.style.transition = "width 2s ease-in-out";
-      bar.style.width = width;
-      let start = 0;
-      const target = parseInt(width);
-      const span = bar.querySelector("span");
-      const interval = setInterval(() => {
-        start++;
-        if(start > target){ clearInterval(interval); start = target; }
-        span.textContent = start + "%";
-      }, 20);
-    }, 600);
-  });
-});
-
- <script src="main.js"></script> 
-</script>
-    
+<script src="main.js"></script>
 </body>
 </html>
