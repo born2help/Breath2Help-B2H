@@ -202,3 +202,74 @@ body.b2h-subpage .site-footer a {
 body.b2h-subpage .site-footer a:hover {
   text-decoration: underline;
 }
+
+/* ===============================
+   Unified Subpage Footer (for all pages)
+   =============================== */
+body.b2h-subpage .site-footer {
+  background: #0b1f29; /* dark footer to match subpages */
+  padding: 25px 20px;
+  text-align: center;
+  color: var(--b2h-text-soft);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  z-index: 1;
+}
+
+/* Footer Links */
+body.b2h-subpage .site-footer .footer-links {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+body.b2h-subpage .site-footer .footer-links a {
+  color: var(--b2h-accent);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+}
+
+body.b2h-subpage .site-footer .footer-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background: var(--gradient-accent);
+  transition: width 0.3s ease;
+}
+
+body.b2h-subpage .site-footer .footer-links a:hover::after {
+  width: 100%;
+}
+
+/* Footer Text */
+body.b2h-subpage .site-footer p {
+  margin: 5px 0;
+  color: var(--b2h-text-soft);
+}
+
+/* Footer "Back to Top" button (optional) */
+body.b2h-subpage .site-footer .back-to-top {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--b2h-accent);
+  color: #0b0f1a;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+body.b2h-subpage .site-footer .back-to-top:hover {
+  box-shadow: 0 0 10px var(--b2h-accent);
+  transform: translateY(-2px);
+}
