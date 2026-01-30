@@ -118,20 +118,6 @@
     <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
 
-  <!-- ================= FADE-IN SCRIPT ================= -->
-  <script>
-    const elements = document.querySelectorAll('.page-hero, .section, .wp-section');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    elements.forEach(el => observer.observe(el));
-  </script>
-
 <script src="subpage.js"></script>
 </body>
 </html>
