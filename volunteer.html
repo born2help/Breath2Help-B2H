@@ -26,6 +26,9 @@
 
   <!-- ================= HERO ================= -->
   <section class="page-hero">
+
+<canvas id="heroParticles" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
+    
     <h1 class="green-glow">Volunteer with B2H</h1>
     <p class="subtitle glow-text">
       Make a real difference — your time, your skills, your heart
@@ -116,85 +119,7 @@
   </div>
   <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
 </footer>
-
-  <!-- ================= VOLUNTEER GLIMMERS ================= -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-
-  // Only for volunteer subpage
-  if (!document.body.classList.contains('b2h-subpage')) return;
-
-  const hero = document.querySelector('.page-hero');
-  if (!hero) return;
-
-  // Number of particles
-  const particleCount = 35;
-  const particles = [];
-
-  // Create particles
-  for (let i = 0; i < particleCount; i++) {
-    const p = document.createElement('span');
-    p.classList.add('volunteer-particle');
-    hero.appendChild(p);
-    particles.push(p);
-
-    // Random initial position
-    p.style.left = Math.random() * 100 + '%';
-    p.style.top = Math.random() * 100 + '%';
-
-    // Random size
-    const size = 3 + Math.random() * 8;
-    p.style.width = p.style.height = size + 'px';
-
-    // Random opacity
-    p.style.opacity = Math.random() * 0.6 + 0.4;
-
-    // Soft green glow
-    p.style.background = 'rgba(50,205,50,0.7)';
-    p.style.boxShadow = '0 0 12px rgba(50,205,50,0.5), 0 0 25px rgba(50,205,50,0.2)';
-
-    p.style.borderRadius = '50%';
-    p.style.position = 'absolute';
-    p.style.pointerEvents = 'none';
-    p.style.transition = 'transform 1.8s linear';
-    p.style.zIndex = '0';
-  }
-
-  // Floating animation loop
-  function floatParticles() {
-    particles.forEach(p => {
-      const dx = (Math.random() - 0.5) * 15;
-      const dy = (Math.random() - 0.5) * 15;
-
-      const transform = p.style.transform.match(/translate\((.*?)px,(.*?)px\)/);
-      let x = transform ? parseFloat(transform[1]) : 0;
-      let y = transform ? parseFloat(transform[2]) : 0;
-
-      p.style.transform = `translate(${x + dx}px, ${y + dy}px)`;
-    });
-    requestAnimationFrame(floatParticles);
-  }
-  floatParticles();
-
-  // Optional: mouse attraction
-  hero.addEventListener('mousemove', e => {
-    const rect = hero.getBoundingClientRect();
-    const mx = e.clientX - rect.left;
-    const my = e.clientY - rect.top;
-
-    particles.forEach((p, idx) => {
-      const px = parseFloat(p.dataset.x || p.offsetLeft);
-      const py = parseFloat(p.dataset.y || p.offsetTop);
-
-      const distX = (mx - px) * 0.01 * (idx % 5 + 1);
-      const distY = (my - py) * 0.01 * (idx % 5 + 1);
-
-      p.style.transform = `translate(${distX}px, ${distY}px)`;
-    });
-  });
-
-});
-</script>
-
+  
+<script src="subpage.js"></script>
 </body>
 </html>
