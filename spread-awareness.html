@@ -1,170 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Spread Awareness — B2H Global Foundation</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spread Awareness — B2H Global Foundation</title>
 
-<!-- Language Toggle -->
-<div class="language-toggle">
-  <button onclick="setLanguage('en')" class="lang-btn active">EN</button>
-  <button onclick="setLanguage('id')" class="lang-btn">ID</button>
-</div>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="subpage.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Subpage CSS -->
+  <link rel="stylesheet" href="subpage.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="B2H Global Foundation">
+  <meta property="og:description" content="Built for Humanity · Driven by Purpose · Guided by Ethics">
+  <meta property="og:image" content="images/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourdomain.com/awareness.html">
 </head>
 
 <body class="b2h-subpage">
 
-<section class="glass-container">
+<!-- ================= HERO WITH PARTICLES ================= -->
+<section class="page-hero" style="position:relative; overflow:hidden;">
 
-  <!-- ================= HERO ================= -->
-  <section class="page-hero">
+  <canvas id="heroParticles" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0;"></canvas>
+
+  <div class="hero-content" style="position:relative; z-index:1; text-align:center; padding:80px 20px;">
     <h1 class="green-glow">Spread Awareness</h1>
-    <p class="subtitle">Your voice can inspire change</p>
+    <p class="subtitle glow-text">Your voice and actions amplify humanity’s reach</p>
 
-    <div class="participate-nav">
-      <a href="#donate"><i class="fas fa-hand-holding-heart"></i> Donate</a>
-      <a href="#volunteer"><i class="fas fa-hands-helping"></i> Volunteer</a>
-      <a href="#awareness"><i class="fas fa-bullhorn"></i> Spread Awareness</a>
-      <a href="index.html">← Home</a>
+    <div class="hero-actions">
+      <a href="donate.html" class="green-btn">Donate Now</a>
+      <a href="volunteer.html" class="green-btn">Join as Volunteer</a>
+      <a href="index.html" class="green-btn">← Back Home</a>
     </div>
-
-    <div class="scroll-indicator">
-      <span></span>
-    </div>
-  </section>
-
-  <hr class="section-divider">
-
-  <!-- ================= DONATE ================= -->
-  <section id="donate" class="section participate-section">
-    <h2 class="section-title green-glow">Donate</h2>
-
-    <div class="donate-box">
-      <p>
-        Your donation is a <strong>Sadaqah Jariyah</strong>.  
-        No financial returns, no privileges, no guarantees — only impact.
-      </p>
-
-      <p><strong>Bank Transfer (Indonesia)</strong></p>
-      <p>
-        PT Arab Indo Group<br>
-        BCA / BNI — Indonesia
-      </p>
-
-      <p><strong>WISE Transfer</strong></p>
-      <p>
-        Use WISE to send directly to our Indonesian company account.
-      </p>
-    </div>
-  </section>
-
-  <hr class="section-divider">
-
-  <!-- ================= VOLUNTEER ================= -->
-  <section id="volunteer" class="section participate-section">
-    <h2 class="section-title green-glow">Volunteer</h2>
-
-    <form class="volunteer-form">
-      <div class="form-row">
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-      </div>
-
-      <div class="form-row">
-        <input type="text" placeholder="Country / City">
-        <select>
-          <option disabled selected>How would you like to help?</option>
-          <option>Field Work</option>
-          <option>Education</option>
-          <option>Fundraising</option>
-          <option>Online Awareness</option>
-        </select>
-      </div>
-
-      <textarea rows="4" placeholder="Why do you want to volunteer?"></textarea>
-
-      <button type="button" class="green-btn">
-        Become a Volunteer
-      </button>
-    </form>
-
-    <!-- WhatsApp Volunteer Connect -->
-    <div class="whatsapp-cta" style="text-align:center; margin-top:25px;">
-      <a href="https://wa.me/6285396622600" target="_blank" class="green-btn">
-        Chat with a Volunteer on WhatsApp
-      </a>
-    </div>
-
-    <!-- Google Form Connect -->
-    <div class="google-form-cta" style="text-align:center; margin-top:15px;">
-      <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="google-btn">
-        Fill Volunteer Form via Google
-      </a>
-    </div>
-  </section>
-
-  <hr class="section-divider">
-
-  <!-- ================= AWARENESS ================= -->
-  <section id="awareness" class="section participate-section">
-    <h2 class="section-title green-glow">Awareness Actions</h2>
-
-    <div class="info-box">
-      <p>
-        You may not donate or volunteer — but spreading awareness can change lives.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn-glow" target="_blank"
-           href="https://twitter.com/intent/tweet?text=Support%20B2H%20Global%20Foundation">
-           Share on Twitter
-        </a>
-
-        <a class="btn-glow" target="_blank"
-           href="https://www.facebook.com/sharer/sharer.php?u=https://yourdomain.com">
-           Share on Facebook
-        </a>
-
-        <a class="btn-glow"
-           href="mailto:?subject=Join B2H&body=Support humanitarian work with B2H Global Foundation">
-           Share via Email
-        </a>
-      </div>
-    </div>
-  </section>
+  </div>
 
 </section>
 
+<!-- ================= MAIN CONTENT ================= -->
+<section class="section">
+
+  <div class="wp-section">
+    <h2 class="section-title green-glow"><i class="fas fa-bullhorn"></i> Why Awareness Matters</h2>
+    <p>
+      Spreading awareness is a cornerstone of lasting humanitarian impact.
+      By educating communities and inspiring action, we ensure contributions create real change for those in need.
+    </p>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="wp-section">
+    <h2 class="section-title green-glow"><i class="fas fa-hands-helping"></i> How You Can Participate</h2>
+    <ul>
+      <li>Share B2H mission through social media and local networks</li>
+      <li>Organize awareness events or community talks</li>
+      <li>Engage schools, corporates, and volunteer groups</li>
+      <li>Support campaigns by spreading verified educational content</li>
+    </ul>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="wp-section">
+    <h2 class="section-title green-glow"><i class="fas fa-heart"></i> Impact Stories</h2>
+    <p>
+      Every effort, no matter how small, helps humanity thrive. Stories of relief, education, and care are shared continuously to highlight the power of collective action.
+    </p>
+  </div>
+
+  <hr class="section-divider">
+
+  <div class="wp-section">
+    <h2 class="section-title green-glow"><i class="fas fa-envelope"></i> Contact / Volunteer Form</h2>
+    <form class="participation-form" action="https://example.com/awareness-submit" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="text" name="city" placeholder="City / Location" required>
+      <textarea name="message" rows="4" placeholder="Message / Questions"></textarea>
+      <button type="submit" class="green-btn">Submit</button>
+    </form>
+  </div>
+
+  <a href="index.html" class="glass-back btn-glow">← Back Home</a>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
-  <p>© 2026 B2H Global Foundation — Built for Humanity</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="white-paper.html">White Paper</a>
+    <a href="burn-ethics.html">Burn & Ethics</a>
+    <a href="founder-continuity.html">Founder Continuity</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="donate.html">Donate</a>
+  </div>
+  <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
 </footer>
 
+<!-- ================= JS: PARTICLES & ANIMATION ================= -->
 <script>
-  const indicator = document.querySelector('.scroll-indicator');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      indicator.style.opacity = '0';
-    } else {
-      indicator.style.opacity = '1';
+  // ================= HERO PARTICLES =================
+  const canvas = document.getElementById('heroParticles');
+  const ctx = canvas.getContext('2d');
+  let particlesArray;
+
+  function initParticles() {
+    canvas.width = window.innerWidth;
+    canvas.height = document.body.scrollHeight;
+    particlesArray = [];
+    const colors = ['#32cd32','#00ffd0','#7CFC00','#9b6bff','#ff7c7c'];
+    for (let i=0;i<80;i++){
+      particlesArray.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: 2 + Math.random()*4,
+        color: colors[Math.floor(Math.random()*colors.length)],
+        speedX: (Math.random()-0.5)*0.5,
+        speedY: (Math.random()-0.5)*0.5
+      });
     }
+  }
+
+  function animateParticles(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particlesArray.forEach(p=>{
+      ctx.beginPath();
+      ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+      ctx.fillStyle = p.color;
+      ctx.fill();
+      p.x += p.speedX;
+      p.y += p.speedY;
+      if(p.x<0)p.x=canvas.width;
+      if(p.x>canvas.width)p.x=0;
+      if(p.y<0)p.y=canvas.height;
+      if(p.y>canvas.height)p.y=0;
+    });
+    requestAnimationFrame(animateParticles);
+  }
+
+  window.addEventListener('resize',()=>{
+    initParticles();
   });
 
-  function setLanguage(lang) {
-    document.querySelectorAll('[data-en]').forEach(el => {
-      el.innerText = el.getAttribute(`data-${lang}`);
-    });
-
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.remove('active');
-    });
-
-    document.querySelector(`.lang-btn[onclick*="${lang}"]`)
-      .classList.add('active');
-  }
+  initParticles();
+  animateParticles();
 </script>
 
 </body>
