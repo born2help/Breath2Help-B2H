@@ -22,22 +22,7 @@
 
 <body class="b2h-subpage dark-page glass-page" style="--page-accent:#9b6bff;">
 
-  <!-- ================= NAVIGATION ================= -->
-  <nav class="site-nav">
-    <div class="nav-container">
-      <div class="nav-logo"></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="white-paper.html">White Paper</a></li>
-        <li><a href="burn-ethics.html">Burn & Ethics</a></li>
-        <li><a href="founder-continuity.html">Founder Continuity</a></li>
-        <li><a href="donate.html">Donate</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ================= MAIN GLASS CONTAINER ================= -->
+    <!-- ================= MAIN GLASS CONTAINER ================= -->
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
@@ -132,6 +117,20 @@
     </div>
     <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
+
+  <!-- ================= FADE-IN SCRIPT ================= -->
+  <script>
+    const elements = document.querySelectorAll('.page-hero, .section, .wp-section');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+    elements.forEach(el => observer.observe(el));
+  </script>
 
 <script src="subpage.js"></script>
 </body>
