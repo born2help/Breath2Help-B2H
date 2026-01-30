@@ -2012,6 +2012,16 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ===== Mobile fix: Burn logo only ===== */
+@media (max-width: 768px) {
+  .burn-logo {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    max-width: 90px;
+  }
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
