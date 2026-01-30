@@ -1,237 +1,204 @@
-/* ==================================================
-   B2H SUBPAGE MASTER CSS
-   Used by ALL subpages (12 pages)
-   SAFE — does NOT touch index.html
-   ================================================== */
+/* ===============================
+   B2H Subpage Unified CSS (LOCKED)
+   Affects ONLY pages with body.b2h-subpage
+   =============================== */
 
 body.b2h-subpage {
-  --bg-main: #0b0f1a;
-  --bg-soft: #111827;
-  --glass-bg: rgba(17, 24, 39, 0.65);
-  --glass-border: rgba(255, 255, 255, 0.08);
 
-  --text-main: #e5e7eb;
-  --text-soft: #9ca3af;
+  /* ---- Variables (SCOPED, SAFE) ---- */
+  --b2h-bg-dark: #0b0f1a;
+  --b2h-bg-soft: #111827;
+  --b2h-text-main: #e5e7eb;
+  --b2h-text-soft: #9ca3af;
+  --b2h-accent: #32cd32;
+  --gradient-accent: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
+  --font-body: 'Montserrat', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
 
-  --accent: var(--b2h-accent, #32cd32);
-  --accent-grad: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
-
-  font-family: 'Montserrat', sans-serif;
-  background: radial-gradient(circle at top, #0f172a, #020617);
-  color: var(--text-main);
-  margin: 0;
+  background-color: var(--b2h-bg-dark);
+  color: var(--b2h-text-main);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  font-size: 16px;
 }
 
-/* ---------------- GLOBAL RESET ---------------- */
+/* ---- Global inside subpages only ---- */
 body.b2h-subpage * {
   box-sizing: border-box;
 }
 
 body.b2h-subpage a {
+  color: var(--b2h-accent);
   text-decoration: none;
-  color: var(--accent);
+  transition: all 0.3s ease;
 }
 
-/* ---------------- GLASS CONTAINER ---------------- */
-.glass-container {
-  max-width: 1100px;
-  margin: 60px auto;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: 24px;
-  backdrop-filter: blur(18px);
-  padding: 50px 30px;
-  box-shadow: 0 0 60px rgba(0,0,0,0.4);
+body.b2h-subpage a:hover {
+  filter: brightness(1.2);
 }
 
-/* ---------------- HERO ---------------- */
-.page-hero {
+/* ---- Hero ---- */
+body.b2h-subpage .page-hero {
+  position: relative;
   text-align: center;
-  margin-bottom: 50px;
+  padding: 80px 20px 40px;
+  overflow: hidden;
 }
 
-.page-hero h1 {
+body.b2h-subpage .page-hero h1 {
+  font-family: var(--font-heading);
   font-size: 3rem;
   font-weight: 800;
-  background: var(--accent-grad);
+  background: var(--gradient-accent);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: 2;
 }
 
-.subtitle {
-  color: var(--text-soft);
+body.b2h-subpage .page-hero .subtitle {
+  font-size: 1.2rem;
   margin-top: 10px;
-  font-size: 1.1rem;
+  color: var(--b2h-text-soft);
+  position: relative;
+  z-index: 2;
 }
 
-/* ---------------- HERO ACTION BUTTONS ---------------- */
-.hero-actions {
-  margin-top: 30px;
+/* ---- Hero Actions Buttons ---- */
+body.b2h-subpage .hero-actions {
+  margin-top: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
-}
-
-.btn-glow {
-  padding: 12px 22px;
-  border-radius: 30px;
-  background: rgba(50, 205, 50, 0.15);
-  color: var(--accent);
-  border: 1px solid rgba(50, 205, 50, 0.35);
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-glow:hover {
-  background: var(--accent);
-  color: #020617;
-  box-shadow: 0 0 25px rgba(50, 205, 50, 0.6);
-}
-
-/* ---------------- NORMALIZE HERO BUTTONS (ABOUT PAGE) ---------------- */
-.hero-actions a,
-.hero-actions a.donate,
-.hero-actions a.whitepaper,
-.hero-actions a.glass-back {
-  padding: 12px 22px;
-  border-radius: 30px;
-  background: rgba(50, 205, 50, 0.15);
-  color: var(--accent);
-  border: 1px solid rgba(50, 205, 50, 0.35);
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-/* Hover effect */
-.hero-actions a:hover {
-  background: var(--accent);
-  color: #020617;
-  box-shadow: 0 0 25px rgba(50, 205, 50, 0.6);
-  transform: translateY(-2px);
-}
-
-/* ---------------- DIVIDERS ---------------- */
-.section-divider {
-  margin: 50px auto;
-  width: 60%;
-  height: 2px;
-  background: var(--accent-grad);
-  border: none;
-  border-radius: 50px;
-}
-
-/* ---------------- CONTENT SECTIONS ---------------- */
-.section {
-  max-width: 900px;
-  margin: auto;
-}
-
-.wp-section {
-  margin-bottom: 40px;
-}
-
-.section-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  background: var(--accent-grad);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.wp-section p,
-.wp-section li {
-  color: var(--text-soft);
-  line-height: 1.8;
-}
-
-/* ---------------- DONATE BOX ---------------- */
-.donate-box {
-  background: rgba(0,0,0,0.35);
-  border: 1px solid var(--glass-border);
-  border-radius: 18px;
-  padding: 30px;
-  margin-bottom: 30px;
-}
-
-.donate-box h3 {
-  color: var(--accent);
-  margin-bottom: 10px;
-}
-
-/* ---------------- BUTTONS ---------------- */
-.green-btn,
-.btn-donate {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 14px 30px;
-  border-radius: 30px;
-  background: var(--accent);
-  color: #020617;
-  font-weight: 700;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.green-btn:hover,
-.btn-donate:hover {
-  box-shadow: 0 0 30px rgba(50, 205, 50, 0.6);
-  transform: translateY(-2px);
-}
-
-/* ---------------- FORMS ---------------- */
-.participation-form input,
-.participation-form textarea,
-.participation-form select {
-  width: 100%;
-  padding: 14px 16px;
-  margin-bottom: 14px;
-  border-radius: 12px;
-  background: #020617;
-  border: 1px solid rgba(50,205,50,0.35);
-  color: var(--text-main);
-}
-
-.participation-form input:focus,
-.participation-form textarea:focus,
-.participation-form select:focus {
-  outline: none;
-  border-color: var(--accent);
-}
-
-/* ---------------- FOOTER ---------------- */
-.site-footer {
-  margin-top: 80px;
-  padding: 40px 20px;
-  text-align: center;
-  background: #020617;
-  border-top: 1px solid var(--glass-border);
-}
-
-.site-footer a {
-  margin: 0 10px;
-  color: var(--text-soft);
-}
-
-.site-footer a:hover {
-  color: var(--accent);
-}
-
-.site-footer p {
-  margin-top: 20px;
-  font-size: 0.9rem;
-  color: #6b7280;
-}
-
-/* ================= VOLUNTEER HERO PARTICLES ================= */
-body.b2h-subpage .page-hero {
+  gap: 15px;
   position: relative;
-  overflow: hidden; /* ensure particles don't overflow */
+  z-index: 2;
 }
 
-body.b2h-subpage .volunteer-particle {
-  will-change: transform;
-  z-index: 0; /* behind text */
+body.b2h-subpage .hero-actions a {
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 700;
+  background: var(--b2h-accent);
+  color: var(--b2h-bg-dark);
+  box-shadow: 0 4px 20px rgba(50, 205, 50, 0.4);
+  transition: all 0.3s ease;
+}
+
+body.b2h-subpage .hero-actions a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(50, 205, 50, 0.6);
+  filter: brightness(1.1);
+}
+
+/* ---- Sections ---- */
+body.b2h-subpage .section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+}
+
+body.b2h-subpage .section-title {
+  font-size: 1.8rem;
+  color: var(--b2h-accent);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+body.b2h-subpage .section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 5px;
+  background: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
+  border-radius: 2px;
+}
+
+/* ---- Info Boxes ---- */
+body.b2h-subpage .info-box,
+body.b2h-subpage .donate-box {
+  background: rgba(50,205,50,0.08);
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+body.b2h-subpage .info-box:hover,
+body.b2h-subpage .donate-box:hover {
+  background: rgba(50,205,50,0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(50,205,50,0.3);
+}
+
+/* ---- Buttons ---- */
+body.b2h-subpage .green-btn,
+body.b2h-subpage .btn-glow,
+body.b2h-subpage .glass-back {
+  background: var(--b2h-accent);
+  color: var(--b2h-bg-dark);
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+body.b2h-subpage .green-btn:hover,
+body.b2h-subpage .btn-glow:hover,
+body.b2h-subpage .glass-back:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(50,205,50,0.6);
+  filter: brightness(1.15);
+}
+
+/* ---- Forms ---- */
+body.b2h-subpage input,
+body.b2h-subpage textarea,
+body.b2h-subpage select {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: #111827;
+  border: 1px solid var(--b2h-accent);
+  color: var(--b2h-text-main);
+  margin-bottom: 15px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+body.b2h-subpage input:focus,
+body.b2h-subpage textarea:focus,
+body.b2h-subpage select:focus {
+  outline: none;
+  border-color: #00ffd0;
+  box-shadow: 0 0 10px rgba(0,255,208,0.6);
+}
+
+/* ---- Floating Particle Canvas ---- */
+#heroParticles {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ---- Footer ---- */
+body.b2h-subpage .site-footer {
+  background: #0b1f29;
+  padding: 20px;
+  text-align: center;
+  color: var(--b2h-text-soft);
+}
+
+body.b2h-subpage .site-footer a {
+  color: var(--b2h-accent);
+}
+
+body.b2h-subpage .site-footer a:hover {
+  text-decoration: underline;
 }
