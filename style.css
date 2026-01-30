@@ -1805,6 +1805,41 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ================= HOW B2H CTA BUTTON ================= */
+
+.how-b2h-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.cta-orange {
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a0f00;
+  background: linear-gradient(135deg, #ff9f1a, #ff6a00);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.45);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.cta-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(255, 140, 0, 0.7);
+}
+
+/* Mobile safety */
+@media (max-width: 768px) {
+  .cta-orange {
+    width: auto;
+    max-width: 90%;
+    font-size: 0.95rem;
+    padding: 14px 26px;
+  }
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
