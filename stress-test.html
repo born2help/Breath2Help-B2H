@@ -22,26 +22,14 @@
 
 <body class="b2h-subpage" style="--page-accent:#ff8c42;">
 
-  <!-- ================= NAVIGATION ================= -->
-  <nav class="site-nav">
-    <div class="nav-container">
-      <div class="nav-logo"></div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="white-paper.html">White Paper</a></li>
-        <li><a href="burn-ethics.html">Burn & Ethics</a></li>
-        <li><a href="founder-continuity.html">Founder Continuity</a></li>
-        <li><a href="donate.html" class="nav-donate">Donate</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ================= MAIN GLASS CONTAINER ================= -->
+    <!-- ================= MAIN GLASS CONTAINER ================= -->
   <section class="glass-container">
 
     <!-- ================= HERO ================= -->
     <section class="page-hero visible">
+
+<canvas id="heroParticles" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
+      
       <h1 class="green-glow">Stress Test Framework</h1>
       <p class="subtitle">Ensuring mission resilience under all conditions</p>
 
@@ -120,21 +108,6 @@
     <p>&copy; 2026 B2H Global Foundation. All Rights Reserved.</p>
   </footer>
 
-  <!-- ================= FADE-IN SCRIPT ================= -->
-  <script>
-    const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back');
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if(entry.isIntersecting){
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-
-    elements.forEach(el => observer.observe(el));
-  </script>
-
+ <script src="subpage.js"></script> 
 </body>
 </html>
