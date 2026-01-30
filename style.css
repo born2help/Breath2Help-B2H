@@ -2072,6 +2072,50 @@ img { max-width: 100%; display: block; }
   }
 }
 
+.hero-buttons-container {
+  display: flex;
+  flex-wrap: nowrap;    /* prevent wrapping */
+  overflow-x: auto;     /* horizontal scroll on mobile */
+  justify-content: center;
+  gap: 10px;
+  padding: 5px 0;
+}
+
+.hero-buttons-container a {
+  flex: 0 0 auto;       /* prevents shrinking */
+}
+
+@media (max-width: 768px) {
+  .hero-buttons-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-actions {
+    flex-direction: column;   /* stack buttons */
+    align-items: center;
+  }
+  .hero-actions .green-btn {
+    width: 80%;   /* responsive width */
+    margin-bottom: 10px;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hero-actions .green-btn,
+.hero-actions .btn-glow {
+  min-width: 160px;   /* makes buttons uniform */
+  text-align: center;
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
