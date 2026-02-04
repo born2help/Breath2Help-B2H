@@ -1859,6 +1859,12 @@ img { max-width: 100%; display: block; }
     display: inline-block;
 }
 
+/* Increase main logo size by 20% */
+.main-logo {
+    transform: scale(1.2); /* 20% bigger */
+    transition: transform 0.3s ease; /* smooth resize effect */
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
