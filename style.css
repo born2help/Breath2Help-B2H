@@ -1859,9 +1859,9 @@ img { max-width: 100%; display: block; }
     display: inline-block;
 }
 
-/* Increase main logo size by 20% */
+/* Increase main logo size by 40% */
 .main-logo {
-    transform: scale(1.2); /* 20% bigger */
+    transform: scale(1.4); /* 40% bigger */
     transition: transform 0.3s ease; /* smooth resize effect */
 }
 
