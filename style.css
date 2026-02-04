@@ -1846,7 +1846,7 @@ img { max-width: 100%; display: block; }
 
 /* Main logo: make it bigger and more visible */
 #main-logo {
-    max-width: 220px; /* adjust as needed */
+    max-width: 240px; /* adjust as needed */
     height: auto;
     display: block;
     margin: 0 auto; /* center if needed */
