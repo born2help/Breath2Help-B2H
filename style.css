@@ -1840,6 +1840,25 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ==========================
+   Logo Adjustments
+   ========================== */
+
+/* Main logo: make it bigger and more visible */
+#main-logo {
+    max-width: 220px; /* adjust as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* center if needed */
+}
+
+/* Burn logo: increase by ~10% */
+#burn-logo {
+    transform: scale(1.1); /* 10% bigger */
+    transform-origin: center center; /* keep it centered */
+    display: inline-block;
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
