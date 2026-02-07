@@ -1393,88 +1393,6 @@ img { max-width: 100%; display: block; }
   z-index: 1;  /* behind everything */
 } 
 
-/* ================= HERO SUBPAGE BUTTONS - VIBRANT & GLOW ================= */
-.hero-subpages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 25px;
-  z-index: 10; /* above particles */
-  position: relative;
-}
-
-.hero-subpages a {
-  padding: 12px 20px;
-  border-radius: 28px;
-  font-weight: 700;
-  font-size: 15px;
-  text-decoration: none;
-  color: #000; /* default black text for light buttons */
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* Micro shine animation */
-.hero-subpages a::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: rgba(255,255,255,0.15);
-  transform: rotate(25deg);
-  transition: all 0.6s ease;
-  pointer-events: none;
-}
-
-.hero-subpages a:hover::before {
-  left: 100%;
-  top: 100%;
-}
-
-/* Hover lift & glow effect */
-.hero-subpages a:hover {
-  transform: translateY(-4px) scale(1.07);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35), 0 0 12px rgba(255,255,255,0.2) inset;
-}
-
-/* ================= INDIVIDUAL BUTTON COLORS ================= */
-.hero-subpages a.btn-about { background: #1e3a8a; color: #fff; }          /* Dark Blue */
-.hero-subpages a.btn-white-paper { background: #06b6d4; color: #000; }    /* Bright Cyan */
-.hero-subpages a.btn-tokenomics { background: #0ea5e9; color: #fff; }     /* Sky Blue */
-.hero-subpages a.btn-transparency { background: #dc2626; color: #fff; }   /* Red */
-.hero-subpages a.btn-donate { background: #f59e0b; color: #000; }         /* Amber */
-.hero-subpages a.btn-constitution { background: #f97316; color: #fff; }  /* Deep Orange */
-.hero-subpages a.btn-burn-ethics { background: #fde047; color: #000; }    /* Yellow */
-.hero-subpages a.btn-founder-continuity { background: #16a34a; color: #fff; } /* Green */
-.hero-subpages a.btn-participation-safeguard { background: #ef4444; color: #fff; } /* Crimson */
-.hero-subpages a.btn-disclaimer { background: #8b5cf6; color: #fff; }     /* Purple */
-.hero-subpages a.btn-vision { background: #f973d6; color: #000; }         /* Pink/Fuchsia */
-.hero-subpages a.btn-stress-test { background: #1E90FF; color: #fff; }    /* Dark Blue */
-
-/* ================= RESPONSIVE ================= */
-@media screen and (max-width: 768px) {
-  .hero-subpages {
-    gap: 10px;
-    margin-top: 15px;
-  }
-  .hero-subpages a {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .hero-subpages a {
-    padding: 6px 12px;
-    font-size: 0.75rem;
-  }
-}
-
 /* ================= HERO BUTTONS VIBRANT & GLOW ================= */
 .hero-subpages a {
   color: #000; /* default text black for better readability */
@@ -1496,19 +1414,29 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 12px rgba(255,255,255,0.4);
 }
 
-/* Vibrant colors for buttons */
-.hero-subpages a.btn-about { background: #1E90FF; }           /* Dodger Blue */
-.hero-subpages a.btn-white-paper { background: #F5F5F5; color: #000; } /* Bright Silver */
-.hero-subpages a.btn-tokenomics { background: #00CED1; }      /* Dark Turquoise */
-.hero-subpages a.btn-transparency { background: #40E0D0; }    /* Turquoise */
-.hero-subpages a.btn-donate { background: #FF4500; color: #fff; } /* Orange Red */
-.hero-subpages a.btn-constitution { background: #FFD700; color: #000; } /* Gold */
-.hero-subpages a.btn-burn-ethics { background: #FF8C00; }      /* Dark Orange */
-.hero-subpages a.btn-founder-continuity { background: #FF69B4; } /* Hot Pink */
-.hero-subpages a.btn-participation-safeguard { background: #32CD32; } /* Lime Green */
-.hero-subpages a.btn-disclaimer { background: #DC143C; color: #fff; } /* Crimson */
-.hero-subpages a.btn-vision { background: #8A2BE2; }           /* Blue Violet */
-.hero-subpages a.btn-stress-test { background: #1E90FF; }      /* Dodger Blue */
+/* ================= HERO SUBPAGE BUTTON COLORS ================= */
+.hero-subpages a.btn-about { background: #1E90FF; color: #fff; }           /* Dodger Blue */
+.hero-subpages a.btn-white-paper { background: #F5F5F5; color: #000; }    /* Bright Silver */
+.hero-subpages a.btn-tokenomics { background: #00CED1; color: #fff; }      /* Dark Turquoise */
+.hero-subpages a.btn-transparency { background: #40E0D0; color: #fff; }    /* Turquoise */
+.hero-subpages a.btn-donate { background: #FF4500; color: #fff; }          /* Orange Red */
+.hero-subpages a.btn-constitution { background: #FFD700; color: #000; }    /* Gold */
+.hero-subpages a.btn-burn-ethics { background: #FF8C00; color: #fff; }     /* Dark Orange */
+.hero-subpages a.btn-founder-continuity { background: #FF69B4; color: #fff; } /* Hot Pink */
+.hero-subpages a.btn-participation-safeguard { background: #32CD32; color: #fff; } /* Lime Green */
+.hero-subpages a.btn-disclaimer { background: #DC143C; color: #fff; }      /* Crimson */
+.hero-subpages a.btn-vision { background: #8A2BE2; color: #fff; }          /* Blue Violet */
+.hero-subpages a.btn-stress-test { background: #1E90FF; color: #fff; }     /* Dodger Blue */
+
+.hero-subpages a {
+    color: #fff;           /* Default text color */
+    text-decoration: none; /* Clean look */
+}
+
+.hero-subpages a:hover {
+    opacity: 0.85;         /* Slight hover effect */
+    transition: 0.3s ease;
+}
 
 /* Optional subtle shine animation */
 .hero-subpages a::before {
@@ -1525,6 +1453,25 @@ img { max-width: 100%; display: block; }
 
 .hero-subpages a:hover::before {
   transform: rotate(45deg) translateX(100%);
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+  .hero-subpages {
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .hero-subpages a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-subpages a {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
 }
 
 /* ================= MAIN PAGE HERO BUTTONS FIX ================= */
