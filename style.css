@@ -1454,7 +1454,7 @@ img { max-width: 100%; display: block; }
 .hero-subpages a.btn-participation-safeguard { background: #ef4444; color: #fff; } /* Crimson */
 .hero-subpages a.btn-disclaimer { background: #8b5cf6; color: #fff; }     /* Purple */
 .hero-subpages a.btn-vision { background: #f973d6; color: #000; }         /* Pink/Fuchsia */
-.hero-subpages a.btn-stress-test { background: #ff8c42; color: #000; }    /* Orange */
+.hero-subpages a.btn-stress-test { background: #1e3a8a; color: #fff; }    /* dark blue */
 
 /* ================= RESPONSIVE ================= */
 @media screen and (max-width: 768px) {
