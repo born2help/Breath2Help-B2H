@@ -1865,6 +1865,31 @@ img { max-width: 100%; display: block; }
     transition: transform 0.3s ease; /* smooth resize effect */
 }
 
+/* ==========================
+   Logo Adjustments
+   ========================== */
+
+/* Main logo: bigger and more visible */
+#main-logo {
+    max-width: 240px; /* keep this as-is */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Burn logo: make it 20% smaller */
+#burn-logo {
+    transform: scale(0.8); /* 20% smaller */
+    transform-origin: center center;
+    display: inline-block;
+}
+
+/* Main logo: increase by 30% */
+.main-logo {
+    transform: scale(1.3); /* 30% bigger */
+    transition: transform 0.3s ease;
+}
+
 .subscribe-success {
   margin-top: 10px;
   font-size: 0.9rem;
