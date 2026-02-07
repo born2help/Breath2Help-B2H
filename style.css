@@ -1840,61 +1840,27 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ==========================
-   Logo Adjustments
-   ========================== */
-
-/* Main logo: make it bigger and more visible */
-#logo.png {
-    max-width: 240px; /* adjust as needed */
-    height: auto;
-    display: block;
-    margin: 0 auto; /* center if needed */
-}
-
-/* Burn logo: increase by ~10% */
-#burn.png {
-    transform: scale(1.1); /* 10% bigger */
-    transform-origin: center center; /* keep it centered */
-    display: inline-block;
-}
-
-/* Increase main logo size by 40% */
-.logo.png {
-    transform: scale(1.4); /* 40% bigger */
-    transition: transform 0.3s ease; /* smooth resize effect */
-}
-
-/* ==========================
-   Logo Adjustments
-   ========================== */
-
-/* Main logo: bigger and more visible */
-#logo.png {
-    max-width: 240px; /* keep this as-is */
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Burn logo: make it 20% smaller */
-#burn.png {
-    transform: scale(0.8); /* 20% smaller */
-    transform-origin: center center;
-    display: inline-block;
-}
-
-/* Main logo: increase by 30% */
-.logo.png {
-    transform: scale(1.3); /* 30% bigger */
-    transition: transform 0.3s ease;
-}
-
 .subscribe-success {
   margin-top: 10px;
   font-size: 0.9rem;
   color: #32cd32;
   opacity: 0.9;
+}
+
+/* ===============================
+   FINAL LOGO SIZE FIX (GUARANTEED)
+   =============================== */
+
+/* Main HERO logo (logo.png) → 30% bigger */
+img[src$="logo.png"] {
+    transform: scale(1.3);
+    transform-origin: center;
+}
+
+/* Burn logo (burn.png) → 20% smaller */
+img[src$="burn.png"] {
+    transform: scale(0.8);
+    transform-origin: center;
 }
 
   /* ================= UNIFIED CARD STYLING ================= */
