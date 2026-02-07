@@ -1579,77 +1579,6 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* =====================================================
-   FINAL MOBILE PATCH – SAFE & ISOLATED
-   Does NOT affect desktop
-   ===================================================== */
-
-@media (max-width: 768px) {
-
-  /* --- Burn logo positioning fix --- */
-  .burn-logo {
-    display: block;
-    margin: 12px auto 0 auto;
-    max-width: 85px;
-  }
-
-  /* --- Hero buttons visibility restore --- */
-  .hero-buttons,
-  .hero-buttons-container,
-  .participate-nav {
-    display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  /* --- Prevent hero buttons from breaking layout --- */
-  .hero-buttons a,
-  .participate-nav a {
-    white-space: nowrap;
-    margin: 6px auto;
-    width: auto;
-  }
-
-  /* --- Fix "How B2H Works" button breaking --- */
-  .how-b2h-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px auto;
-    padding: 12px 22px;
-    white-space: nowrap;
-  }
-
-}
-
-/* ===== MOBILE HERO LOGO FIX ===== */
-@media (max-width: 768px) {
-  .hero-logos {
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-bottom: 20px;
-  }
-
-  .hero-logos img {
-    max-width: 80px;
-    height: auto;
-  }
-
-  .hero h1 {
-    margin-top: 15px;
-  }
-}
-
-/* ===== MOBILE HERO SCROLL FIX ===== */
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    min-height: 100vh;
-    overflow: visible;
-    padding-bottom: 40px;
-  }
-}
-
 /* ================= MAIN PAGE FOOTER ================= */
 .footer {
   background: #0b1f29;
@@ -1942,6 +1871,77 @@ img[src$="burn.png"] {
 
 .hero-buttons-container {
   margin-top: 40px;
+}
+
+/* =====================================================
+   FINAL MOBILE PATCH – SAFE & ISOLATED
+   Does NOT affect desktop
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+  /* --- Burn logo positioning fix --- */
+  .burn-logo {
+    display: block;
+    margin: 12px auto 0 auto;
+    max-width: 85px;
+  }
+
+  /* --- Hero buttons visibility restore --- */
+  .hero-buttons,
+  .hero-buttons-container,
+  .participate-nav {
+    display: flex !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* --- Prevent hero buttons from breaking layout --- */
+  .hero-buttons a,
+  .participate-nav a {
+    white-space: nowrap;
+    margin: 6px auto;
+    width: auto;
+  }
+
+  /* --- Fix "How B2H Works" button breaking --- */
+  .how-b2h-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 12px 22px;
+    white-space: nowrap;
+  }
+
+}
+
+/* ===== MOBILE HERO LOGO FIX ===== */
+@media (max-width: 768px) {
+  .hero-logos {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .hero-logos img {
+    max-width: 80px;
+    height: auto;
+  }
+
+  .hero h1 {
+    margin-top: 15px;
+  }
+}
+
+/* ===== MOBILE HERO SCROLL FIX ===== */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+    padding-bottom: 40px;
+  }
 }
 
   /* ================= UNIFIED CARD STYLING ================= */
