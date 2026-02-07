@@ -1773,6 +1773,101 @@ img[src$="burn.png"] {
     margin: 0 auto 10px; /* vertical stack with spacing */
   }
 
+  /* ================= HERO LOGO POSITIONING ================= */
+
+/* HERO container anchor */
+.hero {
+  position: relative;
+}
+
+/* MAIN LOGO — CENTERED */
+.main-logo-hero {
+  display: block;
+  margin: 0 auto 20px;
+  max-width: 260px;
+  z-index: 3;
+  position: relative;
+}
+
+/* BURN LOGO — FIXED LEFT TOP */
+.burn-logo {
+  position: absolute;
+  top: 2in;     /* 2 inches from top */
+  left: 1in;    /* 1 inch from left */
+  width: 90px;
+  z-index: 4;
+  pointer-events: none; /* decorative only */
+}
+
+/* ================= BREATHING TEXT ANIMATION ================= */
+
+.hero-text h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  letter-spacing: 1px;
+  animation: breathPulse 6s ease-in-out infinite;
+}
+
+@keyframes breathPulse {
+  0%   { opacity: 0.9; transform: scale(1); }
+  50%  { opacity: 1;   transform: scale(1.03); }
+  100% { opacity: 0.9; transform: scale(1); }
+}  
+
+  /* ================= MOBILE HERO OPTIMIZATION ================= */
+
+@media (max-width: 768px) {
+
+  .burn-logo {
+    top: 20px;
+    left: 20px;
+    width: 65px;
+  }
+
+  .hero-text {
+    padding: 0 16px;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-actions a {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero-subpages {
+    justify-content: center;
+  }
+}
+
+ /* ================= FOUNDER GUARDIAN SEAL ================= */
+
+.founder-seal {
+  margin-top: 25px;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  animation: sealGlow 4s ease-in-out infinite;
+}
+
+@keyframes sealGlow {
+  0%   { box-shadow: 0 0 0 rgba(255,255,255,0); }
+  50%  { box-shadow: 0 0 14px rgba(255,255,255,0.25); }
+  100% { box-shadow: 0 0 0 rgba(255,255,255,0); }
+} 
+
     /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
