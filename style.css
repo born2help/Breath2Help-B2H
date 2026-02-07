@@ -1454,7 +1454,7 @@ img { max-width: 100%; display: block; }
 .hero-subpages a.btn-participation-safeguard { background: #ef4444; color: #fff; } /* Crimson */
 .hero-subpages a.btn-disclaimer { background: #8b5cf6; color: #fff; }     /* Purple */
 .hero-subpages a.btn-vision { background: #f973d6; color: #000; }         /* Pink/Fuchsia */
-.hero-subpages a.btn-stress-test { background: #1e3a8a; color: #fff; }    /* dark blue */
+.hero-subpages a.btn-stress-test { background: #1E90FF; color: #fff; }    /* Dark Blue */
 
 /* ================= RESPONSIVE ================= */
 @media screen and (max-width: 768px) {
@@ -1508,7 +1508,7 @@ img { max-width: 100%; display: block; }
 .hero-subpages a.btn-participation-safeguard { background: #32CD32; } /* Lime Green */
 .hero-subpages a.btn-disclaimer { background: #DC143C; color: #fff; } /* Crimson */
 .hero-subpages a.btn-vision { background: #8A2BE2; }           /* Blue Violet */
-.hero-subpages a.btn-stress-test { background: #1E90FF; }      /* Turquoise */
+.hero-subpages a.btn-stress-test { background: #1E90FF; }      /* Dodger Blue */
 
 /* Optional subtle shine animation */
 .hero-subpages a::before {
