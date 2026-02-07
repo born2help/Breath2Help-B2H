@@ -1810,6 +1810,11 @@ img[src$="burn.png"] {
     transform-origin: center;
 }
 
+.hero-subpages a.btn-stress-test {
+    background-color: #1E90FF !important; /* Dodger Blue */
+    color: #fff !important;               /* White text */
+}
+
   /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
