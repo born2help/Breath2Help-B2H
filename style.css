@@ -1868,6 +1868,33 @@ img[src$="burn.png"] {
   100% { box-shadow: 0 0 0 rgba(255,255,255,0); }
 } 
 
+  /* ================= FORCE HERO LOGO POSITION (OVERRIDE SAFE) ================= */
+
+.hero {
+  position: relative !important;
+}
+
+/* MAIN LOGO — HARD CENTER */
+.hero img.main-logo-hero {
+  position: relative !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 30px !important;
+  max-width: 260px !important;
+  z-index: 5 !important;
+}
+
+/* BURN LOGO — HARD TOP LEFT */
+.hero img.burn-logo {
+  position: absolute !important;
+  top: 2in !important;
+  left: 1in !important;
+  width: 90px !important;
+  z-index: 6 !important;
+  pointer-events: none !important;
+}
+
     /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
