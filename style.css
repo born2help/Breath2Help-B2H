@@ -1845,7 +1845,7 @@ img { max-width: 100%; display: block; }
    ========================== */
 
 /* Main logo: make it bigger and more visible */
-#main-logo {
+#logo.png {
     max-width: 240px; /* adjust as needed */
     height: auto;
     display: block;
@@ -1853,14 +1853,14 @@ img { max-width: 100%; display: block; }
 }
 
 /* Burn logo: increase by ~10% */
-#burn-logo {
+#burn.png {
     transform: scale(1.1); /* 10% bigger */
     transform-origin: center center; /* keep it centered */
     display: inline-block;
 }
 
 /* Increase main logo size by 40% */
-.main-logo {
+.logo.png {
     transform: scale(1.4); /* 40% bigger */
     transition: transform 0.3s ease; /* smooth resize effect */
 }
@@ -1870,7 +1870,7 @@ img { max-width: 100%; display: block; }
    ========================== */
 
 /* Main logo: bigger and more visible */
-#main-logo {
+#logo.png {
     max-width: 240px; /* keep this as-is */
     height: auto;
     display: block;
@@ -1878,14 +1878,14 @@ img { max-width: 100%; display: block; }
 }
 
 /* Burn logo: make it 20% smaller */
-#burn-logo {
+#burn.png {
     transform: scale(0.8); /* 20% smaller */
     transform-origin: center center;
     display: inline-block;
 }
 
 /* Main logo: increase by 30% */
-.main-logo {
+.logo.png {
     transform: scale(1.3); /* 30% bigger */
     transition: transform 0.3s ease;
 }
