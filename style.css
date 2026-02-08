@@ -36,13 +36,13 @@ img { max-width: 100%; display: block; }
 
 /* ================= HERO LOGOS ================= */
 
-/* Main Logo — CENTER, reduced by 30% */
+/* Main Logo — CENTER, reduced by 60% */
 .hero .main-logo-hero {
     position: relative;
     display: block;
     margin: 0 auto 25px auto; /* centered with bottom spacing */
-    width: 70%;                /* reduced by 30% */
-    max-width: 250px;          /* original size limit */
+    width: 70%;                /* reduced by 60% */
+    max-width: 240px;          /* original size limit */
     height: auto;
     z-index: 3;
 }
