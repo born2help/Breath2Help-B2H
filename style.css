@@ -1764,6 +1764,25 @@ img { max-width: 100%; display: block; }
 
 }
 
+/* Main hero logo */
+.hero .main-logo-hero {
+    width: 70%;      /* reduced by ~30% */
+    max-width: 420px; /* optional max width */
+    height: auto;
+    display: block;
+    margin: 0 auto;   /* keep centered */
+}
+
+/* Burn logo */
+.hero .burn-logo {
+    width: 200px;       /* double the previous size, adjust if needed */
+    height: auto;
+    position: absolute;
+    top: 2in;           /* 2 inches from top */
+    left: 1.5in;        /* 1.5 inches from left */
+    z-index: 2;
+}
+
      /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
