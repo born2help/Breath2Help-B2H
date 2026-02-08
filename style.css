@@ -14,6 +14,119 @@ img { max-width: 100%; display: block; }
 .section-underline { width: 100px; height: 5px; margin: 10px auto 40px; border-radius: 3px; background: linear-gradient(90deg, #22c55e, #0fffc3); box-shadow: 0 0 12px rgba(0,255,198,0.5); }
 .readable-text { font-size: 1.1rem; line-height: 1.6; color: #b0e0e6; text-align: center; }
 
+/* ================= HERO SECTION CLEAN ================= */
+
+/* Particles Background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;           /* behind all content */
+}
+
+/* Logos */
+
+/* Main Logo — CENTER */
+.hero .main-logo-hero {
+    position: relative;
+    display: block;
+    margin: 0 auto 25px auto;
+    width: 70%;           /* reduced by ~30% */
+    max-width: 420px;
+    height: auto;
+    z-index: 3;
+}
+
+/* Burn Logo — RIGHT SIDE */
+.hero .burn-logo {
+    position: absolute;
+    top: 2in;             /* 2 inches from top */
+    right: 1.5in;         /* 1.5 inches from right */
+    width: 200px;         /* double size */
+    height: auto;
+    z-index: 4;
+    animation: burnPulse 4.5s ease-in-out infinite;
+}
+
+/* ================= HERO TEXT ================= */
+.hero-text {
+    position: relative;
+    z-index: 2;           /* above particles */
+    text-align: center;
+    color: #a3e635;       /* light green for text */
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #FFD700;       /* golden heading */
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Hero CTA buttons */
+.hero-cta {
+    font-weight: bold;
+    color: #a3e635;
+}
+
+.hero-btn,
+.hero-btn-secondary {
+    display: inline-block;
+    margin: 10px 10px 0 10px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-btn {
+    background: #f59e0b;
+    color: #fff;
+}
+
+.hero-btn-secondary {
+    background: #16a34a;
+    color: #fff;
+}
+
+/* ================= HERO SUBPAGES BUTTONS ================= */
+/* Your existing subpages buttons CSS remains unchanged */
+
+.hero-buttons-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero-subpages a {
+    margin: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+/* ================= Burn Animation (optional) ================= */
+@keyframes burnPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
 /* ======== FOUNDER PAGE STYLES (DARK MODE) ======== */
 .founder-page {
   background-color: #111; /* dark background to match main page */
@@ -1607,19 +1720,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
 
-  .hero .burn-logo {
-    top: 20px;
-    right: 20px;
-    width: 110px;   /* scaled down for mobile */
-  }
-
-  .hero-text h1 {
-    font-size: 2.1rem;
-  }
-
-}
-
-     /* ================= UNIFIED CARD STYLING ================= */
+       /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
   backdrop-filter: blur(12px);
