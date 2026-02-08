@@ -36,6 +36,27 @@ img { max-width: 100%; display: block; }
 
 /* ================= LOGOS ================= */
 
+/* Main Logo — CENTER */
+.hero .main-logo-hero {
+  position: relative;
+  display: block;
+  margin: 0 auto 25px auto;
+  max-width: 250px;
+  height: auto;
+  z-index: 3;
+}
+
+/* Burn Logo — TOP LEFT */
+.hero .burn-logo {
+  position: absolute;
+  top: 2in;
+  right: 1.5in;   /* moved to RIGHT */
+  width: 180px;   /* 3x bigger */
+  height: auto;
+  z-index: 4;
+  pointer-events: none;
+}
+
 /* Main hero logo */
 .hero .main-logo-hero {
     width: 70%;      /* reduced by ~30% */
