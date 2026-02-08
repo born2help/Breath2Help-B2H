@@ -50,8 +50,8 @@ img { max-width: 100%; display: block; }
 .hero .burn-logo {
   position: absolute;
   top: 2in;
-  left: 1.5in;
-  width: 90px;
+  right: 1.5in;   /* moved to RIGHT */
+  width: 180px;   /* 2x bigger */
   height: auto;
   z-index: 4;
   pointer-events: none;
@@ -69,7 +69,7 @@ img { max-width: 100%; display: block; }
 
 /* MAIN HEADING */
 .hero-text h1 {
-  color: #6ee7b7; /* light green */
+  color: #FFD700; /* GOLDEN */
   font-size: clamp(2.5rem, 4vw, 3.8rem);
   font-weight: 800;
   margin-bottom: 20px;
