@@ -86,7 +86,7 @@ img { max-width: 100%; display: block; }
 
 /* STRONG EMPHASIS */
 .hero-text strong {
-  color: #86efac;
+ color: #FFD700; /* GOLDEN */
   font-weight: 700;
 }
 
