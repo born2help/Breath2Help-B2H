@@ -34,50 +34,29 @@ img { max-width: 100%; display: block; }
   pointer-events: none;
 }
 
-/* ================= LOGOS ================= */
+/* ================= HERO LOGOS ================= */
 
-/* Main Logo — CENTER */
+/* Main Logo — CENTER, reduced by 30% */
 .hero .main-logo-hero {
-  position: relative;
-  display: block;
-  margin: 0 auto 25px auto;
-  max-width: 250px;
-  height: auto;
-  z-index: 3;
-}
-
-/* Burn Logo — TOP LEFT */
-.hero .burn-logo {
-  position: absolute;
-  top: 2in;
-  right: 1.5in;   /* moved to RIGHT */
-  width: 180px;   /* 3x bigger */
-  height: auto;
-  z-index: 4;
-  pointer-events: none;
-}
-
-/* Main hero logo */
-.hero .main-logo-hero {
-    width: 70%;      /* reduced by ~30% */
-    max-width: 420px; /* optional max width */
-    height: auto;
+    position: relative;
     display: block;
-    margin: 0 auto;   /* keep centered */
-}
-
-/* Burn logo */
-.hero .burn-logo {
-    width: 200px;       /* double the previous size, adjust if needed */
+    margin: 0 auto 25px auto; /* centered with bottom spacing */
+    width: 70%;                /* reduced by 30% */
+    max-width: 250px;          /* original size limit */
     height: auto;
-    position: absolute;
-    top: 2in;           /* 2 inches from top */
-    left: 1.5in;        /* 1.5 inches from left */
-    z-index: 2;
+    z-index: 3;
 }
 
+/* Burn Logo — RIGHT, double size */
 .hero .burn-logo {
-  animation: burnPulse 4.5s ease-in-out infinite;
+    position: absolute;
+    top: 2in;                  /* 2 inches from top */
+    right: 1.5in;              /* 1.5 inches from right */
+    width: 200px;              /* double original size */
+    height: auto;
+    z-index: 4;
+    pointer-events: none;      /* clicks pass through */
+    animation: burnPulse 4.5s ease-in-out infinite; /* keep animation */
 }
 
 /* ================= HERO TEXT ================= */
