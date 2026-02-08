@@ -1568,16 +1568,6 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ===== Mobile fix: Burn logo only ===== */
-@media (max-width: 768px) {
-  .burn-logo {
-    position: relative;
-    margin: 0 auto;
-    display: block;
-    max-width: 90px;
-  }
-}
-
 /* ================= MAIN PAGE FOOTER ================= */
 .footer {
   background: #0b1f29;
