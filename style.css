@@ -41,7 +41,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   display: block;
   margin: 0 auto 25px auto;
-  max-width: 280px;
+  max-width: 250px;
   height: auto;
   z-index: 3;
 }
@@ -51,7 +51,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   top: 2in;
   right: 1.5in;   /* moved to RIGHT */
-  width: 180px;   /* 2x bigger */
+  width: 180px;   /* 3x bigger */
   height: auto;
   z-index: 4;
   pointer-events: none;
