@@ -1729,6 +1729,11 @@ img { max-width: 100%; display: block; }
   100% { box-shadow: 0 0 0 rgba(255,255,255,0); }
 } 
 
+.hero-subpages a.btn-stress-test {
+    background-color: #1E90FF !important; /* Dodger Blue */
+    color: #fff !important;               /* White text */
+}
+
      /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
