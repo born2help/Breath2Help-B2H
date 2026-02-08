@@ -185,7 +185,7 @@ img { max-width: 100%; display: block; }
   min-width: 300px;
   font-size: 1.05rem;
   line-height: 1.75;
-  color: #f5f5f5; /* light text for dark background */
+  color: #b0e0e6; /* light text for dark background */
 }
 
 .founder-text p {
