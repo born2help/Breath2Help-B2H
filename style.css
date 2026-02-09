@@ -1829,6 +1829,34 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
 
+ /* ================= HOW B2H WORKS – STEPS HEADING UPDATED ================= */
+.how-B2H-works .step h3 {
+  color: #22c55e;  /* green like other headings */
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Multi-color gradient underline for step headings */
+.how-B2H-works .step h3::after {
+  content: '';
+  display: block;
+  width: 60px; /* adjust width if needed */
+  height: 4px;
+  margin: 6px auto 0;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    #22c55e,
+    #f59e0b,
+    #ef4444,
+    #3b82f6,
+    #10b981
+  ); /* B2H signature gradient */
+  box-shadow: 0 0 8px rgba(0,255,198,0.4);
+}
+
         /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
