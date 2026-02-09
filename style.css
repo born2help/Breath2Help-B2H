@@ -1,3 +1,1952 @@
+/* =========================== MASTER STYLE.CSS FOR B2H =========================== */
+
+/* ================= GLOBAL RESET & FONTS ================= */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+body { background: #0b1c2b; color: #e0f7fa; overflow-x: hidden; }
+a { text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ================= CONTAINERS ================= */
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+.section { padding: 80px 0; }
+.dark-section { background: linear-gradient(135deg, #081821, #0f3a50, #1a5670); }
+.section-title { font-size: 2.6rem; font-weight: 800; text-align: center; margin-bottom: 25px; }
+.section-underline { width: 100px; height: 5px; margin: 10px auto 40px; border-radius: 3px; background: linear-gradient(90deg, #22c55e, #0fffc3); box-shadow: 0 0 12px rgba(0,255,198,0.5); }
+.readable-text { font-size: 1.1rem; line-height: 1.6; color: #b0e0e6; text-align: center; }
+
+/* ================= HERO SECTION CLEAN ================= */
+
+/* Particles Background */
+#particles-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;           /* behind all content */
+}
+
+/* Logos */
+
+/* Main Logo — CENTER */
+.hero .main-logo-hero {
+    position: relative;
+    display: block;
+    margin: 0 auto 25px auto;
+    width: 70%;           /* reduced by ~60% */
+    max-width: 220px;
+    height: auto;
+    z-index: 3;
+}
+
+/* Burn Logo — RIGHT SIDE */
+.hero .burn-logo {
+    position: absolute;
+    top: 2in;             /* 2 inches from top */
+    right: 1.5in;         /* 1.5 inches from right */
+    width: 280px;         /* double size */
+    height: auto;
+    z-index: 4;
+    animation: burnPulse 4.5s ease-in-out infinite;
+}
+
+/* ================= HERO TEXT ================= */
+.hero-text {
+    position: relative;
+    z-index: 2;           /* above particles */
+    text-align: center;
+    color: #a3e635;       /* light green for text */
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    color: #FFD700;       /* golden heading */
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Hero CTA buttons */
+.hero-cta {
+    font-weight: bold;
+    color: #a3e635;
+}
+
+.hero-btn,
+.hero-btn-secondary {
+    display: inline-block;
+    margin: 10px 10px 0 10px;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    z-index: 2;
+    position: relative;
+}
+
+.hero-btn {
+    background: #f59e0b;
+    color: #fff;
+}
+
+.hero-btn-secondary {
+    background: #16a34a;
+    color: #fff;
+}
+
+/* ================= HERO SUBPAGES BUTTONS ================= */
+/* Your existing subpages buttons CSS remains unchanged */
+
+.hero-buttons-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero-subpages a {
+    margin: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+/* ================= Burn Animation (optional) ================= */
+@keyframes burnPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* ======== FOUNDER PAGE STYLES (DARK MODE) ======== */
+.founder-page {
+  background-color: #111; /* dark background to match main page */
+  padding: 60px 20px;
+}
+
+.founder-page .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.founder-page h2 {
+  font-size: 2.5rem;
+  text-align: center; /* centered heading */
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #10b981; /* green heading color */
+  position: relative;
+}
+
+.founder-page h2::after {
+  content: '';
+  display: block;
+  width: 120px; /* centered underline width */
+  height: 4px;
+  background: linear-gradient(to right, #10b981, #3b82f6, #ef4444, #f59e0b, #10b981);
+  margin: 8px auto 0; /* centered underline */
+  border-radius: 2px;
+}
+
+.founder-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.founder-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.founder-img:hover {
+  box-shadow: 0 8px 30px rgba(16,185,129,0.7);
+  transform: scale(1.05);
+}
+
+.founder-text {
+  flex: 1;
+  min-width: 300px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #b0e0e6; /* light text for dark background */
+}
+
+.founder-text p {
+  margin-bottom: 18px;
+}
+
+.founder-text .signature {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #10b981;
+  text-align: right;
+}
+
+/* ======== RESPONSIVE ======== */
+@media screen and (max-width: 900px) {
+  .founder-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .founder-page h2 {
+    text-align: center;
+  }
+  .founder-img {
+    width: 180px;
+    height: 180px;
+  }
+  .founder-text {
+    font-size: 1rem;
+  }
+  .founder-text .signature {
+    text-align: center;
+  }
+}
+
+/* ================= PHILOSOPHY (CARDS) ================= */
+.philosophy-section {
+  background: #081821;
+  color: #b0e0e6;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section title */
+.philosophy-section .section-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #22c55e;
+  text-shadow: 0 0 15px rgba(34,197,94,0.6);
+  margin-bottom: 12px;
+}
+
+/* Multi-color glowing underline */
+.philosophy-section .section-underline.multi-glow {
+  width: 100px;
+  height: 5px;
+  margin: 10px auto 40px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #22c55e, #f59e0b, #ef4444);
+  box-shadow: 0 0 12px rgba(0,255,198,0.5);
+}
+
+/* Grid layout */
+.philosophy-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+}
+
+/* Individual cards */
+.philosophy-card {
+  background: rgba(0,255,198,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  width: 240px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0,255,198,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+}
+
+/* Highlighted card */
+.philosophy-card.highlight {
+  background: rgba(34,197,94,0.1);
+}
+
+/* Lift and glow on hover */
+.philosophy-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,255,198,0.4),
+              0 0 40px rgba(0,255,198,0.2) inset;
+}
+
+/* Glow behind each card */
+.philosophy-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 20px;
+  background: radial-gradient(circle, rgba(0,255,198,0.15) 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(12px);
+}
+
+/* Card headings */
+.philosophy-card h3 {
+  color: #0fffc3;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+/* Card paragraphs */
+.philosophy-card p {
+  font-size: 0.95rem;
+  color: #b0e0e6;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* Subtle background glow behind section */
+.philosophy-section::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle at center, rgba(0,255,198,0.05) 0%, transparent 70%);
+  animation: philosophyGlow 12s infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes philosophyGlow {
+  0% { transform: scale(1) rotate(0deg); }
+  100% { transform: scale(1.05) rotate(360deg); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .philosophy-card { width: 85%; }
+  .philosophy-section .section-title { font-size: 2.4rem; }
+}
+
+/* ================= GOVERNANCE SECTION ================= */
+.governance-section {
+  background: #081821;
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.governance-section h2 {
+  font-size: 2.2rem;
+  color: #22c55e; /* green headings */
+  margin-bottom: 20px;
+}
+
+.governance-intro {
+  font-size: 1rem;
+  color: #b0e0e6;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.transparency-link {
+  color: #f59e0b;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.transparency-link:hover {
+  text-decoration: underline;
+}
+
+/* ================= GOVERNANCE FRAMEWORK ================= */
+.governance-block {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.governance-block h3 {
+  font-size: 1.6rem;
+  color: #0fffc3;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.governance-block p {
+  color: #b0e0e6;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===== GOVERNANCE FLOW WITH VERTICAL GLOW LINE ===== */
+.governance-flow-container {
+  position: relative;
+  padding-left: 40px;
+  margin: 30px auto;
+  max-width: 700px;
+  text-align: left;
+}
+
+/* ===== BRIGHTER VERTICAL GLOW LINE ===== */
+.glow-line {
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #14b8a6, #f59e0b, #3b82f6, #ef4444, #10b981);
+  border-radius: 2px;
+  box-shadow: 0 0 15px rgba(0,255,198,0.4);
+}
+
+.governance-node {
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.governance-node h4 {
+  font-size: 1.4rem;
+  color: #22c55e;
+  margin-bottom: 5px;
+}
+
+.governance-node p {
+  color: #b0e0e6;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ================= BOARD OF TRUSTEES ================= */
+.board-title {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #f59e0b;
+}
+
+.board-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.board-card {
+  background: rgba(0, 255, 198, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  width: 220px; 
+  text-align: center;
+  padding: 20px 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= BOARD OF TRUSTEES IMAGE CENTERING ================= */
+.board-card img {
+  display: block;
+  margin: 0 auto 15px auto;  /* centers image horizontally in card */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+  z-index: 2;
+}
+
+.board-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,255,198,0.4),
+              0 0 40px rgba(0,255,198,0.2) inset;
+}
+
+.board-card h4 {
+  color: #0fffc3;
+  margin-bottom: 8px;
+}
+
+.board-card p {
+  color: #b0e0e6;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Glow behind board images */
+.board-card img::after {
+  content: '';
+  position: center;
+  width: 140px;
+  height: 140px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0,255,198,0.15), transparent 70%);
+  filter: blur(25px);
+  z-index: -1;
+}
+
+/* ================= CONSTITUTION SECTION ================= */
+.constitution-section {
+  background: #081821;
+  color: #b0e0e6;
+  text-align: center;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.constitution-section h2 {
+  font-size: 2.2rem;
+  color: #22c55e;
+  margin-bottom: 25px;
+}
+
+.constitution-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  color: #b0e0e6;
+  text-align: justify;
+}
+
+.constitution-section p span.orange {
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+/* ================= TOKENOMICS – REFINED ================= */
+.tokenomics {
+  background: radial-gradient(circle at top, #0b1f29, #06121a);
+  color: #e0f7fa;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.tokenomics-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* ===== Title & underline ===== */
+.tokenomics-title {
+  font-size: 2.8rem;
+  color: #22c55e;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(34,197,94,0.5);
+}
+
+.tokenomics-underline {
+  width: 100px;
+  height: 5px;
+  margin: 10px auto 25px;
+  background: linear-gradient(90deg, #22c55e, #f59e0b, #ef4444);
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(0,255,198,0.5);
+}
+
+.tokenomics-subtitle {
+  color: #b0e0e6;
+  margin-bottom: 50px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== Bars container ===== */
+.tokenomics-bars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* ===== Each token box ===== */
+.token-box {
+  flex: 1 1 200px;
+  max-width: 220px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.4s, box-shadow 0.4s;
+  cursor: default;
+}
+.token-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 28px rgba(0,255,198,0.4);
+}
+
+/* Bar track */
+.bar {
+  width: 100%;
+  height: 28px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 6px;
+}
+
+/* Bar fill */
+.bar-fill {
+  width: 0%;
+  height: 100%;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: width 2s ease-in-out;
+}
+
+/* Animated fill percentage */
+.bar-fill span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating shine effect on bar fill */
+.bar-fill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  transform: skewX(-20deg);
+  animation: shineMove 2.5s linear infinite;
+  border-radius: 14px;
+}
+
+@keyframes shineMove {
+  0% { left: -50%; }
+  100% { left: 100%; }
+}
+
+/* Bar colors */
+.bar-fill.red    { background: linear-gradient(90deg, #ff4d4d, #ff8080); }
+.bar-fill.orange { background: linear-gradient(90deg, #ff9f1c, #ffd166); }
+.bar-fill.blue   { background: linear-gradient(90deg, #3a86ff, #7db9ff); }
+.bar-fill.green  { background: linear-gradient(90deg, #2ec4b6, #8ef1df); }
+.bar-fill.lgreen { background: linear-gradient(90deg, #90db7b, #caffbf); }
+
+/* Token box headings */
+.token-box h3 {
+  margin-bottom: 8px;
+  color: #0fffc3;
+  text-shadow: 0 0 8px rgba(0,255,198,0.5);
+  font-size: 1.1rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .token-box { max-width: 100%; }
+  .tokenomics-title { font-size: 2.4rem; }
+  .tokenomics-subtitle { font-size: 1rem; }
+}
+
+@media (max-width: 600px) {
+  .token-box { width: 90%; }
+  .tokenomics-bars { gap: 20px; }
+}
+
+/* ================= HOW B2H WORKS – FINAL READY-TO-PASTE ================= */
+
+#how-B2H-works {
+  display: block;
+  width: 100%;
+  clear: both;
+  overflow: hidden;
+  margin-top: 80px; /* space from previous section */
+}
+
+.how-B2H-works {
+  background: radial-gradient(circle at top, #0b2230, #06131b);
+  padding: 90px 20px 70px;
+  text-align: center;
+  color: #cfeff5;
+  position: relative;
+  overflow: hidden;
+}
+
+.how-B2H-works-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  clear: both;
+}
+
+/* ---------- HEADER ---------- */
+.how-B2H-works .section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.how-B2H-works .section-header h2 {
+  font-size: 2.9rem;
+  font-weight: 800;
+  color: #f59e0b;
+  text-shadow: 0 0 16px rgba(245,158,11,0.6);
+  margin-bottom: 14px;
+}
+
+.how-B2H-works .section-underline {
+  width: 90px;
+  height: 4px;
+  margin: 0 auto 18px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #22c55e, #f59e0b, #ef4444);
+}
+
+.how-B2H-works .subheading {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #b6e6ee;
+}
+
+/* ---------- FLOW LINE + ARROWS ---------- */
+.how-B2H-works .flow-container {
+  position: relative;
+  width: 100%;
+  margin: 60px 0;
+  height: 6px;
+}
+
+.how-B2H-works .flow-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #22c55e, #14b8a6, #f59e0b, #ef4444);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+/* Soft energy glow effect along line */
+.how-B2H-works .flow-line::after {
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(0,0,0,0.15),
+    transparent
+  );
+  mix-blend-mode: overlay;
+}
+
+@keyframes flowGlow {
+  0% { transform: translateX(-100%); opacity: 0.2; }
+  50% { transform: translateX(0); opacity: 0.45; }
+  100% { transform: translateX(100%); opacity: 0.2; }
+}
+
+/* ---------- MOVING ARROWS ---------- */
+.how-B2H-works .moving-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.8rem;
+  font-weight: 700;
+  z-index: 2;
+  animation: moveArrow 7s linear infinite;
+}
+
+.how-B2H-works .moving-arrow:nth-child(2) { color: #22c55e; }
+.how-B2H-works .moving-arrow:nth-child(3) { color: #f59e0b; animation-delay: 1.5s; }
+.how-B2H-works .moving-arrow:nth-child(4) { color: #ef4444; animation-delay: 3s; }
+
+@keyframes moveArrow {
+  0% { left: -40px; opacity: 0; }
+  10% { opacity: 1; }
+  50% { left: calc(100% - 40px); opacity: 1; }
+  90% { opacity: 0; }
+  100% { left: 100%; opacity: 0; }
+}
+
+/* ---------- STEPS ---------- */
+.how-B2H-works .flow-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.how-B2H-works .step {
+  width: 45%;
+  min-width: 260px;
+  padding: 18px 22px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: stepFadeUp 0.9s ease forwards;
+}
+
+.how-B2H-works .step:nth-child(1) { animation-delay: 0.2s; }
+.how-B2H-works .step:nth-child(2) { animation-delay: 0.4s; }
+.how-B2H-works .step:nth-child(3) { animation-delay: 0.6s; }
+.how-B2H-works .step:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes stepFadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.how-B2H-works .step:nth-child(odd) { align-self: flex-start; }
+.how-B2H-works .step:nth-child(even) { align-self: flex-end; }
+
+.how-B2H-works .step::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  background: radial-gradient(circle, rgba(0,255,198,0.18), transparent 70%);
+  filter: blur(14px);
+  border-radius: 22px;
+  z-index: -1;
+}
+
+.how-B2H-works .step:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 35px rgba(0,255,198,0.45);
+}
+
+.how-B2H-works .step h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.how-B2H-works .step p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #cfeff5;
+}
+
+/* ---------- CTA BUTTON ---------- */
+.how-B2H-works .cta {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.how-B2H-works .cta .btn {
+  padding: 14px 38px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #f59e0b, #ef4444);
+  border-radius: 50px;
+  box-shadow: 0 0 25px rgba(245,158,11,0.6);
+  transition: all 0.35s ease;
+}
+
+.how-B2H-works .cta .btn:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 40px rgba(239,68,68,0.9);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1024px) {
+  .how-B2H-works .flow-steps {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-B2H-works .flow-steps {
+    flex-direction: column;
+    align-items: center;
+  }
+  .how-B2H-works .step {
+    width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-B2H-works .section-header h2 { font-size: 2.2rem; }
+  .how-B2H-works .subheading { font-size: 1rem; }
+}
+
+/* ================= CHARITY ================= */
+.charity-section { background: #0f2734; padding: 80px 20px; }
+.charity-header h2 { color: #22c55e; margin-bottom: 10px; text-align: center; }
+.charity-intro { text-align: center; color: #b0e0e6; margin-bottom: 40px; }
+.charity-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.charity-card { background: rgba(0,255,198,0.05); backdrop-filter: blur(8px); border-radius: 15px; width: 280px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,255,198,0.15); }
+.charity-card img { width: 100%; height: 180px; object-fit: cover; }
+.charity-content { padding: 15px; }
+.charity-content h3 { color: #0fffc3; margin-bottom: 8px; }
+.charity-content p { font-size: 0.95rem; color: #b0e0e6; line-height: 1.5; }
+
+/* ================= CHARITY CARDS – GLOW EFFECT ================= */
+.charity-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  position: relative;
+}
+
+.charity-card {
+  background: rgba(0, 255, 198, 0.05); /* subtle card base */
+  backdrop-filter: blur(12px);
+  border-radius: 15px;
+  width: 280px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 255, 198, 0.15);
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+}
+
+.charity-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 255, 198, 0.4),
+              0 0 40px rgba(0, 255, 198, 0.2) inset;
+}
+
+/* Glowing effect behind each charity card */
+.charity-card::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 20px;
+  background: radial-gradient(circle, rgba(0,255,198,0.15) 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(12px);
+}
+
+/* Card content */
+.charity-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.charity-content h3 {
+  color: #0fffc3;
+  margin-bottom: 8px;
+}
+
+.charity-content p {
+  font-size: 0.95rem;
+  color: #b0e0e6;
+  line-height: 1.5;
+}
+
+/* ================= CHARITY SECTION ADJUSTMENTS ================= */
+
+/* Center images inside charity cards */
+.charity-card img {
+  display: block;
+  margin: 0 auto; /* center horizontally */
+}
+
+/* Wrap intro text in two lines and center */
+.charity-intro {
+  max-width: 600px; /* restrict line length */
+  margin: 0 auto 40px auto; /* center horizontally */
+  text-align: center; /* keep centered */
+}
+
+/* ================= CHARITY SECTION – REDUCE VERTICAL SPACING ================= */
+
+/* Reduce the gap between charity cards */
+.charity-grid {
+  gap: 15px 20px; /* vertical 15px, horizontal 20px */
+}
+
+/* Optional: reduce padding inside card for a slightly more compact look */
+.charity-content {
+  padding: 12px 15px;
+}
+
+/* ================= DONATIONS & REAL ASSETS – REFINED ================= */
+.assets-section {
+  background: #081821;
+  color: #b0e0e6;
+  text-align: center;
+  padding: 90px 20px 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.assets-header h2 {
+  color: #22c55e;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  text-shadow: 0 0 14px rgba(34,197,94,0.5);
+}
+
+.assets-underline {
+  width: 90px;
+  height: 4px;
+  margin: 0 auto 30px;
+  background: linear-gradient(90deg, #22c55e, #0fffc3);
+  border-radius: 3px;
+  box-shadow: 0 0 12px rgba(0,255,198,0.5);
+}
+
+.assets-intro {
+  max-width: 720px;
+  margin: 0 auto 50px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #b0e0e6;
+}
+
+/* Grid & cards */
+.assets-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  position: relative;
+}
+
+.asset-card {
+  background: rgba(0, 255, 198, 0.05);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  width: 240px;
+  padding: 25px 18px;
+  box-shadow: 0 8px 25px rgba(0,255,198,0.15);
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.asset-card.highlight {
+  background: rgba(34,197,94,0.12);
+  border: 1px solid rgba(34,197,94,0.3);
+}
+
+.asset-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,255,198,0.35),
+              0 0 50px rgba(0,255,198,0.2) inset;
+}
+
+/* Glow behind card */
+.asset-card::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  border-radius: 22px;
+  background: radial-gradient(circle, rgba(0,255,198,0.18) 0%, transparent 70%);
+  filter: blur(14px);
+  z-index: -1;
+  animation: subtleGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes subtleGlow {
+  0% { opacity: 0.65; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.02); }
+  100% { opacity: 0.65; transform: scale(1); }
+}
+
+/* Card headings & text */
+.asset-card h3 {
+  color: #0fffc3;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px rgba(0,255,198,0.4);
+}
+
+.asset-card p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #b0e0e6;
+}
+
+/* ================= MISSION & VISION ================= */
+.mission { background: #0f2734; text-align: center; padding: 80px 20px; }
+.mission-vision-cards { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+.mv-card { background: rgba(0,255,198,0.05); backdrop-filter: blur(12px); border-radius: 20px; padding: 35px 25px; max-width: 350px; transition: transform 0.4s, box-shadow 0.4s; text-align: center; }
+.mv-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,255,198,0.4), 0 0 40px rgba(0,255,198,0.2) inset; }
+.mv-icon { font-size: 48px; margin-bottom: 20px; color: #00ffc6; text-shadow: 0 0 12px rgba(0,255,198,0.6); }
+.mv-card h3 { font-size: 24px; color: #0fffc3; margin-bottom: 15px; }
+.mv-card p { font-size: 16px; color: #b0e0e6; line-height: 1.6; }
+
+/* ================= MISSION & VISION – spacing from heading ================= */
+.mission-vision-cards {
+  margin-top: 30px; /* adds safe space between heading/subheading and cards */
+}
+
+/* ================= ROADMAP – REFINED ================= */
+.roadmap {
+  background: #081821;
+  color: #b0e0e6;
+  padding: 90px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.roadmap .section-title {
+  color: #22c55e;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 35px;
+  text-shadow: 0 0 14px rgba(34,197,94,0.5);
+}
+
+/* Roadmap list & vertical gradient line */
+.roadmap-list {
+  list-style: none;
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.roadmap-list::before {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(to bottom, #14b8a6, #f59e0b, #3b82f6, #ef4444, #10b981);
+  border-radius: 3px;
+  box-shadow: 0 0 16px rgba(255,255,255,0.2);
+}
+
+/* Each milestone item */
+.roadmap-list li {
+  background: rgba(0,255,198,0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 16px 20px 16px 60px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.roadmap-list li:nth-child(1) { animation-delay: 0.1s; }
+.roadmap-list li:nth-child(2) { animation-delay: 0.3s; }
+.roadmap-list li:nth-child(3) { animation-delay: 0.5s; }
+.roadmap-list li:nth-child(4) { animation-delay: 0.7s; }
+.roadmap-list li:nth-child(5) { animation-delay: 0.9s; }
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Step circle */
+.step-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: linear-gradient(45deg, #22c55e, #0fffc3);
+  box-shadow: 0 0 14px #22c55e, 0 0 24px #0fffc3;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: floatGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatGlow {
+  0% { transform: translateY(-50%) scale(1); }
+  50% { transform: translateY(-55%) scale(1.05); }
+  100% { transform: translateY(-50%) scale(1); }
+}
+
+/* Hover effect for step circles */
+.roadmap-list li:hover .step-circle {
+  transform: translateY(-50%) scale(1.5);
+  box-shadow: 0 0 22px #22c55e, 0 0 40px #0fffc3, 0 0 55px currentColor inset;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .roadmap-list {
+    padding-left: 30px;
+    gap: 20px;
+  }
+  .roadmap-list li {
+    padding: 14px 16px 14px 50px;
+  }
+  .section-title { font-size: 2.4rem; }
+}
+
+/* ================= ROADMAP – HOVER EFFECT ================= */
+.roadmap-list li {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+}
+
+.roadmap-list li::before {
+  /* optional subtle glow behind each step */
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-radius: 20px;
+  background: radial-gradient(circle, rgba(0,255,198,0.12) 0%, transparent 70%);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.roadmap-list li:hover {
+  transform: translateY(-10px);
+}
+
+.roadmap-list li:hover::before {
+  opacity: 1;
+}
+
+/* ================= JOIN THE MOVEMENT ================= */
+.join-movement .btn-join { padding: 14px 28px; margin:10px; border-radius: 8px; font-weight:700; color:#fff; display:inline-block; transition:all 0.3s; }
+.btn-join.donate { background:#22c55e; }
+.btn-join.volunteer { background:#3b82f6; }
+.btn-join.spread { background:#f59e0b; }
+.btn-join:hover { transform:translateY(-3px); box-shadow:0 0 15px rgba(255,255,255,0.4); }
+.join-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin-top:20px; }
+
+/* ================= JOIN THE MOVEMENT ================= */
+.join-movement .section-title {
+  color: #22c55e; /* green like other headings */
+  text-shadow: 0 0 14px rgba(34,197,94,0.6);
+  margin-bottom: 12px;
+}
+
+/* Multicolor underline */
+.join-movement .section-underline {
+  width: 100px;
+  height: 4px;
+  margin: 0 auto 20px;
+  border-radius: 3px;
+  background: linear-gradient(to right, #22c55e, #f59e0b, #ef4444);
+  box-shadow: 0 0 12px rgba(34,197,94,0.5);
+}
+
+/* Buttons container */
+.join-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Buttons base style */
+.btn-join {
+  padding: 14px 28px;
+  margin: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.35s ease;
+}
+
+/* Base glow behind buttons */
+.btn-join::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  border-radius: 12px;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Hover effect with glow lift */
+.btn-join:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 0 20px rgba(255,255,255,0.35), 0 0 30px rgba(255,255,255,0.2) inset;
+}
+
+.btn-join:hover::before {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Animated glow behind buttons */
+.btn-join::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  border-radius: 50%;
+  background: conic-gradient(
+    rgba(34,197,94,0.2),
+    rgba(245,158,11,0.2),
+    rgba(239,68,68,0.2),
+    rgba(34,197,94,0.2)
+  );
+  z-index: -2;
+  filter: blur(20px);
+  animation: rotateGlow 6s linear infinite;
+  opacity: 0.7;
+}
+
+/* Rotate animation for glow */
+@keyframes rotateGlow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Individual button colors (original) */
+.btn-join.donate { background: #22c55e; }
+.btn-join.volunteer { background: #3b82f6; }
+.btn-join.spread { background: #f59e0b; }
+
+/* Ensure subpage buttons are above the particles canvas */
+.hero-subpages {
+  position: relative;  /* establish stacking context */
+  z-index: 10;         /* above the particles canvas */
+}
+
+/* Also make sure hero-content stays above particles */
+.hero-content {
+  position: relative;
+  z-index: 5;  /* above particles but below buttons */
+}
+
+/* Ensure particles canvas stays behind */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;  /* behind everything */
+} 
+
+/* ================= HERO BUTTONS VIBRANT & GLOW ================= */
+.hero-subpages a {
+  color: #000; /* default text black for better readability */
+  font-weight: 600;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Glow and lift effect on hover */
+.hero-subpages a:hover {
+  transform: translateY(-5px) scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25), 0 0 12px rgba(255,255,255,0.4);
+}
+
+/* ================= HERO SUBPAGE BUTTON COLORS ================= */
+.hero-subpages a.btn-about { background: #1E90FF; color: #fff; }           /* Dodger Blue */
+.hero-subpages a.btn-white-paper { background: #F5F5F5; color: #000; }    /* Bright Silver */
+.hero-subpages a.btn-tokenomics { background: #00CED1; color: #fff; }      /* Dark Turquoise */
+.hero-subpages a.btn-transparency { background: #40E0D0; color: #fff; }    /* Turquoise */
+.hero-subpages a.btn-donate { background: #FF4500; color: #fff; }          /* Orange Red */
+.hero-subpages a.btn-constitution { background: #FFD700; color: #000; }    /* Gold */
+.hero-subpages a.btn-burn-ethics { background: #FF8C00; color: #fff; }     /* Dark Orange */
+.hero-subpages a.btn-founder-continuity { background: #FF69B4; color: #fff; } /* Hot Pink */
+.hero-subpages a.btn-participation-safeguard { background: #32CD32; color: #fff; } /* Lime Green */
+.hero-subpages a.btn-disclaimer { background: #DC143C; color: #fff; }      /* Crimson */
+.hero-subpages a.btn-vision { background: #8A2BE2; color: #fff; }          /* Blue Violet */
+.hero-subpages a.btn-sress-test { background-color: #1E90FF !important; color: #fff !important; }
+
+.hero-subpages a {
+    color: #fff;           /* Default text color */
+    text-decoration: none; /* Clean look */
+}
+
+.hero-subpages a:hover {
+    opacity: 0.85;         /* Slight hover effect */
+    transition: 0.3s ease;
+}
+
+/* Optional subtle shine animation */
+.hero-subpages a::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.15);
+  transform: rotate(45deg) translateX(-100%);
+  transition: all 0.7s ease;
+}
+
+.hero-subpages a:hover::before {
+  transform: rotate(45deg) translateX(100%);
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+  .hero-subpages {
+    gap: 10px;
+    margin-top: 15px;
+  }
+  .hero-subpages a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-subpages a {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ================= MAIN PAGE HERO BUTTONS FIX ================= */
+.hero-subpages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-subpages a {
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
+  color: #fff;
+  white-space: nowrap; /* prevents wrapping */
+}
+
+.btn-join.participate {
+  background: #32cd32;
+  color: #000;
+  border-radius: 25px;
+  font-weight: 600;
+  padding: 12px 25px;
+  transition: all 0.35s ease;
+}
+
+.btn-join.participate:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 15px rgba(50,205,50,0.5);
+}
+
+/* ======== FOUNDER IMAGE WRAPPER WITH FLOATING PARTICLES ======== */
+.founder-img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Image floating gently */
+.founder-img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.4s ease, transform 1.5s ease-in-out;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* Gentle float animation */
+@keyframes floatFounder {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.founder-img {
+  animation: floatFounder 4s ease-in-out infinite;
+}
+
+.founder-img:hover {
+  box-shadow: 0 12px 35px rgba(16,185,129,0.7);
+  transform: scale(1.08);
+}
+
+/* ======== PARTICLES AROUND FOUNDER ======== */
+.founder-img-wrapper span.founder-particle {
+  position: absolute;
+  display: block;
+  background: rgba(16,185,129,0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: floatParticle 6s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes floatParticle {
+  0%   { transform: translate(0,0) scale(1); opacity: 0.6; }
+  50%  { transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px)) scale(1.3); opacity: 0.9; }
+  100% { transform: translate(0,0) scale(1); opacity: 0.6; }
+}
+
+/* ===== Mobile fix: How B2H Works button ===== */
+@media (max-width: 768px) {
+  .how-b2h-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    margin: 10px auto;
+  }
+}
+
+/* ================= MAIN PAGE FOOTER ================= */
+.footer {
+  background: #0b1f29;
+  color: #e5e7eb;
+  padding: 40px 20px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer a {
+  color: #32cd32;
+  text-decoration: none;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-subscribe, 
+.footer-address, 
+.footer-social {
+  flex: 1 1 250px;
+}
+
+.footer-subscribe h4,
+.footer-address h4,
+.footer-social h4 {
+  margin-bottom: 10px;
+  color: #32cd32;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 10px;
+}
+
+.subscribe-form input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #32cd32;
+  background: #0f2734;
+  color: #fff;
+}
+
+.subscribe-form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: #32cd32;
+  color: #0b1f29;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-social .social-icons a img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.footer-social .social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #32cd32;
+  padding-top: 10px;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .subscribe-form {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+  }
+}
+
+/* ================= HOW B2H CTA BUTTON ================= */
+
+.how-b2h-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.cta-orange {
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #1a0f00;
+  background: linear-gradient(135deg, #ff9f1a, #ff6a00);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.45);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.cta-orange:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(255, 140, 0, 0.7);
+}
+
+/* Mobile safety */
+@media (max-width: 768px) {
+  .cta-orange {
+    width: auto;
+    max-width: 90%;
+    font-size: 0.95rem;
+    padding: 14px 26px;
+  }
+}
+
+.subscribe-success {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #32cd32;
+  opacity: 0.9;
+}
+
+ /* ================= FOUNDER GUARDIAN SEAL ================= */
+
+.founder-seal {
+  margin-top: 25px;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 30px;
+  animation: sealGlow 4s ease-in-out infinite;
+}
+
+@keyframes sealGlow {
+  0%   { box-shadow: 0 0 0 rgba(255,255,255,0); }
+  50%  { box-shadow: 0 0 14px rgba(255,255,255,0.25); }
+  100% { box-shadow: 0 0 0 rgba(255,255,255,0); }
+} 
+
+.hero-subpages a.btn-stress-test {
+    background-color: #1E90FF !important; /* Dodger Blue */
+    color: #fff !important;               /* White text */
+}
+
+@media (max-width: 768px) {
+
+ /* ===== FORCE MULTICOLOR UNDERLINES ON MAIN PAGE SECTIONS ===== */
+
+body:not(.b2h-subpage) .section-underline,
+body:not(.b2h-subpage) .section-header .section-underline {
+  width: 90px;
+  height: 4px;
+  margin: 14px auto 28px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #32cd32,
+    #00ffd0,
+    #7CFC00,
+    #00ffc6
+  ) !important;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.4);
+}
+
+/* ===== FORCE MULTI-COLOR UNDERLINE ON MAIN PAGE ===== */
+
+body:not(.b2h-subpage) .section-underline {
+  background: linear-gradient(
+    90deg,
+    #32cd32,
+    #00ffd0,
+    #7CFC00,
+    #00ffc6
+  ) !important;
+  height: 4px;
+  width: 90px;
+  border-radius: 6px;
+  margin: 14px auto 28px;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.45);
+}
+
+       /* ================= UNIFIED CARD STYLING ================= */
+.mv-card, .board-card, .charity-card, .asset-card {
+  background: rgba(0,255,198,0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px 15px;
+  text-align: center;
+  transition: transform 0.4s, box-shadow 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+/* Images inside cards */
+.mv-card img, .board-card img, .charity-card img, .asset-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Hover effect - lift and glow */
+.mv-card:hover, .board-card:hover, .charity-card:hover, .asset-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,255,198,0.4), 
+              0 0 40px rgba(0,255,198,0.2) inset;
+}
+
+/* Headings inside cards */
+.mv-card h3, .board-card h4, .charity-card h3, .asset-card h3 {
+  color: #0fffc3;
+  margin-bottom: 8px;
+}
+
+/* Paragraph text inside cards */
+.mv-card p, .board-card p, .charity-card p, .asset-card p {
+  color: #b0e0e6;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.mv-card::before,
+.board-card::before,
+.charity-card::before,
+.asset-card::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle, rgba(0,255,198,0.15), transparent 70%);
+  filter: blur(25px);
+  z-index: -1;
+}
+
+/* ================= FOOTER MAIN PAGE FIXED ================= */
+.footer {
+  background: #0b0f1a;
+  color: #e5e7eb;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Flex layout for social + subscribe blocks */
+.footer-bottom-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* space between subscribe & social */
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Social Media */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-social h4 {
+  margin-bottom: 10px;
+  color: #32cd32;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin-right: 12px;
+  margin-bottom: 6px;
+}
+
+.footer-social a img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.footer-social a:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 5px #32cd32);
+}
+
+/* Subscribe */
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-subscribe h4 {
+  margin-bottom: 10px;
+  color: #32cd32;
+}
+
+.footer-subscribe form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.footer-subscribe input[type="email"] {
+  flex: 1 1 200px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid #32cd32;
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.footer-subscribe .green-btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: #32cd32;
+  color: #0b0f1a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-subscribe .green-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #32cd32;
+}
+
+/* Footer Bottom Text */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 4px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+@media screen and (max-width: 768px) {
+  .footer-bottom-flex {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social, .footer-subscribe {
+    align-items: center;
+  }
+
+  .footer-social a {
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+
+  .footer-subscribe form {
+    justify-content: center;
+  }
+}
+
+/* ================= PARTICLES ADJUSTMENT ================= */
+.particles-js-canvas-el { position:absolute !important; top:0; left:0; width:100% !important; height:100% !important; z-index:0; }
+
+@media (max-width: 768px){
+  /* mobile styles */
+}
+
+/* ===== END OF FILE ===== */
+
 /* =========================== MASTER STYLE.CSS FOR B2H – UNIFIED GRADIENT =========================== */
 
 /* ================= B2H SIGNATURE GRADIENT ================= */
