@@ -18,11 +18,11 @@ body.b2h-subpage {
   background-color: var(--b2h-bg-dark);
   color: var(--b2h-text-main);
   font-family: var(--font-body);
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 16px;
 }
 
-/* ---- Global inside subpages only ---- */
+/* ---- Global ---- */
 body.b2h-subpage * {
   box-sizing: border-box;
 }
@@ -30,18 +30,18 @@ body.b2h-subpage * {
 body.b2h-subpage a {
   color: var(--b2h-accent);
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 body.b2h-subpage a:hover {
-  filter: brightness(1.2);
+  color: #00ffd0;
 }
 
 /* ---- Hero ---- */
 body.b2h-subpage .page-hero {
   position: relative;
   text-align: center;
-  padding: 80px 20px 40px;
+  padding: 80px 20px 45px;
   overflow: hidden;
 }
 
@@ -57,22 +57,21 @@ body.b2h-subpage .page-hero h1 {
 }
 
 body.b2h-subpage .page-hero .subtitle {
-  font-size: 1.2rem;
-  margin-top: 10px;
+  font-size: 1.15rem;
+  margin-top: 12px;
   color: var(--b2h-text-soft);
-  position: relative;
-  z-index: 2;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ---- Hero Actions Buttons ---- */
+/* ---- Hero Actions ---- */
 body.b2h-subpage .hero-actions {
   margin-top: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  position: relative;
-  z-index: 2;
 }
 
 body.b2h-subpage .hero-actions a {
@@ -81,56 +80,60 @@ body.b2h-subpage .hero-actions a {
   font-weight: 700;
   background: var(--b2h-accent);
   color: var(--b2h-bg-dark);
-  box-shadow: 0 4px 20px rgba(50, 205, 50, 0.4);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 18px rgba(50, 205, 50, 0.35);
 }
 
 body.b2h-subpage .hero-actions a:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(50, 205, 50, 0.6);
-  filter: brightness(1.1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 22px rgba(50, 205, 50, 0.5);
 }
 
 /* ---- Sections ---- */
 body.b2h-subpage .section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px;
-  position: relative;
+  padding: 45px 20px;
 }
 
 body.b2h-subpage .section-title {
   font-size: 1.8rem;
   color: var(--b2h-accent);
-  margin-bottom: 15px;
-  position: relative;
+  margin-bottom: 18px;
 }
 
 body.b2h-subpage .section-title::after {
   content: '';
   display: block;
   width: 60px;
-  height: 4px;
-  margin-top: 5px;
-  background: linear-gradient(90deg, #32cd32, #00ffd0, #32cd32);
+  height: 3px;
+  margin-top: 6px;
+  background: var(--gradient-accent);
   border-radius: 2px;
 }
 
-/* ---- Info Boxes ---- */
+/* ---- Standard Info Boxes ---- */
 body.b2h-subpage .info-box,
 body.b2h-subpage .donate-box {
   background: rgba(50,205,50,0.08);
-  padding: 25px;
+  padding: 26px;
   border-radius: 16px;
   margin-bottom: 25px;
-  transition: all 0.3s ease;
 }
 
-body.b2h-subpage .info-box:hover,
-body.b2h-subpage .donate-box:hover {
-  background: rgba(50,205,50,0.15);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(50,205,50,0.3);
+/* ---- Calm / Legal / Governance Boxes ---- */
+body.b2h-subpage .calm-box,
+body.b2h-subpage .legal-note {
+  background: rgba(255,255,255,0.04);
+  border-left: 4px solid var(--b2h-accent);
+  padding: 22px 26px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+body.b2h-subpage .legal-note {
+  font-size: 0.95rem;
+  color: var(--b2h-text-soft);
+  line-height: 1.75;
 }
 
 /* ---- Buttons ---- */
@@ -143,15 +146,13 @@ body.b2h-subpage .glass-back {
   border-radius: 12px;
   font-weight: 700;
   display: inline-block;
-  transition: all 0.3s ease;
 }
 
 body.b2h-subpage .green-btn:hover,
 body.b2h-subpage .btn-glow:hover,
 body.b2h-subpage .glass-back:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(50,205,50,0.6);
-  filter: brightness(1.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(50,205,50,0.5);
 }
 
 /* ---- Forms ---- */
@@ -162,11 +163,9 @@ body.b2h-subpage select {
   padding: 12px 16px;
   border-radius: 8px;
   background: #111827;
-  border: 1px solid var(--b2h-accent);
+  border: 1px solid rgba(50,205,50,0.6);
   color: var(--b2h-text-main);
   margin-bottom: 15px;
-  font-size: 16px;
-  transition: all 0.3s ease;
 }
 
 body.b2h-subpage input:focus,
@@ -174,15 +173,13 @@ body.b2h-subpage textarea:focus,
 body.b2h-subpage select:focus {
   outline: none;
   border-color: #00ffd0;
-  box-shadow: 0 0 10px rgba(0,255,208,0.6);
+  box-shadow: 0 0 8px rgba(0,255,208,0.4);
 }
 
-/* ---- Floating Particle Canvas ---- */
+/* ---- Particle Canvas ---- */
 #heroParticles {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
 }
@@ -190,31 +187,11 @@ body.b2h-subpage select:focus {
 /* ---- Footer ---- */
 body.b2h-subpage .site-footer {
   background: #0b1f29;
-  padding: 20px;
-  text-align: center;
-  color: var(--b2h-text-soft);
-}
-
-body.b2h-subpage .site-footer a {
-  color: var(--b2h-accent);
-}
-
-body.b2h-subpage .site-footer a:hover {
-  text-decoration: underline;
-}
-
-/* ===============================
-   Unified Subpage Footer (for all pages)
-   =============================== */
-body.b2h-subpage .site-footer {
-  background: #0b1f29; /* dark footer to match subpages */
-  padding: 25px 20px;
+  padding: 28px 20px;
   text-align: center;
   color: var(--b2h-text-soft);
   font-size: 0.95rem;
   border-top: 1px solid rgba(255,255,255,0.1);
-  position: relative;
-  z-index: 1;
 }
 
 /* Footer Links */
@@ -228,48 +205,21 @@ body.b2h-subpage .site-footer .footer-links {
 
 body.b2h-subpage .site-footer .footer-links a {
   color: var(--b2h-accent);
-  text-decoration: none;
   font-weight: 600;
-  position: relative;
-  padding-bottom: 2px;
-  transition: all 0.3s ease;
-}
-
-body.b2h-subpage .site-footer .footer-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 0;
-  background: var(--gradient-accent);
-  transition: width 0.3s ease;
-}
-
-body.b2h-subpage .site-footer .footer-links a:hover::after {
-  width: 100%;
 }
 
 /* Footer Text */
 body.b2h-subpage .site-footer p {
-  margin: 5px 0;
-  color: var(--b2h-text-soft);
+  margin: 6px 0;
 }
 
-/* Footer "Back to Top" button (optional) */
+/* Back to Top */
 body.b2h-subpage .site-footer .back-to-top {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 12px;
   padding: 8px 16px;
   border-radius: 8px;
   background: var(--b2h-accent);
   color: #0b0f1a;
   font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-body.b2h-subpage .site-footer .back-to-top:hover {
-  box-shadow: 0 0 10px var(--b2h-accent);
-  transform: translateY(-2px);
 }
