@@ -1720,6 +1720,21 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
 
+ .section-underline {
+  width: 90px;
+  height: 4px;
+  margin: 14px auto 28px;
+  border-radius: 6px;
+  background: linear-gradient(
+    90deg,
+    #32cd32,
+    #00ffd0,
+    #7CFC00,
+    #00ffc6
+  );
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.35);
+}
+
        /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
