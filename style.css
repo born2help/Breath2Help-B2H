@@ -1721,41 +1721,6 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
 
- /* ===== FORCE MULTICOLOR UNDERLINES ON MAIN PAGE SECTIONS ===== */
-
-body:not(.b2h-subpage) .section-underline,
-body:not(.b2h-subpage) .section-header .section-underline {
-  width: 90px;
-  height: 4px;
-  margin: 14px auto 28px;
-  border-radius: 6px;
-  background: linear-gradient(
-    90deg,
-    #32cd32,
-    #00ffd0,
-    #7CFC00,
-    #00ffc6
-  ) !important;
-  box-shadow: 0 0 12px rgba(0, 255, 200, 0.4);
-}
-
-/* ===== FORCE MULTI-COLOR UNDERLINE ON MAIN PAGE ===== */
-
-body:not(.b2h-subpage) .section-underline {
-  background: linear-gradient(
-    90deg,
-    #32cd32,
-    #00ffd0,
-    #7CFC00,
-    #00ffc6
-  ) !important;
-  height: 4px;
-  width: 90px;
-  border-radius: 6px;
-  margin: 14px auto 28px;
-  box-shadow: 0 0 12px rgba(0, 255, 200, 0.45);
-}
-
        /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
@@ -1946,3 +1911,33 @@ body:not(.b2h-subpage) .section-underline {
 }
 
 /* ===== END OF FILE ===== */
+
+/* ================= B2H SIGNATURE GRADIENT UNDERLINES ================= */
+:root {
+    --b2h-gradient: linear-gradient(135deg, #22c55e, #f59e0b, #ef4444, #3b82f6, #10b981);
+}
+
+/* Sections: Foundational Constitution, Governance Framework, Our Charities, Donations & Real Assets, Mission & Vision */
+.section-underline, 
+.founder-page h2::after, 
+.philosophy-section .section-underline, 
+.how-B2H-works .section-underline, 
+.tokenomics-underline {
+    background: var(--b2h-gradient);
+    border-radius: 3px;
+    box-shadow: 0 0 12px rgba(0,255,198,0.5);
+}
+
+/* Optional: subtle animation for gradient glow */
+.section-underline.animated, 
+.founder-page h2::after.animated {
+    background-size: 300% 300%;
+    animation: gradientShift 6s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
