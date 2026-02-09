@@ -1104,7 +1104,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* Heading styles with gradient underline */
-.mission h2 {
+.mission h2, .mission h3 {
     position: relative;
     display: inline-block;
     color: #00ffc6; /* heading text color */
@@ -1113,7 +1113,8 @@ img { max-width: 100%; display: block; }
 }
 
 /* Gradient underline */
-.mission h2::after {
+.mission h2::after,
+.mission h3::after {
     content: "";
     display: block;
     height: 4px;             /* thickness of the line */
