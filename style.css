@@ -11,7 +11,6 @@ img { max-width: 100%; display: block; }
 .section { padding: 80px 0; }
 .dark-section { background: linear-gradient(135deg, #081821, #0f3a50, #1a5670); }
 .section-title { font-size: 2.6rem; font-weight: 800; text-align: center; margin-bottom: 25px; }
-.section-underline { width: 100px; height: 5px; margin: 10px auto 40px; border-radius: 3px; background: linear-gradient(90deg, #22c55e, #0fffc3); box-shadow: 0 0 12px rgba(0,255,198,0.5); }
 .readable-text { font-size: 1.1rem; line-height: 1.6; color: #b0e0e6; text-align: center; }
 
 /* ================= HERO SECTION CLEAN ================= */
