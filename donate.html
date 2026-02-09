@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Donate — B2H Global Foundation</title>
+  <title>Donate — Breath2Help (B2H)</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
@@ -15,27 +15,25 @@
   <link rel="stylesheet" href="subpage.css">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="B2H Global Foundation">
+  <meta property="og:title" content="Breath2Help (B2H)">
   <meta property="og:description" content="Built for Humanity · Driven by Purpose · Guided by Ethics">
   <meta property="og:image" content="images/hero.jpg">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yourdomain.com/donate.html">
 </head>
 
-<body class="b2h-subpage" id="top">
-<body class="b2h-subpage" style="--b2h-accent:#7CFC00;">
+<body class="b2h-subpage" id="top" style="--b2h-accent:#7CFC00;">
 
 <!-- ================= GLASS CONTAINER ================= -->
 <section class="glass-container">
 
   <!-- ================= HERO ================= -->
   <section class="page-hero">
+    <canvas id="heroParticles"></canvas>
 
-<canvas id="heroParticles" style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:0;"></canvas>
-    
     <h1 class="green-glow">Donate with Purpose</h1>
     <p class="subtitle glow-text">
-      Your contribution is an act of service — not an investment
+      Your contribution is an act of service — never an investment
     </p>
 
     <div class="hero-actions">
@@ -55,9 +53,12 @@
     <div class="wp-section">
       <h2 class="section-title green-glow"><i class="fas fa-heart"></i> Purpose of Donations</h2>
       <p>
-        Donations to B2H directly support humanitarian initiatives,
+        Donations to Breath2Help (B2H) directly support humanitarian initiatives,
         ethical operations, and long-term mission sustainability.
-        Contributions are entirely voluntary and <strong>not refundable</strong>.
+        Contributions are voluntary, fully transparent, and <strong>not refundable</strong>.
+      </p>
+      <p class="light-text">
+        Every donation is a conscious act of care — ensuring relief reaches those who need it most.
       </p>
     </div>
 
@@ -69,8 +70,11 @@
         <li>Humanitarian relief and emergency assistance</li>
         <li>Education, healthcare, and food security programs</li>
         <li>Operational and administrative sustainability</li>
-        <li>Compliance and accountability</li>
+        <li>Compliance, accountability, and ethical oversight</li>
       </ul>
+      <p class="light-text">
+        We ensure every dollar or rupiah reaches its intended purpose, measured and reported transparently.
+      </p>
     </div>
 
     <hr class="section-divider">
@@ -82,6 +86,9 @@
         <li>Not a promise of returns</li>
         <li>Not speculative or tradeable</li>
       </ul>
+      <p class="light-text">
+        B2H exists to serve humanity, not profit or speculation. Donations strictly fund humanitarian efforts.
+      </p>
     </div>
 
     <hr class="section-divider">
@@ -90,9 +97,8 @@
     <div class="wp-section center" id="donate">
 
       <h2 class="section-title green-glow">Support Our Mission</h2>
-
       <p class="donate-intro">
-        Your contribution helps us reach those in need with dignity and care.
+        Your contribution helps us reach those in need with dignity, care, and integrity.
       </p>
 
       <!-- BANK -->
@@ -103,7 +109,6 @@
           <strong>Bank:</strong> BCA / BNI — Indonesia<br>
           <strong>Account Number:</strong> <span class="placeholder">XXXX-XXXX-XXXX</span>
         </p>
-
         <a href="https://wa.me/6285396622600" class="btn-donate bank">
           Request Bank Details
         </a>
@@ -115,44 +120,35 @@
         <p>
           Donate internationally using Wise with low fees and multiple currencies.
         </p>
-
         <a href="https://wise.com/" target="_blank" class="btn-donate wise">
           Donate via Wise
         </a>
       </div>
 
-      <!-- ================= DONATION FORM ================= -->
+      <!-- ONLINE FORM -->
       <div class="donate-box">
         <h3>Donate Online</h3>
         <p>Please fill out the form below to support our mission:</p>
 
         <form class="participation-form" action="https://example.com/donate-submit" method="POST">
-
           <input type="text" name="name" placeholder="Full Name" required>
-
           <input type="email" name="email" placeholder="Email Address" required>
-
           <input type="number" name="amount" placeholder="Donation Amount (USD)" required min="1">
-
           <select name="currency" required>
             <option value="">Select Currency</option>
             <option value="USD">USD</option>
             <option value="IDR">IDR</option>
             <option value="EUR">EUR</option>
           </select>
-
           <textarea name="message" rows="4" placeholder="Message (optional)"></textarea>
-
           <button type="submit" class="green-btn">Submit Donation</button>
         </form>
       </div>
 
       <a href="index.html" class="glass-back btn-glow">← Back Home</a>
-
     </div>
 
   </section>
-
 </section>
 
 <!-- ================= FOOTER ================= -->
@@ -168,20 +164,28 @@
     <a href="founder-continuity.html">Founder Continuity</a>
     <a href="tokenomics.html">Tokenomics</a>
   </div>
-  <p>&copy; 2026 B2H Global Foundation. All rights reserved.</p>
+  <p>&copy; 2026 Breath2Help (B2H). All rights reserved.</p>
   <a href="#top" class="back-to-top">↑ Back to Top</a>
 </footer>
 
 <!-- ================= JS ================= -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.bar-fill').forEach(bar => {
-    const width = bar.getAttribute('data-width');
-    setTimeout(() => { bar.style.width = width; }, 500);
-  });
+  const elements = document.querySelectorAll(
+    '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back'
+  );
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
 });
 </script>
-  
+
 <script src="subpage.js"></script>
 </body>
 </html>
