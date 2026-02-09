@@ -1126,6 +1126,13 @@ img { max-width: 100%; display: block; }
     animation: gradientShift 6s ease infinite;
 }
 
+/* Remove any existing border under mission headings */
+.mission h2,
+.mission h3 {
+    border: none !important;  /* remove any old lines */
+    box-shadow: none !important; /* sometimes lines come from shadows */
+}
+
 /* Gradient animation keyframes */
 @keyframes gradientShift {
     0% { background-position: 0% 50%; }
