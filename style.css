@@ -827,6 +827,100 @@ img { max-width: 100%; display: block; }
 .how-B2H-works .step:nth-child(odd) { align-self: flex-start; }
 .how-B2H-works .step:nth-child(even) { align-self: flex-end; }
 
+.how-B2H-works .step::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  background: radial-gradient(circle, rgba(0,255,198,0.18), transparent 70%);
+  filter: blur(14px);
+  border-radius: 22px;
+  z-index: -1;
+}
+
+.how-B2H-works .step:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 35px rgba(0,255,198,0.45);
+}
+
+.how-B2H-works .step h3 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.how-B2H-works .step p {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #cfeff5;
+}
+
+/* ================= HOW B2H WORKS – UNIFIED B2H SIGNATURE ================= */
+
+/* Section header */
+.how-B2H-works .section-header h2 {
+  color: #22c55e; /* green like Mission & Vision */
+  font-weight: 800;
+  font-size: 2.9rem;
+  text-shadow: 0 0 14px rgba(34,197,94,0.5);
+  margin-bottom: 14px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Gradient underline for section header */
+.how-B2H-works .section-underline {
+  width: 90px;
+  height: 4px;
+  margin: 0 auto 18px;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    #22c55e,
+    #f59e0b,
+    #ef4444,
+    #3b82f6,
+    #10b981
+  ); /* B2H signature gradient */
+  box-shadow: 0 0 12px rgba(0,255,198,0.5);
+}
+
+/* Subheading text */
+.how-B2H-works .subheading {
+  max-width: 640px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #b0e0e6; /* subtle greenish tint like Mission & Vision */
+}
+
+/* Step headings (boxes inside section) */
+.how-B2H-works .step h3 {
+  color: #22c55e;  /* green like other headings */
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Multi-color gradient underline for step headings */
+.how-B2H-works .step h3::after {
+  content: '';
+  display: block;
+  width: 60px; /* adjust width if needed */
+  height: 4px;
+  margin: 6px auto 0;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    #22c55e,
+    #f59e0b,
+    #ef4444,
+    #3b82f6,
+    #10b981
+  ); /* B2H signature gradient */
+  box-shadow: 0 0 8px rgba(0,255,198,0.4);
+}
+
 /* ---------- CTA BUTTON ---------- */
 .how-B2H-works .cta {
   margin-top: 60px;
@@ -1801,73 +1895,6 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 768px) {
-
-/* ================= HOW B2H WORKS – UNIFIED B2H SIGNATURE ================= */
-
-/* Section header */
-.how-B2H-works .section-header h2 {
-  color: #22c55e; /* green like Mission & Vision */
-  font-weight: 800;
-  font-size: 2.9rem;
-  text-shadow: 0 0 14px rgba(34,197,94,0.5);
-  margin-bottom: 14px;
-  position: relative;
-  display: inline-block;
-}
-
-/* Gradient underline for section header */
-.how-B2H-works .section-underline {
-  width: 90px;
-  height: 4px;
-  margin: 0 auto 18px;
-  border-radius: 3px;
-  background: linear-gradient(
-    90deg,
-    #22c55e,
-    #f59e0b,
-    #ef4444,
-    #3b82f6,
-    #10b981
-  ); /* B2H signature gradient */
-  box-shadow: 0 0 12px rgba(0,255,198,0.5);
-}
-
-/* Subheading text */
-.how-B2H-works .subheading {
-  max-width: 640px;
-  margin: 0 auto;
-  font-size: 1.05rem;
-  line-height: 1.6;
-  color: #b0e0e6; /* subtle greenish tint like Mission & Vision */
-}
-
-/* Step headings (boxes inside section) */
-.how-B2H-works .step h3 {
-  color: #22c55e;  /* green like other headings */
-  font-size: 1.15rem;
-  margin-bottom: 6px;
-  position: relative;
-  display: inline-block;
-}
-
-/* Multi-color gradient underline for step headings */
-.how-B2H-works .step h3::after {
-  content: '';
-  display: block;
-  width: 60px; /* adjust width if needed */
-  height: 4px;
-  margin: 6px auto 0;
-  border-radius: 3px;
-  background: linear-gradient(
-    90deg,
-    #22c55e,
-    #f59e0b,
-    #ef4444,
-    #3b82f6,
-    #10b981
-  ); /* B2H signature gradient */
-  box-shadow: 0 0 8px rgba(0,255,198,0.4);
-}
 
         /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
