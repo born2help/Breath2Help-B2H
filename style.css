@@ -1096,94 +1096,91 @@ img { max-width: 100%; display: block; }
   color: #b0e0e6;
 }
 
-/* ================= MISSION & VISION – CLEANED ================= */
+/* ================= MISSION & VISION ================= */
 .mission {
-  background: #0f2734;
-  text-align: center;
-  padding: 80px 20px;
-  position: relative;
+    background: #0f2734;
+    text-align: center;
+    padding: 80px 20px;
 }
 
-/* Heading */
-.mission h2 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  color: #22c55e; /* or use your B2H signature gradient if needed */
-  margin-bottom: 20px;
-  position: relative;
-  border: none !important;        /* remove any old borders */
-  box-shadow: none !important;    /* remove old shadows under heading */
-  display: inline-block;
+/* Heading styles with gradient underline */
+.mission h2, .mission h3 {
+    position: relative;
+    display: inline-block;
+    color: #00ffc6; /* heading text color */
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
-/* Gradient multi-color underline */
-.mission h2::after {
-  content: '';
-  display: block;
-  width: 120px;           /* underline width */
-  height: 5px;            /* underline height */
-  margin: 10px auto 0;    /* center it */
-  border-radius: 3px;
-  background: linear-gradient(
-    90deg,
-    #22c55e,
-    #f59e0b,
-    #ef4444,
-    #3b82f6,
-    #10b981
-  ); /* your signature gradient */
-  box-shadow: 0 0 12px rgba(0,255,198,0.5);
+/* Gradient underline */
+.mission h2::after,
+.mission h3::after {
+    content: "";
+    display: block;
+    height: 4px;             /* thickness of the line */
+    width: 80px;             /* line length */
+    margin: 8px auto 0;      /* spacing under heading */
+    border-radius: 3px;
+    background: linear-gradient(135deg, #22c55e, #f59e0b, #ef4444, #3b82f6, #10b981);
+    background-size: 300% 300%;
+    animation: gradientShift 6s ease infinite;
 }
 
-/* Cards container */
+/* Gradient animation keyframes */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Mission & Vision Cards container */
 .mission-vision-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  justify-content: center;
-  margin-top: 30px; /* spacing from heading */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px; /* spacing from heading */
 }
 
-/* Individual card */
+/* Individual cards */
 .mv-card {
-  background: rgba(0,255,198,0.05);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 35px 25px;
-  max-width: 350px;
-  transition: transform 0.4s, box-shadow 0.4s;
-  text-align: center;
-  position: relative;
+    background: rgba(0,255,198,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 35px 25px;
+    max-width: 350px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    text-align: center;
 }
 
-/* Card hover glow */
+/* Card hover effects */
 .mv-card:hover {
-  transform: translateY(-10px);
-  box-shadow:
-    0 15px 30px rgba(0,255,198,0.4),
-    0 0 40px rgba(0,255,198,0.2) inset;
+    transform: translateY(-10px);
+    box-shadow: 
+        0 15px 30px rgba(0,255,198,0.4),
+        0 0 40px rgba(0,255,198,0.2) inset;
 }
 
-/* Icon inside card */
+/* Icon in card */
 .mv-icon {
-  font-size: 48px;
-  margin-bottom: 20px;
-  color: #00ffc6;
-  text-shadow: 0 0 12px rgba(0,255,198,0.6);
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #00ffc6;
+    text-shadow: 0 0 12px rgba(0,255,198,0.6);
 }
 
-/* Card heading */
+/* Card heading inside */
 .mv-card h3 {
-  font-size: 24px;
-  color: #0fffc3; /* card heading color */
-  margin-bottom: 15px;
+    font-size: 24px;
+    color: #00ffc6; /* consistent with section heading */
+    margin-bottom: 15px;
 }
 
 /* Card paragraph */
 .mv-card p {
-  font-size: 16px;
-  color: #b0e0e6;
-  line-height: 1.6;
+    font-size: 16px;
+    color: #b0e0e6;
+    line-height: 1.6;
 }
 
 /* ================= ROADMAP – REFINED ================= */
