@@ -1738,6 +1738,23 @@ body:not(.b2h-subpage) .section-header .section-underline {
   box-shadow: 0 0 12px rgba(0, 255, 200, 0.4);
 }
 
+/* ===== FORCE MULTI-COLOR UNDERLINE ON MAIN PAGE ===== */
+
+body:not(.b2h-subpage) .section-underline {
+  background: linear-gradient(
+    90deg,
+    #32cd32,
+    #00ffd0,
+    #7CFC00,
+    #00ffc6
+  ) !important;
+  height: 4px;
+  width: 90px;
+  border-radius: 6px;
+  margin: 14px auto 28px;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.45);
+}
+
        /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
