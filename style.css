@@ -1896,6 +1896,72 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
 
+ .hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.hero-accent {
+  color: #f59e0b;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.hero-description {
+  margin-top: 18px;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 28px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #f59e0b;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  opacity: 0.7;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255,255,255,0.2);
+}
+
+.hero-cta {
+  margin-top: 25px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.founder-seal {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}   
+
         /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
