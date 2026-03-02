@@ -1918,51 +1918,6 @@ img { max-width: 100%; display: block; }
   opacity: 0.9;
 }
 
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 40px 0;
-}
-
-.stat-box {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(10px);
-  padding: 18px 25px;
-  border-radius: 12px;
-  text-align: center;
-  min-width: 150px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: 0.3s ease;
-}
-
-.stat-box:hover {
-  transform: translateY(-6px);
-  background: rgba(245,158,11,0.12);
-  border-color: rgba(245,158,11,0.5);
-}
-
-.stat-number {
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: #f59e0b;
-}
-
-.stat-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.7;
-  margin-top: 6px;
-}
-
-.stat-divider {
-  width: 1px;
-  height: 40px;
-  background: rgba(255,255,255,0.2);
-}
-
 .hero-cta {
   margin-top: 25px;
   font-weight: 700;
@@ -1993,6 +1948,45 @@ img { max-width: 100%; display: block; }
   position: relative;
   z-index: 2;
 }
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.stat-box {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  padding: 18px 25px;
+  border-radius: 12px;
+  text-align: center;
+  min-width: 150px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-6px);
+  background: rgba(0,255,198,0.12);
+  border-color: #00ffc6;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #00ffc6;
+}
+
+.stat-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-top: 6px;
+}    
     
         /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
