@@ -42,7 +42,7 @@ img { max-width: 100%; display: block; }
 .hero .burn-logo {
     position: absolute;
     top: 2in;             /* 2 inches from top */
-    right: 1.0in;         /* 1.0 inches from right */
+    right: 0.5in;         /* 0.5 inches from right */
     width: 280px;         /* double size */
     height: auto;
     z-index: 4;
