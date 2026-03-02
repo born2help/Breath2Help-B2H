@@ -2087,3 +2087,13 @@ img { max-width: 100%; display: block; }
 
 /* ===== END OF FILE ===== */
 
+/* Burn Logo — RIGHT SIDE */
+.hero .burn-logo {
+    position: absolute;
+    top: 2in;             /* 2 inches from top */
+    right: 1.0in;         /* 1.0 inches from right */
+    width: 280px;         /* double size */
+    height: auto;
+    z-index: 4;
+    animation: burnPulse 4.5s ease-in-out infinite;
+}
