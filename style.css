@@ -1896,166 +1896,128 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
 
- .hero-title {
-  font-size: 3rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
+ /* ================= HERO SECTION FIXED FOR B2H ================= */
 
-.hero-accent {
-  color: #f59e0b;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin-top: 20px;
-  line-height: 1.6;
-}
-
-.hero-description {
-  margin-top: 18px;
-  line-height: 1.7;
-  opacity: 0.9;
-}
-
-.hero-cta {
-  margin-top: 25px;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.founder-seal {
-  margin-top: 20px;
-  font-size: 0.8rem;
-  opacity: 0.6;
-} 
-
+/* Particles Background – clickable */
 .hero {
   position: relative;
   overflow: hidden;
 }
-
 #particles-js {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-.hero-text {
-  position: relative;
-  z-index: 2;
-}
-
- .main-logo-hero {
-  width: 80%;          /* 20% smaller */
-  max-width: 260px;    /* adjust if needed */
-  height: auto;
-}
-
- .burn-logo {
-  position: relative;
-  top: 1.6in;      /* exactly 1.6 inches from top */
-  right: 0.3in;    /* exactly 0.3 inches from right */
-  width: 75%;      /* 25% smaller */
-  max-width: 120px;
-  height: auto;
-}
-
-.hero-text {
-  max-width: 720px;
-  margin: 0 auto;
-  line-height: 1.5;
-}
-
-.hero-description {
-  margin-top: 12px;
-  font-size: 0.95rem;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
-
-.bg-particles {
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0;
+  z-index: 1; /* behind all content */
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
+  pointer-events: none; /* allow particle clicks */
 }
-
-.hero-buttons-container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-text,
-.hero-stats {
-  pointer-events: none;
-}
-
-.hero-subpages a {
+/* Keep buttons clickable */
+.hero-subpages a,
+.hero-btn,
+.hero-btn-secondary {
   pointer-events: auto;
 }
 
-.stat-box {
-  padding: 12px 18px;
-  min-width: 130px;
+/* Main Logo – centered & responsive */
+.hero .main-logo-hero {
+  position: relative;
+  display: block;
+  margin: 0 auto 25px auto;
+  width: 80%;       /* increase slightly from previous 70% */
+  max-width: 260px;
+  height: auto;
+  z-index: 3;
 }
 
-.stat-number {
-  font-size: 1.4rem;
+/* Burn Logo – top-right, scaled, animated */
+.hero .burn-logo {
+  position: absolute;
+  top: 1.6in;        /* fine-tuned */
+  right: 0.3in;      /* fine-tuned */
+  width: 75%;        /* scaled down */
+  max-width: 120px;
+  height: auto;
+  z-index: 4;
+  animation: burnPulse 4.5s ease-in-out infinite;
 }
 
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 40px 0;
-}
-
-.stat-box {
-  background: rgba(255,255,255,0.08);
-  backdrop-filter: blur(8px);
-  padding: 18px 25px;
-  border-radius: 12px;
+/* Hero Text Container */
+.hero-text {
+  position: relative;
+  z-index: 2;
   text-align: center;
-  min-width: 150px;
-  border: 1px solid rgba(255,255,255,0.1);
-  transition: all 0.3s ease;
+  color: #a3e635;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
 }
 
-.stat-box:hover {
-  transform: translateY(-6px);
-  background: rgba(0,255,198,0.12);
-  border-color: #00ffc6;
-}
-
-.stat-number {
-  font-size: 1.8rem;
+/* Hero Title */
+.hero-text h1 {
+  font-size: 3rem;
+  color: #FFD700;
   font-weight: 800;
-  color: #00ffc6;
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
-.stat-label {
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  opacity: 0.7;
-  margin-top: 6px;
-}    
+/* Span accent (B2H) */
+.hero-text h1 span.hero-accent {
+  display: inline-block;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #00ffc6;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+/* Hero Paragraph */
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Hero CTA Buttons */
+.hero-btn,
+.hero-btn-secondary {
+  display: inline-block;
+  margin: 10px 10px 0 10px;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-btn { background: #f59e0b; color: #fff; }
+.hero-btn-secondary { background: #16a34a; color: #fff; }
+
+/* Burn Animation */
+@keyframes burnPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 900px) {
+  .hero .main-logo-hero { width: 60%; max-width: 200px; }
+  .hero .burn-logo { top: 1.2in; right: 0.2in; max-width: 90px; }
+  .hero-text h1 { font-size: 2.4rem; }
+  .hero-text h1 span.hero-accent { font-size: 1.1rem; }
+}
+
+@media screen and (max-width: 600px) {
+  .hero .main-logo-hero { width: 70%; max-width: 180px; }
+  .hero .burn-logo { top: 1in; right: 0.15in; max-width: 80px; }
+  .hero-text h1 { font-size: 2rem; }
+  .hero-text h1 span.hero-accent { font-size: 1rem; }
+}
     
         /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
