@@ -13,63 +13,36 @@ img { max-width: 100%; display: block; }
 .section-title { font-size: 2.6rem; font-weight: 800; text-align: center; margin-bottom: 25px; }
 .readable-text { font-size: 1.1rem; line-height: 1.6; color: #b0e0e6; text-align: center; }
 
-/* ================= HERO SECTION ================= */
-
+ /* ================= HERO SECTION CENTERING ================= */
 .hero {
   position: relative;
-  height: 100vh;
-  background: #0b1c2b;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  color: white;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically if needed */
+  text-align: center;      /* centers text inside */
+  min-height: 100vh;       /* full screen height */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* Particles */
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-/* Content above particles */
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 900px;
-  padding: 20px;
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center;    /* center horizontally */
+  justify-content: center;
 }
 
-/* Main Logo (20% smaller) */
-.main-logo {
-  width: 160px;   /* Reduced size */
+.hero-content .main-logo {
+  max-width: 250px; /* adjust as needed */
+  width: 100%;
+  height: auto;
   margin-bottom: 20px;
 }
 
-/* Burn Logo (20% smaller) */
-.burn-logo {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  width: 110px;   /* Reduced 20% */
-  animation: burnPulse 4s infinite ease-in-out;
-  z-index: 3;
-}
-
-@keyframes burnPulse {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-}
-
-/* Title */
-.hero h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #FFD700;
-  margin-bottom: 10px;
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-buttons {
+  text-align: center; /* make all text centered */
 }
 
 /* Span properly aligned */
@@ -143,39 +116,7 @@ img { max-width: 100%; display: block; }
   .main-logo { width: 130px; }
   .burn-logo { width: 90px; right: 20px; }
 
-  /* ================= HERO SECTION CENTERING ================= */
-.hero {
-  position: relative;
-  display: flex;
-  justify-content: center; /* centers horizontally */
-  align-items: center;     /* centers vertically if needed */
-  text-align: center;      /* centers text inside */
-  min-height: 100vh;       /* full screen height */
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-
-.hero-content {
-  display: flex;
-  flex-direction: column; /* stack items vertically */
-  align-items: center;    /* center horizontally */
-  justify-content: center;
-}
-
-.hero-content .main-logo {
-  max-width: 250px; /* adjust as needed */
-  width: 100%;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.hero-content h1,
-.hero-content p,
-.hero-content .hero-buttons {
-  text-align: center; /* make all text centered */
-}
-    
-}/* ======== FOUNDER PAGE STYLES (DARK MODE) ======== */
+/* ======== FOUNDER PAGE STYLES (DARK MODE) ======== */
 .founder-page {
   background-color: #111; /* dark background to match main page */
   padding: 60px 20px;
