@@ -2105,6 +2105,20 @@ img { max-width: 100%; display: block; }
   float: none !important;
 }  
 
+ /* FORCE CENTER HERO LOGO */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content .main-logo {
+  display: block;
+  margin: 0 auto 25px auto;
+} 
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
