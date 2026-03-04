@@ -2123,18 +2123,19 @@ img { max-width: 100%; display: block; }
 }
 
 /* ================= HERO MAIN LOGO CENTER ================= */
-.hero-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center everything horizontally */
+.hero {
+  position: relative; /* ensure absolute positioning works inside */
 }
 
-.hero-content .main-logo {
-  order: -1;          /* moves the logo above all other content */
-  margin-bottom: 20px; /* space below logo */
-  max-width: 220px;    /* adjust as needed */
+.hero .main-logo {
+  position: absolute;
+  top: 40px;           /* distance from top of hero section, adjust as needed */
+  left: 50%;           /* center horizontally */
+  transform: translateX(-50%); /* truly center horizontally */
+  max-width: 220px;    /* adjust size as needed */
   height: auto;
-}  
+  z-index: 10;         /* make sure it’s above other elements */
+}
 
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
