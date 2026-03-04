@@ -2110,6 +2110,14 @@ img { max-width: 100%; display: block; }
   height: auto;
   z-index: 10;                       /* above background/particles */
 } 
+
+/* ===== CENTER MAIN HERO LOGO ===== */
+.hero-content .main-logo {
+  display: block;          /* ensure it’s block-level */
+  margin: 0 auto 20px;     /* center horizontally & keep bottom spacing */
+  width: 160px;            /* keep your reduced size */
+  max-width: 100%;         /* responsive */
+}  
   
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
