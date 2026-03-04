@@ -2099,6 +2099,18 @@ img { max-width: 100%; display: block; }
   margin-bottom: 20px; /* space between logo and heading */
 }
 
+ /* ================= FORCE MAIN LOGO CENTER ================= */
+.hero .main-logo {
+  display: block !important;        /* ensure block for margin auto */
+  position: relative !important;    /* keep it inside normal flow */
+  left: 50% !important;             /* start at center */
+  transform: translateX(-50%) !important; /* true horizontal center */
+  margin-bottom: 20px;              /* space below logo */
+  max-width: 220px;                  /* adjust as needed */
+  height: auto;
+  z-index: 10;                       /* above background/particles */
+} 
+  
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
@@ -2289,15 +2301,3 @@ img { max-width: 100%; display: block; }
 }
 
 /* ===== END OF FILE ===== */
-
- /* ================= FORCE MAIN LOGO CENTER ================= */
-.hero .main-logo {
-  display: block !important;        /* ensure block for margin auto */
-  position: relative !important;    /* keep it inside normal flow */
-  left: 50% !important;             /* start at center */
-  transform: translateX(-50%) !important; /* true horizontal center */
-  margin-bottom: 20px;              /* space below logo */
-  max-width: 220px;                  /* adjust as needed */
-  height: auto;
-  z-index: 10;                       /* above background/particles */
-} 
