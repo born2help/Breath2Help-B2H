@@ -1913,6 +1913,100 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
 
+/* ================= WHO BENEFITS SECTION ================= */
+
+#who-benefits {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#who-benefits .section-header {
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+/* Title Styling - Match Green Gradient */
+#who-benefits .section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #22c55e, #00ffc6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* Gradient Underline */
+#who-benefits .section-underline {
+  width: 100px;
+  height: 4px;
+  margin: 15px auto 25px auto;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #22c55e, #00ffc6);
+  box-shadow: 0 0 12px rgba(0,255,198,0.6);
+}
+
+/* Subheading Proper Alignment */
+#who-benefits .subheading {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Cards */
+.philosophy-card {
+  background: rgba(0, 255, 198, 0.05);
+  padding: 30px 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  transition: all 0.4s ease;
+  text-align: center;
+  border: 1px solid rgba(0,255,198,0.1);
+}
+
+/* Hover Glow */
+.philosophy-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0,255,198,0.4);
+  border-color: rgba(0,255,198,0.4);
+}
+
+/* Highlight Card */
+.philosophy-card.highlight {
+  background: linear-gradient(135deg, rgba(34,197,94,0.15), rgba(0,255,198,0.08));
+  border: 1px solid rgba(0,255,198,0.3);
+}
+
+/* Icons */
+.philosophy-icon {
+  font-size: 2rem;
+  color: #00ffc6;
+  margin-bottom: 15px;
+}
+
+/* Card Title */
+.philosophy-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #22c55e;
+}
+
+/* Card Text */
+.philosophy-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}  
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
