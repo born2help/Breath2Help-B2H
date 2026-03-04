@@ -1051,12 +1051,11 @@ img { max-width: 100%; display: block; }
   line-height: 1.5;
 }
 
-<!-- ================= WHO BENEFITS CSS ================= -->
-<style>
+/* ================= WHO BENEFITS SECTION ================= */
+
 #who-benefits {
-  padding: 100px 20px;
+  padding: 100px 0;
   text-align: center;
-  background: #0f172a; /* dark section background */
 }
 
 #who-benefits .section-header {
@@ -1064,7 +1063,7 @@ img { max-width: 100%; display: block; }
   margin: 0 auto 60px auto;
 }
 
-/* Gradient Green Heading */
+/* Title Styling - Match Green Gradient */
 #who-benefits .section-title {
   font-size: 2.5rem;
   font-weight: 800;
@@ -1084,7 +1083,7 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 12px rgba(0,255,198,0.6);
 }
 
-/* Subheading */
+/* Subheading Proper Alignment */
 #who-benefits .subheading {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -1101,7 +1100,7 @@ img { max-width: 100%; display: block; }
   margin-top: 40px;
 }
 
-/* Card Styling */
+/* Cards */
 .philosophy-card {
   background: rgba(0, 255, 198, 0.05);
   padding: 30px 25px;
@@ -1112,6 +1111,7 @@ img { max-width: 100%; display: block; }
   border: 1px solid rgba(0,255,198,0.1);
 }
 
+/* Hover Glow */
 .philosophy-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 25px rgba(0,255,198,0.4);
@@ -1144,7 +1144,6 @@ img { max-width: 100%; display: block; }
   line-height: 1.6;
   color: #e2e8f0;
 }
-</style>
 
 /* ================= CHARITY SECTION ADJUSTMENTS ================= */
 
