@@ -2029,41 +2029,49 @@ img { max-width: 100%; display: block; }
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: #0a0a0a; /* adjust to your hero background */
+  background: #0a0a0a; /* your hero background */
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   text-align: center;
-  color: #ffffff;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .hero-container {
-  z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; /* center horizontally */
   justify-content: center;
+  z-index: 2;
+}
+
+.hero-logo-wrapper {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .hero-main-logo {
-  max-width: 220px; /* adjust size as needed */
-  margin-bottom: 20px;
+  max-width: 220px; /* adjust as needed */
+  height: auto;
 }
 
 .hero-heading {
   font-size: 3rem;
-  margin-bottom: 10px;
   font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
 .hero-subheading {
   font-size: 1.25rem;
   color: #bcdfff;
+  max-width: 700px;
 }
 
-/* Optional: Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .hero-heading {
     font-size: 2rem;
@@ -2071,7 +2079,11 @@ img { max-width: 100%; display: block; }
   .hero-main-logo {
     max-width: 150px;
   }
-}  
+  .hero-subheading {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
 
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
