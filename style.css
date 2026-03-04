@@ -2085,39 +2085,37 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ================= HERO MAIN LOGO CENTER ================= */
-.hero .hero-content {
+/* ================= HERO SECTION CENTERING ================= */
+.hero {
+  position: relative;
   display: flex;
-  flex-direction: column; /* stack logo and text vertically */
-  align-items: center;    /* center everything horizontally */
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically if needed */
+  text-align: center;      /* centers text inside */
+  min-height: 100vh;       /* full screen height */
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-.hero .main-logo {
-  order: -1;         /* place logo before all other content visually */
-  max-width: 220px;  /* adjust size if needed */
-  height: auto;
-  margin-bottom: 20px; /* space between logo and heading */
+.hero-content {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center;    /* center horizontally */
+  justify-content: center;
 }
 
- /* ================= FORCE MAIN LOGO CENTER ================= */
-.hero .main-logo {
-  display: block !important;        /* ensure block for margin auto */
-  position: relative !important;    /* keep it inside normal flow */
-  left: 50% !important;             /* start at center */
-  transform: translateX(-50%) !important; /* true horizontal center */
-  margin-bottom: 20px;              /* space below logo */
-  max-width: 220px;                  /* adjust as needed */
-  height: auto;
-  z-index: 10;                       /* above background/particles */
-} 
-
-/* ===== CENTER MAIN HERO LOGO ===== */
 .hero-content .main-logo {
-  display: block;          /* ensure it’s block-level */
-  margin: 0 auto 20px;     /* center horizontally & keep bottom spacing */
-  width: 160px;            /* keep your reduced size */
-  max-width: 100%;         /* responsive */
-}  
+  max-width: 250px; /* adjust as needed */
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-buttons {
+  text-align: center; /* make all text centered */
+}
   
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
