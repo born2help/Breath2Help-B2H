@@ -2122,6 +2122,20 @@ img { max-width: 100%; display: block; }
   }
 }
 
+/* ================= HERO MAIN LOGO CENTER ================= */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything horizontally */
+}
+
+.hero-content .main-logo {
+  order: -1;          /* moves the logo above all other content */
+  margin-bottom: 20px; /* space below logo */
+  max-width: 220px;    /* adjust as needed */
+  height: auto;
+}  
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
