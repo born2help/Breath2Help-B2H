@@ -43,12 +43,6 @@ img { max-width: 100%; display: block; }
   padding: 20px;
 }
 
-/* Main Logo (20% smaller) */
-.main-logo {
-  width: 160px;   /* Reduced size */
-  margin-bottom: 20px;
-}
-
 /* Burn Logo (20% smaller) */
 .burn-logo {
   position: absolute;
@@ -137,11 +131,18 @@ img { max-width: 100%; display: block; }
   color: white;
 }
 
+/* Main Logo */
+.main-logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero h1 { font-size: 2.2rem; }
   .main-logo { width: 130px; }
   .burn-logo { width: 90px; right: 20px; }
+}  /* ← YOU WERE MISSING THIS */
 
   /* ================= HERO SECTION CENTERING ================= */
 .hero {
