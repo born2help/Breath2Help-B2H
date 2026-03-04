@@ -2057,54 +2057,6 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
 
-/* ===== FORCE CENTER MAIN LOGO ===== */
-
-.hero-content {
-  text-align: center !important;
-}
-
-.hero-content .main-logo {
-  display: block !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  margin-top: 0 !important;
-  margin-bottom: 20px !important;
-  position: relative !important;
-  left: 0 !important;
-  right: 0 !important;
-  float: none !important;
-}  
-
- .hero-content {
-  position: relative;
-}
-
-.hero-content .main-logo {
-  position: static !important;
-  display: block !important;
-  margin: 0 auto 20px auto !important;
-} 
-
-/* ================= FINAL HERO LOGO FIX ================= */
-
-.hero-content {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-}
-
-.hero-content .main-logo {
-  position: static !important;
-  display: block !important;
-  margin: 0 auto 25px auto !important;
-  width: 180px !important;   /* adjust size if needed */
-  height: auto !important;
-  transform: none !important;
-  float: none !important;
-}  
-
  /* FORCE CENTER HERO LOGO */
 
 .hero-content {
@@ -2117,6 +2069,17 @@ img { max-width: 100%; display: block; }
 .hero-content .main-logo {
   display: block;
   margin: 0 auto 25px auto;
+} 
+
+ /* ===== FINAL HERO LOGO SIZE & SPACING FIX ===== */
+
+.hero-content .main-logo {
+  width: 160px !important;   /* Back to your original size */
+  margin-bottom: 8px !important;  /* Reduce space under logo */
+}
+
+.hero-content h1 {
+  margin-top: 0 !important;  /* Remove extra gap above heading */
 } 
 
          /* ================= UNIFIED CARD STYLING ================= */
