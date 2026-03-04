@@ -2024,6 +2024,55 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 768px) {
 
+/* ================= HERO STYLING ================= */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0a0a; /* adjust to your hero background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero-container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-main-logo {
+  max-width: 220px; /* adjust size as needed */
+  margin-bottom: 20px;
+}
+
+.hero-heading {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero-subheading {
+  font-size: 1.25rem;
+  color: #bcdfff;
+}
+
+/* Optional: Responsive */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2rem;
+  }
+  .hero-main-logo {
+    max-width: 150px;
+  }
+}  
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
