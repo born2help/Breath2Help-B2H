@@ -142,6 +142,38 @@ img { max-width: 100%; display: block; }
   .hero h1 { font-size: 2.2rem; }
   .main-logo { width: 130px; }
   .burn-logo { width: 90px; right: 20px; }
+
+  /* ================= HERO SECTION CENTERING ================= */
+.hero {
+  position: relative;
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically if needed */
+  text-align: center;      /* centers text inside */
+  min-height: 100vh;       /* full screen height */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column; /* stack items vertically */
+  align-items: center;    /* center horizontally */
+  justify-content: center;
+}
+
+.hero-content .main-logo {
+  max-width: 250px; /* adjust as needed */
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-content .hero-buttons {
+  text-align: center; /* make all text centered */
+}
     
 }/* ======== FOUNDER PAGE STYLES (DARK MODE) ======== */
 .founder-page {
