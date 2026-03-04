@@ -2086,55 +2086,17 @@ img { max-width: 100%; display: block; }
 }
 
 /* ================= HERO MAIN LOGO CENTER ================= */
-.hero {
-  position: relative; /* make hero a positioning context */
-}
-
-.hero-content .main-logo {
-  position: absolute; /* position independently of flow */
-  top: 50px;          /* distance from top of hero section */
-  left: 50%;          /* horizontal center */
-  transform: translateX(-50%); /* truly center horizontally */
-  max-width: 220px;   /* adjust size as needed */
-  height: auto;
-  z-index: 5;         /* make sure it appears above background/particles */
-}
-
-/* ===== Responsive Adjustments ===== */
-@media (max-width: 1024px) {
-  .hero-content .main-logo {
-    max-width: 180px;
-    top: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-content .main-logo {
-    max-width: 140px;
-    top: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content .main-logo {
-    max-width: 120px;
-    top: 20px;
-  }
-}
-
-/* ================= HERO MAIN LOGO CENTER ================= */
-.hero {
-  position: relative; /* ensure absolute positioning works inside */
+.hero .hero-content {
+  display: flex;
+  flex-direction: column; /* stack logo and text vertically */
+  align-items: center;    /* center everything horizontally */
 }
 
 .hero .main-logo {
-  position: absolute;
-  top: 40px;           /* distance from top of hero section, adjust as needed */
-  left: 50%;           /* center horizontally */
-  transform: translateX(-50%); /* truly center horizontally */
-  max-width: 220px;    /* adjust size as needed */
+  order: -1;         /* place logo before all other content visually */
+  max-width: 220px;  /* adjust size if needed */
   height: auto;
-  z-index: 10;         /* make sure it’s above other elements */
+  margin-bottom: 20px; /* space between logo and heading */
 }
 
          /* ================= UNIFIED CARD STYLING ================= */
