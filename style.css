@@ -2085,40 +2085,40 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* ================= HERO LOGO CENTERING ================= */
-.hero-content {
-  display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center;    /* Center everything horizontally */
-  text-align: center;     /* Ensure headings and subtitles are centered */
+/* ================= HERO MAIN LOGO CENTER ================= */
+.hero {
+  position: relative; /* make hero a positioning context */
 }
 
 .hero-content .main-logo {
-  order: -1;               /* Move logo above all other content */
-  margin-bottom: 20px;     /* Space between logo and heading */
-  max-width: 220px;        /* Adjust size for desktop */
+  position: absolute; /* position independently of flow */
+  top: 50px;          /* distance from top of hero section */
+  left: 50%;          /* horizontal center */
+  transform: translateX(-50%); /* truly center horizontally */
+  max-width: 220px;   /* adjust size as needed */
   height: auto;
+  z-index: 5;         /* make sure it appears above background/particles */
 }
 
 /* ===== Responsive Adjustments ===== */
 @media (max-width: 1024px) {
   .hero-content .main-logo {
     max-width: 180px;
-    margin-bottom: 15px;
+    top: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .hero-content .main-logo {
     max-width: 140px;
-    margin-bottom: 12px;
+    top: 30px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-content .main-logo {
     max-width: 120px;
-    margin-bottom: 10px;
+    top: 20px;
   }
 }
 
