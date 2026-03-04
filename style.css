@@ -1051,11 +1051,11 @@ img { max-width: 100%; display: block; }
   line-height: 1.5;
 }
 
-/* ================= WHO BENEFITS SECTION ================= */
-
+/* ================= WHO BENEFITS STYLING ================= */
 #who-benefits {
-  padding: 100px 0;
+  padding: 100px 20px;
   text-align: center;
+  background: #0f172a;
 }
 
 #who-benefits .section-header {
@@ -1063,27 +1063,45 @@ img { max-width: 100%; display: block; }
   margin: 0 auto 60px auto;
 }
 
-/* Title Styling - Match Green Gradient */
-#who-benefits .section-title {
+/* Gradient Animated Heading (Green style) */
+.section-title.animate-gradient {
   font-size: 2.5rem;
   font-weight: 800;
-  background: linear-gradient(90deg, #22c55e, #00ffc6);
+  background: linear-gradient(90deg, #22c55e, #00ffc6, #22c55e);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  animation: gradientAnimation 4s linear infinite;
   display: inline-block;
 }
 
-/* Gradient Underline */
-#who-benefits .section-underline {
-  width: 100px;
+/* Heading animation keyframes */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Multi-Color Gradient Underline */
+.section-underline.multi-glow {
+  width: 120px;
   height: 4px;
   margin: 15px auto 25px auto;
   border-radius: 4px;
-  background: linear-gradient(90deg, #22c55e, #00ffc6);
-  box-shadow: 0 0 12px rgba(0,255,198,0.6);
+  background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff, #ff0000);
+  background-size: 400% 400%;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  animation: rainbowUnderline 5s ease infinite;
 }
 
-/* Subheading Proper Alignment */
+/* Underline gradient animation */
+@keyframes rainbowUnderline {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Subheading */
 #who-benefits .subheading {
   font-size: 1.05rem;
   line-height: 1.7;
@@ -1100,7 +1118,7 @@ img { max-width: 100%; display: block; }
   margin-top: 40px;
 }
 
-/* Cards */
+/* Card Styling */
 .philosophy-card {
   background: rgba(0, 255, 198, 0.05);
   padding: 30px 25px;
@@ -1111,7 +1129,6 @@ img { max-width: 100%; display: block; }
   border: 1px solid rgba(0,255,198,0.1);
 }
 
-/* Hover Glow */
 .philosophy-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 0 25px rgba(0,255,198,0.4);
