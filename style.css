@@ -2084,6 +2084,26 @@ img { max-width: 100%; display: block; }
   margin: 0 auto 20px auto !important;
 } 
 
+/* ================= FINAL HERO LOGO FIX ================= */
+
+.hero-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.hero-content .main-logo {
+  position: static !important;
+  display: block !important;
+  margin: 0 auto 25px auto !important;
+  width: 180px !important;   /* adjust size if needed */
+  height: auto !important;
+  transform: none !important;
+  float: none !important;
+}  
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
