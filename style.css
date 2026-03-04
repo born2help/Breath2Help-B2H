@@ -2085,18 +2085,19 @@ img { max-width: 100%; display: block; }
   }
 }
 
-/* Center the main logo above the hero heading */
+/* Force main logo above hero heading and center it */
 .hero-content {
-  position: relative;
-  text-align: center; /* Center everything inside hero-content */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center;    /* Center everything horizontally */
 }
 
 .hero-content .main-logo {
-  display: block;         /* Makes it behave like a block element */
-  margin: 0 auto 20px;    /* Centers horizontally and adds space below */
-  max-width: 220px;       /* Adjust size if needed */
+  order: -1;             /* Push logo to the top of hero-content */
+  margin-bottom: 20px;   /* Space between logo and heading */
+  max-width: 220px;      /* Adjust size as needed */
   height: auto;
-}  
+}
 
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
