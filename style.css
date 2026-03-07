@@ -2126,10 +2126,22 @@ img { max-width: 100%; display: block; }
   text-align: center;
 }
 
- /* Space after hero section */
+ /* Make hero section naturally expand and add spacing at bottom */
 .hero {
-  padding-bottom: 100px;  /* Add space below the hero content */
-} 
+  position: relative;   /* ensure positioning is normal */
+  padding-bottom: 150px; /* space after hero content */
+  overflow: hidden;      /* prevent overlapping with particles */
+}
+
+/* Optional: reduce unnecessary margin in hero content */
+.hero-content {
+  margin-bottom: 0;      /* no extra space inside */
+}
+
+/* Add margin for founder-page if needed */
+.founder-page {
+  margin-top: 40px;      /* extra spacing after hero */
+}
 
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
