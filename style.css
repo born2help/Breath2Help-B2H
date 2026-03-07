@@ -2220,6 +2220,15 @@ img { max-width: 100%; display: block; }
   .founder-text { text-align: center; }
 }
 
+.burn-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 160px;   /* doubled from 80px to 160px */
+  height: auto;
+  z-index: 3;     /* ensure it stays above background */
+}  
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
