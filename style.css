@@ -2140,7 +2140,7 @@ img { max-width: 100%; display: block; }
 
 /* Add margin for founder-page if needed */
 .founder-page {
-  margin-top: 40px;      /* extra spacing after hero */
+  margin-top: 100px;      /* extra spacing after hero */
 }
 
          /* ================= UNIFIED CARD STYLING ================= */
