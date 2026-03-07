@@ -168,6 +168,49 @@ img { max-width: 100%; display: block; }
 .hero-content .hero-buttons {
   text-align: center; /* make all text centered */
 }
+
+/* Hero Buttons Enhancement */
+.hero-buttons a {
+  padding: 14px 28px;
+  margin: 8px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background: #00ffc6;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #00d3a4;
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #00ffc6;
+  border: 2px solid #00ffc6;
+}
+
+.btn-secondary:hover {
+  background: #00ffc6;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+.btn-partner {
+  background: #ffbf00;
+  color: #000;
+}
+
+.btn-partner:hover {
+  background: #e6ac00;
+  transform: translateY(-3px);
+}
     
 }/* ======== FOUNDER PAGE STYLES (DARK MODE) ======== */
 .founder-page {
