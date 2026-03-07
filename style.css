@@ -1842,87 +1842,130 @@ img { max-width: 100%; display: block; }
   opacity: 0.9;
 }
 
- /* ================= FOUNDER GUARDIAN SEAL ================= */
-
-.founder-seal {
-  margin-top: 25px;
-  font-size: 0.75rem;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 30px;
-  animation: sealGlow 4s ease-in-out infinite;
-}
-
-@keyframes sealGlow {
-  0%   { box-shadow: 0 0 0 rgba(255,255,255,0); }
-  50%  { box-shadow: 0 0 14px rgba(255,255,255,0.25); }
-  100% { box-shadow: 0 0 0 rgba(255,255,255,0); }
-} 
-
-.hero-subpages a.btn-stress-test {
-    background-color: #1E90FF !important; /* Dodger Blue */
-    color: #fff !important;               /* White text */
-}
-
-@media (max-width: 768px) {
-
- /* FORCE CENTER HERO LOGO */
-
-.hero-content {
+/* ================= HERO SECTION ================= */
+.hero {
+  position: relative;
+  min-height: 700px;   /* height of hero, adjust as needed */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* centers content vertically */
+  align-items: center;     /* centers content horizontally */
+  padding: 50px 20px;      /* top/bottom spacing inside hero */
   text-align: center;
+  background-color: #000;  /* optional background */
+  overflow: hidden;        /* ensures particles stay inside */
 }
 
-.hero-content .main-logo {
-  display: block;
-  margin: 0 auto 25px auto;
-} 
-
- /* ===== FINAL HERO LOGO SIZE & SPACING FIX ===== */
-
-.hero-content .main-logo {
-  width: 160px !important;   /* Back to your original size */
-  margin-bottom: 8px !important;  /* Reduce space under logo */
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;              /* behind everything */
 }
 
-.hero-content h1 {
-  margin-top: 0 !important;  /* Remove extra gap above heading */
-} 
-
-   .hero-callout {
-  margin-top: 15px;
-  font-size: 1.2rem;
-  color: #fff;
-  font-weight: 500;
-  text-align: center;
-}
-
- /* Make hero section naturally expand and add spacing at bottom */
-.hero {
-  position: relative;   /* ensure positioning is normal */
-  padding-bottom: 150px; /* space after hero content */
-  overflow: hidden;      /* prevent overlapping with particles */
-}
-
-/* Optional: reduce unnecessary margin in hero content */
 .hero-content {
-  margin-bottom: 0;      /* no extra space inside */
+  position: relative;
+  z-index: 2;              /* above particles */
 }
 
-/* Add margin for founder-page if needed */
-.founder-page {
-  margin-top: 100px;      /* extra spacing after hero */
+/* Logos */
+.main-logo {
+  width: 160px;             /* adjust size */
+  max-width: 30%;           /* optional responsive control */
+  height: auto;
+  margin: 0 auto 15px auto; /* reduce space below logo */
+  display: block;
 }
 
+.burn-logo {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 80px;
+  height: auto;
+}
+
+/* Hero Heading & Subtitle spacing */
+.hero h1 {
+  margin: 0 0 10px 0;       /* reduces space below heading */
+  font-size: 3rem;
+}
+
+.hero .hero-subtitle {
+  margin: 5px 0;            /* small gap between subtitles */
+  font-size: 1.2rem;
+}
+
+.hero-description {
+  margin: 10px 0;           /* spacing between paragraphs */
+  line-height: 1.5;
+}
+
+/* Hero buttons spacing */
+.hero-buttons {
+  margin-top: 20px;         /* space between hero text and buttons */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* ================= FOUNDER SECTION ================= */
 .founder-page {
-  margin-top: 60px; /* visual space after hero */
-}  
+  margin-top: 120px;        /* visual space after hero */
+  padding: 50px 20px;
+}
+
+.founder-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;                /* space between image and text */
+  align-items: flex-start;
+}
+
+.founder-img-wrapper {
+  flex: 0 0 250px;          /* image width */
+}
+
+.founder-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.founder-text {
+  flex: 1;                  /* takes remaining space */
+}
+
+.founder-text p {
+  margin-bottom: 15px;      /* spacing between paragraphs */
+  line-height: 1.6;
+}
+
+.founder-text .highlight-quote {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #10b981;           /* green accent */
+  margin-bottom: 20px;
+}
+
+.founder-text .signature {
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero .hero-subtitle { font-size: 1rem; }
+  .main-logo { width: 130px; margin-bottom: 10px; }
+  .founder-content { flex-direction: column; align-items: center; }
+  .founder-img-wrapper { flex: 0 0 60%; margin-bottom: 20px; }
+  .founder-text { text-align: center; }
+}
 
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
