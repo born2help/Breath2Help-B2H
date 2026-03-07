@@ -2118,18 +2118,18 @@ img { max-width: 100%; display: block; }
   margin-top: 0 !important;  /* Remove extra gap above heading */
 } 
 
- /* Space between hero and founder message */
-.founder-page {
-  margin-top: 120px; /* increase space, adjust as needed */
-} 
-
-  .hero-callout {
+   .hero-callout {
   margin-top: 15px;
   font-size: 1.2rem;
   color: #fff;
   font-weight: 500;
   text-align: center;
 }
+
+ /* Space after hero section */
+.hero {
+  padding-bottom: 100px;  /* Add space below the hero content */
+} 
 
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
