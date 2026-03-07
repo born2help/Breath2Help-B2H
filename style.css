@@ -2118,6 +2118,11 @@ img { max-width: 100%; display: block; }
   margin-top: 0 !important;  /* Remove extra gap above heading */
 } 
 
+ /* Space between hero and founder message */
+.founder-page {
+  margin-top: 60px; /* increase space, adjust as needed */
+} 
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
