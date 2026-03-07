@@ -2132,14 +2132,6 @@ img { max-width: 100%; display: block; }
   display: block;
 }
 
-.burn-logo {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 80px;
-  height: auto;
-}
-
 /* Hero Heading & Subtitle spacing */
 .hero h1 {
   margin: 0 0 10px 0;       /* reduces space below heading */
