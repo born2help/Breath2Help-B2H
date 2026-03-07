@@ -2143,6 +2143,10 @@ img { max-width: 100%; display: block; }
   margin-top: 100px;      /* extra spacing after hero */
 }
 
+.founder-page {
+  margin-top: 60px; /* visual space after hero */
+}  
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
