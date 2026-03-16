@@ -24,28 +24,32 @@
 
 <body class="b2h-subpage" id="top" style="--b2h-accent:#7CFC00;">
 
-<!-- ================= HERO ================= -->
-<section class="page-hero hero-light">
-  <canvas id="heroParticles"></canvas>
+<!-- ================= GLASS CONTAINER ================= -->
+<section class="glass-container">
 
-  <h1 class="green-glow">Donate with Purpose</h1>
-  <p class="subtitle glow-text">
-    Every contribution changes lives — never an investment
-  </p>
+  <!-- ================= HERO ================= -->
+  <section class="page-hero">
+    <canvas id="heroParticles"></canvas>
 
-  <div class="hero-actions">
-    <a href="disclaimer.html" class="btn-glow"><i class="fas fa-file-alt"></i> Disclaimer</a>
-    <a href="constitution.html" class="btn-glow"><i class="fas fa-balance-scale"></i> Constitution</a>
-    <a href="transparency.html" class="btn-glow"><i class="fas fa-balance-scale"></i> Transparency</a>
-    <a href="index.html" class="btn-glow">← Back Home</a>
-  </div>
-</section>
+    <h1 class="green-glow">Donate with Purpose</h1>
+    <p class="subtitle glow-text">
+      Your contribution is an act of service — never an investment
+    </p>
 
-<!-- ================= MAIN CONTENT ================= -->
-<section class="section donate-section">
-  <div class="container">
+    <div class="hero-actions">
+      <a href="disclaimer.html" class="btn-glow"><i class="fas fa-file-alt"></i> Disclaimer</a>
+      <a href="constitution.html" class="btn-glow"><i class="fas fa-balance-scale"></i> Constitution</a>
+      <a href="stress-test.html" class="btn-glow"><i class="fas fa-file-alt"></i> Stress Test</a>
+      <a href="transparency.html" class="btn-glow"><i class="fas fa-balance-scale"></i> Transparency</a>
+      <a href="index.html" class="btn-glow">← Back Home</a>
+    </div>
 
-    <!-- Purpose -->
+    <hr class="section-divider">
+  </section>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <section class="section">
+
     <div class="wp-section">
       <h2 class="section-title green-glow"><i class="fas fa-heart"></i> Purpose of Donations</h2>
       <p>
@@ -60,23 +64,21 @@
 
     <hr class="section-divider">
 
-    <!-- Donation Usage -->
     <div class="wp-section">
       <h2 class="section-title green-glow"><i class="fas fa-gift"></i> How Your Donation Is Used</h2>
       <ul>
         <li>Humanitarian relief and emergency assistance</li>
         <li>Education, healthcare, and food security programs</li>
-        <li>Operational and administrative sustainability (small % allowed)</li>
+        <li>Operational and administrative sustainability</li>
         <li>Compliance, accountability, and ethical oversight</li>
       </ul>
       <p class="light-text">
-        Every contribution is tracked and reported, ensuring maximum impact and transparency.
+        We ensure every dollar or rupiah reaches its intended purpose, measured and reported transparently.
       </p>
     </div>
 
     <hr class="section-divider">
 
-    <!-- What Donations Are NOT -->
     <div class="wp-section">
       <h2 class="section-title green-glow"><i class="fas fa-ban"></i> What Donations Are NOT</h2>
       <ul>
@@ -85,7 +87,7 @@
         <li>Not speculative or tradeable</li>
       </ul>
       <p class="light-text">
-        B2H exists to serve humanity, not profit or speculation.
+        B2H exists to serve humanity, not profit or speculation. Donations strictly fund humanitarian efforts.
       </p>
     </div>
 
@@ -101,11 +103,17 @@
 
       <!-- BANK -->
       <div class="donate-box">
-        <h3>Bank Transfer (Indonesia)</h3>
+        <h3>Donate via Bank Transfer (Indonesia)</h3>
         <p>
-          <strong>PT Arab Indo Group</strong><br>
-          BCA: 246-444331-1<br>
-          BNI: 1888361345
+          <strong>Account Name:</strong> PT Arab Indo Group<br>
+          <strong>Bank:</strong> BCA — Indonesia<br>
+          <strong>Account Number:</strong> <span class="placeholder">246-444331-1</span>
+        </p>
+
+        <p>
+          <strong>Account Name:</strong> PT Arab Indo Group<br>
+          <strong>Bank:</strong> BNI — Indonesia<br>
+          <strong>Account Number:</strong> <span class="placeholder">1888361345</span>
         </p>
         <a href="https://wa.me/6285396622600" class="btn-donate bank">
           Request Bank Details
@@ -114,8 +122,10 @@
 
       <!-- WISE -->
       <div class="donate-box">
-        <h3>International via Wise</h3>
-        <p>Send donations internationally with low fees and multiple currencies.</p>
+        <h3>Donate via Wise (International)</h3>
+        <p>
+          Donate internationally using Wise with low fees and multiple currencies.
+        </p>
         <a href="https://wise.com/" target="_blank" class="btn-donate wise">
           Donate via Wise
         </a>
@@ -124,6 +134,8 @@
       <!-- ONLINE FORM -->
       <div class="donate-box">
         <h3>Donate Online</h3>
+        <p>Please fill out the form below to support our mission:</p>
+
         <form class="participation-form" action="https://example.com/donate-submit" method="POST">
           <input type="text" name="name" placeholder="Full Name" required>
           <input type="email" name="email" placeholder="Email Address" required>
@@ -139,20 +151,38 @@
         </form>
       </div>
 
-      <!-- META MASK / CRYPTO DONATION -->
+      <!-- CRYPTO / METAMASK -->
       <div class="donate-box">
-        <h3>Donate via MetaMask / Crypto</h3>
+        <h3>Donate via Crypto / MetaMask</h3>
         <p>Send ETH or BNB directly to our charity wallet:</p>
-        <p><strong>Wallet Address:</strong> <span id="cryptoWallet">0xYourWalletAddressHere</span></p>
+
+        <p><strong>Ethereum (ETH) Address:</strong></p>
+        <p class="wallet-address">0x90A4579E56a989f24ba2BEe137Fc37a93e21BCa8</p>
+
+        <p><strong>BNB Smart Chain (BNB) Address:</strong></p>
+        <p class="wallet-address">0x90A4579E56a989f24ba2BEe137Fc37a93e21BCa8</p>
+
         <button id="connectWallet" class="green-btn">Connect MetaMask</button>
+        <button onclick="copyWallet()" class="btn-donate">Copy Wallet Address</button>
         <p id="walletStatus" class="light-text"></p>
+        <p class="light-text">Always verify the wallet address before sending funds.</p>
+      </div>
+
+      <!-- IMPACT ANCHORING -->
+      <div class="donate-box">
+        <h3>Suggested Donation Amounts</h3>
+        <ul>
+          <li>$5 — Feed a child for a day</li>
+          <li>$20 — Support a Quran student</li>
+          <li>$50 — Feed a family for a day</li>
+          <li>$100 — Support a small local project</li>
+        </ul>
       </div>
 
       <a href="index.html" class="glass-back btn-glow">← Back Home</a>
-
     </div>
 
-  </div>
+  </section>
 </section>
 
 <!-- ================= FOOTER ================= -->
@@ -174,24 +204,24 @@
 
 <!-- ================= JS ================= -->
 <script>
-  // Hero fade-in animation
-  document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back');
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.2 });
-    elements.forEach(el => observer.observe(el));
-  });
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll(
+    '.page-hero, .section, .wp-section, p, li, h1, h2, .hero-actions a, .glass-back'
+  );
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
 
-  // ================= MetaMask Wallet =================
+  // MetaMask Connect
   const connectBtn = document.getElementById('connectWallet');
   const walletStatus = document.getElementById('walletStatus');
-  const cryptoWallet = document.getElementById('cryptoWallet').innerText;
+  const cryptoWallet = "0x90A4579E56a989f24ba2BEe137Fc37a93e21BCa8";
 
   connectBtn.addEventListener('click', async () => {
     if (window.ethereum) {
@@ -199,12 +229,20 @@
         const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
         walletStatus.innerText = `Connected: ${accounts[0]}`;
       } catch (err) {
-        walletStatus.innerText = `Connection failed: ${err.message}`;
+        walletStatus.innerText = 'Connection failed';
       }
     } else {
-      walletStatus.innerText = 'MetaMask not detected. Please install MetaMask extension.';
+      walletStatus.innerText = 'MetaMask not detected. Please install MetaMask.';
     }
   });
+});
+
+// Copy Wallet Function
+function copyWallet() {
+  const wallet = "0x90A4579E56a989f24ba2BEe137Fc37a93e21BCa8";
+  navigator.clipboard.writeText(wallet);
+  alert("Wallet address copied!");
+}
 </script>
 
 <script src="subpage.js"></script>
