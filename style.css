@@ -2388,6 +2388,84 @@ img { max-width: 100%; display: block; }
   margin-bottom: 20px;
 }
 
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Burn Logo */
+.hero .burn-logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  max-width: 120px;
+  z-index: 2;
+}
+
+/* Center Content */
+.hero-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* PERFECT center */
+  text-align: center;
+  z-index: 1;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+/* Callout Buttons in straight row */
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Subpage buttons vertical left and right */
+.hero-subpages-left,
+.hero-subpages-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-subpages-left { left: 20px; }
+.hero-subpages-right { right: 20px; }
+
+.btn-subpage {
+  background: #00ffc6;
+  padding: 8px 12px;
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero-center {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    padding: 20px;
+  }
+  .hero-subpages-left,
+  .hero-subpages-right {
+    display: none; /* hide side buttons on mobile */
+  }
+  .hero-buttons { flex-direction: column; }
+}
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
