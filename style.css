@@ -1794,16 +1794,21 @@ img { max-width: 100%; display: block; }
   margin-top: 20px;
 }
 
- <!-- ================= HERO CSS ================= -->
-<style>
-/* Hero section - base */
+/* ================= HERO SECTION ================= */
 .hero {
   position: relative;
-  padding: 50px 20px;
-  text-align: center;
+  width: 100%;
+  height: 100vh; /* full screen height */
   overflow: hidden;
+  background: #0b1c2b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
+/* Particles */
 #particles-js {
   position: absolute;
   top: 0;
@@ -1813,160 +1818,78 @@ img { max-width: 100%; display: block; }
   z-index: 0;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero .burn-logo {
-  max-width: 80px;
-  margin-bottom: 15px;
-}
-
-.hero .main-logo {
-  max-width: 200px;
-  margin-bottom: 20px;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  margin-bottom: 15px;
-}
-
-.hero-subtitle {
-  font-size: 1.1rem;
-  margin: 10px 0;
-}
-
-.hero-description {
-  font-size: 0.95rem;
-  margin: 10px 0;
-}
-
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.hero-stats .stat-box {
-  flex: 1 1 150px;
-  text-align: center;
-  padding: 10px;
-}
-
-.hero-callout {
-  font-size: 1rem;
-  margin: 15px 0;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-.hero-buttons a {
-  text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-}
-
-.hero-buttons-container {
-  margin-top: 20px;
-  text-align: center;
-}
-
-.hero-subpages {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.hero-subpages a {
-  text-decoration: none;
-  padding: 6px 12px;
-  font-size: 0.9rem;
-  border-radius: 4px;
-}
-
-/* ================= MOBILE RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero {
-    padding: 20px 10px;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-subtitle, .hero-description, .hero-callout {
-    font-size: 0.9rem;
-  }
-
-  .hero-stats {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-stats .stat-box {
-    flex: 1 1 100%;
-  }
-
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full screen height */
-  overflow: hidden;
-}
-
-/* Burn logo top-left */
-.hero .burn-logo {
+/* Burn Logo top-left */
+.burn-logo {
   position: absolute;
-  left: 20px;
   top: 20px;
+  left: 20px;
   max-width: 120px;
   z-index: 2;
+  animation: burnPulse 4s infinite ease-in-out;
 }
 
-/* Center content perfectly */
+@keyframes burnPulse {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+/* Center Hero Content */
 .hero-center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 1;
   max-width: 700px;
+  z-index: 1;
   padding: 0 20px;
 }
 
-/* Callout Buttons (straight row) */
+/* Main Logo */
+.main-logo {
+  width: 160px;
+  margin-bottom: 20px;
+}
+
+/* Titles and subtitles */
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.accent { color: #00ffc6; font-size: 1.2rem; margin-left: 8px; }
+.hero-subtitle { font-size: 1.1rem; margin-bottom: 15px; }
+.hero-description { font-size: 1rem; margin-bottom: 20px; }
+.highlight { color: #22c55e; font-weight: bold; }
+
+/* Hero callout buttons */
 .hero-buttons {
   display: flex;
   gap: 15px;
   justify-content: center;
-  margin-top: 20px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
-/* Subpage buttons vertical left and right */
-.hero-subpages-left,
-.hero-subpages-right {
+.btn-primary { background: #00ffc6; color: #000; padding: 12px 25px; border-radius: 50px; font-weight: 600; text-decoration: none; }
+.btn-primary:hover { background: #00d3a4; transform: translateY(-3px); }
+
+.btn-secondary { background: transparent; color: #00ffc6; border: 2px solid #00ffc6; padding: 12px 25px; border-radius: 50px; font-weight: 600; text-decoration: none; }
+.btn-secondary:hover { background: #00ffc6; color: #000; transform: translateY(-3px); }
+
+.btn-partner { background: #ffbf00; color: #000; padding: 12px 25px; border-radius: 50px; font-weight: 600; text-decoration: none; }
+.btn-partner:hover { background: #e6ac00; transform: translateY(-3px); }
+
+/* Subpage buttons left & right */
+.hero-subpages-left, .hero-subpages-right {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  z-index: 2;
 }
 
 .hero-subpages-left { left: 20px; }
@@ -1974,15 +1897,16 @@ img { max-width: 100%; display: block; }
 
 .btn-subpage {
   background: #00ffc6;
-  padding: 8px 12px;
   color: #000;
+  padding: 8px 12px;
+  border-radius: 6px;
   font-weight: 600;
   text-align: center;
-  border-radius: 6px;
+  text-decoration: none;
   white-space: nowrap;
 }
 
-/* MOBILE RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .hero-center {
     position: relative;
@@ -1991,18 +1915,16 @@ img { max-width: 100%; display: block; }
     transform: none;
     padding: 20px;
   }
-
-  .hero-subpages-left,
-  .hero-subpages-right {
+  .hero-subpages-left, .hero-subpages-right {
     display: none; /* hide side buttons on mobile */
   }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
+  .hero-buttons { flex-direction: column; }
+  .hero h1 { font-size: 2.2rem; }
+  .main-logo { width: 130px; }
+  .burn-logo { max-width: 90px; }
 }
-  
-         /* ================= UNIFIED CARD STYLING ================= */
+
+          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
   backdrop-filter: blur(12px);
