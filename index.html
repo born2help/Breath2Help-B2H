@@ -30,82 +30,74 @@
   <!-- Particles Background -->
   <div id="particles-js"></div>
 
-  <!-- Burn Logo (slightly smaller) -->
-  <img src="images/burn.png" alt="Burn Logo" class="burn-logo" style="max-width:80px;">
+  <!-- Burn Logo -->
+  <img src="images/burn.png" alt="Burn Logo" class="burn-logo">
 
-  <div class="hero-content" style="padding: 40px 20px; max-width: 1200px; margin:auto;">
+  <div class="hero-content">
 
-    <!-- Main Logo (slightly smaller for lighter feel) -->
-    <img src="images/logo.png" alt="B2H Logo" class="main-logo" style="max-width:200px; margin-bottom:20px;">
+    <!-- Main Logo -->
+    <img src="images/logo.png" alt="B2H Logo" class="main-logo">
 
     <!-- Hero Text -->
-    <h1 style="font-size:2.5rem; line-height:1.2;">
+    <h1>
       Breath2Help <span class="accent">(B2H)</span>
     </h1>
 
-    <p class="hero-subtitle" style="font-size:1.1rem; margin: 15px 0;">
+    <p class="hero-subtitle">
       A humanitarian ecosystem powered by ethical blockchain technology
       built to create permanent <span class="highlight">Sadaqah Jariyah for Humanity</span>
     </p>
 
-    <p class="hero-subtitle" style="font-size:1rem; margin:10px 0;">
+    <p class="hero-subtitle">
       One small act. One shared breath. One life transformed.
     </p>
 
-    <p class="hero-description" style="font-size:0.95rem; margin:15px 0;">
+    <p class="hero-description">
       <strong>B2H is more than a token.</strong>  
-      It is a humanitarian system where every small action — even one cent — becomes real help for someone in need.
-      Through transparent blockchain technology and ethical governance,
-      every participation automatically supports charity, dignity, and opportunity.
+      Every small action — even one cent — becomes real help for someone in need. Transparent blockchain technology ensures every participation supports charity, dignity, and opportunity.
     </p>
 
-    <p class="hero-description" style="font-size:0.95rem; margin:10px 0;">
+    <p class="hero-description">
       No hidden profit. No exploitation.  
       <strong>Only purpose.</strong>  
-      Every transaction contributes directly to humanitarian support,
-      long-term sustainability, and a living charity that continues
-      long after we are gone.
+      Every transaction contributes directly to humanitarian support, long-term sustainability, and living charity.
     </p>
 
     <!-- Stats Boxes -->
-    <div class="hero-stats" style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin:20px 0;">
-      <div class="stat-box" style="flex:1 1 120px; text-align:center; padding:10px;">
+    <div class="hero-stats">
+      <div class="stat-box">
         <h3>500B</h3>
         <p>Total Supply</p>
       </div>
-
-      <div class="stat-box" style="flex:1 1 120px; text-align:center; padding:10px;">
+      <div class="stat-box">
         <h3>5%</h3>
         <p>Charity Per TX</p>
       </div>
-
-      <div class="stat-box" style="flex:1 1 180px; text-align:center; padding:10px;">
+      <div class="stat-box">
         <h3>Ethical Governance</h3>
         <p>Founder Takes No Profit</p>
       </div>
     </div>
 
-    <p class="hero-callout" style="font-size:1rem; margin:15px 0; text-align:center;">
-      🌟 Become part of a global humanitarian movement.
-      Support, participate, or simply share the mission.
-      Every action helps someone in need.
+    <p class="hero-callout">
+      🌟 Become part of a global humanitarian movement. Support, participate, or simply share the mission.
     </p>    
 
     <!-- Buttons -->
-    <div class="hero-buttons" style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px;">
+    <div class="hero-buttons">
       <a href="donate.html" class="btn-primary">💖 Donate Now</a>
       <a href="volunteer.html" class="btn-secondary">🤝 Become a Volunteer</a>
       <a href="partner.html" class="btn-partner">🌟 Partner With Us</a>
     </div>
-    <p class="hero-trust" style="text-align:center; margin-top:10px; font-size:0.85rem;">
-      100% transparency commitment. All donations and charity allocations will be publicly documented.
+    <p class="hero-trust">
+      100% transparency commitment. All donations and charity allocations are publicly documented.
     </p>    
 
   </div>
 
-  <!-- ================= SUBPAGES BUTTONS ================= -->
-  <div class="hero-buttons-container" style="margin-top:20px; text-align:center;">
-    <div class="hero-subpages" style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px;">
+  <!-- Subpage Buttons -->
+  <div class="hero-buttons-container">
+    <div class="hero-subpages">
       <a href="about.html" class="btn-about">About</a>
       <a href="white-paper.html" class="btn-white-paper">White Paper</a>
       <a href="tokenomics.html" class="btn-tokenomics">Tokenomics</a>
@@ -123,16 +115,53 @@
 
 </section>
 
-<!-- ================= MOBILE RESPONSIVE ADJUSTMENTS ================= -->
+<!-- ================= MOBILE RESPONSIVE STYLES ================= -->
 <style>
-@media (max-width: 768px) {
-  .hero-content h1 { font-size:2rem; }
-  .hero-subtitle, .hero-description { font-size:0.9rem; }
-  .hero-stats { flex-direction:column; gap:10px; }
-  .hero-buttons { flex-direction:column; gap:10px; }
+/* General adjustments */
+.hero-content { padding: 40px 20px; max-width:1200px; margin:auto; text-align:center; }
+.hero h1 { font-size:2.5rem; line-height:1.2; }
+.hero-subtitle, .hero-description { font-size:1rem; margin:10px 0; }
+.hero-stats { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin:20px 0; }
+.hero-stats .stat-box { flex:1 1 140px; text-align:center; padding:10px; }
+.hero-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px; }
+.hero-subpages { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px; }
+
+/* Logos */
+.burn-logo { max-width:80px; margin-bottom:15px; }
+.main-logo { max-width:200px; margin-bottom:20px; }
+
+/* Callout & trust */
+.hero-callout { font-size:1rem; margin:15px 0; }
+.hero-trust { font-size:0.85rem; margin-top:10px; }
+
+/* MOBILE */
+@media (max-width: 992px) {
+  .hero h1 { font-size:2.2rem; }
+  .hero-subtitle, .hero-description { font-size:0.95rem; }
+  .hero-stats .stat-box { flex:1 1 120px; }
+  .hero-buttons { flex-direction:column; gap:12px; }
   .hero-subpages a { font-size:0.85rem; padding:6px 10px; }
+  .burn-logo { max-width:70px; }
+  .main-logo { max-width:160px; }
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size:1.8rem; }
+  .hero-subtitle, .hero-description { font-size:0.9rem; }
+  .hero-stats { flex-direction:column; gap:12px; }
+  .hero-buttons { flex-direction:column; gap:10px; }
+  .hero-subpages { flex-direction:column; gap:8px; }
   .burn-logo { max-width:60px; }
-  .main-logo { max-width:150px; }
+  .main-logo { max-width:140px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size:1.5rem; }
+  .hero-subtitle, .hero-description { font-size:0.85rem; }
+  .hero-buttons a { font-size:0.85rem; padding:8px 12px; }
+  .hero-subpages a { font-size:0.8rem; padding:5px 8px; }
+  .burn-logo { max-width:50px; }
+  .main-logo { max-width:120px; }
 }
 </style>
 
