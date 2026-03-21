@@ -54,14 +54,13 @@
 
     <p class="hero-description">
       <strong>B2H is more than a token.</strong>  
-      Every small action—even one cent—becomes real help for someone in need.
-      Through transparent blockchain and ethical governance, every participation automatically supports charity, dignity, and opportunity.
+      Every small action — even one cent — becomes real help for someone in need. Transparent blockchain technology ensures every participation supports charity, dignity, and opportunity.
     </p>
 
     <p class="hero-description">
       No hidden profit. No exploitation.  
       <strong>Only purpose.</strong>  
-      Every transaction contributes directly to humanitarian support and long-term sustainability.
+      Every transaction contributes directly to humanitarian support, long-term sustainability, and living charity.
     </p>
 
     <!-- Stats Boxes -->
@@ -80,27 +79,23 @@
       </div>
     </div>
 
-    <!-- Hero Callout -->
     <p class="hero-callout">
-      🌟 Become part of a global humanitarian movement.
-      Support, participate, or simply share the mission.
-      Every action helps someone in need.
-    </p>
+      🌟 Become part of a global humanitarian movement. Support, participate, or simply share the mission.
+    </p>    
 
-    <!-- Hero Buttons -->
+    <!-- Buttons -->
     <div class="hero-buttons">
       <a href="donate.html" class="btn-primary">💖 Donate Now</a>
       <a href="volunteer.html" class="btn-secondary">🤝 Become a Volunteer</a>
       <a href="partner.html" class="btn-partner">🌟 Partner With Us</a>
     </div>
-
     <p class="hero-trust">
-      100% transparency commitment. All donations and charity allocations will be publicly documented.
-    </p>
+      100% transparency commitment. All donations and charity allocations are publicly documented.
+    </p>    
 
   </div>
 
-  <!-- Subpages Buttons -->
+  <!-- Subpage Buttons -->
   <div class="hero-buttons-container">
     <div class="hero-subpages">
       <a href="about.html" class="btn-about">About</a>
@@ -119,6 +114,56 @@
   </div>
 
 </section>
+
+ <!-- ================= MOBILE RESPONSIVE STYLES ================= -->
+<style>
+/* General adjustments */
+.hero-content { padding: 40px 20px; max-width:1200px; margin:auto; text-align:center; }
+.hero h1 { font-size:2.5rem; line-height:1.2; }
+.hero-subtitle, .hero-description { font-size:1rem; margin:10px 0; }
+.hero-stats { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin:20px 0; }
+.hero-stats .stat-box { flex:1 1 140px; text-align:center; padding:10px; }
+.hero-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px; }
+.hero-subpages { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px; }
+
+/* Logos */
+.burn-logo { max-width:80px; margin-bottom:15px; }
+.main-logo { max-width:200px; margin-bottom:20px; }
+
+/* Callout & trust */
+.hero-callout { font-size:1rem; margin:15px 0; }
+.hero-trust { font-size:0.85rem; margin-top:10px; }
+
+/* MOBILE */
+@media (max-width: 992px) {
+  .hero h1 { font-size:2.2rem; }
+  .hero-subtitle, .hero-description { font-size:0.95rem; }
+  .hero-stats .stat-box { flex:1 1 120px; }
+  .hero-buttons { flex-direction:column; gap:12px; }
+  .hero-subpages a { font-size:0.85rem; padding:6px 10px; }
+  .burn-logo { max-width:70px; }
+  .main-logo { max-width:160px; }
+}
+
+@media (max-width: 768px) {
+  .hero h1 { font-size:1.8rem; }
+  .hero-subtitle, .hero-description { font-size:0.9rem; }
+  .hero-stats { flex-direction:column; gap:12px; }
+  .hero-buttons { flex-direction:column; gap:10px; }
+  .hero-subpages { flex-direction:column; gap:8px; }
+  .burn-logo { max-width:60px; }
+  .main-logo { max-width:140px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size:1.5rem; }
+  .hero-subtitle, .hero-description { font-size:0.85rem; }
+  .hero-buttons a { font-size:0.85rem; padding:8px 12px; }
+  .hero-subpages a { font-size:0.8rem; padding:5px 8px; }
+  .burn-logo { max-width:50px; }
+  .main-logo { max-width:120px; }
+}
+</style> 
 
 <!-- ================= PHILOSOPHY ================= -->
 <section id="philosophy" class="section philosophy-section dark-section">
@@ -734,27 +779,5 @@ particlesJS("particles-js", {
   retina_detect: true
 });
 </script>
-
-<!-- ================= PARTICLES JS ================= -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 60, density: { enable: true, value_area: 800 } },
-    color: { value: "#00ffc6" },
-    shape: { type: "circle" },
-    opacity: { value: 0.6, random: true },
-    size: { value: 3, random: true },
-    line_linked: { enable: true, distance: 120, color: "#00ffc6", opacity: 0.4, width: 1 },
-    move: { enable: true, speed: 2, out_mode: "out" }
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "repulse" }, resize: true },
-    modes: { grab: { distance: 150, line_linked: { opacity: 0.8 } }, repulse: { distance: 200, duration: 0.6 } }
-  },
-  retina_detect: true
-});
-</script>  
 </body>
 </html>
