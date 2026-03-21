@@ -30,10 +30,10 @@
   <!-- Particles Background -->
   <div id="particles-js"></div>
 
-  <!-- Burn Logo (left top corner) -->
+  <!-- Burn Logo top-left -->
   <img src="images/burn.png" alt="Burn Logo" class="burn-logo">
 
-  <!-- Main Center Content -->
+  <!-- Center Hero Content -->
   <div class="hero-center">
     <img src="images/logo.png" alt="B2H Logo" class="main-logo">
     <h1>Breath2Help <span class="accent">(B2H)</span></h1>
@@ -52,111 +52,27 @@
     </div>
   </div>
 
-  <!-- Left & Right Subpage Buttons -->
+  <!-- Subpage Buttons Left -->
   <div class="hero-subpages-left">
     <a href="about.html" class="btn-subpage">About</a>
     <a href="white-paper.html" class="btn-subpage">White Paper</a>
     <a href="tokenomics.html" class="btn-subpage">Tokenomics</a>
     <a href="burn-ethics.html" class="btn-subpage">Burn & Ethics</a>
-  </div>
-  <div class="hero-subpages-right">
     <a href="donate.html" class="btn-subpage">Donate</a>
     <a href="constitution.html" class="btn-subpage">Constitution</a>
-    <a href="transparency.html" class="btn-subpage">Transparency</a>
-    <a href="vision.html" class="btn-subpage">Vision</a>
   </div>
+
+  <!-- Subpage Buttons Right -->
+  <div class="hero-subpages-right">
+    <a href="transparency.html" class="btn-subpage">Transparency</a>
+    <a href="founder-continuity.html" class="btn-subpage">Founder Continuity</a>
+    <a href="participation-safeguard.html" class="btn-subpage">Participation Safeguard</a>
+    <a href="disclaimer.html" class="btn-subpage">Disclaimer</a>
+    <a href="vision.html" class="btn-subpage">Vision</a>
+    <a href="stress-test.html" class="btn-subpage">Stress Test</a>
+  </div>
+
 </section>
-
-<!-- ================= HERO CSS ================= -->
-<style>
-.hero {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  padding: 20px;
-  background: radial-gradient(circle at center, rgba(0,255,198,0.15), rgba(0,0,0,0.8));
-}
-
-/* Particles */
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-/* Burn Logo Top Left */
-.hero .burn-logo {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  max-width: 100px;
-  z-index: 2;
-}
-
-/* Center Content */
-.hero-center {
-  position: relative;
-  z-index: 1;
-  max-width: 700px;
-}
-
-/* Main Logo */
-.hero-center .main-logo {
-  max-width: 200px;
-  margin-bottom: 20px;
-}
-
-/* Hero Text */
-.hero-center h1 { font-size: 2.8rem; margin-bottom: 15px; color: #00ffc6; }
-.hero-subtitle { font-size: 1.1rem; margin: 8px 0; color: #fff; }
-.hero-description { font-size: 0.95rem; margin: 10px 0; color: #e0e0e0; }
-.hero-stats {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 20px 0;
-}
-.hero-stats .stat-box { flex: 1 1 150px; text-align: center; padding: 10px; color: #fff; }
-
-/* Call-to-action Buttons */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: nowrap;
-  gap: 15px;
-  margin-top: 20px;
-}
-
-/* Subpages vertical left/right */
-.hero-subpages-left, .hero-subpages-right {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  z-index: 1;
-}
-.hero-subpages-left { left: 10px; }
-.hero-subpages-right { right: 10px; }
-
-.hero-subpages-left a, .hero-subpages-right a {
-  padding: 8px 12px;
-  font-size: 0.85rem;
-  background: rgba(255,255,255,0.1);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  text-align: center;
-  transition: all 0.3s;
-}
-.hero-subpages-left a:hover, .hero-subpages-right a:hover { background: #00ffc6; color: #000; }
 
 /* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
