@@ -2359,6 +2359,35 @@ img { max-width: 100%; display: block; }
 }
 </style> 
 
+.hero {
+  position: relative;
+  height: 100vh;             /* full viewport height */
+  display: flex;
+  justify-content: center;    /* horizontal centering */
+  align-items: center;        /* vertical centering */
+  text-align: center;
+  flex-direction: column;     /* stack content vertically */
+  overflow: hidden;
+  padding: 20px;
+  background: radial-gradient(circle at center, rgba(0,255,198,0.15), rgba(0,0,0,0.8));
+}
+
+/* Center Content */
+.hero-center {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Logo */
+.hero-center .main-logo {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
          /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
