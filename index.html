@@ -30,140 +30,176 @@
   <!-- Particles Background -->
   <div id="particles-js"></div>
 
-  <!-- Burn Logo -->
-  <img src="images/burn.png" alt="Burn Logo" class="burn-logo">
+  <!-- Subpages Left -->
+  <div class="hero-subpages-left">
+    <a href="about.html">About</a>
+    <a href="white-paper.html">White Paper</a>
+    <a href="tokenomics.html">Tokenomics</a>
+    <a href="burn-ethics.html">Burn & Ethics</a>
+    <a href="donate.html">Donate</a>
+    <a href="constitution.html">Constitution</a>
+  </div>
 
-  <div class="hero-content">
+  <!-- Subpages Right -->
+  <div class="hero-subpages-right">
+    <a href="transparency.html">Transparency</a>
+    <a href="founder-continuity.html">Founder Continuity</a>
+    <a href="participation-safeguard.html">Participation Safeguard</a>
+    <a href="disclaimer.html">Disclaimer</a>
+    <a href="vision.html">Vision</a>
+    <a href="stress-test.html">Stress Test</a>
+  </div>
 
-    <!-- Main Logo -->
+  <!-- Center Content -->
+  <div class="hero-center">
+
+    <!-- Logos -->
+    <img src="images/burn.png" alt="Burn Logo" class="burn-logo">
     <img src="images/logo.png" alt="B2H Logo" class="main-logo">
 
     <!-- Hero Text -->
-    <h1>
-      Breath2Help <span class="accent">(B2H)</span>
-    </h1>
-
+    <h1>Breath2Help <span class="accent">(B2H)</span></h1>
     <p class="hero-subtitle">
-      A humanitarian ecosystem powered by ethical blockchain technology
+      A humanitarian ecosystem powered by ethical blockchain technology<br>
       built to create permanent <span class="highlight">Sadaqah Jariyah for Humanity</span>
     </p>
-
-    <p class="hero-subtitle">
-      One small act. One shared breath. One life transformed.
-    </p>
-
+    <p class="hero-subtitle">One small act. One shared breath. One life transformed.</p>
     <p class="hero-description">
-      <strong>B2H is more than a token.</strong>  
-      Every small action — even one cent — becomes real help for someone in need. Transparent blockchain technology ensures every participation supports charity, dignity, and opportunity.
+      <strong>B2H is more than a token.</strong> Every action—even one cent—becomes real help for someone in need.
+      Through transparent blockchain and ethical governance, every participation automatically supports charity, dignity, and opportunity.
     </p>
 
-    <p class="hero-description">
-      No hidden profit. No exploitation.  
-      <strong>Only purpose.</strong>  
-      Every transaction contributes directly to humanitarian support, long-term sustainability, and living charity.
-    </p>
-
-    <!-- Stats Boxes -->
+    <!-- Stats -->
     <div class="hero-stats">
-      <div class="stat-box">
-        <h3>500B</h3>
-        <p>Total Supply</p>
-      </div>
-      <div class="stat-box">
-        <h3>5%</h3>
-        <p>Charity Per TX</p>
-      </div>
-      <div class="stat-box">
-        <h3>Ethical Governance</h3>
-        <p>Founder Takes No Profit</p>
-      </div>
+      <div class="stat-box"><h3>500B</h3><p>Total Supply</p></div>
+      <div class="stat-box"><h3>5%</h3><p>Charity Per TX</p></div>
+      <div class="stat-box"><h3>Ethical Governance</h3><p>Founder Takes No Profit</p></div>
     </div>
 
-    <p class="hero-callout">
-      🌟 Become part of a global humanitarian movement. Support, participate, or simply share the mission.
-    </p>    
-
-    <!-- Buttons -->
+    <!-- Call-to-action Buttons Bottom Center -->
     <div class="hero-buttons">
       <a href="donate.html" class="btn-primary">💖 Donate Now</a>
       <a href="volunteer.html" class="btn-secondary">🤝 Become a Volunteer</a>
       <a href="partner.html" class="btn-partner">🌟 Partner With Us</a>
     </div>
-    <p class="hero-trust">
-      100% transparency commitment. All donations and charity allocations are publicly documented.
-    </p>    
 
-  </div>
-
-  <!-- Subpage Buttons -->
-  <div class="hero-buttons-container">
-    <div class="hero-subpages">
-      <a href="about.html" class="btn-about">About</a>
-      <a href="white-paper.html" class="btn-white-paper">White Paper</a>
-      <a href="tokenomics.html" class="btn-tokenomics">Tokenomics</a>
-      <a href="burn-ethics.html" class="btn-burn-ethics">Burn & Ethics</a>
-      <a href="donate.html" class="btn-donate">Donate</a>
-      <a href="constitution.html" class="btn-constitution">Constitution</a>
-      <a href="transparency.html" class="btn-transparency">Transparency</a>
-      <a href="founder-continuity.html" class="btn-founder-continuity">Founder Continuity</a>
-      <a href="participation-safeguard.html" class="btn-participation-safeguard">Participation Safeguard</a>
-      <a href="disclaimer.html" class="btn-disclaimer">Disclaimer</a>
-      <a href="vision.html" class="btn-vision">Vision</a>
-      <a href="stress-test.html" class="btn-stress-test">Stress Test</a>
-    </div>
   </div>
 
 </section>
 
- <!-- ================= MOBILE RESPONSIVE STYLES ================= -->
+<!-- ================= HERO CSS ================= -->
 <style>
-/* General adjustments */
-.hero-content { padding: 40px 20px; max-width:1200px; margin:auto; text-align:center; }
-.hero h1 { font-size:2.5rem; line-height:1.2; }
-.hero-subtitle, .hero-description { font-size:1rem; margin:10px 0; }
-.hero-stats { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; margin:20px 0; }
-.hero-stats .stat-box { flex:1 1 140px; text-align:center; padding:10px; }
-.hero-buttons { display:flex; flex-wrap:wrap; justify-content:center; gap:15px; margin-top:20px; }
-.hero-subpages { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:20px; }
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Particles */
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Center Content */
+.hero-center {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
 
 /* Logos */
-.burn-logo { max-width:80px; margin-bottom:15px; }
-.main-logo { max-width:200px; margin-bottom:20px; }
+.hero-center .burn-logo { max-width: 60px; margin-bottom: 10px; }
+.hero-center .main-logo { max-width: 180px; margin-bottom: 20px; }
 
-/* Callout & trust */
-.hero-callout { font-size:1rem; margin:15px 0; }
-.hero-trust { font-size:0.85rem; margin-top:10px; }
+/* Hero Text */
+.hero-center h1 { font-size: 2.5rem; margin-bottom: 15px; }
+.hero-subtitle { font-size: 1.1rem; margin: 8px 0; }
+.hero-description { font-size: 0.95rem; margin: 8px 0; }
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+}
+.hero-stats .stat-box { flex: 1 1 150px; text-align: center; padding: 10px; }
 
-/* MOBILE */
-@media (max-width: 992px) {
-  .hero h1 { font-size:2.2rem; }
-  .hero-subtitle, .hero-description { font-size:0.95rem; }
-  .hero-stats .stat-box { flex:1 1 120px; }
-  .hero-buttons { flex-direction:column; gap:12px; }
-  .hero-subpages a { font-size:0.85rem; padding:6px 10px; }
-  .burn-logo { max-width:70px; }
-  .main-logo { max-width:160px; }
+/* Buttons Bottom Center */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
 }
 
+/* Subpages vertical left/right */
+.hero-subpages-left, .hero-subpages-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1;
+}
+.hero-subpages-left { left: 10px; }
+.hero-subpages-right { right: 10px; }
+
+.hero-subpages-left a, .hero-subpages-right a {
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.hero-subpages-left a:hover, .hero-subpages-right a:hover { background: #00ffc6; color: #000; }
+
+/* ================= MOBILE RESPONSIVE ================= */
 @media (max-width: 768px) {
-  .hero h1 { font-size:1.8rem; }
-  .hero-subtitle, .hero-description { font-size:0.9rem; }
-  .hero-stats { flex-direction:column; gap:12px; }
-  .hero-buttons { flex-direction:column; gap:10px; }
-  .hero-subpages { flex-direction:column; gap:8px; }
-  .burn-logo { max-width:60px; }
-  .main-logo { max-width:140px; }
+  .hero { flex-direction: column; padding: 20px 10px; }
+  .hero-center { max-width: 95%; }
+  .hero-center h1 { font-size: 1.8rem; }
+  .hero-subtitle, .hero-description { font-size: 0.9rem; }
+  .hero-stats { flex-direction: column; gap: 10px; }
+  .hero-buttons { flex-direction: column; gap: 10px; }
+  .hero-subpages-left, .hero-subpages-right { position: static; transform: none; flex-direction: row; justify-content: center; gap: 8px; margin-bottom: 10px; }
+  .hero-subpages-left a, .hero-subpages-right a { font-size: 0.8rem; padding: 6px 8px; }
 }
+</style>
 
-@media (max-width: 480px) {
-  .hero h1 { font-size:1.5rem; }
-  .hero-subtitle, .hero-description { font-size:0.85rem; }
-  .hero-buttons a { font-size:0.85rem; padding:8px 12px; }
-  .hero-subpages a { font-size:0.8rem; padding:5px 8px; }
-  .burn-logo { max-width:50px; }
-  .main-logo { max-width:120px; }
-}
-</style> 
+<!-- ================= PARTICLES JS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 60, density: { enable: true, value_area: 800 } },
+    color: { value: "#00ffc6" },
+    shape: { type: "circle" },
+    opacity: { value: 0.6, random: true },
+    size: { value: 3, random: true },
+    line_linked: { enable: true, distance: 120, color: "#00ffc6", opacity: 0.4, width: 1 },
+    move: { enable: true, speed: 2, out_mode: "out" }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "repulse" }, resize: true },
+    modes: { grab: { distance: 150, line_linked: { opacity: 0.8 } }, repulse: { distance: 200, duration: 0.6 } }
+  },
+  retina_detect: true
+});
+</script>
 
 <!-- ================= PHILOSOPHY ================= -->
 <section id="philosophy" class="section philosophy-section dark-section">
