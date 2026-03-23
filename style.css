@@ -1955,9 +1955,6 @@ img { max-width: 100%; display: block; }
   .main-logo { width: 140px; }
   .burn-logo { width: 90px; }
 
-  .hero-subpages-left,
-  .hero-subpages-right { display: none; }
-
   .hero-buttons { flex-direction: column; gap: 12px; }
 }
 
@@ -1974,6 +1971,57 @@ img { max-width: 100%; display: block; }
 @keyframes logoFloat {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
+}
+
+@media (max-width: 768px) {
+
+  /* Show subpages as bottom grid */
+  .hero-subpages-left,
+  .hero-subpages-right {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    top: auto;
+    left: auto;
+    right: auto;
+    transform: none;
+    margin-top: 20px;
+    gap: 8px;
+  }
+
+  /* Make buttons smaller */
+  .btn-subpage {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
+}
+
+.burn-logo {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 90px;
+  z-index: 5;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .burn-logo {
+    width: 70px;
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.hero-center {
+  z-index: 2;
+}
+
+.hero-subpages-left,
+.hero-subpages-right {
+  z-index: 3;
 }
 
           /* ================= UNIFIED CARD STYLING ================= */
