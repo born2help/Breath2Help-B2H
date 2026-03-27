@@ -2024,6 +2024,83 @@ img { max-width: 100%; display: block; }
   z-index: 3;
 }
 
+@media screen and (max-width: 768px) {
+
+  .hero-buttons,
+  .hero-actions {
+    position: static !important;   /* REMOVE absolute positioning */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .hero-buttons a,
+  .hero-actions a {
+    display: block;
+    width: 80%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .hero-content {
+    width: 100%;
+    padding: 0 15px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .hero-logo,
+  .logo {
+    position: relative !important;
+    display: block;
+    margin: 0 auto 15px auto;
+    max-width: 120px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .burn-logo {
+    position: relative !important;
+    display: block;
+    margin: 15px auto;
+    max-width: 100px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .hero {
+    height: auto !important;
+    min-height: 100vh;
+    padding: 80px 15px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
           /* ================= UNIFIED CARD STYLING ================= */
 .mv-card, .board-card, .charity-card, .asset-card {
   background: rgba(0,255,198,0.05);
