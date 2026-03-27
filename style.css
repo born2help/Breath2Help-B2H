@@ -1820,7 +1820,7 @@ img { max-width: 100%; display: block; }
 
 /* Burn Logo Top-Left */
 .burn-logo {
-  position: absolute;
+  position: static !important;
   top: 30px;
   left: 30px;
   width: 140px;
